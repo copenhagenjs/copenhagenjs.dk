@@ -1,3 +1,104 @@
 body {
-	font-family: 'Times New Roman', serif;
+	color: #111;
+	background-color: #fcfcfc;
+	font-family: 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 13px;
+}
+
+#container {
+	margin: 0 auto;
+	text-align: left;
+	width: 960px;
+}
+
+	#container > header {
+		position: relative;
+		height: 50px;
+		border-bottom: 1px solid #ddd;
+		padding: 0 0 10px;
+		margin: 0 0 30px;
+	}
+
+		#container > header a.home {
+			color: #111;
+			font: bold 40px/1.2 'Helvetica Neue', Helvetica, sans-serif;
+			text-decoration: none;
+		}
+
+		#container > header ul.nav {
+			position: absolute;
+			right: 0;
+			bottom: 10px;
+			margin: 0;
+			padding: 0;
+		}
+	
+			#container > header ul.nav li {
+				display: inline-block;
+				margin: 0 10px 0;
+		
+			}
+				#container > header ul.nav li a {
+					display: block;
+					padding: 8px 24px;
+				}
+			
+					#container > header ul.nav li a:hover {
+						color: #111;
+					}
+
+
+#main {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	box-orient: horizontal;
+
+	-webkit-box-align: stretch;
+	-moz-box-align: stretch;
+	box-align: stretch;
+
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	box-direction: normal;
+
+	-webkit-box-pack: start;
+	-moz-box-pack: start;
+	box-pack: start;
+	
+	width: 100%;
+}
+
+	#main .content {
+		-webkit-box-flex: 5;
+		-moz-box-flex: 5;
+		box-flex: 5;
+
+		-webkit-box-ordinal-group: 1;
+		-moz-box-ordinal-group: 1;
+		box-ordinal-group: 1;
+
+		margin: 0 20px 0 0;
+	}
+	
+	#main .sidebar {
+		-webkit-box-flex: 0;
+		-moz-box-flex: 0;
+		box-flex: 0;
+
+		-webkit-box-ordinal-group: 1;
+		-moz-box-ordinal-group: 1;
+		box-ordinal-group: 1;
+		
+		width: 300px;
+	}
+	
+#container > footer {
+	color: #666;
+	font-size: 12px;
+	margin: 20px 0 0;
 }
