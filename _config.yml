@@ -1,0 +1,23 @@
+safe:        false
+auto:        true
+server:      true
+server_port: 4001
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+
+future:      true
+lsi:         false
+pygments:    true
+markdown:    maruku
+permalink:   /:year/:month/:day/:title
+
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    images/latex
+  png_url:    /images/latex
+
+rdiscount:

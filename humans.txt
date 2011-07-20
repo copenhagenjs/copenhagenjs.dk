@@ -1,0 +1,8 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* TEAM */
+  CopenhagenJS: Morgan Roderick, Kenneth Auchenberg, Björn Söderqvist
+  Site: http://copenhagenjs.dk
+  Twitter: @copenhagenjs
+  Location: Copenhagen, Denmark
