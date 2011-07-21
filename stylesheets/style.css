@@ -82,7 +82,7 @@ body {
 		-moz-box-ordinal-group: 1;
 		box-ordinal-group: 1;
 
-		margin: 0 20px 0 0;
+		margin: 0 40px 0 0;
 	}
 	
 	#main .sidebar {
@@ -94,11 +94,48 @@ body {
 		-moz-box-ordinal-group: 1;
 		box-ordinal-group: 1;
 		
-		width: 300px;
+		width: 250px;
 	}
 	
 #container > footer {
 	color: #666;
 	font-size: 12px;
 	margin: 20px 0 0;
+}
+
+
+
+.content h1 {
+	font-size: 2em;
+}
+
+.content h1 a {
+	color: #111;
+	text-decoration: none;
+}
+
+.content h1 a:hover {
+
+}
+
+.content h1 a:hover:after {
+	color: #999;
+	content: '#';
+} 
+
+.content h2 {
+	font-size: 1.5em;
+}
+
+.sidebar h3 {
+	margin: 20px 0 0;
+}
+
+.sidebar p, .sidebar ul {
+	margin: 0 0 5px;
+} 
+
+p.promotejs {
+	margin: 30px 0 0;
+	text-align: center;
 }

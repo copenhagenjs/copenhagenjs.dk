@@ -1,6 +1,10 @@
 ---
-title: About
+title: About CopenhagenJS
 layout: default
 ---
 
-Soon&trade;
+## Organisers
+
+* Kenneth Auchenberg — [@auchenberg](https://twitter.com/auchenberg)
+* Morgan Roderick — [@mrgnrdck](https://twitter.com/mrgnrdrck)
+* Björn Söderqvist — [@kaptencybear](https://twitter.com/kaptencybear)
