@@ -3,4 +3,4 @@ title: About
 layout: default
 ---
 
-Soon[tm]
+Soon&trade;
