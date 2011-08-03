@@ -9,7 +9,7 @@ Welcome to CopenhagenJS, a JavaScript community in and around Copenhagen, Denmar
 
 There will be a meetup on the third Thursday of every month at 19.00. Look to this site for announcements of speakers and venue.
 
-Mark your calendar, the first meetup will be on **August 18th 2011 at 19.00**, just a month from now.
+Mark your calendar, the first meetup will be on <del>**August 18th 2011 at 19.00**</del> **August 24th 2011 at 19.00**, just a month from now.
 
 ## Where?
 
