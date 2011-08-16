@@ -11,7 +11,9 @@ The first meetup will take place at **Podio's Copenhagen office**, which is loca
 
 ## Agenda
 
-TODO
+* Simon Højberg, Swipely: Building Single Page Applications with YUI
+
+We could still do with a few more talks, lightning talks also welcome.
 
 ## Call for speakers
 
