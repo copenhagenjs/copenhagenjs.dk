@@ -13,6 +13,7 @@ The first meetup will take place at **Podio's Copenhagen office**, which is loca
 
 * Simon Højberg, Swipely: Building Single Page Applications with YUI
 * Mads Hartmann Jensen: Purely Functional Data Structures for JavaScript
+* Daniel Pouzemski: Backbone.js
 
 We could still do with a few more talks, **lightning talks also welcome**.
 
