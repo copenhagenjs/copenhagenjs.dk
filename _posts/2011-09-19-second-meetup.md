@@ -9,7 +9,7 @@ We are pleased to announce the second CopenhagenJS meetup, which is going to tak
 
 The meetup will be be hosted by **[ProData](http://prodata.dk/)**, Stamholmen 157 2650 Hvidovre.
 
-![Map showing Stamholmen 157 2650 Hvidovre](http://maps.google.com/staticmap?center=55.61465,12.47704&zoom=15&size=400x325&maptype=mobile&markers=55.61465,12.47704,red&key=ABQIAAAAqQJ-gFBKUbBLaFN1HQF4KBQ_k2Fxd8XZtbWUsvz5Vrarxzf2SRSh7DRXLQmAZ-6XwtrmMhkINGT27A&sensor=false)
+![Map showing Stamholmen 157 2650 Hvidovre](http://maps.google.com/staticmap?center=55.61465,12.47704&zoom=15&size=400x325&maptype=mobile&markers=55.61465,12.47704,red&sensor=false)
 
 <http://findvej.dk/Stamholmen157,2650>
 
