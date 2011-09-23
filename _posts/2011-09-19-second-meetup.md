@@ -3,13 +3,15 @@ title: Second meetup at ProData
 layout: post
 ---
 
+This meeting has been [canceled](/2011/09/22/september-meeting-canceled/), our apologies.
+
 We are pleased to announce the second CopenhagenJS meetup, which is going to take place **September 22nd 2011 at 19.00**. We apologise for the very late notice, hopefully you will still be able to attend.
 
 ## Where?
 
 The meetup will be be hosted by **[ProData](http://prodata.dk/)**, Stamholmen 157 2650 Hvidovre.
 
-![Map showing Stamholmen 157 2650 Hvidovre](http://maps.google.com/staticmap?center=55.61465,12.47704&zoom=15&size=650x325&maptype=mobile&markers=55.61465,12.47704,red&sensor=false)
+![Map showing Stamholmen 157 2650 Hvidovre](/images/staticmap-prodata.gif)
 
 <http://findvej.dk/Stamholmen157,2650>
 
