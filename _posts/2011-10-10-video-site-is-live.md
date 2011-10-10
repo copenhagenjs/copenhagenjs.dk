@@ -9,7 +9,7 @@ It has taken some time, and now we managed to get a [new funky video site](http:
 
 The videos from our August meetup is now online, where you can enjoy the wonderfull sessions by [Simon Højberg](http://twitter.com/#!/shojberg), [Mads Hartmann Jensen](http://www.sidewayscoding.com), and [Daniel Pouzemski](http://twitter.com/#!/fredsmoo).
 
-Find them right here [http://video.copenhagenjs.dk//channel/3330684/august-meetup](http://copenhagenjs.23video.com/channel/3330684/august-meetup)
+Find them right here <http://video.copenhagenjs.dk//channel/3330684/august-meetup>
 
 
 
