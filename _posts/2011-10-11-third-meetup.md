@@ -11,20 +11,20 @@ We are pleased to announce the third CopenhagenJS meetup. Clear your schedule fo
 
 The meetup will be be hosted by **[One.com](http://one.com/)**.
 
-Address: Kalvebod Brygge 45, 1560 København V, building name: KB24. 
+Address: Kalvebod Brygge 24, 1560 København V. 
 
-It can be tricky to find so please note the building name and note that Google Maps map of the area is outdated. Use [this more recent map](http://t.co/FuWrT0zV).
+It can be tricky to find so please note that Google Maps map of the area is outdated. Use [this more recent map](http://t.co/FuWrT0zV).
 
-![Map showing Kalvebod Brygge 45, 1560 København V](/images/kb24.png)
+![Map showing Kalvebod Brygge 24, 1560 København V](/images/kb24.png)
 <!--KB24 is the designation of the southernmost of the buildings on Bernstorffs plads.-->
 
 ## Agenda
 
-* Peter Müller: One-color.js
+### Peter Müller: One-color.js
 
-* Björn Söderqvist: An interactive HDR viewer using Canvas
+### Björn Söderqvist: An interactive HDR viewer using Canvas
 
-* Morgan Roderick: Closures, this, call and apply — an attempt at an explanation
+### Morgan Roderick: Closures, this, call and apply — an attempt at an explanation
 
 
 
