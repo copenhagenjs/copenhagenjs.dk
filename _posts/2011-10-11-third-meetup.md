@@ -15,7 +15,9 @@ Address: Kalvebod Brygge 24, 1560 København V.
 
 It can be tricky to find so please note that Google Maps map of the area is outdated. Use [this more recent map](http://t.co/FuWrT0zV).
 
-![Map showing Kalvebod Brygge 24, 1560 København V](/images/kb24.png)
+![Map showing Kalvebod Brygge 24, 1560 København V](/images/venues/kb24/map.png)
+![Photo of Kalvebod Brygge 24, 1560 København V](/images/venues/kb24/kb24.jpg)
+
 <!--KB24 is the designation of the southernmost of the buildings on Bernstorffs plads.-->
 
 ## Agenda
