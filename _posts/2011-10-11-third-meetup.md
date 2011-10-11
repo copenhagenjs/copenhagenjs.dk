@@ -22,13 +22,9 @@ It can be tricky to find so please note that Google Maps map of the area is outd
 
 ## Agenda
 
-### Peter Müller: One-color.js
-
-### Björn Söderqvist: An interactive HDR viewer using Canvas
-
-### Morgan Roderick: Closures, this, call and apply — an attempt at an explanation
-
-
+* Peter Müller: One-color.js
+* Björn Söderqvist: An interactive HDR viewer using Canvas
+* Morgan Roderick: Closures, this, call and apply — an attempt at an explanation
 
 We could still use a speaker or two, so if you have something to share, a cool project to show off, do drop us a note at <hello@copenhagenjs.dk> and tell us about your topic, and we will try to fit you in.
 
