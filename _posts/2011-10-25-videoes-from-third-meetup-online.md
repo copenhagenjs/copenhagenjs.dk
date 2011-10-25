@@ -5,6 +5,9 @@ layout: post
 
 As promised we have uploaded the [videos](http://video.copenhagenjs.dk/channel/3712184/october-meetup) from our third meetup to our video site.
 
+We also has [@strusia](twitter.com/strusia) around to take some pictures, which can be found at [Flickr](http://www.flickr.com/photos/sylwiaerhardt/sets/72157627853259761/)
+
+
 **Slides from the presentations**
 
 * [Peter Müller: One-color.js](http://mntr.dk/one-color/slides/CPHJS-Oct2011/#intro)
