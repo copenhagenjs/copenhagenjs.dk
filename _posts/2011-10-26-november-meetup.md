@@ -28,4 +28,4 @@ It can be tricky to find so please note that Google Maps map of the area is outd
 
 ## RSVP
 
-To get an indication of how many are attending, please visit the [Copenhagen JS November Lanyrd page](http://lanyrd.com/2011/cphjs-november/) and let us know if you're attending. Nothing is binding, we just need to know rougly how many that will attend.
+To get an indication of how many are attending, please visit the [Copenhagen JS November Lanyrd page](http://lanyrd.com/2011/cphjs-november/) and let us know if you're attending. Nothing is binding, we just need to know roughly how many that will attend.

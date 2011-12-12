@@ -23,4 +23,4 @@ We could still use a couple of speakers, so if you have something to share, a co
 
 ## RSVP
 
-To get an indication of how many are attending, please visit the [lanyrd page](http://lanyrd.com/2011/cphjs-september/) and let us know if you're attending. Nothing is binding, we just need to know rougly how many drinks to prepare.
+To get an indication of how many are attending, please visit the [lanyrd page](http://lanyrd.com/2011/cphjs-september/) and let us know if you're attending. Nothing is binding, we just need to know roughly how many drinks to prepare.
