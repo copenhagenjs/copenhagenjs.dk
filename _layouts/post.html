@@ -4,7 +4,7 @@ layout: default
 <div class="article">
 	<article>
 		<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-	    <div class="date">Posted on <a href="{{ page.url }}" title="Permalink for this post">{{ page.date | date_to_string }}</a></div>		
+	    <div class="date">Posted on <a href="{{ page.url }}" title="Permalink for this post">{{ page.date | date: "%Y-%m-%d" }}</a></div>		
 		{{ content }}
 	</article>
 </div>

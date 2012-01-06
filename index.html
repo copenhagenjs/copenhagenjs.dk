@@ -6,7 +6,7 @@ title: CopenhagenJS
 {% for post in site.posts limit:5 %}
 <div class="post">
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <div class="date">Posted on <a href="{{ post.url }}" title="Permalink for this post">{{ post.date | date_to_string }}</a></div>
+    <div class="date">Posted on <a href="{{ post.url }}" title="Permalink for this post">{{ post.date | date: "%Y-%m-%d" }}</a></div>
 	<div class="post_content">
 	  {{ post.content }}
 	</div>
