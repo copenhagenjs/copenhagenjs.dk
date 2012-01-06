@@ -8,7 +8,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>{{ page.title }} | CopenhagenJS</title>
 		{% if page.description %}
-			<meta name="description" content="">
+			<meta name="description" content="{{ page.description }}">
 		{% endif %}
 		
 		{% if page.author %}
@@ -17,15 +17,7 @@
 			<meta name="author" content="CopenhagenJS" />
 		{% endif %}
 
-		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<!-- CSS: implied media="all" -->
 		<link rel="stylesheet" href="/stylesheets/style.css" />
-
-		<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 		<meta name="robots" content="index,follow" />
 		<meta name="mssmarttagspreventparsing" content="true" />
@@ -34,51 +26,46 @@
 		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="CopenhagenJS ATOM Feed" />
 	</head>
 	<body>
-	  <div id="container">
-		<header role="navigation">
-			<a href="/" class="home">CopenhagenJS</a>
-			<ul class="nav">
-				<li><a href="/">Blog</a></li>
-				<li><a href="/archives.html">Archives</a></li>
-				<li><a href="/about/">About</a></li>
-			</ul>
-		</header>
-		
-		<div id="main" role="main">
-			<div class="content">
-				{{ content }}
-			</div>
-
-			<div class="sidebar">
-				<h3>Meetup</h3>
-				<p>The CopenhagenJS meetup is on every third Thursday of the month at 19.00</p>
-
-				<h3>Announcements</h3>
-				<p>
-					All announcements will be crossposted on <a href="/">copenhagenjs.dk</a>, the 
-					<a href="http://groups.google.com/group/copenhagenjs/">Google Group</a> and on
-					<a href="https://twitter.com/#!/CopenhagenJS">Twitter</a>.
-				</p>
-
-				<h3>Elsewhere</h3>
-				<ul>
-					<li><a href="https://twitter.com/copenhagenjs">@CopenhagenJS</a></li>
-					<li><a href="http://groups.google.com/group/copenhagenjs/">Google Group</a></li>
+		<div id="container">
+			<header role="navigation">
+				<a href="/" class="home">CopenhagenJS</a>
+				<ul class="nav">
+					<li><a href="/">Blog</a></li>
+					<li><a href="/archives.html">Archives</a></li>
+					<li><a href="/about/">About</a></li>
 				</ul>
-				
-				<p class="promotejs">
-					<a href='https://developer.mozilla.org/en/JavaScript' title='JS API'><img src='/images/promotejsv.gif' height='280' width='160' alt='JS API'/></a>
-				</p>
-			</div>
-		</div>
-
+			</header>
 		
-		<footer>
-			&copy; CopenhagenJS, unless otherwise noted.
-		</footer>
-	  </div>
+			<div id="main" role="main">
+				<div class="content">
+					{{ content }}
+				</div>
+				<div class="sidebar">
+					<h3>Meetup</h3>
+					<p>The CopenhagenJS meetup is on every third Thursday of the month at 19.00</p>
 
-	  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+					<h3>Announcements</h3>
+					<p>
+						All announcements will be crossposted on <a href="/">copenhagenjs.dk</a>, the 
+						<a href="http://groups.google.com/group/copenhagenjs/">Google Group</a> and on
+						<a href="https://twitter.com/#!/CopenhagenJS">Twitter</a>.
+					</p>
+
+					<h3>Elsewhere</h3>
+					<ul>
+						<li><a href="https://twitter.com/copenhagenjs">@CopenhagenJS</a></li>
+						<li><a href="http://groups.google.com/group/copenhagenjs/">Google Group</a></li>
+					</ul>
+				
+					<p class="promotejs">
+						<a href='https://developer.mozilla.org/en/JavaScript' title='JS API'><img src='/images/promotejsv.gif' height='280' width='160' alt='JS API'/></a>
+					</p>
+				</div>
+			</div>
+			<footer>
+				&copy; CopenhagenJS, unless otherwise noted.
+			</footer>
+	  	</div>
 		<script>
 			var _gaq = _gaq || [];
 		 	_gaq.push(['_setAccount', 'UA-24633486-1']);
