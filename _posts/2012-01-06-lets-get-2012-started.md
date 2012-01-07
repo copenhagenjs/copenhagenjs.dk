@@ -9,7 +9,7 @@ In order to allow you to plan your attendance, we've added all the meetings for 
 
 The first four meetings of the year will be:
 
-* [2012-01-19 19:00](http://lanyrd.com/2012/copenhagenjs-january/), no venue yet
+* [2012-01-19 19:00](http://lanyrd.com/2012/copenhagenjs-january/), hosted by [23 Video](http://www.23video.com)
 * [2012-02-16 19:00](http://lanyrd.com/2012/copenhagenjs-february/), no venue yet, we're looking to have a meetup in Malmö
 * [2012-03-15 19:00](http://lanyrd.com/2012/copenhagenjs-march/), no venue yet
 * [2012-04-19 19:00](http://lanyrd.com/2012/copenhagenjs-april/), no venue yet
