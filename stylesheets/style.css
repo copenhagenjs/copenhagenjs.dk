@@ -127,6 +127,10 @@ body {
 	font-size: 1.4em;
 }
 
+.content .date, .content .date a{
+	color:#777
+}
+
 .sidebar h3 {
 	margin: 20px 0 0;
 }
