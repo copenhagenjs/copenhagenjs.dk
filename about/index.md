@@ -5,7 +5,7 @@ layout: default
 
 CopenhagenJS is a JavaScript user group in Copenhagen and the Öresund region. On the third thursday of every month we meet and share our knowledge, enthusiasm and war stories with each other.
 
-A wide range of backgrounds are represented in the group, from occasional users to JavaScript and front end experts. Everyone with an interest in JavaScript are welcome.
+A wide range of backgrounds are represented in the group, from occasional users to JavaScript and front end experts. Everyone with an interest in JavaScript is welcome.
 
 In a typical meeting, we start at 19:00. There's a quick introduction, everyone grabs a drink of some sort. After that we usually have 3-4 talks of 15-30 minutes.
 
