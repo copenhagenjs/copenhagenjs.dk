@@ -13,6 +13,8 @@ We are pleased to announce the January CopenhagenJS meetup for Thursday next wee
 ### Talks
 
 * Steffen Christensen, 23video: [Crash your browser, not your upload](http://lanyrd.com/2012/copenhagenjs-january/smxyd/)
+* Your talk here?
+
 
 ### Show us your toolbox! 
 
