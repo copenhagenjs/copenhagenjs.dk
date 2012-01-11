@@ -26,6 +26,12 @@ We still have two free slots for this new form of presentation!
 
 If you have something to share, do let us know at <hello@copenhagenjs.dk>!
 
+### Competition
+
+Don't forget! We're still running our raffle for a ticket to [Front Trends 2012](http://2012.front-trends.com/). Detais are in [the thread on the mailinglist](http://groups.google.com/group/copenhagenjs/browse_thread/thread/29657152efd372a5). If you sign up **right now**, you have a 20% chance of winning!
+
+The lucky winner will be drawn at the end of this meetup.
+
 ## Where?
 
 The meetup will be be hosted by **[23video](http://23video.com/)**.
