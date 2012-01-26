@@ -10,7 +10,7 @@ We are pleased to announce the February CopenhagenJS meetup.
 
 ### Talks
 
-* [Anders Ringqvist](twitter.com/anddoutoi): Understanding undefined
+* [Anders Ringqvist](http://twitter.com/anddoutoi): Understanding undefined
 
 We could still use a speaker or two, so if you have something to share, a cool project to show off, do drop us a note at <hello@copenhagenjs.dk> and tell us about your topic, and we will try to fit you in.
 
