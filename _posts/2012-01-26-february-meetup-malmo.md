@@ -4,7 +4,7 @@ layout: post
 ---
 We are pleased to announce the February CopenhagenJS meetup.  
 
-**Thursday 2012-02-19 at 19.00.**
+**Thursday 2012-02-16 at 19.00.**
 
 ## Agenda
 
