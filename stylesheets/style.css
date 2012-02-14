@@ -131,6 +131,10 @@ body {
 	color:#777
 }
 
+.sidebar {
+	font-size: 90%;
+}
+
 .sidebar h3 {
 	margin: 20px 0 0;
 }
@@ -138,6 +142,7 @@ body {
 .sidebar p, .sidebar ul {
 	margin: 0 0 5px;
 } 
+
 
 p.promotejs {
 	margin: 30px 0 0;
