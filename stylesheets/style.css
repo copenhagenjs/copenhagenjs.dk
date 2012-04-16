@@ -105,6 +105,14 @@ body {
 
 
 
+.content .post {
+	margin-bottom: 60px;
+}
+
+.content .post:last-child {
+	margin-bottom: 0px !important;
+}
+
 .content h1 {
 	font-size: 1.8em;
 }
