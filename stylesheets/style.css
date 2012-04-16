@@ -110,7 +110,7 @@ body {
 }
 
 .content .post:last-child {
-	margin-bottom: 0px !important;
+	margin-bottom: 0px;
 }
 
 .content h1 {
