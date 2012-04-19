@@ -8,6 +8,7 @@ We are pleased to announce the April CopenhagenJS meetup. The meetup takes place
 ## Talks
 
 * [@jonasbn](https://twitter.com/#!/jonasbn): Untitled
+* [Martin Jespersen](http://stackoverflow.com/users/572680/martin-jespersen): Pageload performance, profiling & optimization
 
 We could still use a speaker or two, so if you have something to share, a cool project to show off, do drop us a note at <hello@copenhagenjs.dk> and tell us about your topic, and we will try to fit you in.
 
