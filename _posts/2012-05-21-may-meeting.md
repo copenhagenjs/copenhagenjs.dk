@@ -10,6 +10,7 @@ A rather late announcement on this site: this months meetup will be on Thursday 
 
 * "From Flash to Canvas - a penchant for black holes" by [Patric Jonsson](http://flashpatric.com)
 * "Getting started with RequireJS" by [Morgan Roderick](http://roderick.dk) 
+* "Node.js: what, why, when and how" by [David Björklund](http://davidbjorklund.se)
 
 We could still use a speaker or two, so if you have something to share, a cool project to show off, do drop us a note at <hello@copenhagenjs.dk> and tell us about your topic, and we will try to fit you in.
 
