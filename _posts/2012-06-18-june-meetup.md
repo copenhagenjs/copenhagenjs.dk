@@ -15,7 +15,7 @@ This months meetup will be on Thursday 2012-06-21 at 19:00. The event is hosted 
 
 ## Where?
 
-[Kanonbådsvej 2, 1437 Copenhagen K](http://maps.google.com/maps?q=Kanonb%C3%A5dsvej+2,+Copenhagen,+Denmark+(Valtech)&hl=en&ie=UTF8&sll=55.679351,12.606425&sspn=0.011614,0.033023)
+[Kanonbådsvej 2, 1437 Copenhagen K](http://maps.google.com/maps?q=Kanonb%C3%A5dsvej+2,+Copenhagen,+Denmark&hl=en&ie=UTF8&sll=55.679351,12.606425&sspn=0.011614,0.033023)
 
 ## RSVP
 
