@@ -9,6 +9,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.9)
     addressable (2.3.2)
     albino (1.3.3)
       posix-spawn (>= 0.3.6)
@@ -57,6 +58,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth
   heroku
   jekyll
   rack-jekyll!
