@@ -45,6 +45,7 @@ GEM
     posix-spawn (0.3.6)
     rack (1.4.1)
     raindrops (0.10.0)
+    rdiscount (1.6.8)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubyzip (0.9.9)
@@ -62,4 +63,5 @@ DEPENDENCIES
   heroku
   jekyll
   rack-jekyll!
+  rdiscount
   unicorn
