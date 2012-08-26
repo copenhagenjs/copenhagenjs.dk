@@ -1,13 +1,2 @@
 /_site/
-.DS_Store
-.idea/.name
-.idea/copenhagenjs.dk.iml
-.idea/dictionaries/auchenberg.xml
-.idea/encodings.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/projectCodeStyle.xml
-.idea/vcs.xml
-.idea/workspace.xml
-images/.DS_Store
-images/ie6_logo.jpg
+public/*
