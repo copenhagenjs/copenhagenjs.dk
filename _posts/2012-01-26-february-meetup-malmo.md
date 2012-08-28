@@ -1,5 +1,5 @@
 ---
-title: February meetup
+title: February meetup hosted by Tretton37
 layout: post
 ---
 We are pleased to announce the February CopenhagenJS meetup.  
