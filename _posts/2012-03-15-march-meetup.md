@@ -1,5 +1,5 @@
 ---
-title: March meetup
+title: March meetup at Huubla
 layout: post
 ---
 We are pleased to announce the March CopenhagenJS meetup.
