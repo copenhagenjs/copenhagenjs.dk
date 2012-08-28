@@ -4,7 +4,7 @@ layout: post
 author: Morgan Roderick
 ---
 
-We hope that you're all enjoying the summer and that you'll join us for the next meeting on Thursday, 2012-08-16 at 19.00. The event will be hostd by [e-conomic](http://www.e-conomic.dk/) at [Wildersgade 10B, 3.sal, 1408 København K](http://findvej.dk/Wildersgade10B,1408)
+We hope that you're all enjoying the summer and that you'll join us for the next meeting on Thursday, 2012-08-16 at 19.00. The event will be hosted by [e-conomic](http://www.e-conomic.dk/) at [Wildersgade 10B, 3.sal, 1408 København K](http://findvej.dk/Wildersgade10B,1408)
 
 ## Schedule
 
