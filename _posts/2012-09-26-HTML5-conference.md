@@ -1,6 +1,6 @@
 #HTML5 conference 
 
-Together with our friends at [Lat55](http://www.lat55.se/), CopenhagenJS organizes the HTML5 conference "Create The Web" in Copenhagen.
+Together with our friends at [Lat55](http://www.lat55.se/), CopenhagenJS organises the HTML5 conference "Create The Web" in Copenhagen.
 
 With HTML5 and CSS3, there's lots of new possibilities, but also a great need for new development tools. Adobe is very engaged in the open source tools that exist now and are coming. 
 Create The Web is a worldwide tour where Adobe's developers talk about the latest and greatest in web standards and web development tools. 
