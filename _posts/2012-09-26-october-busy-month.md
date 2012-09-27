@@ -9,6 +9,7 @@ October is going to be a very busy month for the Community, we are going to have
 So 
 
 ---
+
 October 11th — Couchbase event
 ----------------------------------------------
 
@@ -23,13 +24,25 @@ So, we are happy to organise a *bonus* event for the community in October.
 
 ### Schedule
 
-19.00 Welcome  
-19.15 Couchbase talk by J Chris Anderson  
-20.15 Hallway track (with beer) 
+<!-- Add this where you want the output to appear -->
+<div class="lanyrd-target-schedule">
+    <a href="http://lanyrd.com/2012/copenhagenjs-couchbase-bonus-event/schedule/"
+        class="lanyrd-schedule">
+        Schedule for CopenhagenJS - Couchbase bonus event on Lanyrd
+    </a>
+</div>
 
-22.00 Good night!
+There will be limited seating for this event, once we have final venue, we will open up registration. This will be announced via [@copenhagenjs](http://twitter.com/copenhagenjs).
 
-There will be limited seating for this event, once registration is sorted, there will be announcements via @copenhagenjs.
+<iframe  src="http://www.eventbrite.com/tickets-external?eid=4459081232&ref=etckt" frameborder="0" height="192" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+
+<!-- Add this where you want the output to appear -->
+<div class="lanyrd-target-participants">
+    <a href="http://lanyrd.com/2012/copenhagenjs-couchbase-bonus-event/attendees/"
+        class="lanyrd-participants">
+        Attendee list for CopenhagenJS - Couchbase bonus event on Lanyrd
+    </a>
+</div>
 
 ---
 
@@ -68,3 +81,5 @@ October 18th — CopenhagenJS Meeting
 Our regular scheduled meeting will be on the 18th, as it's the third thursday of the month.
 More details to follow.
 
+<!-- Add this to the end of body -->
+<script src="http://cdn.lanyrd.net/badges/embed-v1.min.js"></script>
