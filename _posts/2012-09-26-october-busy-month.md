@@ -6,14 +6,14 @@ author: Björn Söderqvist
 
 October is going to be a very busy month for the Community, we are going to have at least three events, and have an opportunity for yet another talk.
 
-So 
+So mark your calendar for October 11th, 16th and 18th:
 
 ---
 
 October 11th — Couchbase event
 ----------------------------------------------
 
-J Chris Anderson (@jchris), co-founder of [Couchbase](http://www.couchbase.com) will be dropping by in Copenhagen and has offered to give a talk at CopenhagenJS
+J Chris Anderson [http://twitter.com/jchris](@jchris), co-founder of [Couchbase](http://www.couchbase.com) will be dropping by in Copenhagen and has offered to give a talk at CopenhagenJS.
 
 So, we are happy to organise a *bonus* event for the community in October.
 
@@ -34,7 +34,7 @@ So, we are happy to organise a *bonus* event for the community in October.
 
 There will be limited seating for this event, once we have final venue, we will open up registration. This will be announced via [@copenhagenjs](http://twitter.com/copenhagenjs).
 
-<iframe  src="http://www.eventbrite.com/tickets-external?eid=4459081232&ref=etckt" frameborder="0" height="192" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+<iframe src="http://www.eventbrite.com/tickets-external?eid=4459081232&ref=etckt" frameborder="0" height="192" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
 
 <!-- Add this where you want the output to appear -->
 <div class="lanyrd-target-participants">
@@ -62,7 +62,7 @@ Create The Web is a worldwide tour where Adobe's developers talk about the lates
 
 **When:** Tuesday, October 16, 2012 from 6.00 PM
 
-**Where:** ProData, Stamholmen 157, 2650 Hvidovre, Denmark. Transports will be available from Stortorget, Malmö, Sweden at 5.00 PM
+**Where:** [http://prodata.dk/](ProData), Stamholmen 157, 2650 Hvidovre, Denmark. Transports will be available from Stortorget, Malmö, Sweden at 5.00 PM
 
 **How Much:** Free and open to the public (Limited space and Registration required)
 
