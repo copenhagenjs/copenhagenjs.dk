@@ -4,9 +4,17 @@ layout: post
 author: Björn Söderqvist
 ---
 
-October is going to be a very busy month for the Community, we are going to have at least three events, and have an opportunity for yet another talk.
+**Newsflash: We now also have a fourth event on MongoDB, the 29th! Scroll down for details and [sign up](http://simpleeventsignup.com/event/14498/signup/attendees?signup_token=1f4fd13ac194b6c)!**
 
-So mark your calendar for October 11th, 16th and 18th:
+---
+
+October is going to be a very busy month for the Community, we are going to have at least three **four** events, and have an opportunity for yet another talk.
+
+So mark your calendar for 
+* October 11th: Couchbase event 
+* October 16th: HTML5 conference
+* October 18th: CopenhagenJS meetup
+* October 29th: MongoDB event
 
 ---
 
@@ -74,8 +82,9 @@ To be announced!
 
 <iframe src="http://www.eventbrite.com/tickets-external?eid=4432194814&amp;ref=etckt" frameborder="0" marginwidth="5" marginheight="5" scrolling="auto" width="100%" height="192"></iframe>
 
+
 ---
-October 18th — CopenhagenJS Meeting
+October 18th — CopenhagenJS meetup
 ----------------------------------------------
 
 Our regular scheduled meeting will be on the 18th, as it's the third thursday of the month.
@@ -83,3 +92,22 @@ More details to follow.
 
 <!-- Add this to the end of body -->
 <script src="http://cdn.lanyrd.net/badges/embed-v1.min.js"></script>
+
+
+
+---
+October 29th — MongoDB event
+----------------------------------------------
+
+##Ensuring High Availability for Real-time Analytics
+
+Real time analytics is a compelling use case for MongoDB, but only if everything is up and running smoothly. We'll talk about how to set up and configure MongoDB to maintain high performance and redundancy. This will cover what to consider for high write throughput performance from hardware configuration through to the use of replica sets, multi-data centre deployments, monitoring and sharding to ensure your database is fast and stays online.
+
+[**David Mytton**](http://twitter.com/davidmytton) is the founder of Server Density. He has been programming in PHP and Python for over 10 years, regularly speaks about MongoDB (including running the London MongoDB User Group), co-founded the Open Rights Group and can often be found cycling in London or drinking tea in Japan.
+
+**When:** Monday October 29th, from 7.00 PM.
+
+**Where:** This meetup is hosted by [Foo Café](http://www.foocafe.org/), Media Evolution City at Stora Varvsgatan 6a, Malmö
+
+Price: **Free** 
+##[Sign up](http://simpleeventsignup.com/event/14498/signup/attendees?signup_token=1f4fd13ac194b6c)
