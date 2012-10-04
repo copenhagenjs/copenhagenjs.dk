@@ -11,6 +11,7 @@ author: Björn Söderqvist
 October is going to be a very busy month for the Community, we are going to have at least three **four** events, and have an opportunity for yet another talk.
 
 So mark your calendar for 
+
 * October 11th: Couchbase event 
 * October 16th: HTML5 conference
 * October 18th: CopenhagenJS meetup
