@@ -8,7 +8,7 @@ author: Björn Söderqvist
 
 ---
 
-October is going to be a very busy month for the Community, we are going to have at least three **four** events, and have an opportunity for yet another talk.
+October is going to be a very busy month for the Community, we are going to have **four** events, and have an opportunity for yet another talk.
 
 So mark your calendar for 
 
