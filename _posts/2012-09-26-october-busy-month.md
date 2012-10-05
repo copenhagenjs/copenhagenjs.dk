@@ -28,7 +28,7 @@ So, we are happy to organise a *bonus* event for the community in October.
 
 **When:** 2012-10-11 19:00
 
-**Where:** Central Copenhagen, final confirmation pending
+**Where:** [http://foundershouse.dk/](Founders House), Gothersgade 8B, 2fl, Boltens Gaard, 1123 Copenhagen.
 
 
 ### Schedule
@@ -41,7 +41,7 @@ So, we are happy to organise a *bonus* event for the community in October.
     </a>
 </div>
 
-There will be limited seating for this event, once we have final venue, we will open up registration. This will be announced via [@copenhagenjs](http://twitter.com/copenhagenjs).
+There is limited seating for this event, register below. 
 
 <iframe src="http://www.eventbrite.com/tickets-external?eid=4459081232&ref=etckt" frameborder="0" height="192" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
 
