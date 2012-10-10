@@ -22,13 +22,13 @@ So mark your calendar for
 October 11th — Couchbase event
 ----------------------------------------------
 
-J Chris Anderson [http://twitter.com/jchris](@jchris), co-founder of [Couchbase](http://www.couchbase.com) will be dropping by in Copenhagen and has offered to give a talk at CopenhagenJS.
+J Chris Anderson [@jchris](http://twitter.com/jchris), co-founder of [Couchbase](http://www.couchbase.com) will be dropping by in Copenhagen and has offered to give a talk at CopenhagenJS.
 
 So, we are happy to organise a *bonus* event for the community in October.
 
 **When:** 2012-10-11 19:00
 
-**Where:** [http://foundershouse.dk/](Founders House), Gothersgade 8B, 2fl, Boltens Gaard, 1123 Copenhagen.
+**Where:** [Founders House](http://foundershouse.dk/), Gothersgade 8B, 2fl, Boltens Gaard, 1123 Copenhagen.
 
 
 ### Schedule
@@ -71,7 +71,7 @@ Create The Web is a worldwide tour where Adobe's developers talk about the lates
 
 **When:** Tuesday, October 16, 2012 from 6.00 PM
 
-**Where:** [http://prodata.dk/](ProData), Stamholmen 157, 2650 Hvidovre, Denmark. Transports will be available from Stortorget, Malmö, Sweden at 5.00 PM
+**Where:** [ProData](http://prodata.dk/), Stamholmen 157, 2650 Hvidovre, Denmark. Transports will be available from Stortorget, Malmö, Sweden at 5.00 PM
 
 **How Much:** Free and open to the public (Limited space and Registration required)
 
