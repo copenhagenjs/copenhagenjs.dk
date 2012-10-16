@@ -35,10 +35,10 @@ So, we are happy to organise a *bonus* event for the community in October.
 
 <!-- Add this where you want the output to appear -->
 <div class="lanyrd-target-schedule">
-    <a href="http://lanyrd.com/2012/copenhagenjs-couchbase-bonus-event/schedule/"
-        class="lanyrd-schedule">
-        Schedule for CopenhagenJS - Couchbase bonus event on Lanyrd
-    </a>
+	<a href="http://lanyrd.com/2012/copenhagenjs-couchbase-bonus-event/schedule/"
+		class="lanyrd-schedule">
+		Schedule for CopenhagenJS - Couchbase bonus event on Lanyrd
+	</a>
 </div>
 
 There is limited seating for this event, register below. 
@@ -47,10 +47,10 @@ There is limited seating for this event, register below.
 
 <!-- Add this where you want the output to appear -->
 <div class="lanyrd-target-participants">
-    <a href="http://lanyrd.com/2012/copenhagenjs-couchbase-bonus-event/attendees/"
-        class="lanyrd-participants">
-        Attendee list for CopenhagenJS - Couchbase bonus event on Lanyrd
-    </a>
+	<a href="http://lanyrd.com/2012/copenhagenjs-couchbase-bonus-event/attendees/"
+		class="lanyrd-participants">
+		Attendee list for CopenhagenJS - Couchbase bonus event on Lanyrd
+	</a>
 </div>
 
 ---
@@ -89,11 +89,25 @@ October 18th — CopenhagenJS meetup
 ----------------------------------------------
 
 Our regular scheduled meeting will be on the 18th, as it's the third thursday of the month.
-More details to follow.
 
-<!-- Add this to the end of body -->
-<script src="http://cdn.lanyrd.net/badges/embed-v1.min.js"></script>
+<!-- Add this where you want the output to appear -->
+<div class="lanyrd-target-schedule">
+	<a href="http://lanyrd.com/2012/copenhagenjs-october/schedule/"
+		class="lanyrd-schedule"
+		data-lanyrd-abstracts
+		data-lanyrd-truncateabstracts="60"
+		data-lanyrd-speakers
+		data-lanyrd-speakerlabels>
+		Schedule for CopenhagenJS — October 2012 on Lanyrd
+	</a>
+</div>
 
+<div class="lanyrd-target-participants">
+	<a href="http://lanyrd.com/2012/copenhagenjs-october/attendees/"
+		class="lanyrd-participants">
+		Attendee list for CopenhagenJS — October 2012 on Lanyrd
+	</a>
+</div>
 
 
 ---
@@ -111,4 +125,8 @@ Real time analytics is a compelling use case for MongoDB, but only if everything
 **Where:** This meetup is hosted by [Foo Café](http://www.foocafe.org/), Media Evolution City at Stora Varvsgatan 6a, Malmö
 
 Price: **Free** 
-##[Sign up](http://simpleeventsignup.com/event/14498/signup/attendees)
+##[Sign up](http://simpleeventsignup.com/event/14498/signup/attendees?signup_token=1f4fd13ac194b6c)
+
+
+<!-- Add this to the end of body -->
+<script src="http://cdn.lanyrd.net/badges/embed-v1.min.js"></script>
