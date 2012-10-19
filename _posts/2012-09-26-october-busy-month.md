@@ -111,4 +111,4 @@ Real time analytics is a compelling use case for MongoDB, but only if everything
 **Where:** This meetup is hosted by [Foo Café](http://www.foocafe.org/), Media Evolution City at Stora Varvsgatan 6a, Malmö
 
 Price: **Free** 
-##[Sign up](http://simpleeventsignup.com/event/14498/signup/attendees?signup_token=1f4fd13ac194b6c)
+##[Sign up](http://simpleeventsignup.com/event/14498/signup/attendees)
