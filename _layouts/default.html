@@ -10,7 +10,7 @@
 		{% if page.description %}
 			<meta name="description" content="{{ page.description }}">
 		{% endif %}
-		
+
 		{% if page.author %}
 			<meta name="author" content="{{ page.author }}" />
 		{% else %}
@@ -21,7 +21,7 @@
 
 		<meta name="robots" content="index,follow" />
 		<meta name="mssmarttagspreventparsing" content="true" />
-		
+
 		<!-- TODO: use FeedBurner -->
 		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="CopenhagenJS ATOM Feed" />
 	</head>
@@ -35,7 +35,7 @@
 					<li><a href="/about/">About</a></li>
 				</ul>
 			</header>
-		
+
 			<div id="main" role="main">
 				<div class="content">
 					{{ content }}
@@ -43,11 +43,12 @@
 				<div class="sidebar">
 					<h3>Meetup</h3>
 					<p>We meet every third Thursday of the month at 19.00.</p>
+					<p><a href="http://lanyrd.com/series/copenhagenjs/save-to-calendar/">Subscribe to our calendar</a></p>
           {% include upcoming.md %}
-					
+
           <h3>Announcements</h3>
 					<p>
-						All announcements will be crossposted on <a href="/">copenhagenjs.dk</a>, the 
+						All announcements will be crossposted on <a href="/">copenhagenjs.dk</a>, the
 						<a href="http://groups.google.com/group/copenhagenjs/">Google Group</a> and on
 						<a href="https://twitter.com/#!/CopenhagenJS">Twitter</a>.
 					</p>
@@ -58,7 +59,7 @@
 						<li><a href="http://groups.google.com/group/copenhagenjs/">Mailinglist</a></li>
 						<li><a href="irc://irc.freenode.net/copenhagenjs">#copenhagenjs on irc.freenode.net</a></li>
 					</ul>
-				
+
 					<p class="promotejs">
 						<a href='https://developer.mozilla.org/en/JavaScript' title='JS API'><img src='/images/promotejsv.gif' height='280' width='160' alt='JS API'/></a>
 					</p>
@@ -78,7 +79,7 @@
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
-		</script>		
+		</script>
 		<script src="http://cdn.lanyrd.net/badges/embed-v1.min.js"></script>
 	</body>
 </html>
