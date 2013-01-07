@@ -6,6 +6,8 @@ author: Peter Müller
 
 Dear javascripters of the Copenhagen area, welcome to 2013. If 2012 was any indication of what the future has in store for this community, we are looking into a bright and very busy future.
 
+Already this january we have something special in store for you: [Future of Internet Explorer](/2013/01/03/special-future-internet-explorer-event/)
+
 New years usually mean fresh starts, and to give CopenhagenJS the best start possible we would like to welcome newcomers and refresh the memories of regulars with a few bits of information to help us organize 2013.
 
 Join the community
@@ -25,35 +27,4 @@ If you work at, or know any venue that would be interested in hosting a Copenhag
 
 See you in 2013
 ---------------
-We hope to see you soon and many times over during 2013. Remember to spread the word and bring your friends so we can meet all of the awesome people interested in javascript and front end technologies in the Copenhagen area.
-
----
-January 17th - CopenhagenJS meetup at Foo Café
-----------------------------------------------
-
-The next CopenhagenJS meetup will be on Thursday 2013-01-17 at 19.00. The event will be hosted by [Foo Café](http://foocafe.org/) at [Stora Varvsgatan 6a in Malmö, Sweden](http://kartor.eniro.se/m/naxed).
-
-## Schedule
-
-<div class="lanyrd-target-schedule">
-    <a href="http://lanyrd.com/2013/copenhagenjs-january/schedule/"
-        class="lanyrd-schedule"
-        data-lanyrd-abstracts
-        data-lanyrd-truncateabstracts="50"
-        data-lanyrd-speakers
-        data-lanyrd-speakerlabels>
-        Schedule for CopenhagenJS — January 2013 on Lanyrd
-    </a>
-</div>
-
-## Attending
-
-Please visit the [Lanyrd page](http://lanyrd.com/2013/copenhagenjs-january/) and let us know if you're attending. It greatly helps us coordinate with the venue to set out chairs, drinks, etc.
-
-<div class="lanyrd-target-participants">
-    <a href="http://lanyrd.com/2013/copenhagenjs-january/attendees/"
-        class="lanyrd-participants"
-        data-lanyrd-limit="30">
-        Attendee list for CopenhagenJS — January 2013 on Lanyrd
-    </a>
-</div>
+We hope to see you soon and many times over during 2013. Remember to spread the word and bring your friends so we can meet all of the awesome people interested in javascript and front end technologies in the Copenhagen area. The next meetup is [January 17th at Foo Café](/2013/01/02/january-meetup/), See you there?
