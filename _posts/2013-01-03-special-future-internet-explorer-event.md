@@ -20,9 +20,12 @@ We expect to have space for around **60 people**, and this to **go quick**, so p
 
 <!-- Add this where you want the output to appear -->
 <div class="lanyrd-target-schedule">
-    <a href="http://lanyrd.com/2013/copenhagenjs-2/schedule/"
-        class="lanyrd-schedule">
-        Schedule for CopenhagenJS - Couchbase bonus event on Lanyrd
+    <a href="http://lanyrd.com/2013/copenhagenjs-special-internet-explorer-event/schedule/"
+        class="lanyrd-schedule"
+        data-lanyrd-abstracts
+        data-lanyrd-speakers
+        data-lanyrd-speakerlabels>
+        Schedule for CopenhagenJS — Special Internet Explorer event on Lanyrd
     </a>
 </div>
 
@@ -30,13 +33,10 @@ We expect to have space for around **60 people**, and this to **go quick**, so p
 
 <!-- Add this where you want the output to appear -->
 <div class="lanyrd-target-participants">
-    <a href="http://lanyrd.com/2013/copenhagenjs-2/attendees/"
-        class="lanyrd-participants">
-        Attendee list for CopenhagenJS - Couchbase bonus event on Lanyrd
+    <a href="http://lanyrd.com/2013/copenhagenjs-special-internet-explorer-event/attendees/"
+        class="lanyrd-participants"
+        data-lanyrd-labels>
+        Attendee list for CopenhagenJS — Special Internet Explorer event on Lanyrd
     </a>
 </div>
-
-
-We are off to a great start in 2013!
-
 
