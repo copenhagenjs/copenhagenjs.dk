@@ -12,7 +12,7 @@ Jeff Burtoft, [@boyofgreen](https://twitter.com/boyofgreen), HTML5 Evangelist at
 
 This is the first time we someone close to the IE team in town, so start preparing your IE questions for Jeff :)
 
-The event will take place at **28th January 2013, 19:00**, in a yet to be announced venue in central Copenhagen.
+The event will take place at **28th January 2013, 19:00**, in the [Trustpilot office at Trommesalen 5, 3. sal, 1614](http://findvej.dk/Trommesalen5,1614).
 
 We expect to have space for around **60 people**, and this to **go quick**, so please RSVP to the event in Lanyrd to get your spot.
 
