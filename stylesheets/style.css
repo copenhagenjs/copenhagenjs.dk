@@ -33,17 +33,17 @@ body {
 			margin: 0;
 			padding: 0;
 		}
-	
+
 			#container > header ul.nav li {
 				display: inline-block;
 				margin: 0 10px 0;
-		
+
 			}
 				#container > header ul.nav li a {
 					display: block;
 					padding: 8px 24px;
 				}
-			
+
 					#container > header ul.nav li a:hover {
 						color: #111;
 					}
@@ -69,7 +69,7 @@ body {
 	-webkit-box-pack: start;
 	-moz-box-pack: start;
 	box-pack: start;
-	
+
 	width: 100%;
 }
 
@@ -84,7 +84,7 @@ body {
 
 		margin: 0 40px 0 0;
 	}
-	
+
 	#main .sidebar {
 		-webkit-box-flex: 0;
 		-moz-box-flex: 0;
@@ -93,10 +93,10 @@ body {
 		-webkit-box-ordinal-group: 1;
 		-moz-box-ordinal-group: 1;
 		box-ordinal-group: 1;
-		
+
 		width: 250px;
 	}
-	
+
 #container > footer {
 	color: #666;
 	font-size: 12px;
@@ -129,7 +129,7 @@ body {
 .content h1 a:hover:after {
 	color: #999;
 	content: '#';
-} 
+}
 
 .content h2 {
 	font-size: 1.4em;
@@ -144,15 +144,31 @@ body {
 }
 
 .sidebar h3 {
-	margin: 20px 0 0;
+	margin: 20px 0 10px 0;
 }
 
 .sidebar p, .sidebar ul {
 	margin: 0 0 5px;
-} 
+}
 
 
 p.promotejs {
 	margin: 30px 0 0;
 	text-align: center;
+}
+
+.upcoming-meetings .lanyrd-target-guide {
+	margin-top: 20px;
+}
+
+.upcoming-meetings .lanyrd-target-guide h1 {
+	display: none;
+}
+
+.upcoming-meetings .lanyrd-target-guide .tags {
+	display: none;
+}
+
+.upcoming-meetings .lanyrd-guide-embed > p > a {
+	display: none;
 }
