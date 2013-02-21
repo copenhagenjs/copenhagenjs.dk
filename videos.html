@@ -1,0 +1,78 @@
+---
+title: Videos
+layout: default
+---
+
+
+  <style>
+    #thumbs { margin-top: 20px; overflow: auto; height: 500px; width: 598px; border: 1px solid #E7E7DE; padding: 0; float: left; }
+
+    #thumbs ul { list-style-type: none;padding: 10px; margin:0;}
+    #thumbs ul li { height: 75px; margin-bottom: 10px; }
+
+    .thumb { border: 0; float: left; width: 100px; height: 75px; background: url(http://a.vimeocdn.com/thumbnails/defaults/default.75x100.jpg); margin-right: 10px; }
+
+    #embed { background-color: #E7E7DE; height: 334px; width: 600px; float: left; }
+
+    #portrait { float: left; margin-right: 5px; max-width: 100px; }
+
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script>
+
+    var apiEndpoint = 'http://vimeo.com/api/v2/';
+    var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json'
+    var oEmbedCallback = 'switchVideo';
+    var videosCallback = 'setupGallery';
+    var vimeoUsername = 'copenhagenjs';
+
+    // Get the user's videos
+    $(document).ready(function() {
+      $.getScript(apiEndpoint + vimeoUsername + '/videos.json?callback=' + videosCallback);
+    });
+
+    function getVideo(url) {
+      $.getScript(oEmbedEndpoint + '?url=' + url + '&width=600&height=334&callback=' + oEmbedCallback);
+    }
+
+    function setupGallery(videos) {
+
+      // Load the first video
+      getVideo(videos[0].url);
+
+      // Add the videos to the gallery
+      for (var i = 0; i < videos.length; i++) {
+        var html = '<li><a href="' + videos[i].url + '"><img src="' + videos[i].thumbnail_medium + '" class="thumb" />';
+        html += '<p>' + videos[i].title + '</p></a></li>';
+        $('#thumbs ul').append(html);
+      }
+
+      // Switch to the video when a thumbnail is clicked
+      $('#thumbs a').click(function(event) {
+        event.preventDefault();
+        getVideo(this.href);
+        return false;
+      });
+
+    }
+
+    function switchVideo(video) {
+      $('#embed').html(unescape(video.html));
+    }
+
+  </script>
+
+<h1>Latest videos from meetups</h1>
+
+<div id="stats">
+  <h2></h2>
+  <div style="clear: both;"></div>
+</div>
+
+<div id="wrapper">
+  <div id="embed"></div>
+  <div id="thumbs">
+    <ul></ul>
+  </div>
+</div>
