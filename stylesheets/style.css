@@ -169,3 +169,18 @@ footer {
 .upcoming-meetings .lanyrd-guide-embed > p > a {
 	display: none;
 }
+
+.flickr_badge_wrapper {
+	text-align: center;
+}
+
+.flickr_badge_image {
+	margin: 10px;
+	height: 240px;
+	width: 240px;
+	display: inline-block;
+}
+
+.flickr_badge_image img {
+	border: 1px solid black;
+}
