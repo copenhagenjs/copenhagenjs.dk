@@ -1,6 +1,5 @@
-
   var apiEndpoint = 'http://vimeo.com/api/v2/';
-  var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json'
+  var oEmbedEndpoint = 'http://vimeo.com/api/oembed.json';
   var oEmbedCallback = 'switchVideo';
   var videosCallback = 'setupGallery';
   var vimeoUsername = 'copenhagenjs';
@@ -38,4 +37,3 @@
   function switchVideo(video) {
     $('.videos .embed').html(unescape(video.html));
   }
-

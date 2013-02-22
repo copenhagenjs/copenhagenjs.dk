@@ -185,7 +185,6 @@ footer {
 	border: 1px solid black;
 }
 
-
 .videos .thumbs { margin-top: 20px; overflow: auto; height: 500px; width: 598px; border: 1px solid #E7E7DE; padding: 0; float: left; }
 
 .videos .thumbs ul { list-style-type: none;padding: 10px; margin:0;}
@@ -196,6 +195,3 @@ footer {
 .videos .embed { background-color: #E7E7DE; height: 334px; width: 600px; float: left; }
 
 .videos .portrait { float: left; margin-right: 5px; max-width: 100px; }
-
-
-
