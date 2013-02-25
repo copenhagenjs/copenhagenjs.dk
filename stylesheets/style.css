@@ -110,8 +110,12 @@ body {
 	margin: 20px 0 10px 0;
 }
 
-.sidebar p, .sidebar ul {
+.sidebar p {
 	margin: 0 0 5px;
+}
+
+.sidebar ul {
+	margin-left: 15px;
 }
 
 
