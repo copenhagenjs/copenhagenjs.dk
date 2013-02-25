@@ -3,6 +3,8 @@ title: About CopenhagenJS
 layout: default
 ---
 
+# About
+
 CopenhagenJS is a JavaScript user group in Copenhagen and the Öresund region. On the third thursday of every month we meet and share our knowledge, enthusiasm and war stories with each other.
 
 A wide range of backgrounds are represented in the group, from occasional users to JavaScript and front end experts. Everyone with an interest in JavaScript is welcome.
