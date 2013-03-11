@@ -6,7 +6,7 @@ author: Peter Müller
 
 The next CopenhagenJS meetup will be on Thursday 2013-03-21 at 19:00. The event will be hosted by [Netmester A/S](http://www.netmester.dk/) at [Bremerholm 4, Copenhagen, 1069](http://goo.gl/maps/ZB7Zr).
 
-## Competition
+## Win a conference ticket!
 <a href="http://roderick.dk/">Morgan Roderick</a> has yet again been so kind to lobby the <a href="http://2013.front-trends.com/">Font-Trends 2013</a> organizers. They have very kindly sponsored a free ticket to their conference april 24-26th. And we have decided to give you that ticket!
 
 We will draw the lucky winner in a raffle at the end of the meetup. <a href="http://lanyrd.com/2013/copenhagenjs-march/">More information here</a>.
