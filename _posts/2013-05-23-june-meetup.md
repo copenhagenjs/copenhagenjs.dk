@@ -10,26 +10,33 @@ The next CopenhagenJS meetup will be on Tuesday 2013-06-04 at 19:00. The event w
 
 ## Schedule
 
-<div class="lanyrd-target-schedule">
-    <a href="http://lanyrd.com/2013/copenhagenjs-june/schedule/"
-        class="lanyrd-schedule"
-        data-lanyrd-abstracts
-        data-lanyrd-truncateabstracts="50"
-        data-lanyrd-speakers
-        data-lanyrd-speakerlabels>
-        Schedule for CopenhagenJS — June 2013 on Lanyrd
-    </a>
+## Angular JS - Pär Sikö and Martin Gunnarsson
+
+## Testing your JavaScript code base - Mats Bryntse
+
+
+<a href="http://www.foocafe.org/event/angular-js-and-testing-js">Schedule at Foo Café</a>
+
+## Signup
+
+Please let us know if you're attending. It greatly helps us coordinate with the venue to set out chairs, drinks, etc.
+<div>
+	<form action="http://simpleeventsignup.com/event/25341/signup/tickets"  target="_blank" method="post">
+		<input id="start_signup" name="start_signup" type="hidden" value="1" />
+		&nbsp;Attendee(s)
+		<select id="tickets_78288" name="tickets[78288]">
+			<option value="0">0</option>
+			<option value="1" selected="selected">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select> 
+		<input name="commit" type="submit" value="Sign up for this event" />
+	</form>
 </div>
-
-## Attending
-
-Please visit the [Lanyrd page](http://lanyrd.com/2013/copenhagenjs-june/) and let us know if you're attending. It greatly helps us coordinate with the venue to set out chairs, drinks, etc.
-
-<div class="lanyrd-target-participants">
-    <a href="http://lanyrd.com/2013/copenhagenjs-june/attendees/"
-        class="lanyrd-participants"
-        data-lanyrd-limit="30">
-        Attendee list for CopenhagenJS — June 2013 on Lanyrd
-    </a>
-</div>
-
