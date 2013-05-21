@@ -7,6 +7,11 @@ author: Björn Söderqvist
 The next CopenhagenJS meetup will be on Thursday 2013-05-23 at 19:00. The event will be hosted by [Tretton37](http://tretton37.se/) at [Klostergatan 2, Lund (Se)](http://goo.gl/maps/eMBV5).
 
 
+## Transport from Copenhagen
+
+Getting to Lund by train is more fun when in a group. Meet up at the Copenhagen main station main entrance at 18:00 to buy family rebate tickets and travel together. Look out for [Peter Müller](https://twitter.com/_munter_)
+
+
 ## Schedule
 
 <div class="lanyrd-target-schedule">
