@@ -6,10 +6,6 @@ author: Björn Söderqvist
 
 The next CopenhagenJS meetup will be on Thursday 2013-05-23 at 19:00. The event will be hosted by [Tretton37](http://tretton37.se/) at [Klostergatan 2, Lund (Se)](http://goo.gl/maps/eMBV5).
 
-## Call for speakers
-
-We still need more speakers for this event. If you have something you would like to share with the JavaScript community, drop us a note at <hello@copenhagenjs.dk> and tell us about your topic, and we'll add you to the event!
-
 
 ## Schedule
 
