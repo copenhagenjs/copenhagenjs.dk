@@ -4,11 +4,13 @@ layout: post
 author: Kenneth Auchenberg
 ---
 
-We are glad to announce a very special GitHub Training Workshop event. We convinced (asked kindly) [GitHub Training](http://http://training.github.com/), the offical training team from [GitHub](http://github.com), to stop by Copenhagen and give a full-day workshop on Git - all for **free**!
+We are glad to announce a very special GitHub Training Workshop event. We convinced (asked kindly) [GitHub Training](http://training.github.com/), the offical training team from [GitHub](http://github.com), to stop by Copenhagen and give a full-day workshop on Git - all for **free**!
 
 The event will take place at **7th June 2013, 10:00 to 15:00**, at [Founders House](http://findvej.dk/Gothersgade8B,1123).
 
 We have space for **50 people**, and we expect to the seats to be taken **quickly**, so please register on the [Eventbrite page](http://github-workshop-copenhagen.eventbrite.com/).
+
+**The format is a combination of both university-style lecture and hands-on workshop, so bring your laptop!**
 
 <hr>
 
