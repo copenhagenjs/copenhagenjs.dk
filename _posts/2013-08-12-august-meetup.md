@@ -4,7 +4,7 @@ layout: post
 author: Peter Müller
 ---
 
-The next CopenhagenJS meetup will be on Thursday 2013-08-15 at 18:30. The event will be hosted by [Vertic](http://www.vertic.com/) at [Ryesgade 3A 2, 2200 Copenhagen N](http://goo.gl/maps/O1G0n).
+The next CopenhagenJS meetup will be on Thursday 2013-08-15 at <del>18:30</del> 19:00. The event will be hosted by [Vertic](http://www.vertic.com/) at [Ryesgade 3A 2, 2200 Copenhagen N](http://goo.gl/maps/O1G0n).
 
 ## Schedule
 
