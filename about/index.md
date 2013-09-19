@@ -59,7 +59,7 @@ If you need help organising drinks, cables, put out chairs, etc, just let the or
 
 Signage helps people find your building, floor or office if you areen't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadbrumbs to follow.
 
-Download our logo here: [SVG](images/cphjs.svg) [EPS](images/cphjs.eps) [PDF](images/cphjs.pdf)
+Download our logo here: [SVG](/images/cphjs.svg), [EPS](/images/cphjs.eps), [PDF](/images/cphjs.pdf)
 
 ## Get in touch
 
