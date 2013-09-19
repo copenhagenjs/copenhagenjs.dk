@@ -38,8 +38,8 @@ We've put together a little checklist, of things to keep in mind when hosting a 
 * Have your presentation setup ready and tested in advance
    * Projector
    * VGA cable
-   * VGA  ⟺ Mini DisplayPort (<http://store.apple.com/dk/product/MB572Z/A>)
-   * VGA  ⟺ Mini DVI (<http://store.apple.com/dk/product/M9320G/A>)
+   * VGA ⟺ Mini DisplayPort (<http://store.apple.com/dk/product/MB572Z/A>)
+   * VGA ⟺ Mini DVI (<http://store.apple.com/dk/product/M9320G/A>)
    * Power outlet for speaker's laptop, bonus points for outlets for participants
    * Possibly power supply for laptops, Macs are popular
 * Drinks, snacks
