@@ -57,7 +57,7 @@ If you need help organising drinks, cables, put out chairs, etc, just let the or
 
 ## Make your venue easy to find
 
-Signage helps people find your building, floor or office if you areen't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadbrumbs to follow.
+Signage helps people find your building, floor or office if you aren't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadbrumbs to follow.
 
 Download our logo here: [SVG](/images/logo/cphjs.svg), [EPS](/images/logo/cphjs.eps), [PDF](/images/logo/cphjs.pdf)
 
