@@ -55,6 +55,12 @@ We've put together a little checklist, of things to keep in mind when hosting a 
 
 If you need help organising drinks, cables, put out chairs, etc, just let the organisers know in advance, and we'll find a way to make it happen.
 
+## Make your venue easy to find
+
+Signage helps people find your building, floor or office if you areen't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadbrumbs to follow.
+
+Download our logo here: [SVG](images/cphjs.svg) [EPS](images/cphjs.eps) [PDF](images/cphjs.pdf)
+
 ## Get in touch
 
 E: <hello@copenhagenjs.dk>
