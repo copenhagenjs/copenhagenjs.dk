@@ -38,8 +38,8 @@ We've put together a little checklist, of things to keep in mind when hosting a 
 * Have your presentation setup ready and tested in advance
    * Projector
    * VGA cable
-   * VGA  ⟺ Mini DisplayPort (<http://store.apple.com/dk/product/MB572Z/A>)
-   * VGA  ⟺ Mini DVI (<http://store.apple.com/dk/product/M9320G/A>)
+   * VGA ⟺ Mini DisplayPort (<http://store.apple.com/dk/product/MB572Z/A>)
+   * VGA ⟺ Mini DVI (<http://store.apple.com/dk/product/M9320G/A>)
    * Power outlet for speaker's laptop, bonus points for outlets for participants
    * Possibly power supply for laptops, Macs are popular
 * Drinks, snacks
@@ -57,7 +57,7 @@ If you need help organising drinks, cables, put out chairs, etc, just let the or
 
 ## Make your venue easy to find
 
-Signage helps people find your building, floor or office if you areen't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadbrumbs to follow.
+Signage helps people find your building, floor or office if you aren't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadbrumbs to follow.
 
 Download our logo here: [SVG](/images/logo/cphjs.svg), [EPS](/images/logo/cphjs.eps), [PDF](/images/logo/cphjs.pdf)
 
