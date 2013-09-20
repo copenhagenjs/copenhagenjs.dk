@@ -2,7 +2,7 @@
 /* humanstxt.org */
 
 /* TEAM */
-  CopenhagenJS: Morgan Roderick, Kenneth Auchenberg, Björn Söderqvist
+  CopenhagenJS: Morgan Roderick, Kenneth Auchenberg, Björn Söderqvist, Peter Müller
   Site: http://copenhagenjs.dk
   Twitter: @copenhagenjs
   Location: Copenhagen, Denmark
