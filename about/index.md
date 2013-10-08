@@ -71,7 +71,7 @@ G: [CopenhagenJS on Google Groups](http://groups.google.com/group/copenhagenjs/)
 
 ### Organisers
 
-* Björn Söderqvist — [@kaptencybear](https://twitter.com/kaptencybear)
+* Björn Söderqvist — [@bjorn_js](https://twitter.com/bjorn_js)
 * Kenneth Auchenberg — [@auchenberg](https://twitter.com/auchenberg)
 * Peter Müller — [@_munter_](https://twitter.com/_munter_)
 * Morgan Roderick — [@mrgnrdck](https://twitter.com/mrgnrdrck)
