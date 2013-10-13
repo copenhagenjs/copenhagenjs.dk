@@ -1,12 +1,14 @@
 ---
-title: October 17th - CopenhagenJS meetup at The Orbit
+title: October 17th - CopenhagenJS meetup at KiggIt/The Orbit
 layout: post
 author: Jeppe Toustrup
 ---
 
-The next CopenhagenJS meetup will be on Thursday 2013-10-17 at 19:00. The event will be hosted by [The Orbit](http://symbion.dk/orbit/) at [Amagerfælledvej 56, 2300 København S](http://goo.gl/maps/RjFKM).
+The next CopenhagenJS meetup will be on Thursday 2013-10-17 at 19:00. The event will be hosted by [KiggIt](http://kiggit.com/) at [The Orbit](http://symbion.dk/orbit/) at [Amagerfælledvej 56, 2300 København S](http://goo.gl/maps/RjFKM).
 
-We still need a couple of speakers for the event, so if you have a project you would like us to know about, some obscure problem you have solved in an interesting way, or just want to do a lightning talk to inspire some discussion, then let us know. You can either contact us through the [Google Group](http://groups.google.com/group/copenhagenjs/) or on [Twitter](https://twitter.com/copenhagenjs).
+The danish startup [The Eye Tribe](http://theeyetribe.com), has been so kind to sponsor pizza's for us, and [KiggIt](http://kiggit.com/) is sponsoring drinks, so be there early to get some food!
+
+We got four speakers for the event, but as always if you have a project you would like us to know about, some obscure problem you have solved in an interesting way, or just want to do a lightning talk to inspire some discussion, then let us know. You can either contact us through the [Google Group](http://groups.google.com/group/copenhagenjs/) or on [Twitter](https://twitter.com/copenhagenjs).
 
 ## Schedule
 
