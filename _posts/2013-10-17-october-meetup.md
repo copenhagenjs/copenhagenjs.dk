@@ -8,7 +8,7 @@ The next CopenhagenJS meetup will be on Thursday 2013-10-17 at 19:00. The event 
 
 The danish startup [The Eye Tribe](http://theeyetribe.com), has been so kind to sponsor pizza's for us, and [KiggIt](http://kiggit.com/) is sponsoring drinks, so be there early to get some food!
 
-We got four speakers for the event, but as always if you have a project you would like us to know about, some obscure problem you have solved in an interesting way, or just want to do a lightning talk to inspire some discussion, then let us know. You can either contact us through the [Google Group](http://groups.google.com/group/copenhagenjs/) or on [Twitter](https://twitter.com/copenhagenjs).
+We got 4 speakers for the event, but as always if you have a project you would like us to know about, some obscure problem you have solved in an interesting way, or just want to do a lightning talk to inspire some discussion, then let us know.
 
 ## Schedule
 
