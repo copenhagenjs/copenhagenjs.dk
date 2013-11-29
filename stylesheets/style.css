@@ -99,15 +99,12 @@ header.master:before {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
-	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.05) 26%, rgba(0, 0, 0, 0.5) 71%, rgba(0, 0, 0, 0.7) 100%);
-	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
-	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
-	-webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-	-moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-	-ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-	-o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
-	transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	right: 0;
+	background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(0,0,0,0)), to(rgba(0,0,0,0.6)));
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.6));
+	background: -moz-linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.6));
+	background: -o-linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.6));
+	background: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.6));
 }
 
 .btn-white {
