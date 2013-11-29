@@ -15,7 +15,6 @@
 		{% endif %}
 
 		<link rel="stylesheet" href="/stylesheets/bootstrap.css" />
-		<link rel="stylesheet" href="/stylesheets/bootstrap-responsive.css" />
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 		<meta property="og:image" content="http://copenhagenjs.dk/images/logo.png">
 
@@ -26,56 +25,14 @@
 		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="CopenhagenJS ATOM Feed" />
 	</head>
 	<body>
-
-			<header class="masthead" role="navigation">
-				<div class="container">
-					<ul class="nav nav-pills pull-right">
-						<li><a href="/">Blog</a></li>
-						<li><a href="/archives/">Archives</a></li>
-						<li><a href="/activity/">Activity</a></li>
-						<li><a href="/photos/">Photos</a></li>
-						<li><a href="/videos/">Videos</a></li>
-						<li><a href="/about/">About</a></li>
-					</ul>
-					<h3>
-						<img src="/images/logo.png"/>
-						<a href="/" class="home">CopenhagenJS</a>
-					</h3>
-				</div>
-			</header>
-
-		<div class="container">
-
+		<div class="page">
 			<div id="main" role="main">
 				<div class="content">
 					{{ content }}
 				</div>
-				<div class="sidebar">
-          {% include upcoming.md %}
-
-          <h3>Announcements</h3>
-					<p>
-						All announcements will be crossposted on <a href="/">copenhagenjs.dk</a>, the
-						<a href="http://groups.google.com/group/copenhagenjs/">Google Group</a> and on
-						<a href="https://twitter.com/#!/CopenhagenJS">Twitter</a>.
-					</p>
-
-					<h3>Elsewhere</h3>
-					<ul>
-						<li><a href="https://twitter.com/copenhagenjs">Twitter</a></li>
-						<li><a href="http://groups.google.com/group/copenhagenjs/">Mailinglist</a></li>
-						<li><a href="irc://irc.freenode.net/copenhagenjs">#copenhagenjs on irc.freenode.net</a></li>
-					</ul>
-
-					<p class="promotejs">
-						<a href='https://developer.mozilla.org/en/JavaScript' title='JS API'><img src='/images/promotejsv.gif' height='280' width='160' alt='JS API'/></a>
-					</p>
-				</div>
 			</div>
-			<footer>
-				&copy; CopenhagenJS, unless otherwise noted.
-			</footer>
-	  	</div>
+  	</div>
+
 		<script>
 			var _gaq = _gaq || [];
 		 	_gaq.push(['_setAccount', 'UA-24633486-1']);
@@ -88,5 +45,16 @@
 			})();
 		</script>
 		<script src="http://cdn.lanyrd.net/badges/embed-v1.min.js"></script>
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=423774561071001";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	</body>
 </html>
