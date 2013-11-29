@@ -111,11 +111,16 @@ header.master:before {
 	border: 1px solid #fff;
 	border-radius: 0;
 	padding: 10px 20px;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	transition: all 0.2s;
 }
 
 .btn-white:hover {
-	background: #f9e034;
 	text-decoration: none;
+	background: #f9e036;
+	color: #444;
 }
 
 header .container {
