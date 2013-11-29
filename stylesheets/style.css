@@ -139,6 +139,7 @@ header .navigation li {
 
 header .navigation li a {
 	color: #fff;
+	background: rgba(0,0,0,0.4);
 }
 
 header h3 {
