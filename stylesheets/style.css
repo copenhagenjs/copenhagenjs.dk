@@ -86,7 +86,7 @@ header {
 
 	background-image: url('/images/header_bg.jpg');
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center 45%;
 	background-size: cover;
 
 	position: relative;
