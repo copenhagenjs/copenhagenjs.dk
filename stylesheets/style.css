@@ -32,7 +32,7 @@ section:last-of-type {
 	margin-right: auto;
 	text-align: left;
 	max-width: 850px;
-	width: 100%;
+	width: auto !important; /* Overrides bootstrap default */
 }
 
 
