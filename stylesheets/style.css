@@ -246,6 +246,13 @@ footer {
 	margin: 20px 0;
 }
 
+.next-meetup header a {
+	display: block;
+	margin: -20px;
+	padding: 20px;
+	color: white;
+}
+
 .past-events ul {
 	margin: 0;
 }
