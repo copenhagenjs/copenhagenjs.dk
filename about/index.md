@@ -1,9 +1,9 @@
 ---
 title: About CopenhagenJS
-layout: default
+layout: single
 ---
 
-# About
+## About CopenhagenJS
 
 CopenhagenJS is a JavaScript user group in Copenhagen and the Öresund region. On the third thursday of every month we meet and share our knowledge, enthusiasm and war stories with each other.
 
@@ -26,7 +26,7 @@ Usually the meeting ends at around 22:00.
 
 If you're interested in attending a meeting, we'd appreciate an indication on the [Lanyrd page for the specific meeting](http://lanyrd.com/series/copenhagenjs/), so we can get an idea of the requirements for the venue in terms of chairs, drinks, etc.
 
-## Hosting CopenhagenJS
+### How do I host a CopenhagenJS meetup?
 
 We've put together a little checklist, of things to keep in mind when hosting a CopenhagenJS meeting.
 
@@ -55,22 +55,14 @@ We've put together a little checklist, of things to keep in mind when hosting a 
 
 If you need help organising drinks, cables, put out chairs, etc, just let the organisers know in advance, and we'll find a way to make it happen.
 
-## Make your venue easy to find
+### Where can I find your logo?
 
 Signage helps people find your building, floor or office if you aren't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadbrumbs to follow.
 
 Download our logo here: [SVG](/images/logo/cphjs.svg), [EPS](/images/logo/cphjs.eps), [PDF](/images/logo/cphjs.pdf)
 
-## Get in touch
+### How do I contact you?
 
-E: <hello@copenhagenjs.dk>
+Feel free to write to us at <hello@copenhagenjs.dk>, or on [@copenhagenjs](http://twitter.com/copenhagenjs), if you have questions, want to host, or simply wanna talk.
 
-T: [@copenhagenjs](http://twitter.com/copenhagenjs)
-
-G: [CopenhagenJS on Google Groups](http://groups.google.com/group/copenhagenjs/)
-
-### Organisers
-
-* Björn Söderqvist — [@bjorn_js](https://twitter.com/bjorn_js)
-* Kenneth Auchenberg — [@auchenberg](https://twitter.com/auchenberg)
-* Peter Müller — [@_munter_](https://twitter.com/_munter_)
+We also have a [CopenhagenJS on Google Groups](http://groups.google.com/group/copenhagenjs/), and many of us hang out in our [#copenhagenjs channel on irc.freenode.net](irc://irc.freenode.net/copenhagenjs).
