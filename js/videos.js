@@ -10,13 +10,10 @@ $(document).ready(function() {
 });
 
 function getVideo(url) {
-  $.getScript(oEmbedEndpoint + '?url=' + url + '&width=600&height=334&callback=' + oEmbedCallback);
+  $.getScript(oEmbedEndpoint + '?url=' + url + '&width=800&height=400&callback=' + oEmbedCallback);
 }
 
 function setupGallery(videos) {
-
-  // Load the first video
-  getVideo(videos[0].url);
 
   // Array for filling in months
   var months = [
@@ -36,26 +33,18 @@ function setupGallery(videos) {
   ];
 
   // Add the videos to the gallery
-  for (var i = 0; i < videos.length; i++) {
+  for (var i = 0; i < 9; i++) {
     var uploadYear = videos[i].upload_date.slice(0, 4);
     var uploadMonth = parseInt(videos[i].upload_date.slice(5, 7), 10);
 
-    var html = '<li><a href="' + videos[i].url + '"><img src="' + videos[i].thumbnail_medium + '" class="thumb" />';
-    html += '<p>' + videos[i].title + '</p></a>';
+    var html = '<li><div class="inner"><a href="' + videos[i].url + '" target="_blank"><img src="' + videos[i].thumbnail_large + '" class="thumb" />';
+    html += '<h5>' + videos[i].title + '</h5></a>';
     html += '<p class="metadata">Uploaded ' + months[uploadMonth] + ', ' + uploadYear + '<br />';
-    html += videos[i].stats_number_of_plays + ' plays</p></li>';
+    html += '</div></li>';
+
     $('.videos .thumbs ul').append(html);
   }
 
-  // Switch to the video when a thumbnail is clicked
-  $('.videos .thumbs a').click(function(event) {
-    event.preventDefault();
-    getVideo(this.href);
-    return false;
-  });
-
 }
 
-function switchVideo(video) {
-  $('.videos .embed').html(unescape(video.html));
-}
+
