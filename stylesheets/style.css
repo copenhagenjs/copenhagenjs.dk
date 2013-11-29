@@ -92,6 +92,25 @@ header {
 	position: relative;
 }
 
+header.master:before {
+	content: " ";
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.05) 26%, rgba(0, 0, 0, 0.5) 71%, rgba(0, 0, 0, 0.7) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.07) 26%, rgba(0,0,0,0.5) 71%, rgba(0,0,0,0.7) 100%);
+	-webkit-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-moz-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-ms-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	-o-transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+	transition: all 100ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
 .btn-white {
 	border: 1px solid #fff;
 	border-radius: 0;
@@ -103,6 +122,10 @@ header {
 	text-decoration: none;
 }
 
+header .container {
+	position: relative;
+	z-index: 2;
+}
 header .navigation {
 	text-align: center;
 }
