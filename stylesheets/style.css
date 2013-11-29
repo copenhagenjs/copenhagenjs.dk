@@ -20,11 +20,7 @@ a:visited {
 
 section {
 	margin: 0 0 40px 0;
-	padding: 20px 0;
-}
-
-section.page:last-of-type {
-	padding: 0;
+	padding: 20px;
 }
 
 section:last-of-type {
@@ -36,6 +32,7 @@ section:last-of-type {
 	margin-right: auto;
 	text-align: left;
 	max-width: 850px;
+	width: 100%;
 }
 
 
@@ -70,10 +67,12 @@ section:last-of-type {
 }
 
 .content h2 {
+	margin-top: 0;
 	font-size: 2rem;
 }
 
-.content .date, .content .date a{
+.content .date,
+.content .date a {
 	color:#777
 }
 
@@ -84,7 +83,6 @@ header {
 	padding: 30px 0 30px;
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #ddd;
-	margin-bottom: 30px;
 
 	background-image: url('/images/header_bg.jpg');
 	background-repeat: no-repeat;
@@ -210,17 +208,17 @@ footer {
 	display: inline-block;
 }
 
-
 .next-meetup header {
 	background: #428BCA;
 	color: #fff;
 	padding: 20px;
 	font-size: 30px;
 	text-align: center;
+	margin: 20px 0;
 }
 
 .past-events ul {
-
+	margin: 0;
 }
 
 .past-events li {
@@ -302,7 +300,9 @@ footer {
 	color: #9DA2A8;
 }
 
-.videos .thumbs p { margin: 0; }
+.videos .thumbs p {
+	margin: 0;
+}
 
 .videos .thumb {
 	border: 0;
@@ -312,13 +312,21 @@ footer {
 	background: url(http://a.vimeocdn.com/thumbnails/defaults/default.75x200.jpg);
 	margin-right: 10px;
 }
-.videos .metadata { font-size: 12px; }
 
-.videos .embed { background-color: #f5f5f5; height: 400px; width: 100%; }
+.videos .metadata {
+	font-size: 12px;
+}
+
+.videos .embed {
+	background-color: #f5f5f5;
+	height: 400px;
+	width: 100%;
+}
 
 .videos iframe {
-  width: 100%    !important;
+  width: 100% !important;
 }
+
 .twitter-timeline {
 	width: 100%;
 }
