@@ -28,16 +28,24 @@ title: CopenhagenJS
 <section class="container">
   <div class="next-meetup">
     <h2 class="text-center">Our next meetup will take place at</h2>
-    {% for post in site.posts limit:1 %}
+    {% for page in site.posts limit:1 %}
+      {% if page.date %}
       <header>
-        {{ post.date | date: "%A, %B %d, %H:%M" }}
+        {% if page.lanyrd %}
+          <a href="{{ post.lanyrd }}">{{ page.date | date: "%A, %B %d, %H:%M" }}</a>
+        {% else %}
+          {{ page.date | date: "%A, %B %d, %H:%M" }}
+        {% endif %}
       </header>
+      {% endif %}
 
       <div class="post">
-      	<div class="post_content">
-      	  {{ post.content }}
-      	</div>
+        <div class="post_content">
+          {{ page.content }}
+        </div>
       </div>
+
+      {% include lanyrd.html %}
     {% endfor %}
   </div>
 </section>
