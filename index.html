@@ -32,7 +32,7 @@ title: CopenhagenJS
       {% if page.date %}
       <header>
         {% if page.lanyrd %}
-          <a href="{{ post.lanyrd }}">{{ page.date | date: "%A, %B %d, %H:%M" }}</a>
+          <a href="{{ page.lanyrd }}">{{ page.date | date: "%A, %B %d, %H:%M" }}</a>
         {% else %}
           {{ page.date | date: "%A, %B %d, %H:%M" }}
         {% endif %}
