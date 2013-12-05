@@ -1,5 +1,5 @@
 ---
-title: December 1th - CopenhagenJS December 2013 meetup
+title: December 18th - CopenhagenJS December 2013 meetup
 layout: post
 author: Kenneth Auchenberg
 date: Wednesday, December 18, 19:00
