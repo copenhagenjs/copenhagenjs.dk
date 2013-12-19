@@ -11,6 +11,7 @@ end
 
 desc 'Build and start server with --auto'
 task :server do
+  jekyll 'build'
   jekyll 'serve'
 end
 
