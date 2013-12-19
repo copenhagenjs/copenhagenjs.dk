@@ -6,17 +6,12 @@ task :default => :server
 
 desc 'Build site with Jekyll'
 task :build do
-  jekyll '--no-server --no-auto'
+  jekyll 'build'
 end
 
 desc 'Build and start server with --auto'
 task :server do
-  jekyll '--server --auto'
-end
-
-desc 'Build and deploy'
-task :deploy => [:build] do
-  sh 'rsync -avz -e ssh --progress _site/ morgan@roderick.dk:/dana/data/www.copenhagenjs.dk/docs/'
+  jekyll 'serve'
 end
 
 def jekyll(opts = '')
