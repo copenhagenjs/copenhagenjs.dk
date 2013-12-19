@@ -3,7 +3,7 @@ title: January 16th - CopenhagenJS meetup at Netmester A/S
 layout: post
 author: Peter Müller
 date: Thursday, January 16, 2014 19:00
-lanyrd: http://lanyrd.com/2014/copenhagenjs
+lanyrd: http://lanyrd.com/2014/copenhagenjs-january
 ---
 
 <h3>Happy new year!</h3>
