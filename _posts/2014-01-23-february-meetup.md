@@ -10,8 +10,16 @@ lanyrd: http://lanyrd.com/2014/copenhagenjs-february
 
 The february meetup will be hosted by [Rocket Labs](http://rocketlabs.dk/).
 
-More venue details to follow...
+We will be sharing the space with a group of entrepeneurs from germany, so polish up your german skills and get ready to mingle :)
 
+While Rocket Labs has offered us an amazing space to have the meetup, sadly they do not have the economy to supply us with a free bar. Fear not however, they do have a bar with very reasonable pricing and we will try to find a drinks sponsor for the evening.
+
+<h3>Getting to the venue</h3>
+
+We often have guests from outside of Copenhagen, and we of course hope that our swedish friends will join us yet again. The best way to get to the venue is to take bus route [5A](http://www.moviatrafik.dk/dinrejse/kort/Pages/Kort.aspx?direction_gid=9014200000510000&line_name=5A&linegid=9011200000500000) towards Husum St. and walk from the Frederiksborgvej stop. [Example from Nørreport](http://goo.gl/maps/oI0er)
+
+
+<h3>Free stuff!</h3>
 Remember to sign up as an attendee in order to take part in our [JetBrains License Raffle](http://lanyrd.com/2014/copenhagenjs-february/scwchf/)!
 
 <h3>Help us find speakers</h3>
