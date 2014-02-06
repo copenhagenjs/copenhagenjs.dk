@@ -22,6 +22,8 @@ We often have guests from outside of Copenhagen, and we of course hope that our 
 <h3>Free stuff!</h3>
 Remember to sign up as an attendee in order to take part in our [JetBrains License Raffle](http://lanyrd.com/2014/copenhagenjs-february/scwchf/)!
 
+[Jacob Andresen](https://twitter.com/jacobandresen) will also talk about his experience with technical writing and bring us some copies of [ExtJS in Action, second edition](http://www.manning.com/garcia3/)
+
 <h3>Help us find speakers</h3>
 
 Do you know of some web technology topic that might be interesting to you? Maybe even to others?
