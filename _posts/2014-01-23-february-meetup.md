@@ -12,7 +12,11 @@ The february meetup will be hosted by [Rocket Labs](http://rocketlabs.dk/).
 
 We will be sharing the space with a group of entrepeneurs from germany, so polish up your german skills and get ready to mingle :)
 
-While Rocket Labs has offered us an amazing space to have the meetup, sadly they do not have the economy to supply us with a free bar. Fear not however, they do have a bar with very reasonable pricing and we will try to find a drinks sponsor for the evening.
+<h3>Sponsored by Iconfinder</h3>
+While Rocket Labs are a great venue, they do sadly not have a budget to sponsor drinks for the evening. Luckily our great friends at [Iconfinder](https://www.iconfinder.com) have offered to sponsor drinks for us!
+
+<a href="https://www.iconfinder.com" style="display: block; width: 80%; margin: 20px auto"><img src="/images/sponsors/iconfinder.svg" style="width: 100%"></a>
+
 
 <h3>Getting to the venue</h3>
 
