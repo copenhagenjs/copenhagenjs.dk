@@ -23,7 +23,9 @@ While Rocket Labs are a great venue, they do sadly not have a budget to sponsor 
 We often have guests from outside of Copenhagen, and we of course hope that our swedish friends will join us yet again. The best way to get to the venue is to take bus route [5A](http://www.moviatrafik.dk/dinrejse/kort/Pages/Kort.aspx?direction_gid=9014200000510000&line_name=5A&linegid=9011200000500000) towards Husum St. and walk from the Frederiksborgvej stop. [Example from Nørreport](http://goo.gl/maps/oI0er)
 
 
-<h3>Free stuff!</h3>
+<h3>Be a winner!</h3>
+[Front-Trends](http://2014.front-trends.com/) have given us a ticket to their 2014 conference which we are going to raffle out at this meetup. Sign up as an attendee on lanyrd and be at the meetup to win it!
+
 Remember to sign up as an attendee in order to take part in our [JetBrains License Raffle](http://lanyrd.com/2014/copenhagenjs-february/scwchf/)!
 
 [Jacob Andresen](https://twitter.com/jacobandresen) will also talk about his experience with technical writing and bring us some copies of [ExtJS in Action, second edition](http://www.manning.com/garcia3/)
