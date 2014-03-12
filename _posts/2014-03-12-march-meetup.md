@@ -3,7 +3,7 @@ title: March 20th - CopenhagenJS meetup at Blackwood Seven
 layout: post
 author: Kenneth Auchenberg
 date: Thursday, March 20, 2014 19:00
-lanyrd: http://http://lanyrd.com/2014/copenhagenjs-march
+lanyrd: http://lanyrd.com/2014/copenhagenjs-march
 ---
 
 <h2>Welcome to our March meetup</h2>
