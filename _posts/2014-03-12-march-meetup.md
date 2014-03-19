@@ -15,6 +15,11 @@ The february meetup will be hosted by [Blackwood Seven](http://blackwoodseven.co
 
 We often have guests from outside of Copenhagen, and we of course hope that our swedish friends will join us yet again. The venue is placed in central Copenhagen, so there's many options. Use Google Maps to find your way.
 
+<h3>Food and beverages</h3>
+
+Our host Blackwood Seven has let us know that there will be pizza, drinks and snacks.
+
+
 <h3>Help us find speakers</h3>
 
 Do you know of some web technology topic that might be interesting to you? Maybe even to others?
