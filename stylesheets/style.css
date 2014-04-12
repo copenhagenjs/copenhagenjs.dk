@@ -2,7 +2,12 @@ body {
 	color: #111;
 	background-color: #fff;
 	text-align: center;
-	font-size: 15px;
+
+    font-size: 62.5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;	
+
+    line-height: 2rem;
 }
 
 a:link,
@@ -33,6 +38,8 @@ section:last-of-type {
 	text-align: left;
 	max-width: 850px;
 	width: auto !important; /* Overrides bootstrap default */
+
+	font-size: 18px;
 }
 
 
@@ -163,13 +170,17 @@ header .logo h3 {
 	margin: 0 auto;
 	text-align: center;
 	font-weight: normal;
-	font-size: 20px;
+	font-size: 26px;
 	max-width: 500px;
 }
 
 header .social {
 	text-align: center;
 	margin: 30px auto 0 auto;
+}
+
+header .social .fb_iframe_widget {
+	line-height: 12px;
 }
 
 header .credits {
@@ -196,14 +207,25 @@ footer {
 }
 
 
+.organizers {
+	padding: 40px;
+}
+
+.organizers h2 {
+	font-size: 2.5rem;
+	margin-bottom: 40px;
+}
 
 .organizers h4 {
-	margin-top: 20px;
+	margin: 20px 0;
+	font-size: 2rem;
+	line-height: 45px;
 }
 
 .organizers	ul {
 	display: flex;
 	padding: 20px 0;
+	margin-bottom: 80px;
 }
 
 .organizers ul li {
@@ -367,6 +389,19 @@ footer {
 	width: 100%;
 }
 
+
+.lanyrd {
+	padding: 0;
+}
+
+.lanyrd .lanyrd-target-schedule {
+	margin-bottom: 20px;
+	padding-left: 40px;
+}
+
+.lanyrd .lanyrd-target-attendees {
+	margin-bottom: 20px;
+}
 
 @media (max-width: 700px) {
 

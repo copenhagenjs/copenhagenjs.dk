@@ -26,7 +26,7 @@ Do you maybe even know of someone who might give a talk about that subject? Is t
 
 Why not give us a hand and [give us some speaker suggestions](http://copenhagenjs.dk/upcoming/). It will make the organization of CopenhagenJS easier and will keep the content interesting and diverse. This is a way that you can contribute to making our community great. We appreciate it!
 
-## Attending
+<h3>Attending</h3>
 
 We have a limited amount of seats - you must reserve your ticket:
 <div>
