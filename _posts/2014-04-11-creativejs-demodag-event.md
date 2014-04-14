@@ -3,7 +3,7 @@ title: May 2nd -  CreativeJS with Seb Lee-Delisle and DemoDag
 layout: post
 author: Kenneth Auchenberg
 date: Friday, May 2, 2014 18:00
-lanyrd: http://lanyrd.com/2014/copenhagenjs-2/
+lanyrd: http://lanyrd.com/2014/copenhagenjs-2
 ---
 
 ## CreativeJS with Seb Lee-Delisle and DemoDag
