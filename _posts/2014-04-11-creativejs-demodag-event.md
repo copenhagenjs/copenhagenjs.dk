@@ -16,7 +16,7 @@ Seb will give a talk about how to use JavaScript "creatively", and to play on th
 
 ### Host and venue.
 
-<img src="http://www.eksponent.com/content/images/eksponent_logo.svg" width="300" style="margin: 0 auto 40px auto; display: block;" />
+<a href="http://www.eksponent.com/"><img src="http://www.eksponent.com/content/images/eksponent_logo.svg" width="300" style="margin: 0 auto 40px auto; display: block;" /></a>
 
 The event is hosted by [Eksponent](http://www.eksponent.com/), located in Vesterbro, Copenhagen at [Gammel Kongevej 3E, 4. sal, 1610 København V](https://www.google.dk/maps/preview?q=Gammel+Kongevej+3E,+4.+sal,+1610+K%C3%B8benhavn+V&ie=UTF-8&hq=&hnear=0x4652530b7d476169:0xd3f8ba6d981e024c,Gammel+Kongevej+3E,+1610+K%C3%B8benhavn+V&gl=dk&ei=fqlJU72XFubI4ATgvoCQBw&ved=0CCoQ8gEwAA). 
 
