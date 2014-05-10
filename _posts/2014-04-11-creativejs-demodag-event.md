@@ -1,5 +1,5 @@
 ---
-title: May 2nd -  CreativeJS with Seb Lee-Delisle and DemoDag
+title: May 2nd - CreativeJS with Seb Lee-Delisle and DemoDag
 layout: post
 author: Kenneth Auchenberg
 date: Friday, May 2, 2014 18:00
