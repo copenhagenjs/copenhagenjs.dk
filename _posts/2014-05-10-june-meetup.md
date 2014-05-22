@@ -1,14 +1,14 @@
 ---
-title: May 22th - CopenhagenJS May meetup.
+title: June 19th - CopenhagenJS Jue meetup.
 layout: post
 author: Kenneth Auchenberg
-date: Thursday, May 22, 2014 18:00
-lanyrd: http://lanyrd.com/2014/copenhagenjs-may
+date: Thursday, June 19, 2014 18:00
+lanyrd: http://lanyrd.com/2014/copenhagenjs-june
 ---
 
-## Welcome to our May meetup 
+## Welcome to our June meetup 
 
-The May CopenhagenJS meetup is hosted by [TBA](http://foo).
+The June CopenhagenJS meetup is hosted by [TBA](http://foo).
 
 ### Help us find speakers
 
