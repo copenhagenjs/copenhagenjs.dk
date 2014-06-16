@@ -8,7 +8,7 @@ lanyrd: http://lanyrd.com/2014/copenhagenjs-june
 
 ## Welcome to our June meetup 
 
-The June CopenhagenJS meetup is hosted by [TBA](http://foo).
+The June CopenhagenJS meetup is hosted by [Conferize](http://www.conferize.com/).
 
 ### Help us find speakers
 
