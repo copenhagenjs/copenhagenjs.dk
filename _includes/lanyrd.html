@@ -26,5 +26,15 @@
             Attendee list for {{ page.title }} on Lanyrd
         </a>
     </div>
+
+    <script id="raffle">
+        function raffle() {
+            var participants = document.querySelectorAll('.lanyrd-target-participants .avatar');
+            var winner = participants[Math.round((participants.length - 1) * Math.random())];
+
+            winner.style.backgroundColor = 'red';
+        }
+    </script>
+
 </section>
 {% endif %}
