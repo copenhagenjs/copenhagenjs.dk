@@ -32,7 +32,13 @@
             var participants = document.querySelectorAll('.lanyrd-target-participants .avatar');
             var winner = participants[Math.round((participants.length - 1) * Math.random())];
 
+            winner.style.backgroundColor = 'white';
+            winner.style.transition = 'all 1s';
             winner.style.backgroundColor = 'red';
+            winner.style.zIndex = '10';
+            winner.style.webkitTranslate = 'scale(3) rotate(2turn)';
+            winner.style.translate = 'scale(3) rotate(2turn)';
+
         }
     </script>
 
