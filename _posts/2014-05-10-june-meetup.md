@@ -1,5 +1,5 @@
 ---
-title: June 19th - CopenhagenJS Jue meetup.
+title: June 19th - CopenhagenJS June meetup.
 layout: post
 author: Kenneth Auchenberg
 date: Thursday, June 19, 2014 18:00
