@@ -2,7 +2,7 @@
 title: September 18th – Yes, CopenhagenJS, but in Lund
 layout: post
 author: Björn Söderqvist
-date: Saturday, September 18, 2014 16:00
+date: Saturday, September 18, 2014 17:30
 lanyrd: http://lanyrd.com/2014/copenhagenjs-september-2013-in-lund
 ---
 
@@ -16,7 +16,7 @@ The theme of this meetup is: Show us something you've worked on, or a tool you l
 
 Ideas, discussions, learnings, hacks and demoes are most welcome. No big slide decks are needed, just get up there and tell us what's on your mind.
 
-
+The venue opens at 17:30 for food and drinks, the first talk starts at 18:30.
 
 ---
 
