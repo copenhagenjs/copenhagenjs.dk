@@ -4,7 +4,8 @@ layout: single
 
 <div class="container">
   <h2>{{ page.title }}</h2>
- {{ content }}
+  {% include host.html %}
+  {{ content }}
 </div>
 
 {% include lanyrd.html %}

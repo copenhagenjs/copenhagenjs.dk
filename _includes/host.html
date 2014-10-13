@@ -1,0 +1,12 @@
+{% if page.host %}
+<section class="host">
+    <h2>Our gracious host</h2>
+
+    <p>This CopenhagenJS meetup is hosted by <strong><a <% if page.host_url %>href="{{ page.host_url | uri_escape }}"<% endif %>>{{ page.host }}</a></strong>.</p>
+
+    {% if page.host_address %}
+        <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q={{ page.host | uri_escape}}{{ ', ' | uri_escape }}{{ page.host_address | uri_escape }}&key=AIzaSyAbJY5-y93CLYBgjRkqVeT4GbCWUHXpwOI"></iframe>
+    {% endif %}
+
+</section>
+{% endif %}
