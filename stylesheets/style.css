@@ -5,7 +5,7 @@ body {
 
     font-size: 62.5%;
     font-family: 'Source Sans Pro', sans-serif;
-    -webkit-font-smoothing: antialiased;	
+    -webkit-font-smoothing: antialiased;
 
     line-height: 2rem;
 }
@@ -200,6 +200,12 @@ header.page .logo {
 header.page .logo img {
 	margin: 0;
 	height: 40px;
+}
+
+.post_content iframe[src^=https://www.google.com/maps/embed/] {
+    display: block;
+    width: 100% !important;
+    height: 300px !important;
 }
 
 footer {
