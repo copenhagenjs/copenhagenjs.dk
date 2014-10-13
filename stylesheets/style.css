@@ -202,10 +202,11 @@ header.page .logo img {
 	height: 40px;
 }
 
-.post_content iframe[src^=https://www.google.com/maps/embed/] {
+.post_content iframe[src^="https://www.google.com/maps/embed/"] {
     display: block;
-    width: 100% !important;
-    height: 300px !important;
+    border: 0;
+    width: 100%;
+    height: 300px;
 }
 
 footer {

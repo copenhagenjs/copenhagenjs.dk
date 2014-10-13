@@ -10,7 +10,7 @@ lanyrd: http://lanyrd.com/2014/copenhagenjs-october
 
 The August CopenhagenJS meetup is hosted by [e-conomic](http://www.e-conomic.com/).
 
-<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=e-conomic%20Danmark%20A%2FS%2C%20Langebrogade%2C%20Denmark&key=AIzaSyAbJY5-y93CLYBgjRkqVeT4GbCWUHXpwOI"></iframe>
+<iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=e-conomic%20Danmark%20A%2FS%2C%20Langebrogade%2C%20Denmark&key=AIzaSyAbJY5-y93CLYBgjRkqVeT4GbCWUHXpwOI"></iframe>
 
 ### Special event: Get-a-logo
 
