@@ -61,13 +61,15 @@ section {
     margin-left: auto;
     margin-right: auto;
     max-width: 850px;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 .page-header {
 	line-height: 40px;
 	position: relative;
 	border-bottom: 1px solid #ddd;
-	padding: 30px 0 30px;
+	padding: 30px;
 	border-top: 1px solid #fff;
     text-align: center;
 
@@ -75,6 +77,10 @@ section {
 	background-repeat: no-repeat;
 	background-position: center 45%;
 	background-size: cover;
+}
+
+.page-header.master {
+    padding-bottom: 100px;
 }
 
 .page-header.master:before {
@@ -124,7 +130,6 @@ section {
     z-index: 2;
 }
 
-
 .page-header h3 {
 	margin: 0 auto;
     font-size: 26px;
@@ -141,8 +146,20 @@ section {
 }
 
 .page-header .social {
-	text-align: center;
-	margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+
+    white-space: nowrap;
+}
+
+.page-header .social > * {
+    margin: 0 10px;
 }
 
 .page-header .social .fb_iframe_widget {
@@ -151,7 +168,7 @@ section {
 
 .page-header .credits {
 	position: absolute;
-	left: 30px;
+	left: 50px;
 	bottom: 30px;
 
 	color: #fff;
@@ -188,6 +205,7 @@ iframe[src^="https://www.google.com/maps/embed/"] {
 
 .organizers	ul {
 	display: flex;
+    flex-direction: row;
 	padding: 18px 0;
 	margin-bottom: 36px;
 }
@@ -200,7 +218,6 @@ iframe[src^="https://www.google.com/maps/embed/"] {
 
 	background: #fff;
 	margin-right: 10px;
-
 }
 
 .organizers ul li h5 {
@@ -220,7 +237,7 @@ iframe[src^="https://www.google.com/maps/embed/"] {
     margin: 0 auto 5px;
     display: block;
     max-width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
 }
 
 .next-meetup header {
