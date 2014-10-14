@@ -1,5 +1,5 @@
 ---
-title: August 21st - CopenhagenJS October Meetup.
+title: CopenhagenJS October Meetup.
 layout: post
 author: Peter Müller
 date: Thursday, October 16, 2014 19:00

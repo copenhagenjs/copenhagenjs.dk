@@ -202,7 +202,7 @@ header.page .logo img {
 	height: 40px;
 }
 
-.post_content iframe[src^="https://www.google.com/maps/embed/"] {
+iframe[src^="https://www.google.com/maps/embed/"] {
     display: block;
     border: 0;
     width: 100%;
