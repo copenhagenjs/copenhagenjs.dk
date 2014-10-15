@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>{{ page.title }} | CopenhagenJS</title>
-		{% if page.description %}
-			<meta name="description" content="{{ page.description }}">
-		{% endif %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page.title }} | CopenhagenJS</title>
+        {% if page.description %}
+            <meta name="description" content="{{ page.description }}">
+        {% endif %}
 
-		{% if page.author %}
-			<meta name="author" content="{{ page.author }}" />
-		{% else %}
-			<meta name="author" content="CopenhagenJS" />
-		{% endif %}
+        {% if page.author %}
+            <meta name="author" content="{{ page.author }}" />
+        {% else %}
+            <meta name="author" content="CopenhagenJS" />
+        {% endif %}
 
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" type="text/css" />		
-		<link rel="stylesheet" href="/stylesheets/bootstrap.css" />
-		<link rel="stylesheet" href="/stylesheets/style.css" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900" type="text/css" />
+        <!-- <link rel="stylesheet" href="/stylesheets/bootstrap.css" /> -->
+        <link rel="stylesheet" href="/stylesheets/style.css" />
 
-		<meta property="og:image" content="http://copenhagenjs.dk/images/logo.png">
+        <meta property="og:image" content="http://copenhagenjs.dk/images/logo.png">
 
-		<meta name="robots" content="index,follow" />
-		<meta name="mssmarttagspreventparsing" content="true" />
+        <meta name="robots" content="index,follow" />
+        <meta name="mssmarttagspreventparsing" content="true" />
 
-		<!-- TODO: use FeedBurner -->
-		<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="CopenhagenJS ATOM Feed" />
-	</head>
-	<body>
-		<div class="page">
-			<div id="main" role="main">
-				<div class="content">
-					{{ content }}
-				</div>
-			</div>
-  	</div>
+        <!-- TODO: use FeedBurner -->
+        <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="CopenhagenJS ATOM Feed" />
+    </head>
+    <body>
+        {{ content }}
 
-		<script>
-			var _gaq = _gaq || [];
-		 	_gaq.push(['_setAccount', 'UA-24633486-1']);
-			_gaq.push(['_trackPageview']);
+        <div id="fb-root"></div>
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-24633486-1']);
+            _gaq.push(['_trackPageview']);
 
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-		<script src="http://cdn.lanyrd.net/badges/embed-v1.min.js"></script>
+            window.onload = function () {
+                var defer = (function (document, script) {
+                    var scripts = {},
+                        firstScript = document.getElementsByTagName(script)[0];
 
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=423774561071001";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
+                    return function (url, id) {
+                        var inc;
 
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	</body>
+                        if (typeof scripts[url] === 'undefined') {
+                            inc = document.createElement(script);
+                            inc.id = id;
+                            inc.async = true;
+                            inc.src = url;
+                            firstScript.parentNode.insertBefore(inc, firstScript);
+                            scripts[url] = inc;
+                        }
+                    };
+                }(document, 'script'));
+
+                defer('//' + ('https:' === document.location.protocol ? 'ssl' : 'www') + '.google-analytics.com/ga.js');
+                defer('//cdn.lanyrd.net/badges/embed-v1.min.js');
+                defer('//connect.facebook.net/en_US/all.js#xfbml=1&appId=423774561071001', 'facebook-jssdk');
+                defer('//platform.twitter.com/widgets.js', 'twitter-wjs');
+            };
+        </script>
+    </body>
 </html>
