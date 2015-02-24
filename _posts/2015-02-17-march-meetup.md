@@ -20,4 +20,4 @@ Not that the starting time is 18:00 this time, not 19:00 as usual.
 
 CopenhagenJS has decided to share the usual third Thursday of the month with [UpFront](http://upfront.ninja/), a meetup group that focuses on the softer sides of frontend development. We did this because we've had trouble getting speakers for our events, they did not, and we don't want the community in Copenhagen to compete for the same target audience. If our amount of speakers increase we might increase our meetup frequency as well.
 
-Until then, keep an eye on UpFront as well. Next meetup: February 24th at Podio.
+Until then, keep an eye on UpFront as well. Next meetup: ~~February 24th at Podio~~ CANCELLED, meet up at Fermentoren at 19:00 if you want to socialize.
