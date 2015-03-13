@@ -3,7 +3,7 @@ title: CopenhagenJS March Meetup.
 layout: post
 author: Peter Müller
 date: Thursday, March 19, 2015 18:00
-lanyrd: http://lanyrd.com/2015/copenhagenjs-march
+lanyrd: http://lanyrd.com/2015/copenhagenjs
 host: Founders
 host_url: http://founders.as/
 host_address: Indiakaj 12, 2, Copenhagen
