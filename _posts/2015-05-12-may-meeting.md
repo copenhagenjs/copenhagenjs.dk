@@ -3,7 +3,7 @@ title: CopenhagenJS May 2015 Meeting
 layout: post
 author: Morgan Roderick
 date: Thursday, 2015-05-21 19:00
-lanyrd: http://lanyrd.com/2015/copenhagenjs-may/
+lanyrd: http://lanyrd.com/2015/copenhagenjs-may
 host: Falcon Social
 host_url: http://www.falconsocial.com
 host_address: H.C. Andersens Boulevard 27, 1553 København V
