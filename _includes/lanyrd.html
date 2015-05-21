@@ -30,7 +30,7 @@
     <script id="raffle">
         function raffle() {
             var participants = document.querySelectorAll('.lanyrd-target-participants .avatar');
-            var winner = participants[Math.round((participants.length - 1) * Math.random())];
+            var winner = participants[Math.floor(participants.length * Math.random())];
 
             var parent = winner.parentNode;
             parent.style.transition = 'all 1s';
