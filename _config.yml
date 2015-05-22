@@ -7,8 +7,6 @@ plugins:     ./_plugins
 
 future:      true
 lsi:         false
-pygments:    true
-markdown:    rdiscount
 permalink:   /:year/:month/:day/:title
 
 maruku:
