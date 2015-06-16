@@ -11,7 +11,7 @@ host_address: Howitzvej 60, 6. sal, 1123, Copenhagen
 
 ## Welcome to the June 2015 meetup
 
-This meetup is going to take things back to basic.
+There will be pizza, compliments of [Billy's Billing](https://www.billy.dk/)
 
 ## Workshop
 
