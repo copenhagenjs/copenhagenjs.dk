@@ -18,6 +18,10 @@ This meetup is going to take things back to basic.
 So are you new to javascript and want to learn some tricks and tips, come and
 bring your laptop and ask all your questions!
 
+## ELECTION DAY!
+
+This is election day, so if you are attending, make sure to cast your vote before you attend the meetup. We will not be showing election TV coverage, presentations will be business as usual :)
+
 
 ## Raffle
 
