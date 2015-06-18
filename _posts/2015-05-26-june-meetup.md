@@ -6,7 +6,7 @@ date: Thursday, 2015-06-18 18:00
 lanyrd: http://lanyrd.com/2015/copenhagenjs-june/
 host: Billy's Billing
 host_url: https://www.billy.dk/
-host_address: Howitzvej 60, 6. sal, 1123, Copenhagen
+host_address: Solbjerg Pl. 3, 2000 Frederiksberg. Lokale SP207
 ---
 
 ## Welcome to the June 2015 meetup
