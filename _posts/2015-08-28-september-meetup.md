@@ -17,7 +17,7 @@ NodeSchool is a concept built around small modules that each teaches you
 something new. You can look at the website, but there is modules for everything
 from learning basic javascript, to working with WebGL and Browserify.
 
-[http://nodeschool.io/]()
+[http://nodeschool.io/](http://nodeschool.io/)
 
 There will be several people to help, so don't be afraid that you will be stuck!
 
