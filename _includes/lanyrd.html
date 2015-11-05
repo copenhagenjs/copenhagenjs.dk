@@ -1,9 +1,12 @@
 {% if page.lanyrd %}
+
+{% assign lanyrd-url = page.lanyrd | split:"/" | join:"/" %}
+
 <section class="lanyrd">
     <h3>Schedule</h3>
 
     <div class="lanyrd-target-schedule">
-        <a href="{{ page.lanyrd }}/schedule/"
+        <a href="{{ lanyrd-url }}/schedule/"
             class="lanyrd-schedule"
             data-lanyrd-abstracts
             data-lanyrd-truncateabstracts="50"
@@ -16,11 +19,11 @@
     <h3>Attendees</h3>
 
     <div class="lanyrd-target-attendees">
-        Please visit the <a href="{{ page.lanyrd }}">Lanyrd page</a> and let us know if you're attending. It greatly helps us coordinate with the venue to set out chairs, drinks, etc.
+        Please visit the <a href="{{ lanyrd-url }}">Lanyrd page</a> and let us know if you're attending. It greatly helps us coordinate with the venue to set out chairs, drinks, etc.
     </div>
 
     <div class="lanyrd-target-participants">
-        <a href="{{ page.lanyrd }}/attendees/"
+        <a href="{{ lanyrd-url }}/attendees/"
             class="lanyrd-participants"
             data-lanyrd-limit="200">
             Attendee list for {{ page.title }} on Lanyrd
