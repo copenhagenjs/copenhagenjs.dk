@@ -24,7 +24,8 @@ a:visited {
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: 2.5em;
+    line-height: 1em;
 }
 
 h1 a {
@@ -242,12 +243,16 @@ iframe[src^="https://www.google.com/maps/embed/"] {
 }
 
 .next-meetup header {
-	background: #428BCA;
-	color: #fff;
-	padding: 30px;
-	font-size: 30px;
-	text-align: center;
-	margin: 20px 0;
+    background: #428BCA;
+    color: #fff;
+    padding: 25px;
+    font-size: 30px;
+    text-align: center;
+}
+@media (min-width: 850px) {
+    .next-meetup header {
+        margin: 0 170px;
+    }
 }
 
 .next-meetup header a {
