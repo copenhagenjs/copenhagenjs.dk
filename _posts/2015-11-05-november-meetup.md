@@ -1,5 +1,5 @@
 ---
-title: CopenhagenJS November Meetup
+title: Welcome to the November 2015 Meetup
 layout: post
 author: Kevin Simper
 date: Wednesday, 2015-11-18 19:00
@@ -8,8 +8,6 @@ host: Founders
 host_url: http://founders.as/
 host_address: Indiakaj 12, 2, Copenhagen, 2100
 ---
-
-## Welcome to the November 2015 Meetup
 
 This meetup will be a nice Wednesday instead of the normal Thursday because [Startup Safari Copenhagen](http://copenhagen.startupsafary.com/) is taking place that day.
 

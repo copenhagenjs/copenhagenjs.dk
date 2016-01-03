@@ -1,5 +1,5 @@
 ---
-title: CopenhagenJS March Meetup.
+title: CopenhagenJS March React Meetup
 layout: post
 author: Peter Müller
 date: Thursday, March 19, 2015 18:00
@@ -8,8 +8,6 @@ host: Founders
 host_url: http://founders.as/
 host_address: Indiakaj 12, 2, Copenhagen
 ---
-
-<h2>React meetup</h2>
 
 This time around our focus will be on React and the paradigms surrounding it. This might also be the start of a Copenhagen React Meetup group, which we are collaborating with this time. If you are interested in React in general you might want to pay them a visit: [http://www.meetup.com/Copenhagen-React-Meetup/](http://www.meetup.com/Copenhagen-React-Meetup/).
 

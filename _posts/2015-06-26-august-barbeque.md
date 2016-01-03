@@ -1,12 +1,10 @@
 ---
-title: CopenhagenJS August 2015 Barbeque Meeting
+title: Welcome to the August 2015 Barbeque meetup
 layout: post
 author: Kevin Simper
 date: Thursday, 2015-08-6 18:00
 host_address: Solbjerg Plads 3, 2000 Frederiksberg
 ---
-
-## Welcome to the August 2015 Barbeque meetup
 
 **Sunday 2. August: More tickets available!**
 
