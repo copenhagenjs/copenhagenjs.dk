@@ -3,7 +3,6 @@ port: 4001
 
 source:      .
 destination: ./_site
-plugins:     ./_plugins
 
 future:      true
 lsi:         false
