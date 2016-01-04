@@ -1,5 +1,5 @@
 ---
-title: CopenhagenJS May 2015 Meeting
+title: Welcome to the May 2015 meeting
 layout: post
 author: Morgan Roderick
 date: Thursday, 2015-05-21 19:00
@@ -8,8 +8,6 @@ host: Falcon Social
 host_url: http://www.falconsocial.com
 host_address: H.C. Andersens Boulevard 27, 1553 København V
 ---
-
-## Welcome to the May 2015 meeting
 
 This one is organised with very short notice. We're trying to get back to the monthly schedule.
 
