@@ -133,11 +133,11 @@ section {
 }
 
 .page-header h3 {
-	margin: 0 auto;
+	margin: 0 auto 50px auto;
     font-size: 26px;
     font-weight: normal;
 	text-align: center;
-	max-width: 500px;
+	max-width: 520px;
     color: #fff;
 }
 
@@ -242,24 +242,28 @@ iframe[src^="https://www.google.com/maps/embed/"] {
     margin-bottom: 12px;
 }
 
-.next-meetup header {
-    background: #428BCA;
-    color: #fff;
-    padding: 25px;
-    font-size: 30px;
+.next-meetup {
     text-align: center;
-}
-@media (min-width: 850px) {
-    .next-meetup header {
-        margin: 0 170px;
-    }
+    margin-bottom: 60px;
 }
 
-.next-meetup header a {
-	display: block;
-	margin: -20px;
-	padding: 20px;
-	color: white;
+.next-meetup__button {
+    padding: 10px;
+    font-size: 1.3rem;
+    border: none;
+    text-align: center;
+    background-color: #FFF;
+    background: #428BCA;
+    color: #fff;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+.next-meetup__button:link,
+.next-meetup__button:visited {
+    color: #fff;
 }
 
 .past-events ul {
@@ -371,6 +375,11 @@ iframe[src^="https://www.google.com/maps/embed/"] {
 	width: 100%;
 }
 
+.fb_iframe_widget{
+    top: -10px;
+    margin-right: 10px;
+}
+
 
 .lanyrd {
 	padding: 0;
@@ -431,7 +440,10 @@ iframe[src^="https://www.google.com/maps/embed/"] {
 .newsletter {
     background-color: #f8de48;
     text-align: center;
-    padding: 10px;
+    padding: 50px;
+}
+.newsletter h3 {
+    margin-top: 10px;
 }
 .newsletter__email {
     padding: 10px;
