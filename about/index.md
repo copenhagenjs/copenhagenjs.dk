@@ -24,7 +24,7 @@ Previous topics include:
 
 Usually the meeting ends at around 22:00.
 
-If you're interested in attending a meeting, we'd appreciate an indication on the [Lanyrd page for the specific meeting](http://lanyrd.com/series/copenhagenjs/), so we can get an idea of the requirements for the venue in terms of chairs, drinks, etc.
+If you're interested in attending a meeting, we'd appreciate an indication on the [Meetup page](https://www.meetup.com/copenhagenjs/), so we can get an idea of the requirements for the venue in terms of chairs, drinks, etc.
 
 ### How do I host a CopenhagenJS meetup?
 
@@ -57,12 +57,25 @@ If you need help organising drinks, cables, put out chairs, etc, just let the or
 
 ### Where can I find your logo?
 
-Signage helps people find your building, floor or office if you aren't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadbrumbs to follow.
+Signage helps people find your building, floor or office if you aren't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadcrumbs to follow.
 
-Download our logo here: [SVG](/images/logo/cphjs.svg), [EPS](/images/logo/cphjs.eps), [PDF](/images/logo/cphjs.pdf)
+Download our logo here: [SVG](/images/logo/cphjs.svg), [PDF](/images/logo/cphjs.pdf)
 
 ### How do I contact you?
 
 Feel free to write to us at <hello@copenhagenjs.dk>, or on [@copenhagenjs](http://twitter.com/copenhagenjs), if you have questions, want to host, or simply wanna talk.
 
 We also have a [CopenhagenJS on Google Groups](http://groups.google.com/group/copenhagenjs/), and many of us hang out in our [#copenhagenjs channel on irc.freenode.net](irc://irc.freenode.net/copenhagenjs).
+
+<footer class="organizers">
+    <h4>Meet our organizers</h4>
+    <ul class="organizers">
+      <li>
+          <h5>Kevin Simper</h5>
+          <a href="https://kevinsimper.dk" title="Kevin Simper">
+            <img src="https://pbs.twimg.com/profile_images/421755629078728704/eTx6RTWJ.jpeg" alt="Kevin Simper">
+          </a>
+          <a href="https://twitter.com/kevinsimper" class="twitter-follow-button" data-show-count="true">Follow @kevinsimper</a>
+      </li>
+    </ul>
+</footer>
