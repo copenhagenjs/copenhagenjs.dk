@@ -46,6 +46,10 @@ section {
     padding: 36px 0;
 }
 
+img {
+    max-width: 100%
+}
+
 .date,
 .date a {
     color:#777
