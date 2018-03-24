@@ -12,9 +12,13 @@ export default () => {
         </a>
       </div>
       <h3>Archive</h3>
-      <ul>{data.posts.reverse().map((p, id) => <li key={id}>
-        <a href={`/archive/${p.replace('.md', '')}`}>{p}</a>
-      </li>)}</ul>
+      <ul>
+        {data.posts.reverse().map((p, id) => (
+          <li key={id}>
+            <a href={`/archive/${p.replace('.md', '')}`}>{p}</a>
+          </li>
+        ))}
+      </ul>
     </Page>
   )
 }

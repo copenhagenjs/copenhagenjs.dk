@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 
-export default ({children}) => {
+export default ({ children }) => {
   return (
     <Layout>
       <header className="page-header bg-grey" role="navigation">
@@ -29,9 +29,7 @@ export default ({children}) => {
         </div>
       </header>
 
-      <section className="page">
-        {children}
-      </section>
+      <section className="page">{children}</section>
     </Layout>
   )
 }
