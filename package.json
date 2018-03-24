@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "fix-lint": "npx prettier --write --single-quote --no-semi 'components/**/*.js' 'pages/**/*.js'",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "npm run build"
   },
   "keywords": [],
   "author": "",
