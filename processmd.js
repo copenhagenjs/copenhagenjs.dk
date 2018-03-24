@@ -17,7 +17,7 @@ async function main() {
     writeFileSync(
       './pages/archive/' + files[file].replace('.md', '.js'),
       `import Page from '../../components/Page'
-        export default () => ( <Page>${html}</Page> )
+        export default () => ( <Page><div dangerouslySetInnerHTML={{__html: \`${html}\`}}></div></Page> )
       `
     )
   }
