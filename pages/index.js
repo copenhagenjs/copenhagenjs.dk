@@ -5,13 +5,8 @@ export default () => (
     <header className="page-header master bg-grey" role="navigation">
       <ul className="navigation">
         <li>
-          <a className="btn-white" href="/upcoming/">
-            Upcoming events
-          </a>
-        </li>
-        <li>
-          <a className="btn-white" href="/past/">
-            Past events
+          <a className="btn-white" href="/events/">
+            Events
           </a>
         </li>
         <li>
