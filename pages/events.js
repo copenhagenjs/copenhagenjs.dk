@@ -1,35 +1,20 @@
-import Layout from '../components/Layout'
+import Page from '../components/Page'
+import data from '../_posts/_data.json'
 
 export default () => {
   return (
-    <Layout>
-      <header class="page-header bg-grey" role="navigation">
-        <div class="page">
-          <a href="/">
-            <img class="logo" src="/static/images/cphjs.png" />
-          </a>
-
-          <ul class="navigation">
-            <li>
-              <a class="btn-white" href="/events/">
-                All events
-              </a>
-            </li>
-            <li>
-              <a class="btn-white" href="/media/">
-                Photos & Video
-              </a>
-            </li>
-            <li>
-              <a class="btn-white" href="/about/">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-      </header>
-
-      <section class="page">Events</section>
-    </Layout>
+    <Page>
+      <h1>Events</h1>
+      <div>
+        You can find the newest meetups on{' '}
+        <a href="https://www.meetup.com/copenhagenjs/">
+          meetup.com/copenhagenjs
+        </a>
+      </div>
+      <h3>Archive</h3>
+      <ul>{data.posts.reverse().map((p, id) => <li key={id}>
+        <a href={`/archive/${p.replace('.md', '')}`}>{p}</a>
+      </li>)}</ul>
+    </Page>
   )
 }
