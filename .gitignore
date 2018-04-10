@@ -5,3 +5,6 @@ node_modules
 .next
 out
 pages/archive
+
+yarn.lock
+yarn-error.lock
