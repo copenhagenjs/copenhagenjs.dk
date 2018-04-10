@@ -7,7 +7,7 @@ export default ({ children }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>CopenhagenJS</title>
-        <link rel="icon" type="image/png" href="/static/images/logo.png" />
+        <link rel="icon" type="image/png" href="favicon.ico" />
         <link
           rel="stylesheet"
           href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900"
@@ -17,8 +17,9 @@ export default ({ children }) => {
 
         <meta
           property="og:image"
-          content="http://copenhagenjs.dk/static/images/logo.png"
+          content="http://copenhagenjs.dk/static/images/logo-small.png"
         />
+        {/* TODO: use FeedBurner */}
         <link
           href="/atom.xml"
           type="application/atom+xml"
