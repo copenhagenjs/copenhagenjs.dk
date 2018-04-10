@@ -23,7 +23,7 @@ export default () => (
 
       <img
         className="logo"
-        src="/static/images/cphjs.png"
+        src="/static/images/logo/cphjs.svg"
         alt="CopenhagenJS logo"
       />
       <h3>
