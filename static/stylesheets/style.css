@@ -74,7 +74,7 @@ section {
 	border-top: 1px solid #fff;
     text-align: center;
 
-	background-image: url('/images/header_bg.jpg');
+	background-image: url('/static/images/header_bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center 45%;
 	background-size: cover;
