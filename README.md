@@ -1,14 +1,17 @@
-This is a Jekyll based website for CopenhagenJS.
+# CopenhagenJS
+
+Nice people have a nice readme file :) 
+
+This is a React & Next based website of CopenhagenJS.
 
 See http://copenhagenjs.dk
 
 ## Installation
 ```
-gem install jekyll
+npm i
 ```
 
-### Serving the page
-This will start up a web server on `localhost:4000`, include drafts and rebuild the page on every update:
+### Running locally
 ```
-jekyll serve -w -D
+npm run next
 ```
