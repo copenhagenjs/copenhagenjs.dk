@@ -1,26 +1,11 @@
 import Layout from '../components/Layout'
+import Navigation from '../components/Navigation'
 import marked from 'marked'
 
 export default () => (
   <Layout>
     <header className="page-header master bg-grey" role="navigation">
-      <ul className="navigation">
-        <li>
-          <a className="btn-white" href="/events/">
-            Events
-          </a>
-        </li>
-        <li>
-          <a className="btn-white" href="/media/">
-            Photos & Video
-          </a>
-        </li>
-        <li>
-          <a className="btn-white" href="/about/">
-            About
-          </a>
-        </li>
-      </ul>
+      <Navigation/>
 
       <img
         className="logo"

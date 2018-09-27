@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import Navigation from '../components/Navigation'
 
 export default ({ children }) => {
   return (
@@ -8,23 +9,7 @@ export default ({ children }) => {
           <a href="/">
             <img className="logo" src="/static/images/cphjs.png" />
           </a>
-          <ul className="navigation">
-            <li>
-              <a className="btn-white" href="/">
-                Home
-              </a>
-            </li>
-            <li>
-              <a className="btn-white" href="/events">
-                All events
-              </a>
-            </li>
-            <li>
-              <a className="btn-white" href="/about">
-                About
-              </a>
-            </li>
-          </ul>
+          <Navigation/>
         </div>
       </header>
       <section className="page">{children}</section>
