@@ -34,16 +34,6 @@ export default ({ children }) => {
           async
           src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=423774561071001"
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118380583-1"></script>
-        <script dangerouslySetInnerHTML={{__html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-118380583-1');
-        `}}>
-        </script>
-
       </div>
     </div>
   )
