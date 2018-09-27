@@ -8,27 +8,25 @@ export default ({ children }) => {
           <a href="/">
             <img className="logo" src="/static/images/cphjs.png" />
           </a>
-
           <ul className="navigation">
             <li>
-              <a className="btn-white" href="/events/">
+              <a className="btn-white" href="/">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="btn-white" href="/events">
                 All events
               </a>
             </li>
             <li>
-              <a className="btn-white" href="/media/">
-                Photos & Video
-              </a>
-            </li>
-            <li>
-              <a className="btn-white" href="/about/">
+              <a className="btn-white" href="/about">
                 About
               </a>
             </li>
           </ul>
         </div>
       </header>
-
       <section className="page">{children}</section>
     </Layout>
   )
