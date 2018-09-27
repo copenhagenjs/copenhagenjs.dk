@@ -40,7 +40,7 @@ It's time for the September edition of CopenhagenJS. Let us get together and tal
     18:00 - "Video from Bornhack" - Julian
     18:25 - Break with food and drinks
     19:00 - "How we use Glimmer.js" - Kenneth Larsen
-    19:35 - "Becoming a professional data modeler" - Andreas Møller
+    19:35 - "Data Modelling with Types" - Andreas Møller
     20:00 - "RailsGirls Summer of Code" - Neer & Anne
     20:10 - Quiz
     20:20 - Socialising - meet the community
@@ -80,8 +80,8 @@ Kevin & Paul`)
 
       <div className="social">
         <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcopenhagenjs%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=167461780321599"
-          width="340"
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcopenhagenjs%2F&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=167461780321599"
+          width="300"
           height="214"
           style={{ border: 'none', overflow: 'hidden' }}
           scrolling="no"
