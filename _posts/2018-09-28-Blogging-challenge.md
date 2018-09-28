@@ -1,0 +1,26 @@
+---
+
+title: 'Blogging Challenge'
+
+---
+
+# Blogging Challenge
+
+Write a blogpost about _How did you find and starting programming?_
+
+You decide how you want to write it, if it should be long or short.
+
+You can write it on your own blog and if you don't have one already then use
+either medium.com or wordpress.com which are both really good places to get
+started.
+
+When you are done, submit your blogpost to this form:
+
+All the participates will get a reward and we will highlight all the blogposts
+at the next meetup.
+
+https://goo.gl/forms/sXVwPMX8kptUJ4Nm1
+
+Happy writing and looking forward to reading your posts!
+
+- Kevin
