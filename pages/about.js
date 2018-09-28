@@ -8,7 +8,7 @@ CopenhagenJS is a JavaScript user group in Copenhagen and the Öresund region. O
 
 A wide range of backgrounds are represented in the group, from occasional users to JavaScript and front end experts. Everyone with an interest in JavaScript is welcome.
 
-In a typical meeting, we start at 18:00. There's a quick introduction, everyone grabs a drink of some sort. After that we usually have 3-4 talks of 15-30 minutes.
+In a typical meeting, we start at 18:00. There's a quick introduction, everyone grabs a drink of some sort. After that we usually have 3 talks of 20-25 minutes.
 
 Previous topics include:
 
@@ -30,15 +30,13 @@ If you're interested in attending a meeting, we'd appreciate an indication on th
 We've put together a little checklist, of things to keep in mind when hosting a CopenhagenJS meeting.
 
 * Respond to a call for venue sooner, rather than later
-* Be sure you have enough room for the meetup. Current size is around 30-40 per meeting
+* Be sure you have enough room for the meetup. Current size is around 70-90 per meeting
 * Make your venue easy to find
    * Supply links to map services with pointers placed correctly
    * Put up signs/posters on location to guide participants
 * Have your presentation setup ready and tested in advance
-   * Projector
-   * VGA cable
-   * VGA ⟺ Mini DisplayPort (<http://store.apple.com/dk/product/MB572Z/A>)
-   * VGA ⟺ Mini DVI (<http://store.apple.com/dk/product/M9320G/A>)
+   * HDMI Projector
+   * HDMI cable
    * Power outlet for speaker's laptop, bonus points for outlets for participants
    * Possibly power supply for laptops, Macs are popular
 * Drinks, snacks
