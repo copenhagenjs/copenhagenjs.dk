@@ -15,7 +15,7 @@ export default () => {
       <ul>
         {data.posts.reverse().map((p, id) => (
           <li key={id}>
-            <a href={`/archive/${p.replace('.md', '')}`}>{p}</a>
+            <a href={`/archive/${p.replace('.md', '')}`}>{p.replace('.md', '')}</a>
           </li>
         ))}
       </ul>
