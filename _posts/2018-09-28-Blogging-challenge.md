@@ -6,7 +6,7 @@ title: 'Blogging Challenge'
 
 # Blogging Challenge
 
-Write a blogpost about _How did you find and starting programming?_
+Write a blogpost about _How did you find and start programming?_
 
 You decide how you want to write it, if it should be long or short.
 

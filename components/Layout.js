@@ -10,14 +10,14 @@ export default ({ children }) => {
         <link rel="icon" type="image/png" href="/static/images/logo.png" />
         <link
           rel="stylesheet"
-          href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900"
           type="text/css"
         />
         <link rel="stylesheet" href="/static/stylesheets/style.css" />
 
         <meta
           property="og:image"
-          content="http://copenhagenjs.dk/static/images/logo.png"
+          content="https://copenhagenjs.dk/static/images/logo.png"
         />
         <link
           href="/atom.xml"
