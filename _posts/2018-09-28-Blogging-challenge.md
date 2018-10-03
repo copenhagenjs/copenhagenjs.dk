@@ -24,3 +24,7 @@ https://goo.gl/forms/sXVwPMX8kptUJ4Nm1
 Happy writing and looking forward to reading your posts!
 
 - Kevin
+
+## Blogpost entries submitted
+
+- "How I started programming" - Kevin Simper <br/> https://www.kevinsimper.dk/posts/how-i-started-programming
