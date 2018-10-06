@@ -27,4 +27,5 @@ Happy writing and looking forward to reading your posts!
 
 ## Blogpost entries submitted
 
+-  "How I convert myself from a buyer to a web developer in six months" - Zoey Zou <br/> https://medium.com/@zoeyzou2018/how-i-convert-myself-from-a-buyer-to-a-web-developer-in-six-months-ccbd1cc473d6
 - "How I started programming" - Kevin Simper <br/> https://www.kevinsimper.dk/posts/how-i-started-programming
