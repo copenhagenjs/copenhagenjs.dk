@@ -10,14 +10,14 @@ export default ({ children }) => {
         <link rel="icon" type="image/png" href="/static/images/logo.png" />
         <link
           rel="stylesheet"
-          href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900"
           type="text/css"
         />
         <link rel="stylesheet" href="/static/stylesheets/style.css" />
 
         <meta
           property="og:image"
-          content="http://copenhagenjs.dk/static/images/logo.png"
+          content="https://copenhagenjs.dk/static/images/logo.png"
         />
         <link
           href="/atom.xml"
@@ -34,16 +34,6 @@ export default ({ children }) => {
           async
           src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=423774561071001"
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118380583-1"></script>
-        <script dangerouslySetInnerHTML={{__html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-118380583-1');
-        `}}>
-        </script>
-
       </div>
     </div>
   )

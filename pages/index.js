@@ -1,25 +1,11 @@
 import Layout from '../components/Layout'
+import Navigation from '../components/Navigation'
+import marked from 'marked'
 
 export default () => (
   <Layout>
     <header className="page-header master bg-grey" role="navigation">
-      <ul className="navigation">
-        <li>
-          <a className="btn-white" href="/events/">
-            Events
-          </a>
-        </li>
-        <li>
-          <a className="btn-white" href="/media/">
-            Photos & Video
-          </a>
-        </li>
-        <li>
-          <a className="btn-white" href="/about/">
-            About
-          </a>
-        </li>
-      </ul>
+      <Navigation/>
 
       <img
         className="logo"
@@ -40,8 +26,45 @@ export default () => (
     </header>
 
     <section className="page">
+      <div style={{textAlign: 'center'}}><a style={{background: '#fae209', color: 'black', padding: '10px', border: '3px dashed black', borderRadius: '4px'}} href="/archive/2018-09-28-Blogging-challenge">Link to Blogging Challenge</a></div>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: marked(`
+# October Meetup 25th
+
+Next meetup is going to be at Danmarks Radio.
+
+### Schedule:
+
+    17:00 - Doors open
+    17:45 - Welcome
+    18:00 - You?
+    18:25 - Break with food and drinks
+    19:00 - You?
+    19:35 - You?
+    20:00 - Quiz
+    20:10 - Socialising - meet the community
+    21:00 - See you next time!
+
+### What is CopenhagenJS?
+If you've never heard about CopenhagenJS, it's a monthly community group in Copenhagen for all JavaScript enthusiasts.
+
+### Can I present something at CopenhagenJS?
+Yes, CopenhagenJS is for and by the community so you are more than welcome to talk about things that you find interesting.
+
+Remember to Like our facebook to get all the latest updates and videos!
+
+https://www.facebook.com/copenhagenjs/
+
+Yes, you can write to us here on the meetup.com page if you want to help, or if you just want to ask about something.
+
+Looking forward to seeing you!
+
+Kevin & Paul
+          `)
+        }}
+      />
       <div className="next-meetup">
-        <h1>Next meetup</h1>
         <p>Read more and sign up for the next event here:</p>
 
         <a
@@ -58,8 +81,8 @@ export default () => (
 
       <div className="social">
         <iframe
-          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcopenhagenjs%2F&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=167461780321599"
-          width="340"
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcopenhagenjs%2F&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=167461780321599"
+          width="300"
           height="214"
           style={{ border: 'none', overflow: 'hidden' }}
           scrolling="no"
