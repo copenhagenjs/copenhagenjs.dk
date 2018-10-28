@@ -15,9 +15,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^3.3.2",
+    "@zeit/next-css": "^1.0.1",
+    "@material/react-text-field": "^0.6.1",
     "marked": "^0.3.19",
-    "next": "^5.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "next": "^7.0.2",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "webpack": "^4.23.1"
   }
 }

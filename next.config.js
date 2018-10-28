@@ -1,11 +1,13 @@
 const { readdirSync } = require('fs')
+const withCSS = require('@zeit/next-css');
 
-module.exports = {
+module.exports = withCSS({
   exportPathMap: function() {
     let pages = {
       '/': { page: '/' },
       '/events': {page: '/events'}
     }
+    /*
     const archive = readdirSync('./pages/archive')
     for (let page in archive) {
       if(archive[page] !== '_data.json') {
@@ -14,7 +16,7 @@ module.exports = {
         }
       }
     }
-    console.log(pages)
+    console.log(pages)*/
     return pages
   }
-}
+})
