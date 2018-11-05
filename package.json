@@ -18,7 +18,6 @@
     "@material-ui/core": "^3.3.2",
     "@material/react-text-field": "^0.6.1",
     "@zeit/next-css": "^1.0.1",
-    "axios": "^0.18.0",
     "body-parser": "^1.15.0",
     "cors": "^2.8.4",
     "express": "3.x",

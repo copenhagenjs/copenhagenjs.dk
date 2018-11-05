@@ -1,14 +1,11 @@
 const fs = require('fs');
-const Guid = require('guid');
 const express = require('express');
-const bodyParser = require("body-parser");
-const Mustache  = require('mustache');
+const bodyParser = require('body-parser');
 const Request  = require('request');
 const Querystring  = require('querystring');
 var cors = require('cors');
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
@@ -21,7 +18,6 @@ const me_endpoint_base_url = 'https://graph.accountkit.com/{{ACCOUNT_KIT_API_VER
 const token_exchange_base_url = 'https://graph.accountkit.com/{{ACCOUNT_KIT_API_VERSION}}/access_token';
 
 app.post('/login_success', cors(), function(request, response) {
-
   // CSRF check
   if (request.body.csrf === csrf_guid) {
     var app_access_token = ['AA', app_id, app_secret].join('|');

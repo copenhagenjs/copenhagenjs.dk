@@ -4,7 +4,6 @@ import Page from '../components/Page';
 import TextField, { HelperText, Input } from '@material/react-text-field';
 import Button from '@material-ui/core/Button'
 import '@material/react-text-field/dist/text-field.css';
-import axios from 'axios';
 
 export default class Login extends React.Component {
   constructor() {
@@ -20,6 +19,7 @@ export default class Login extends React.Component {
       }
     }
   }
+
   init() {
     AccountKit.init({
       appId:"248317325862187",
@@ -28,17 +28,26 @@ export default class Login extends React.Component {
       debug:true
     });
   }
+
   handleLogin() {
     AccountKit.login('EMAIL', { emailAddress: this.state.email }, res => {
       if (res.status === "PARTIALLY_AUTHENTICATED") {
         var code = res.code;
         var csrf = res.state;
+
         // Send code to server to exchange for access token
-        axios.post('http://localhost:8880/login_success', {
-          code: code,
-          csrf: csrf
+        fetch('http://localhost:8880/login_success', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            code: code,
+            csrf: csrf
+          })
         })
-        .then((res) => {
+        .then(res => {
           console.log(res);
         })
       }
