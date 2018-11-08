@@ -113,7 +113,6 @@ Kevin & Paul`)
       >
         <input
           type="email"
-          value=""
           placeholder="mail@example.com"
           name="EMAIL"
           className="newsletter__email"
@@ -124,7 +123,6 @@ Kevin & Paul`)
             type="text"
             name="b_e5f1b30e5ca3a2a397fa93a0d_163c4118a6"
             tabIndex="-1"
-            value=""
           />
         </div>
         <input
