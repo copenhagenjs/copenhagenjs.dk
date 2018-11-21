@@ -30,38 +30,39 @@ export default () => (
       <div
         dangerouslySetInnerHTML={{
           __html: marked(`
-# October Meetup 25th
+# November Meetup 29th
 
-Next meetup is going to be at Danmarks Radio.
+It is time for the November edition of CopenhagenJS. We are going to be hosted by SaxoBank, which is a really cool venue. Let's meet and talk some Javascript.
 
 ### Schedule:
 
     17:00 - Doors open
     17:45 - Welcome
-    18:00 - You?
+    18:00 - Using the new React Hooks - Younes Meliani
     18:25 - Break with food and drinks
     19:00 - You?
     19:35 - You?
-    20:00 - Quiz
+    20:00 - Quiz time
     20:10 - Socialising - meet the community
     21:00 - See you next time!
 
 ### What is CopenhagenJS?
-If you've never heard about CopenhagenJS, it's a monthly community group in Copenhagen for all JavaScript enthusiasts.
+
+it's a monthly community group in Copenhagen for all JavaScript developers. We get together and share the things we work on and really like. We talk about new frameworks and techniques that we can use in work to make it better.
 
 ### Can I present something at CopenhagenJS?
+
 Yes, CopenhagenJS is for and by the community so you are more than welcome to talk about things that you find interesting.
 
 Remember to Like our facebook to get all the latest updates and videos!
 
 https://www.facebook.com/copenhagenjs/
 
-Yes, you can write to us here on the meetup.com page if you want to help, or if you just want to ask about something.
+You can write to us here on the meetup.com page if you want to help, or if you just want to ask about something.
 
 Looking forward to seeing you!
 
-Kevin & Paul
-          `)
+Kevin & Paul`)
         }}
       />
       <div className="next-meetup">
@@ -112,7 +113,6 @@ Kevin & Paul
       >
         <input
           type="email"
-          value=""
           placeholder="mail@example.com"
           name="EMAIL"
           className="newsletter__email"
@@ -123,7 +123,6 @@ Kevin & Paul
             type="text"
             name="b_e5f1b30e5ca3a2a397fa93a0d_163c4118a6"
             tabIndex="-1"
-            value=""
           />
         </div>
         <input
