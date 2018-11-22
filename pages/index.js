@@ -1,11 +1,11 @@
-import Layout from '../components/Layout'
-import Navigation from '../components/Navigation'
-import marked from 'marked'
+import Layout from '../components/Layout';
+import Navigation from '../components/Navigation';
+import marked from 'marked';
 
 export default () => (
   <Layout>
     <header className="page-header master bg-grey" role="navigation">
-      <Navigation/>
+      <Navigation />
 
       <img
         className="logo"
@@ -26,7 +26,6 @@ export default () => (
     </header>
 
     <section className="page">
-      <div style={{textAlign: 'center'}}><a style={{background: '#fae209', color: 'black', padding: '10px', border: '3px dashed black', borderRadius: '4px'}} href="/archive/2018-09-28-Blogging-challenge">Link to Blogging Challenge</a></div>
       <div
         dangerouslySetInnerHTML={{
           __html: marked(`
@@ -40,7 +39,7 @@ It is time for the November edition of CopenhagenJS. We are going to be hosted b
     17:45 - Welcome
     18:00 - Using the new React Hooks - Younes Meliani
     18:25 - Break with food and drinks
-    19:00 - You?
+    19:00 - Morphism and reusability - How we built a new product in record time - Atli Adalsteinsson
     19:35 - You?
     20:00 - Quiz time
     20:10 - Socialising - meet the community
@@ -134,4 +133,4 @@ Kevin & Paul`)
       </form>
     </section>
   </Layout>
-)
+);
