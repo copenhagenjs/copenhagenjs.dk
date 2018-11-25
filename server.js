@@ -1,3 +1,4 @@
+require('dotenv-safe').config();
 const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -12,8 +13,8 @@ app.use(cors());
 //var csrf_guid = Guid.raw();
 const csrf_guid = 'test';
 const account_kit_api_version = 'v1.1';
-const app_id = '248317325862187';
-const app_secret = 'b50a135544538e8160de917d6d346160';
+const app_id = AK_APP_ID;
+const app_secret = AK_APP_SECRET;
 const me_endpoint_base_url = 'https://graph.accountkit.com/{{ACCOUNT_KIT_API_VERSION}}/me';
 const token_exchange_base_url = 'https://graph.accountkit.com/{{ACCOUNT_KIT_API_VERSION}}/access_token';
 const app_access_token = ['AA', app_id, app_secret].join('|');

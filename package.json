@@ -20,6 +20,7 @@
     "@zeit/next-css": "^1.0.1",
     "body-parser": "^1.15.0",
     "cors": "^2.8.4",
+    "dotenv-safe": "^6.1.0",
     "express": "3.x",
     "guid": "0.0.12",
     "marked": "^0.3.19",
