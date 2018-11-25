@@ -45,7 +45,6 @@ app.post('/login_success', cors(), function(request, response) {
         } else if (respBody.email) {
           view.email_addr = respBody.email.address;
         }
-        //var html = Mustache.to_html(loadLoginSuccess(), view);
         response.send("SUCCESSS");
       });
     });
