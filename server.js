@@ -16,11 +16,11 @@ const app_id = '248317325862187';
 const app_secret = 'b50a135544538e8160de917d6d346160';
 const me_endpoint_base_url = 'https://graph.accountkit.com/{{ACCOUNT_KIT_API_VERSION}}/me';
 const token_exchange_base_url = 'https://graph.accountkit.com/{{ACCOUNT_KIT_API_VERSION}}/access_token';
+const app_access_token = ['AA', app_id, app_secret].join('|');
 
 app.post('/login_success', cors(), function(request, response) {
   // CSRF check
   if (request.body.csrf === csrf_guid) {
-    let app_access_token = ['AA', app_id, app_secret].join('|');
     let params = {
       grant_type: 'authorization_code',
       code: request.body.code,
