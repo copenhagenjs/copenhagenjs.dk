@@ -40,7 +40,7 @@ It is time for the November edition of CopenhagenJS. We are going to be hosted b
     18:00 - Using the new React Hooks - Younes Meliani
     18:25 - Break with food and drinks
     19:00 - Morphism and reusability - How we built a new product in record time - Atli Adalsteinsson
-    19:35 - You?
+    19:35 - How we use Storybooks at Vivino - Johnathan Sewell
     20:00 - Quiz time
     20:10 - Socialising - meet the community
     21:00 - See you next time!
