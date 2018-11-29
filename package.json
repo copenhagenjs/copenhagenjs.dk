@@ -9,7 +9,7 @@
     "fix-lint": "npx prettier --write --single-quote --no-semi 'components/**/*.js' 'pages/**/*.js'",
     "start": "next start",
     "process-archive": "mkdir -p pages/archive && node processmd",
-    "deploy": "npm run build && npx surge out https://copenhagenjs.dk"
+    "deploy": "npm run build && firebase deploy"
   },
   "keywords": [],
   "author": "",
