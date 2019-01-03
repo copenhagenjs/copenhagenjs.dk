@@ -9,7 +9,7 @@ export default ({ children }) => {
           <a href="/">
             <img className="logo" src="/static/images/cphjs.png" />
           </a>
-          <Navigation/>
+          <Navigation />
         </div>
       </header>
       <section className="page">{children}</section>

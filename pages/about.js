@@ -65,8 +65,7 @@ Feel free to write to us at <kevin.simper@gmail.com>, or on [@copenhagenjs](http
 export default () => {
   return (
     <Page>
-      <div dangerouslySetInnerHTML={{__html: marked(text)}}>
-      </div>
+      <div dangerouslySetInnerHTML={{ __html: marked(text) }} />
     </Page>
   )
 }
