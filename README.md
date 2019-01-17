@@ -1,14 +1,13 @@
-This is a Jekyll based website for CopenhagenJS.
+# 📦 CopenhagenJS Website
 
-See http://copenhagenjs.dk
+Made with Next.js and deployed to Firebase.
 
-## Installation
+How to run the website:
+
 ```
-gem install jekyll
+npm install
 ```
 
-### Serving the page
-This will start up a web server on `localhost:4000`, include drafts and rebuild the page on every update:
 ```
-jekyll serve -w -D
+npm run dev
 ```
