@@ -63,23 +63,27 @@ export default class IndexRoutes extends React.Component {
           <h3>Dont miss important news!</h3>
 
           <div className="social">
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcopenhagenjs%2F&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=167461780321599"
-              width="300"
-              height="214"
-              style={{ border: 'none', overflow: 'hidden' }}
-              scrolling="no"
-              frameBorder="0"
-              allowtransparency="true"
-            />
-            <a
-              href="https://twitter.com/copenhagenjs"
-              className="twitter-follow-button"
-              data-show-count="true"
-              data-size="large"
-            >
-              Follow @copenhagenjs
-            </a>
+            <div>
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcopenhagenjs%2F&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=167461780321599"
+                width="300"
+                height="214"
+                style={{ border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                frameBorder="0"
+                allowtransparency="true"
+              />
+            </div>
+            <div>
+              <a
+                href="https://twitter.com/copenhagenjs"
+                className="twitter-follow-button"
+                data-show-count="true"
+                data-size="large"
+              >
+                Follow @copenhagenjs
+              </a>
+            </div>
           </div>
 
           <div className="newsletter__description">
