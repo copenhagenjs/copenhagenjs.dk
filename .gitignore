@@ -5,3 +5,5 @@ node_modules
 .next
 out
 pages/archive
+static/posts
+.firebase
