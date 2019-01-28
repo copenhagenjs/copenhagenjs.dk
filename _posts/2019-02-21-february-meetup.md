@@ -1,0 +1,34 @@
+# February 21st
+
+Hi everyone,
+
+It is February, and as usual we are organising the monthly edition of CopenhagenJS.
+Like last February, we are being hosted by Karnov. They have a super cool venue in the center of Copenhagen. So big thank you to Karnov!
+
+### Schedule:
+
+    17:00 Doors open
+    17:45 Welcome
+    18:00 First presentation - by you?
+    18:25 Break with food and drinks
+    19:00 Second presentation - by you?
+    19:35 Third presentation - by you?
+    19:50 Possible event
+    20:00 Socialising - meet the community
+    21:00 See you next time!
+
+### What is CopenhagenJS?
+
+CopenhagenJs is a community group in Copenhagen for all JavaScript developers. We get together and share the things we work on and really like. We talk about various technologies that we either use on a day to day basis, or aspire to use.
+
+### Can I present something at CopenhagenJS?
+
+Definitely, CopenhagenJS is for and by the community, so you are more than welcome to talk about things that you find interesting. You can contact us with a private message or comment here on meetup.com, or on any social network where you can find us.
+
+Remember to Like our facebook to get all the latest updates and videos!
+
+https://www.facebook.com/copenhagenjs/
+
+Looking forward to seeing you!
+
+Kevin & Paul

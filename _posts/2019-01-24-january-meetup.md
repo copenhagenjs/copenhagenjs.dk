@@ -9,7 +9,8 @@ Hi friends, happy new year++ and we are ready to start another great year of Cop
     18:00 - micro:bit - JavaScript meets microcontroller - Kenneth Geisshirt
     18:25 - Break with food and drinks
     19:00 - GraphQL and React Suspense - Morten Barklund
-    19:35 - You?
+    19:35 - Shape your workflows with custom eslint plugins - Peter Munter
+    19:45 - You?
     20:00 - Quiz time
     20:10 - Socialising - meet the community
     21:00 - See you next time!
