@@ -11,7 +11,7 @@ export default class IndexRoutes extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('/static/posts/2019-01-24-january-meetup.md').then(r => r.text()).then(r => {
+    fetch('/static/posts/2019-02-21-february-meetup.md').then(r => r.text()).then(r => {
       this.setState({
         markdown: r
       })
