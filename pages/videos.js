@@ -1,6 +1,12 @@
 import React from "react";
 import Page from "../components/Page";
 
+const videos = [
+  "https://www.youtube.com/embed/Zu8P6xejHuU",
+  "https://www.youtube.com/embed/HYqxc_zjqMg",
+  "https://www.youtube.com/embed/VNoDZihhWHI"
+];
+
 export default class Videos extends React.Component {
   render() {
     return (
@@ -12,30 +18,18 @@ export default class Videos extends React.Component {
           </a>
         </p>
         <p>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Zu8P6xejHuU"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/HYqxc_zjqMg"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/VNoDZihhWHI"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          />
+          {videos.map(url => {
+            return (
+              <iframe
+                width="560"
+                height="315"
+                src={url}
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              />
+            );
+          })}
         </p>
       </Page>
     );

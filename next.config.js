@@ -5,6 +5,7 @@ module.exports = {
     let pages = {
       "/": { page: "/" },
       "/events": { page: "/events" },
+      "/videos": { page: "/videos" },
       "/about": { page: "/about" }
     };
     const archive = readdirSync("./pages/archive");
