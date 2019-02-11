@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "npm build && next",
     "build": "npm run process-archive && cp -R _posts/ static/posts && next build && next export",
     "fix-lint": "npx prettier --write --single-quote --no-semi 'components/**/*.js' 'pages/**/*.js'",
     "start": "next start",
