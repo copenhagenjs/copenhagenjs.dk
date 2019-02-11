@@ -1,4 +1,4 @@
-const { readdirSync } = require("fs");
+const { readdirSync } = require('fs');
 
 module.exports = {
   exportPathMap: function() {
@@ -16,7 +16,7 @@ module.exports = {
         };
       }
     }
-    console.log(pages);
+
     return pages;
   }
 };
