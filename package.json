@@ -10,7 +10,9 @@
     "start": "next start",
     "process-archive": "mkdir -p pages/archive && node processmd",
     "deploy": "npm run build && firebase deploy",
-    "test": "echo 'everything is fine'"
+    "test": "echo 'everything is fine'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +22,13 @@
     "next": "^7.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "^4.1.11",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11",
+    "@storybook/addons": "^4.1.11",
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.5"
   }
 }
