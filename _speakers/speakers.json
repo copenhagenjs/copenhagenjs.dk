@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Kenneth Geisshirt",
+    "avatar": "https://pbs.twimg.com/profile_images/647736931/kneth_400x400.jpg",
+    "talks": [
+      {
+        "title": "micro:bit - 'JavaScript meets microcontroller'",
+        "videoUrl": "https://www.youtube.com/embed/HYqxc_zjqMg",
+        "eventName": "2019-01-24-january-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Morten Barklund",
+    "avatar": "https://pbs.twimg.com/profile_images/87424058/avatar_400x400.jpg",
+    "talks": [
+      {
+        "title": "GraphQL and React Suspense",
+        "videoUrl": "https://www.youtube.com/embed/VNoDZihhWHI",
+        "eventName": "2019-01-24-january-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Peter Munter",
+    "avatar": "https://pbs.twimg.com/profile_images/671250909/me_400x400.jpg",
+    "talks": [
+      {
+        "title": "Shape your workflows with custom eslint plugins",
+        "videoUrl": "https://www.youtube.com/embed/Zu8P6xejHuU",
+        "eventName": "2019-01-24-january-meetup"
+      }
+    ]
+  }
+]
