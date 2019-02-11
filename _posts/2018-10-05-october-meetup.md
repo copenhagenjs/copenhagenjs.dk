@@ -8,7 +8,7 @@ Next meetup is going to be at Danmarks Radio. It is an interesting location beca
     17:45 - Welcome
     18:00 - How to Maps with OpenStreetMap - John Wika Haakseth
     18:25 - Break with food and drinks
-    19:00 - Amazing but simple SVG animation - Marijn
+    19:00 - Why I use Wordpress as a backend  - Marijn
     19:35 - Delivering DR TV with React.js - Kjartan
     20:00 - Quiz
     20:10 - Socialising - meet the community
