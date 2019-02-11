@@ -9,7 +9,8 @@
     "fix-lint": "npx prettier --write --single-quote --no-semi 'components/**/*.js' 'pages/**/*.js'",
     "start": "next start",
     "process-archive": "mkdir -p pages/archive && node processmd",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy",
+    "test": "echo 'everything is fine'"
   },
   "keywords": [],
   "author": "",
