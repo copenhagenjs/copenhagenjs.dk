@@ -1,5 +1,5 @@
-import marked from 'marked';
-import Page from '../components/Page';
+import marked from "marked";
+import Page from "../components/Page";
 
 const GUIDELINES_TEXT = `
 # Speakers guidelines
@@ -13,6 +13,10 @@ Please note that these are just for the guiding purpose and making the presentat
 * Share the presentation(even if you end up modifying parts of it) with the organisers at least three days before the event
 
 For any advice and help that you need when you build the presentation, you can contact [Kevin](<kevin.simper@gmail.com>) or [Paul](<paulcornelmorar@gmail.com>) directly.
+
+### Checklist for presenting
+* Expect to use HDMI, or bring a adapter to be sure
+* Disable Night Shift
 `;
 
 export default () => {
