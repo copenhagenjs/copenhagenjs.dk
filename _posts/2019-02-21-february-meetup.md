@@ -9,10 +9,10 @@ Like last February, we are being hosted by Karnov. They have a super cool venue 
 
     17:00 Doors open
     17:45 Welcome
-    18:00 First presentation - by you?
+    18:00 Talk with Neha Sharma from JSLovers community in Delhi
     18:25 Break with food and drinks
-    19:00 Second presentation - by you?
-    19:35 Third presentation - by you?
+    19:00 WebBluetooth, WebUSB, LitElement - Lars Knudsen
+    19:35 Markdownlint - Jonas BN
     19:50 Possible event
     20:00 Socialising - meet the community
     21:00 See you next time!
