@@ -1,5 +1,192 @@
 [
   {
+    "name": "Peter Munter",
+    "avatar": "https://pbs.twimg.com/profile_images/671250909/me_400x400.jpg",
+    "talks": [
+      {
+        "title": "How to do automatic WebFont setup",
+        "videoUrl": "",
+        "eventName": "2017-12-14-december-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Casper Fabricius",
+    "avatar": "https://pbs.twimg.com/profile_images/378800000736150115/37af5e49ba84f0f65813f6098f292558_400x400.jpeg",
+    "talks": [
+      {
+        "title": "Introduction to ReasonML",
+        "videoUrl": "",
+        "eventName": "2017-12-14-december-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Cem Turan",
+    "avatar": "https://pbs.twimg.com/profile_images/898489196427579393/s5YrxlDy_400x400.jpg",
+    "talks": [
+      {
+        "title": "The state of WebVR and WebAR",
+        "videoUrl": "",
+        "eventName": "2017-12-14-december-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Olga Dmitricenko & Steffen Agger",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "Dear Javascript,",
+        "videoUrl": "",
+        "eventName": "2018-01-25-january-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Mads Obel Jørgensen",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "Front-end at TDC",
+        "videoUrl": "",
+        "eventName": "2018-01-25-january-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Elvis Adomnica",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "Garbage collecting in the browser",
+        "videoUrl": "",
+        "eventName": "2018-02-22-february-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Anne & Neer",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "Rails Girls with Summer of Code",
+        "videoUrl": "",
+        "eventName": "2018-02-22-february-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Kenneth Auchenberg",
+    "avatar": "https://pbs.twimg.com/profile_images/1029857797737828352/sC2aAvFV_400x400.jpg",
+    "talks": [
+      {
+        "title": "Building the VS Code editor at Microsoft",
+        "videoUrl": "",
+        "eventName": "2018-03-22-march-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Ràul Pineda",
+    "avatar": "https://pbs.twimg.com/profile_images/990613286658994177/Ax1VlAlR_400x400.jpg",
+    "talks": [
+      {
+        "title": "ElectronJS at Saxobank, building a multiscreen desktop application",
+        "videoUrl": "",
+        "eventName": "2018-03-22-march-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Hunor Márton Borbély",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "Making SVG and examples",
+        "videoUrl": "",
+        "eventName": "2018-03-22-march-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Lars Thorup",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "100 tests per second - 40 releases per week",
+        "videoUrl": "",
+        "eventName": "2018-04-19-april-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Aleksandra Shinkevich",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "I'm not afraid of MV* in JavaScript",
+        "videoUrl": "",
+        "eventName": "2018-04-19-april-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Rene Pot",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "Building native apps with Javascript using Titanium Alloy",
+        "videoUrl": "",
+        "eventName": "2018-05-24-may-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Kevin Simper",
+    "avatar": "https://pbs.twimg.com/profile_images/980560882936745984/yWyrDg0v_400x400.jpg",
+    "talks": [
+      {
+        "title": "Getting into Virtual Reality with React.js",
+        "videoUrl": "",
+        "eventName": "2018-05-24-may-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Hassan Brazzi",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "Working on Preact and OSS",
+        "videoUrl": "",
+        "eventName": "2018-05-24-may-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Gustavo Lira",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "Flowtype your code",
+        "videoUrl": "",
+        "eventName": "2018-08-16-august-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Boyan Mihaylov",
+    "avatar": "",
+    "talks": [
+      {
+        "title": "The rise of Non-JavaScript frameworks using WebAssembly",
+        "videoUrl": "",
+        "eventName": "2018-08-16-august-meetup"
+      }
+    ]
+  },
+  {
     "name": "Andreas Møller",
     "avatar": "https://pbs.twimg.com/profile_images/3731196850/39fc9827054f8558fc07e9c24ecb4718_400x400.jpeg",
     "talks": [
@@ -128,6 +315,28 @@
         "title": "Shape your workflows with custom eslint plugins",
         "videoUrl": "https://www.youtube.com/embed/Zu8P6xejHuU",
         "eventName": "2019-01-24-january-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Lars Knudsen",
+    "avatar": "https://pbs.twimg.com/profile_images/906772055512805376/G6OOSRbn_400x400.jpg",
+    "talks": [
+      {
+        "title": "WebBluetooth, WebUSB, LitElement",
+        "videoUrl": "",
+        "eventName": "2019-02-21-february-meetup"
+      }
+    ]
+  },
+  {
+    "name": "Jonas B. Nielsen",
+    "avatar": "https://secure.meetupstatic.com/photos/member/1/e/a/a/member_265267850.jpeg",
+    "talks": [
+      {
+        "title": "Markdownlint",
+        "videoUrl": "",
+        "eventName": "2019-02-21-february-meetup"
       }
     ]
   }
