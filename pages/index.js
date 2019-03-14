@@ -11,11 +11,13 @@ export default class IndexRoutes extends React.Component {
     }
   }
   componentDidMount() {
-    fetch('/static/posts/2019-02-21-february-meetup.md').then(r => r.text()).then(r => {
-      this.setState({
-        markdown: r
-      })
-    })
+    fetch("/static/posts/2019-03-13-marts-meetup.md")
+      .then(r => r.text())
+      .then(r => {
+        this.setState({
+          markdown: r
+        });
+      });
   }
   render() {
     return (
