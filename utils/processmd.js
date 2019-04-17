@@ -6,8 +6,10 @@ const files = readdirSync("./_posts/");
 
 async function main() {
   for (let file in files) {
+    const splitted = files[file].split(".");
+    const fileEnding = splitted[splitted.length - 1];
+    if (fileEnding !== "md") return;
     console.log(files[file]);
-    if (files[file] === "_data.json") return;
     const content = readFileSync("./_posts/" + files[file], "utf8");
     const parsed = content.includes("---")
       ? content
