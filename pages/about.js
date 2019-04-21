@@ -1,5 +1,5 @@
-import marked from 'marked'
-import Page from '../components/Page'
+import marked from 'marked';
+import Page from '../components/Page';
 
 let text = `
 # About CopenhagenJS
@@ -57,15 +57,11 @@ If you need help organising drinks, cables, put out chairs, etc, just let the or
 Signage helps people find your building, floor or office if you aren't located somewhere completely obvious. We encourage you to make use of our logo and put up signage in relevant places to give our attendees some breadcrumbs to follow.
 
 Download our logo here: [PNG](/static/images/cphjs.png)
-
-### How do I contact you?
-
-Feel free to write to us at <kevin.simper@gmail.com>, or on [@copenhagenjs](http://twitter.com/copenhagenjs), if you have questions, want to host, or simply wanna talk.
-`
+`;
 export default () => {
   return (
     <Page>
       <div dangerouslySetInnerHTML={{ __html: marked(text) }} />
     </Page>
-  )
-}
+  );
+};
