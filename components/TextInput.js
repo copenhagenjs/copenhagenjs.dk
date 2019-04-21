@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TextInput = ({ type, label, name, onChange, width, height, padding, margin }) => (
+const TextInput = ({ type, label, name, onChange, required, width, height, padding, margin }) => (
   <div className="input-root">
     <label htmlFor={name}>{label}</label>
-    <input type={type} name={name} onChange={onChange} />
+    <input type={type} name={name} onChange={onChange} required={required} />
     <style jsx>{`
       .input-root {
         display: flex;
