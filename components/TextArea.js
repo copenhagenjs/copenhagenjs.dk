@@ -36,7 +36,7 @@ const TextArea = ({
         font-family: 'Source Sans Pro', sans-serif;
         color: #484848;
         font-weight: 800;
-        etter-spacing: 0.08333333333333333em;
+        letter-spacing: 0.08333333333333333em;
       }
 
       textarea {
@@ -49,7 +49,7 @@ const TextArea = ({
         font-size: 1rem;
         width: ${width};
         height: ${height ? height : '80px'};
-        margin: ${margin ? margin : '10px 0'};
+        margin: ${margin};
         padding: ${padding ? padding : '5px 4px 5px 12px'};
       }
     `}</style>
