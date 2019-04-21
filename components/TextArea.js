@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextInput = ({
+const TextArea = ({
   label,
   name,
   onChange,
@@ -56,8 +56,9 @@ const TextInput = ({
   </div>
 );
 
-TextInput.defaultProps = {
-  type: 'text',
+TextArea.defaultProps = {
+  minLength: 10,
+  maxLength: 300,
 };
 
-export default TextInput;
+export default TextArea;
