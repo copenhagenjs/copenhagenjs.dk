@@ -6,7 +6,8 @@ module.exports = {
       '/': { page: '/' },
       '/events': { page: '/events' },
       '/videos': { page: '/videos' },
-      '/about': { page: '/about' }
+      '/about': { page: '/about' },
+      '/contact': { page: '/contact' }
     }
     const archive = readdirSync('./pages/archive')
     for (let page in archive) {
