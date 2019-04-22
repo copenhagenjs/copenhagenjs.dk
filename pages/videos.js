@@ -1,11 +1,11 @@
-import React from "react";
-import Page from "../components/Page";
+import React from 'react'
+import Page from '../components/Page'
 
 const videos = [
-  "https://www.youtube.com/embed/Zu8P6xejHuU",
-  "https://www.youtube.com/embed/HYqxc_zjqMg",
-  "https://www.youtube.com/embed/VNoDZihhWHI"
-];
+  'https://www.youtube.com/embed/Zu8P6xejHuU',
+  'https://www.youtube.com/embed/HYqxc_zjqMg',
+  'https://www.youtube.com/embed/VNoDZihhWHI'
+]
 
 export default class Videos extends React.Component {
   render() {
@@ -28,10 +28,10 @@ export default class Videos extends React.Component {
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
               />
-            );
+            )
           })}
         </p>
       </Page>
-    );
+    )
   }
 }

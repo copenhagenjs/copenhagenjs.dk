@@ -1,7 +1,7 @@
-import Page from '../components/Page';
-import TextInput from '../components/TextInput';
-import TextArea from '../components/TextArea';
-import Button from '../components/Button';
+import Page from '../components/Page'
+import TextInput from '../components/TextInput'
+import TextArea from '../components/TextArea'
+import Button from '../components/Button'
 
 export default () => {
   return (
@@ -16,5 +16,5 @@ export default () => {
         </Button>
       </form>
     </Page>
-  );
-};
+  )
+}

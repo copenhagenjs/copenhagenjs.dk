@@ -1,6 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-const Button = ({ type, children, display, onClick, size, width, height, padding, margin }) => (
+const Button = ({
+  type,
+  children,
+  display,
+  onClick,
+  size,
+  width,
+  height,
+  padding,
+  margin
+}) => (
   <button type={type} onClick={onClick} className="button-root">
     {children}
     <style jsx>{`
@@ -23,11 +33,11 @@ const Button = ({ type, children, display, onClick, size, width, height, padding
       }
     `}</style>
   </button>
-);
+)
 
 Button.defaultProps = {
   type: 'button',
-  size: 'sm',
-};
+  size: 'sm'
+}
 
-export default Button;
+export default Button

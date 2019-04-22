@@ -1,5 +1,5 @@
-import marked from "marked";
-import Page from "../components/Page";
+import marked from 'marked'
+import Page from '../components/Page'
 
 const GUIDELINES_TEXT = `
 # Speakers guidelines
@@ -17,12 +17,12 @@ For any advice and help that you need when you build the presentation, you can c
 ### Checklist for presenting
 * Expect to use HDMI, or bring a adapter to be sure
 * Disable Night Shift
-`;
+`
 
 export default () => {
   return (
     <Page>
       <div dangerouslySetInnerHTML={{ __html: marked(GUIDELINES_TEXT) }} />
     </Page>
-  );
-};
+  )
+}
