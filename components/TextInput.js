@@ -2,8 +2,10 @@ import React from 'react';
 
 const TextInput = ({ type, label, name, onChange, required, width, height, padding, margin }) => (
   <div className="input-root">
-    <label htmlFor={name}>{label}</label>
-    <input type={type} name={name} onChange={onChange} required={required} />
+    <label>
+      {label}
+      <input type={type} name={name} onChange={onChange} required={required} />
+    </label>
     <style jsx>{`
       .input-root {
         display: flex;
@@ -19,7 +21,6 @@ const TextInput = ({ type, label, name, onChange, required, width, height, paddi
         font-family: 'Source Sans Pro', sans-serif;
         color: #484848;
         font-weight: 800;
-        letter-spacing: 0.08333333333333333em;
       }
 
       input {
@@ -30,7 +31,7 @@ const TextInput = ({ type, label, name, onChange, required, width, height, paddi
         border-radius: 4px;
         outline-color: #f8de48;
         font-size: 1rem;
-        width: ${width};
+        width: ${width || '100%'};
         height: ${height ? height : '46.4px'};
         margin: ${margin};
         padding: ${padding ? padding : '5px 4px 5px 12px'};
