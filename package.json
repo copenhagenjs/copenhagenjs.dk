@@ -8,7 +8,7 @@
     "build": "npm run process-archive && cp -R _posts/ static/posts && next build && next export",
     "fix-lint": "npx prettier --write --single-quote --no-semi 'components/**/*.js' 'pages/**/*.js'",
     "start": "next start",
-    "process-archive": "mkdir -p pages/archive && node utils/processmd",
+    "process-archive": "mkdirp pages/archive && node utils/processmd",
     "deploy": "npm run build && firebase deploy",
     "test": "echo 'everything is fine'",
     "storybook": "start-storybook -p 6006",
@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "marked": "^0.6.0",
+    "mkdirp": "^0.5.1",
     "next": "^7.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

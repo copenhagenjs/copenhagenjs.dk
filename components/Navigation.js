@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default () => (
   <ul className="navigation">
@@ -20,6 +20,11 @@ export default () => (
     <li>
       <a className="btn-white" href="/videos">
         Videos
+      </a>
+    </li>
+    <li>
+      <a className="btn-white" href="/contact">
+        Contact
       </a>
     </li>
   </ul>

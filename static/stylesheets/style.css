@@ -10,6 +10,10 @@ body {
     line-height: 2rem;
 }
 
+label {
+    letter-spacing: 1.33px;
+}
+
 a {
     text-decoration: none;
 }
