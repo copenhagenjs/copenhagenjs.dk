@@ -31,8 +31,5 @@
     "@storybook/addons": "^4.1.11",
     "@babel/core": "^7.2.2",
     "babel-loader": "^8.0.5"
-  },
-  "config": {
-    "script-shell": "/bin/bash"
   }
 }
