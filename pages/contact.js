@@ -11,7 +11,7 @@ export default () => {
         <TextInput required type="email" label="Your email" name="email" />
         <TextInput required label="Message title" name="title" />
         <TextArea required label="Message body" name="message" />
-        <Button type="submit" size="lg" margin="20px auto">
+        <Button type="submit" display="block" size="lg" margin="20px auto">
           Send
         </Button>
       </form>

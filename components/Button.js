@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Button = ({ type, children, onClick, size, width, height, padding, margin }) => (
+const Button = ({ type, children, display, onClick, size, width, height, padding, margin }) => (
   <button type={type} onClick={onClick} className="button-root">
     {children}
     <style jsx>{`
       .button-root {
-        display: block;
+        display: ${display ? display : 'inline-block'};
         max-width: 300px;
         background: #428bca;
         color: #fff;
