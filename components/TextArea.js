@@ -33,10 +33,8 @@ const TextArea = ({
         font-size: 12px;
         text-transform: uppercase;
         display: block;
-        font-family: 'Source Sans Pro', sans-serif;
         color: #484848;
         font-weight: 800;
-        letter-spacing: 0.08333333333333333em;
       }
 
       textarea {

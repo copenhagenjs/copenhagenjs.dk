@@ -18,7 +18,6 @@ const TextInput = ({ type, label, name, onChange, required, width, height, paddi
         font-size: 12px;
         text-transform: uppercase;
         display: block;
-        font-family: 'Source Sans Pro', sans-serif;
         color: #484848;
         font-weight: 800;
       }
