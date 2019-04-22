@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "npm run build && next",
     "build": "npm run process-archive && cp -R _posts/ static/posts && next build && next export",
-    "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/**/*.js'",
-    "lint": "npx prettier -l --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/**/*.js'",
+    "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js'",
+    "lint": "npx prettier -l --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js'",
     "start": "next start",
     "process-archive": "mkdirp pages/archive && node utils/processmd",
     "deploy": "npm run build && firebase deploy",
