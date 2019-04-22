@@ -8,7 +8,10 @@ body {
     -webkit-font-smoothing: antialiased;
 
     line-height: 2rem;
-    letter-spacing: 1.33;
+}
+
+label {
+    letter-spacing: 1.33px;
 }
 
 a {
