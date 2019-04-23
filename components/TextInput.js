@@ -1,6 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-const TextInput = ({ type, label, name, onChange, required, width, height, padding, margin }) => (
+const TextInput = ({
+  type,
+  label,
+  name,
+  onChange,
+  required,
+  width,
+  height,
+  padding,
+  margin
+}) => (
   <div className="input-root">
     <label>
       {label}
@@ -37,10 +47,10 @@ const TextInput = ({ type, label, name, onChange, required, width, height, paddi
       }
     `}</style>
   </div>
-);
+)
 
 TextInput.defaultProps = {
-  type: 'text',
-};
+  type: 'text'
+}
 
-export default TextInput;
+export default TextInput

@@ -1,5 +1,5 @@
-import marked from 'marked';
-import Page from '../components/Page';
+import marked from 'marked'
+import Page from '../components/Page'
 
 let text = `
 # About CopenhagenJS
@@ -61,12 +61,12 @@ Download our logo here: [PNG](/static/images/cphjs.png)
 ### How do I contact you?
 
 Feel free to write to us at <kevin.simper@gmail.com>, or on [@copenhagenjs](http://twitter.com/copenhagenjs), if you have questions, want to host, or simply wanna talk.
-`;
+`
 
 export default () => {
   return (
     <Page>
       <div dangerouslySetInnerHTML={{ __html: marked(text) }} />
     </Page>
-  );
-};
+  )
+}

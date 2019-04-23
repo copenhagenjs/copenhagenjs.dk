@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const TextArea = ({
   label,
@@ -10,7 +10,7 @@ const TextArea = ({
   width,
   height,
   padding,
-  margin,
+  margin
 }) => (
   <div className="input-root">
     <label htmlFor={name}>{label}</label>
@@ -52,11 +52,11 @@ const TextArea = ({
       }
     `}</style>
   </div>
-);
+)
 
 TextArea.defaultProps = {
   minLength: 10,
-  maxLength: 300,
-};
+  maxLength: 300
+}
 
-export default TextArea;
+export default TextArea

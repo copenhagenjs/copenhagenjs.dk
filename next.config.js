@@ -1,22 +1,22 @@
-const { readdirSync } = require('fs');
+const { readdirSync } = require('fs')
 
 module.exports = {
   exportPathMap: function() {
     let pages = {
-      "/": { page: "/" },
-      "/events": { page: "/events" },
-      "/videos": { page: "/videos" },
-      "/about": { page: "/about" }
-    };
-    const archive = readdirSync("./pages/archive");
+      '/': { page: '/' },
+      '/events': { page: '/events' },
+      '/videos': { page: '/videos' },
+      '/about': { page: '/about' }
+    }
+    const archive = readdirSync('./pages/archive')
     for (let page in archive) {
-      if (archive[page] !== "_data.json") {
-        pages["/archive/" + archive[page].replace(".js", "")] = {
-          page: "/archive/" + archive[page].replace(".js", "")
-        };
+      if (archive[page] !== '_data.json') {
+        pages['/archive/' + archive[page].replace('.js', '')] = {
+          page: '/archive/' + archive[page].replace('.js', '')
+        }
       }
     }
 
-    return pages;
+    return pages
   }
-};
+}

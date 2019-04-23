@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "npm run build && next",
     "build": "npm run process-archive && cp -R _posts/ static/posts && next build && next export",
-    "fix-lint": "npx prettier --write --single-quote --no-semi 'components/**/*.js' 'pages/**/*.js'",
+    "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js'",
+    "lint": "npx prettier -l --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js'",
     "start": "next start",
     "process-archive": "mkdirp pages/archive && node utils/processmd",
     "deploy": "npm run build && firebase deploy",
-    "test": "echo 'everything is fine'",
+    "test": "npm run build-storybook && npm run lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -21,6 +22,7 @@
     "marked": "^0.6.0",
     "mkdirp": "^0.5.1",
     "next": "^7.0.2",
+    "prettier": "^1.17.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

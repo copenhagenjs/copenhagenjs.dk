@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default () => (
   <ul className="navigation">
@@ -28,4 +28,4 @@ export default () => (
       </a>
     </li>
   </ul>
-);
+)
