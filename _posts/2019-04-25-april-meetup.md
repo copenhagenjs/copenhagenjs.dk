@@ -9,9 +9,9 @@ It is time for the April edition of CopenhagenJS. This time we will be hosted by
     17:45 Welcome
     18:00 How we used Ionic 4 to create a PWA - Mario Padilla
     18:25 Break with food and drinks
-    19:00 You?
-    19:35 You?
-    19:50 Raffle.js
+    19:00 How we are building a new wine community with GraphQL - Mads Obel
+    19:35 Lightning talk: Changing Layout in Apps Immediately with Server-Driven UI - Morten Bo
+    19:45 Raffle.js
     20:00 Socializing - meet the community
     21:00 See you next time!
 
