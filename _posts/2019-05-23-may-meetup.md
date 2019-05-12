@@ -1,7 +1,7 @@
 # May 23th - WebComponents Special
 
 Hello everyone 😄,
-It is time for the May edition of CopenhagenJS. So much interesting is going on and at this meetup we will focus on WebComponents, something that can bring development of JS apps so much further! We are looking for a place to host the meetup, so if you can help with that please reach out!
+It is time for the May edition of CopenhagenJS. So many interesting things have been going on and at this meetup we will focus on WebComponents, something that can bring development of JS apps so much further! We are looking for a place to host the meetup, so if you can help with that please reach out!
 
     Schedule:
     17:00 Doors open
