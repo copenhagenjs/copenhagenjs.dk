@@ -1,3 +1,18 @@
+---
+type: meetup
+location: Talent Garden Rainmaking, Danneskiold-Samsøes Allé 41, 1434 København
+link: https://www.meetup.com/copenhagenjs/events/260918421/
+date: 2019-05-23T17:00:00
+duration: 3
+speakers:
+  - title: Building framework-agnostic UI components
+    name: Andreas Mehlsen
+  - title: How we maintain more than 250 Web Components
+    name: Rune Mehlsen
+  - title: How to support Web Components across browsers with 1 line of code
+    name: Frederik Wessberg
+---
+
 # May 23th - WebComponents Special
 
 Hello everyone 😄,
@@ -6,13 +21,12 @@ It is time for the May edition of CopenhagenJS. So many interesting things have 
     Schedule:
     17:00 Doors open
     17:45 Welcome
-    18:00 Best practices from building a large Web Component UI library
-     - Andreas Mehlsen
+    18:00 Building framework-agnostic UI components - Andreas Mehlsen
     18:25 Break with food and drinks
-    19:00 Polyfills and Webcomponents - how to support all browsers
-     - Frederik Wessberg
-    19:35 You?
-    19:50 Raffle.js
+    19:00 How we maintain more than 250 Web Components - Rune Mehlsen
+    19:25 How to support Web Components across browsers with 1 line of code - Frederik Wessberg
+    19:50 Group photo
+    19:55 Raffle.js
     20:00 Socializing - meet the community
     21:00 See you next time!
 
