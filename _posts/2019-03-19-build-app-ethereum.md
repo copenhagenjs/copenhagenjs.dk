@@ -20,9 +20,14 @@ make your first blockchain transaction - How to create your first HelloWorld
 blockchain app - How to interact with your blockchain app - How to distribute
 your app to your friends
 
-Schedule: 17:00 Doors Open 17:30 Welcome 17:40 Blockchain & Ethereum - how and
-why to get started? 18:00 Exercises with Ethereum 18:30 Sandwiches and drinks
-18:50 How to deploy blockchain 19:10 Exercises for deploying blockchain apps
+Schedule:
+17:00 Doors Open
+17:30 Welcome
+17:40 Blockchain & Ethereum - how andwhy to get started?
+18:00 Exercises with Ethereum
+18:30 Sandwiches and drinks
+18:50 How to deploy blockchain
+19:10 Exercises for deploying blockchain apps
 20:30 Follow up talk and networking!
 
 Why are we doing this? Blockchain is an interesting technology that is talked
