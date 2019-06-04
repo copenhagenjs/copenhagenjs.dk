@@ -1,3 +1,19 @@
+---
+title: April 25th - at Yousee
+type: meetup
+location: YouSee A/S, Teglholmsgade 1, København
+link: https://www.meetup.com/copenhagenjs/events/260394468/
+date: 2019-04-25T17:00:00
+duration: 4
+speakers:
+  - title: How we used Ionic 4 to create a PWA
+    name: Mario Padilla
+  - title: How we are building a new wine community with GraphQL
+    name: Mads Obel
+  - title: Changing Layout in Apps Immediately with Server-Driven UI
+    name: Morten Bo
+---
+
 # April 25th - at Yousee
 
 Hello everyone 😄,
