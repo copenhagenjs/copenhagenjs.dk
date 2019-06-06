@@ -1,4 +1,5 @@
 ---
+title: May 23th - WebComponents Special
 type: meetup
 location: Talent Garden Rainmaking, Danneskiold-Samsøes Allé 41, 1434 København
 link: https://www.meetup.com/copenhagenjs/events/260918421/
