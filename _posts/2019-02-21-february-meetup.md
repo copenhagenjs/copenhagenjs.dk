@@ -1,3 +1,19 @@
+---
+title: February 21st
+type: meetup
+location: Karnov Group Denmark A/S, Sankt Petri Passage 5 · København
+link: https://www.meetup.com/copenhagenjs/events/258330862/
+date: 2019-02-21T17:00:00
+duration: 4
+speakers:
+  - title: Talk with Neha Sharma from JSLovers community in Delhi
+    name: Neha Sharma
+  - title: WebBluetooth, WebUSB, LitElement
+    name: Lars Knudsen
+  - title: Markdownlint
+    name: Jonas BN
+---
+
 # February 21st
 
 Hi everyone,
