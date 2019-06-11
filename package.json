@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run build && next",
-    "build": "npm run process-archive && cp -R _posts/ static/posts && next build && next export",
+    "dev": "npm run prepare && next",
+    "prepare": "npm run process-archive && cp -R _posts/ static/posts",
+    "build": "npm run prepare && next build && next export",
     "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json'",
     "lint": "npx prettier -l --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json'",
     "start": "next start",
@@ -19,6 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "front-matter": "^3.0.2",
     "marked": "^0.6.0",
     "mkdirp": "^0.5.1",
     "next": "^7.0.2",
