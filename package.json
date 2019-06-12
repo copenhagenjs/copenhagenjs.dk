@@ -26,7 +26,8 @@
     "next": "^7.0.2",
     "prettier": "^1.17.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "yargs": "^13.2.4"
   },
   "devDependencies": {
     "@storybook/react": "^4.1.11",
