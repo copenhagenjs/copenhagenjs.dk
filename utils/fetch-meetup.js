@@ -16,7 +16,8 @@ async function main() {
   } = await req.json();
   const formatted = description
     .replace(/<br\/>/g, "\n")
-    .replace(/<p>|<\/p>/g, "\n");
+    .replace(/<p>|<\/p>/g, "\n")
+    .replace(/<a.*?>|<\/a>/g, '')
   const headers = formatted
     .split("\n")
     .map(i => i.trim())
