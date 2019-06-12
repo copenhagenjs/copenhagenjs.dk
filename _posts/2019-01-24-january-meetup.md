@@ -39,7 +39,7 @@ Yes, CopenhagenJS is for and by the community so you are more than welcome to ta
 
 Remember to Like our facebook to get all the latest updates and videos!
 
-<a href="https://www.facebook.com/copenhagenjs/" class="linkified">https://www.facebook.com/copenhagenjs/</a>
+https://www.facebook.com/copenhagenjs/
 
 You can write to us here on the meetup.com page if you want to help, or if you just want to ask about something.
 
