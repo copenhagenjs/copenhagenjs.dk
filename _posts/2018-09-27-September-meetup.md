@@ -1,5 +1,19 @@
 ---
-title: September Meetup - 27th
+title: September 27th
+type: meetup
+location: Linkfire Artillerivej 86 3th, Copenhagen
+link: https://www.meetup.com/copenhagenjs/events/253839050/
+date: 2018-09-27T17:00:00
+duration: 4
+speakers:
+  - title: Video from Bornhack
+    name: Julian
+  - title: How we use Glimmer.js
+    name: Kenneth Larsen
+  - title: Data Modelling with Types
+    name: Andreas Møller
+  - title: RailsGirls Summer of Code
+    name: Neer & Anne
 ---
 
 # September Meetup - 27th
@@ -20,9 +34,11 @@ It's time for the September edition of CopenhagenJS. Let us get together and tal
     21:00 - See you next time!
 
 ### What is CopenhagenJS?
+
 If you've never heard about CopenhagenJS, it's a monthly community group in Copenhagen for all JavaScript enthusiasts.
 
 ### Can I present something at CopenhagenJS?
+
 Yes, CopenhagenJS is for and by the community so you are more than welcome to talk about things that you find interesting.
 
 Remember to Like our facebook to get all the latest updates and videos!

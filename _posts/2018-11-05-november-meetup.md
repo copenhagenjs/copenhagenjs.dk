@@ -1,3 +1,19 @@
+---
+title: November 29th
+type: meetup
+location: Saxo Bank Philip Heymans Alle 15, Hellerup
+link: https://www.meetup.com/copenhagenjs/events/255062576/
+date: 2018-11-29T17:00:00
+duration: 4
+speakers:
+  - title: Using the new React Hooks
+    name: Younes Meliani
+  - title: Morphism and reusability - How we built a new product in record time
+    name: Atli Adalsteinsson
+  - title: How we use Storybooks at Vivino
+    name: Johnathan Sewell
+---
+
 # November Meetup 29th
 
 It is time for the November edition of CopenhagenJS. We are going to be hosted by SaxoBank, which is a really cool venue. Let's meet and talk some Javascript.
