@@ -4,8 +4,6 @@ const fm = require("front-matter");
 const files = readdirSync("./_posts/");
 
 async function main() {
-  let missing = 0;
-  let present = 0;
   let allSpeakers = [];
   for (let file in files) {
     let speakerList;
@@ -16,10 +14,7 @@ async function main() {
     const raw = readFileSync("./_posts/" + files[file], "utf8");
     const content = fm(raw);
 
-    if (typeof content.attributes.speakers === 'undefined') {
-      missing++;
-    } else {
-      present++;
+    if (typeof content.attributes.speakers !== 'undefined') {
       console.log(content.attributes.speakers);
       speakerList = {
         src: files[file],
@@ -28,7 +23,9 @@ async function main() {
       allSpeakers.push(speakerList);
     }
   }
-  console.log(`Found ${present} speaker tags, ${missing} are missing`)
+  console.log(`Found ${allSpeakers.length} speaker tags, ${files.length - allSpeakers.length} are missing`)
+
+  writeFileSync('./static/speakers.json', JSON.stringify(allSpeakers));
 }
 
 main();
