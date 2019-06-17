@@ -1,23 +1,24 @@
 ---
-title: June 20th - Summer Meetup ☀️
-type: workshop
-location: Ideanote, Rigensgade 5, København
+title: CopenhagenJS June - Visma
+type: meetup
+location: Langebrogade 1, København
 link: https://www.meetup.com/copenhagenjs/events/261710796/
-date: 2019-05-27T17:00:00
+date: 2019-06-20T17:00:00
 duration: 3
 ---
 
-# June 20th - Summer Meetup ☀️
+# CopenhagenJS June - Visma
 
 Hello everyone 😄,
 It is time for the June edition of CopenhagenJS. We are being hosted by Visma.
 
-    Schedule:
+## Schedule:
+
     17:00 Doors open
     17:45 Welcome
-    18:00 You?
+    18:00 Power of Hackathons - André Kovac
     18:25 Break with food and drinks
-    19:00 You?
+    19:00 What can a javascript developer do to combat climate change? - Olivier Corradi
     19:25 You?
     19:50 Group photo
     19:55 Raffle.js
