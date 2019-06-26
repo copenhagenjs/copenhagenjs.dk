@@ -18,7 +18,7 @@ export default () => {
       <h1>Speakers</h1>
       <p>These speakers have previously given talks at copenhagen.js:</p>
       <ul>
-        {speakerList}
+        {speakerList.flat()}
       </ul>
     </Page>
   )
