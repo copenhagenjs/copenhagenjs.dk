@@ -6,4 +6,5 @@ node_modules
 out
 pages/archive
 static/posts
+static/speakers.json
 .firebase

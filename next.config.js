@@ -7,6 +7,7 @@ module.exports = {
       '/events': { page: '/events' },
       '/videos': { page: '/videos' },
       '/about': { page: '/about' },
+      '/speakers': { page: '/speakers' },
       '/guidelines': { page: '/guidelines' },
       '/contact': { page: '/contact' }
     }
