@@ -1,7 +1,7 @@
 const { readdirSync } = require('fs')
 
 module.exports = {
-  exportPathMap: function () {
+  exportPathMap: function() {
     let pages = {
       '/': { page: '/' },
       '/events': { page: '/events' },
