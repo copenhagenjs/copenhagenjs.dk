@@ -19,20 +19,6 @@ speakers:
 Hello everyone 😄,
 It is time for the June edition of CopenhagenJS. We are being hosted by Mærsk.
 
-Deciding on a frontend framework can be hard for new teams. We attempted to do this and commit for many years on a framework. In his talk, Sumit provides insights into their approach how a decision can be formed and what to consider, technical and business wise.
-
-Choosing Vue.js in 2016 where it was much smaller compared to Angular and React. What made car2go go for Vue? What was good, what was bad? What has been found about the other frameworks?
-
-Finally, car2go was not only building small SPAs but used Vue.js ecosystem to build over 20 frontends like SPAs, mobile PWAs, SEO heavy websites, data heavy websites and real time dashboards.
-
-Sumit will share the challenges of their applications and how Vue helped or where the framework still limits them.
-
-Sumit is a Developer Advocate and Frontend Expert currently working as Head of Developer Relations at car2go / SHARE NOW. Previously he built teams and/or web applications for Mercedes-Benz, Porsche, Hugo Boss, and others. In his spare time, he works on open source software and many side projects like geoman.io.
-
-After doing GraphQL in production with small and large companies, Uri Goldshtein from The Guild would try to change the misinformation you might have about GraphQL with real production use cases and to show you how you can start using it today on any app.
-
-Bart works as a fullstack developer at Maersk and he’s gonna tell us how easy he as a .NET developer could start doing frontend development using just the platform api with LitElement, a framework agnostic approach.
-
 ## Schedule:
 
     17:00 Doors open
@@ -45,6 +31,20 @@ Bart works as a fullstack developer at Maersk and he’s gonna tell us how easy 
     19:55 Raffle.js
     20:00 Panel with speakers and free conversation + socializing - meet the community
     21:00 See you next time!
+
+## About the speakers
+
+**Zoey Zou:**
+
+She came from a non-technical background -- a former buyer made to a developer, currently working in Pleo as frontend developer, as well as part-time meetup enthusiast. As someone who just had a career transform, she has her unique stories to tell -- for those who want to start something new or get some inspiration.
+
+**Uri Godshtein:**
+
+After doing GraphQL in production with small and large companies, Uri Goldshtein from The Guild would try to change the misinformation you might have about GraphQL with real production use cases and to show you how you can start using it today on any app.
+
+**Bartlomiej Wietrak:**
+
+Bart works as a fullstack developer at Maersk and he’s gonna tell us how easy he as a .NET developer could start doing frontend development using just the platform api with LitElement, a framework agnostic approach.
 
 ## What is CopenhagenJS?
 
