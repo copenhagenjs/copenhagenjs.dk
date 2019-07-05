@@ -23,7 +23,7 @@ It is time for the June edition of CopenhagenJS. We are being hosted by Mærsk.
 
     17:00 Doors open
     17:45 Welcome
-    18:00 Vue.js at car2go / SHARE NOW by Sumit Kumar
+    18:00 A journey => A developer by Zoey Zou
     18:25 Break with food and drinks
     19:00 LitElement magic, easy transformation from .NET to frontend development! Lightning talk by Bartlomiej Wietrak
     19:15 Mythbusting around GraphQL by Uri Godshtein
