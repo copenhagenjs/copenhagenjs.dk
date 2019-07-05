@@ -6,8 +6,8 @@ link: https://www.meetup.com/copenhagenjs/events/262483853/
 date: 2019-07-18T17:00:00
 duration: 3
 speakers:
-  - title: Vue.js at car2go / SHARE NOW
-    name: Sumit Kumar
+  - title: A journey => A developer
+    name: Zoey Zou
   - title: LitElement magic, easy transformation from .NET to frontend development
     name: Bartlomiej Wietrak
   - title: Mythbusting around GraphQL
