@@ -1,5 +1,6 @@
 ---
-title: 'Blogging Challenge'
+title: "Blogging Challenge"
+type: update
 ---
 
 # Blogging Challenge
