@@ -27,5 +27,10 @@ export default () => (
         Contact
       </a>
     </li>
+    <li>
+      <a className="btn-white" href="/speakers">
+        Speakers
+      </a>
+    </li>
   </ul>
 )

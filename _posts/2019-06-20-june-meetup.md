@@ -5,6 +5,11 @@ location: Langebrogade 1, København
 link: https://www.meetup.com/copenhagenjs/events/261710796/
 date: 2019-06-20T17:00:00
 duration: 3
+speakers:
+  - title: Power of Hackathons
+    name: André Kovac
+  - title: What can a javascript developer do to combat climate change?
+    name: Olivier Corradi
 ---
 
 # CopenhagenJS June - Visma

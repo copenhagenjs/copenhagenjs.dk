@@ -8,8 +8,8 @@ duration: 3
 speakers:
   - title: A journey => A developer
     name: Zoey Zou
-  - title: LitElement magic, easy transformation from .NET to frontend development
-    name: Bartlomiej Wietrak
+  - title: Deciding on a frontend framework and how we chose vue.js
+    name: Sumit Kumar
   - title: Mythbusting around GraphQL
     name: Uri Godshtein
 ---
@@ -25,7 +25,7 @@ It is time for the June edition of CopenhagenJS. We are being hosted by Mærsk.
     17:45 Welcome
     18:00 A journey => A developer by Zoey Zou
     18:25 Break with food and drinks
-    19:00 LitElement magic, easy transformation from .NET to frontend development! Lightning talk by Bartlomiej Wietrak
+    19:00 Deciding on a frontend framework and how we chose vue.js - Sumit Kumar
     19:15 Mythbusting around GraphQL by Uri Godshtein
     19:50 Group photo
     19:55 Raffle.js
@@ -42,9 +42,9 @@ She came from a non-technical background -- a former buyer made to a developer, 
 
 After doing GraphQL in production with small and large companies, Uri Goldshtein from The Guild would try to change the misinformation you might have about GraphQL with real production use cases and to show you how you can start using it today on any app.
 
-**Bartlomiej Wietrak:**
+**Sumit Kumar:**
 
-Bart works as a fullstack developer at Maersk and he’s gonna tell us how easy he as a .NET developer could start doing frontend development using just the platform api with LitElement, a framework agnostic approach.
+Sumit is a Developer Advocate and Frontend Expert currently working at car2go / SHARE NOW and lead the decision making process on a frontend framework for all of the companies web-apps and websites. Previously he built teams and/or web applications for Mercedes-Benz, Porsche, Hugo Boss, and others. In his spare time, he works on open source software and many side projects.
 
 ## What is CopenhagenJS?
 
