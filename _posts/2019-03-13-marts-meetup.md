@@ -1,3 +1,12 @@
+---
+title: Build your first blockchain app with JS & Ethereum
+type: workshop
+location: Impact A/S, Laplandsgade 4A, København
+link: https://www.meetup.com/copenhagenjs/events/259713370/
+date: 2019-03-19T17:00:00
+duration: 3,5
+---
+
 # Marts 19th - Build your first blockchain app
 
 In this workshop, we will look at how to create blockchain applications with Ethereum. We will give a how to get started with cryptocurrency and the tools you need to make your own blockchain apps. So join and meet others, and create your first blockchain app! I promise it is easier than you think! 😄
