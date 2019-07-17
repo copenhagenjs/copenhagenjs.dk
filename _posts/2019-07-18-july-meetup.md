@@ -17,7 +17,7 @@ speakers:
 # CopenhagenJS July - Mærsk
 
 Hello everyone 😄,
-It is time for the June edition of CopenhagenJS. We are being hosted by Mærsk.
+It is time for the July edition of CopenhagenJS. We are being hosted by Mærsk.
 
 ## Schedule:
 
