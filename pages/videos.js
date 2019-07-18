@@ -24,7 +24,15 @@ const videos = [
     'z7utiFdXgFg',
     'Building framework agnostic UI components - Andreas Mehlsen'
   ],
-  ['iFKkz6_6WV8', 'How we maintain more than 250 Web Components - Rune Mehlsen']
+  [
+    'iFKkz6_6WV8',
+    'How we maintain more than 250 Web Components - Rune Mehlsen'
+  ],
+  ['tty9txryOgA', 'Power of Hackathons - André Kovac & Cem Turan'],
+  [
+    'keOPXD-ojWY',
+    'What can a javascript developer do to combat climate change? - Olivier Corradi'
+  ]
 ]
 
 export default class Videos extends React.Component {
