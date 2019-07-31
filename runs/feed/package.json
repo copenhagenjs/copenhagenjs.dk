@@ -1,0 +1,19 @@
+{
+  "name": "atom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r esm server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "feed": "^4.0.0",
+    "front-matter": "^3.0.2",
+    "marked": "^0.7.0"
+  }
+}
