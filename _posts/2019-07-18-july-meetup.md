@@ -1,7 +1,7 @@
 ---
 title: CopenhagenJS July - Mærsk
 type: meetup
-location: Phoenix Copenhagen Hotel at Bredgade 37, 1260 København
+location: Phoenix Copenhagen Hotel, Bredgade 37, 1260 København
 link: https://www.meetup.com/copenhagenjs/events/262483853/
 date: 2019-07-18T17:00:00
 duration: 3
