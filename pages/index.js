@@ -16,7 +16,8 @@ export default class IndexRoutes extends React.Component {
     const data = await req.text()
     const content = fm(data)
     this.setState({
-      markdown: content.body
+      markdown: content.body,
+      location: content.attributes.location
     })
   }
   componentDidMount() {
@@ -61,6 +62,17 @@ export default class IndexRoutes extends React.Component {
             >
               View meetup group
             </a>
+          </div>
+          <div className="map" style={{ width: '100%' }}>
+            <iframe
+              width="100%"
+              height="300"
+              src={`https://maps.google.com/maps?width=100%&height=300&hl=en&q=${encodeURIComponent(
+                this.state.location
+              )}&ie=UTF8&t=&z=14&iwloc=B&output=embed`}
+              frameBorder="0"
+              scrolling="no"
+            />
           </div>
         </section>
 
