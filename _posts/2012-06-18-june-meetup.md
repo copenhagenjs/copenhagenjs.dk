@@ -1,6 +1,15 @@
 ---
 title: June meetup at Valtech
 layout: post
+speakers:
+  - title: 5 minutes about streams in node.js
+    name: David Björklund
+  - title: Facing your daemons with node.js
+    name: Jacob Andresen
+  - title: Controlling the world with nodejs
+    name: Camilo Tapia
+  - title: The 3D engine series (part 1)
+    name: Richard Olsson
 ---
 
 This months meetup will be on Thursday 2012-06-21 at 19:00. The event is hosted by [Valtech](http://valtech.dk).

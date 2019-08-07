@@ -1,6 +1,9 @@
 ---
 title: March meetup at Huubla
 layout: post
+speakers:
+  - title: Who put a Lisp in my browser? An introduction to ClojureScript, a Lisp that compiles to Javascript
+    name: Martin Clausen
 ---
 We are pleased to announce the March CopenhagenJS meetup.
 

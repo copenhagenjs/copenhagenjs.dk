@@ -1,6 +1,13 @@
 ---
 title: First CopenhagenJS meetup hosted at Podio
 layout: post
+speakers:
+  - title: Building Single Page Applications with YUI
+    name: Simon Højberg
+  - title: Purely Functional Data Structures for JavaScript
+    name: Mads Hartmann Jensen
+  - title: Backbone.js
+    name: Daniel Pouzemski
 ---
 
 We are pleased to announce the first CopenhagenJS meetup, which is going to take place **August 24th 2011 at 19.00** - roughly three weeks from now.

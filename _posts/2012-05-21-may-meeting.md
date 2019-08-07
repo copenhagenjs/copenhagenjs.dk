@@ -1,6 +1,17 @@
 ---
 title: May meetup at JayWay in Malmö
 layout: post
+speakers:
+  - title: From Flash to Canvas - a penchant for black holes
+    name: Patric Jonsson
+  - title: Getting started with RequireJS
+    name: Morgan Roderick
+  - title: "Node.js: what, why, when and how"
+    name: David Björklund
+  - title: tmux
+    name: Torbjörn Josefsson
+  - title: Validation with Regex - now I've got two problems...
+    name: Peter Müller
 ---
 
 A rather late announcement on this site: this months meetup will be on Thursday 2012-05-24 19:00 at JayWay in Malmö, very close to the Centralstation.

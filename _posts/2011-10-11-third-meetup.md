@@ -1,6 +1,15 @@
 ---
 title: Third meetup at One.com 
 layout: post
+speakers:
+  - title: One-color.js
+    name: Peter Müller
+  - title: An interactive HDR viewer using Canvas
+    name: Björn Söderqvist
+  - title: Closures, this, call and apply — an attempt at an explanation
+    name: Morgan Roderick
+  - title: Javascript + robots, hell yes!!!
+    name: Ian Jørgensen
 ---
 
 We are pleased to announce the third CopenhagenJS meetup. Clear your schedule for Thursday, as we will once again meet and talk JavaScript and all things frontend. 
