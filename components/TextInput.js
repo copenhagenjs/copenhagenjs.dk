@@ -20,7 +20,6 @@ const TextInput = ({
       .input-root {
         display: flex;
         flex-flow: column;
-        max-width: 300px;
         margin: 10px auto;
       }
 

@@ -23,7 +23,7 @@ const Button = ({
         font-size: ${size === 'sm' ? '1rem' : '1.3rem'};
         width: ${width ? width : '100%'};
         height: ${height};
-        margin: ${margin ? margin : '10px auto'};
+        margin: ${margin ? margin : '10px 0'};
         padding: ${padding ? padding : '10px'};
       }
 
