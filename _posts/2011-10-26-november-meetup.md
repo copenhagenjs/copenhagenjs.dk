@@ -1,6 +1,13 @@
 ---
 title: November meetup at One.com
 layout: post
+speakers:
+  - title: Lively Kernel - A Development Environment for Creating and Sharing Rich Web Applications
+    name: Robert Krahn
+  - title: KickJS - A WebGL game engine for modern web-browsers
+    name: Morten Nobel-Jørgensen
+  - title: Closures, this, call and apply — an attempt at an explanation
+    name: Morgan Roderick
 ---
 
 We are pleased to announce the November CopenhagenJS meetup. Clear your schedule for Thursday, as we will once again meet and talk JavaScript and all things frontend.

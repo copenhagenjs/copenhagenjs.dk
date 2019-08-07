@@ -2,6 +2,13 @@
 title: September 2012 meeting at Consulence
 layout: post
 author: Björn Söderqvist
+speakers:
+  - title: A different approach to web build systems
+    name: Peter Müller
+  - title: "Frontend testing: A practical guide to getting started with testing JavaScript with Buster.JS"
+    name: Morgan Roderick
+  - title: The 3D engine series (part 3)
+    name: Richard Olsson
 ---
 
 The next CopenhagenJS meetup will be on Thursday 2012-09-20 at 19.00. The event will be hosted by [Consulence](http://www.consulence.se/) at [Winstrupsgatan 1 in Lund, Sweden](http://kartor.eniro.se/m/9jThN). 

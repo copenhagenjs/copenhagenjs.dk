@@ -2,6 +2,15 @@
 title: August 2012 meeting at e-conomic
 layout: post
 author: Morgan Roderick
+speakers:
+  - title: Presentation of the Mascara JavaScript Compiler
+    name: Olav Junker Kjær
+  - title: The 3D engine series (part 2)
+    name: Richard Olsson
+  - title: The Mozilla Marketplace and the Chrome Web Store - What is a Web App?
+    name: Karl Tannergård
+  - title: Quality in JavaScript code (browser and node.js)
+    name: Allan Ebdrup
 ---
 
 We hope that you're all enjoying the summer and that you'll join us for the next meeting on Thursday, 2012-08-16 at 19.00. The event will be hosted by [e-conomic](http://www.e-conomic.dk/) at [Wildersgade 10B, 3.sal, 1408 København K](http://findvej.dk/Wildersgade10B,1408)
