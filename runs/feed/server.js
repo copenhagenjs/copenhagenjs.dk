@@ -31,8 +31,8 @@ data.posts.forEach(post => {
     title: parsed.attributes.title || post.replace(".md", ""),
     id: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
     link: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
-    description: marked(markdown),
-    content: marked(markdown),
+    description: marked(parsed.body),
+    content: marked(parsed.body),
     date
   });
 });
