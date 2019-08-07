@@ -17,7 +17,7 @@ const Button = ({
       .button-root {
         display: ${display ? display : 'inline-block'};
         max-width: 300px;
-        background: #428bca;
+        background: #067ade;
         color: #fff;
         border: none;
         font-size: ${size === 'sm' ? '1rem' : '1.3rem'};
@@ -28,7 +28,7 @@ const Button = ({
       }
 
       .button-root:hover {
-        background-color: #067ade;
+        background-color: #0a60ab;
         cursor: pointer;
       }
     `}</style>
