@@ -20,23 +20,19 @@ const TextInput = ({
       .input-root {
         display: flex;
         flex-flow: column;
-        max-width: 300px;
         margin: 10px auto;
       }
 
       label {
-        font-size: 12px;
-        text-transform: uppercase;
         display: block;
         color: #484848;
-        font-weight: 800;
       }
 
       input {
         box-sizing: border-box;
         display: block;
         max-width: 300px;
-        border: 1px solid #ebebeb;
+        border: 1px solid #ccc;
         border-radius: 4px;
         outline-color: #f8de48;
         font-size: 1rem;
