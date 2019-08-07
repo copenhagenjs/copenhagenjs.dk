@@ -36,7 +36,7 @@ const TextInput = ({
         box-sizing: border-box;
         display: block;
         max-width: 300px;
-        border: 1px solid #ebebeb;
+        border: 1px solid #ccc;
         border-radius: 4px;
         outline-color: #f8de48;
         font-size: 1rem;
