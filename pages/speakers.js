@@ -3,6 +3,7 @@ import speakerEvents from '../static/speakers.json'
 
 export default () => {
   const speakerList = speakerEvents
+    .reverse()
     .map((event, id) => {
       return event.speakers.map(speaker => {
         return (
