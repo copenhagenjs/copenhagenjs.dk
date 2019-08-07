@@ -24,7 +24,11 @@ import Map from '../../components/Map'
 export default () => (
   <Page>
     <div dangerouslySetInnerHTML={{__html: \`${html}\`}}></div>
-    <Map location='${content.attributes.location}' />
+    ${
+      content.attributes.location
+        ? `<Map location='${content.attributes.location}'/>`
+        : ""
+    }
   </Page> 
 )
       `
