@@ -60,7 +60,23 @@ Download our logo here: [PNG](/static/images/cphjs.png)
 
 ### How do I contact you?
 
-Feel free to write to us at <kevin.simper@gmail.com>, or on [@copenhagenjs](http://twitter.com/copenhagenjs), if you have questions, want to host, or simply wanna talk.
+Feel free to write to us at <hi@copenhagenjs.dk>, or on [@copenhagenjs](http://twitter.com/copenhagenjs), if you have questions, want to host, or simply wanna talk.
+
+### Do you want to help?
+
+We really appreciate everyone that wants to help out at CopenhagenJS, please reach out online or during the meetup.
+
+We are looking for help with:
+- finding new venues for upcoming meetups
+- finding speakers that has something they want to share
+- helping organzing the raffle/quiz
+
+We, the organizers, try to meet once a month to talk about upcoming meetups (but we also hang out and just talk) 😄
+
+You can also help out on the website, you can find the Github repo here https://github.com/copenhagenjs/copenhagenjs.dk
+
+The website can always be improved and we highlight all contributions at the next meetup, so there is a big potential to do something that will have a impact to many people.
+
 `
 
 export default () => {
