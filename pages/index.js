@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Map from '../components/Map'
 import Navigation from '../components/Navigation'
 import marked from 'marked'
 import fm from 'front-matter'
@@ -63,19 +64,7 @@ export default class IndexRoutes extends React.Component {
               View meetup group
             </a>
           </div>
-          {this.state.location && (
-            <div className="map" style={{ width: '100%' }}>
-              <iframe
-                width="100%"
-                height="300"
-                src={`https://maps.google.com/maps?width=100%&height=300&hl=en&q=${encodeURIComponent(
-                  this.state.location
-                )}&ie=UTF8&t=&z=14&iwloc=B&output=embed`}
-                frameBorder="0"
-                scrolling="no"
-              />
-            </div>
-          )}
+          {this.state.location && <Map location={this.state.location} />}
         </section>
 
         <section className="newsletter">

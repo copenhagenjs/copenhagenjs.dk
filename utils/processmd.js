@@ -18,8 +18,15 @@ async function main() {
 
     writeFileSync(
       "./pages/archive/" + files[file].replace(".md", ".js"),
-      `import Page from '../../components/Page'
-        export default () => ( <Page><div dangerouslySetInnerHTML={{__html: \`${html}\`}}></div></Page> )
+      `
+import Page from '../../components/Page'
+import Map from '../../components/Map'
+export default () => (
+  <Page>
+    <div dangerouslySetInnerHTML={{__html: \`${html}\`}}></div>
+    <Map location='${content.attributes.location}' />
+  </Page> 
+)
       `
     );
   }
