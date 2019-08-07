@@ -19,13 +19,13 @@ export default ({ children }) => {
           property="og:image"
           content="https://copenhagenjs.dk/static/images/logo.png"
         />
-        <link
-          href="/atom.xml"
-          type="application/atom+xml"
-          rel="alternate"
-          title="CopenhagenJS ATOM Feed"
-        />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link
+          rel="alternate"
+          type="application/atom+xml"
+          title="CopenhagenJS Feed - Subscribe to latest meetups"
+          href="https://copenhagenjsdk-5qfo37at3a-ew.a.run.app/"
+        />
       </Head>
       <div>
         {children}
