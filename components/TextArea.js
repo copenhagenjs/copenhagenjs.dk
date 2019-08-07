@@ -30,11 +30,8 @@ const TextArea = ({
       }
 
       label {
-        font-size: 12px;
-        text-transform: uppercase;
         display: block;
         color: #484848;
-        font-weight: 800;
       }
 
       textarea {
