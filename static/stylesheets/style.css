@@ -107,34 +107,6 @@ pre {
 	background: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.6));
 }
 
-.page-header .navigation {
-    margin: 0;
-    padding: 0;
-}
-
-.page-header .navigation li {
-    display: inline-block;
-    margin-right: 0px;
-}
-
-.page-header .navigation a {
-    text-decoration: none;
-    border: 1px solid #fff;
-    border-radius: 0;
-    padding: 10px 20px;
-    font-weight: bold;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-
-    transition: all 0.2s;
-}
-
-.page-header .navigation a:hover {
-    background: #f9e036;
-    color: #444;
-}
-
 .page-header > * {
     position: relative;
     z-index: 2;
@@ -190,7 +162,7 @@ pre {
 }
 
 .page-header .logo {
-	margin: -3px 0 0;
+  margin: 0 20px 0 0;
 	height: 45px;
     float: left;
 }
@@ -412,26 +384,14 @@ iframe[src^="https://www.google.com/maps/embed/"] {
     line-height: 20px;
   }
 
-  .page-header .navigation li {
-    margin-right: 0px;
-  }
-
-  .page-header .navigation a {
-    float: left;
-    display: block;
-    font-size: 12px;
-    line-height: 28px;
-    padding: 0 10px;
-  }
-
   .page-header.master .logo {
     margin: 30px auto;
   }
 
     .page-header .logo {
         margin: 0;
-        height: 30px;
-        float: left;
+        height: 80px;
+        float: none;
     }
 
   .page-header.master h3 {
