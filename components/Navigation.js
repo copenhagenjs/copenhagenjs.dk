@@ -49,6 +49,7 @@ export default class Navigation extends React.Component {
             }
             .navigation {
               display: flex;
+              justify-content: center;
             }
             .navigation li {
               display: inline-block;
