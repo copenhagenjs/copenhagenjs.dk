@@ -2,7 +2,7 @@
 title: September 3rd - Keyboard Warriors
 layout: post
 author: Peter Müller
-date: Wednesday, September 3, 2014 18:00
+date: 2014-09-03T18:00:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-september
 ---
 

@@ -2,7 +2,7 @@
 title: CopenhagenJS NodeSchool Edition
 layout: post
 author: Kevin Simper
-date: Thursday, 2015-09-17 18:00
+date: 2015-09-17T18:00:00
 host: Founders House
 host_url: http://www.foundershouse.dk/
 host_address: 1. sal, Njalsgade 19D, 2300 København S

@@ -2,7 +2,7 @@
 title: April 10th - CopenhagenJS meetup at Foo Café
 layout: post
 author: Björn Söderqvist
-date: Thursday, April 10, 2014 18:00
+date: 2014-04-10T18:00:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-april
 ---
 

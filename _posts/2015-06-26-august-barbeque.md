@@ -2,7 +2,7 @@
 title: Welcome to the August 2015 Barbeque meetup
 layout: post
 author: Kevin Simper
-date: Thursday, 2015-08-6 18:00
+date: 2015-08-06T18:00:00
 host_address: Solbjerg Plads 3, 2000 Frederiksberg
 ---
 

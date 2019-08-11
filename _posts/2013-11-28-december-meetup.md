@@ -2,7 +2,7 @@
 title: December 18th - CopenhagenJS December 2013 meetup
 layout: post
 author: Kenneth Auchenberg
-date: Wednesday, December 18, 2013 19:00
+date: 2013-12-18T19:00:00
 lanyrd: http://lanyrd.com/2013/copenhagenjs-december
 ---
 

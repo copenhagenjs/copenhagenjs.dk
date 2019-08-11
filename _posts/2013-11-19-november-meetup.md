@@ -2,7 +2,7 @@
 title: November 21st - CopenhagenJS meetup at d60
 layout: post
 author: Jeppe Toustrup
-date: Thursday, November 21, 2013 19:00
+date: 2013-11-21T19:00:00
 ---
 
 The next CopenhagenJS meetup will be on Thursday 2013-11-21 at 19:00. The event will be hosted by [d60](http://www.d60.dk/) at [Frode Jakobsens Plads 4, 2., 2720 Vanløse](http://goo.gl/maps/f4i7K).

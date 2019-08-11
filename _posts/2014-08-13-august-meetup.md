@@ -2,7 +2,7 @@
 title: August 21st - CopenhagenJS August Meetup.
 layout: post
 author: Peter Müller
-date: Thursday, August 21, 2014 19:00
+date: 2014-08-21T19:00:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-august
 ---
 

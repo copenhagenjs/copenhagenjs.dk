@@ -2,7 +2,7 @@
 title: Welcome to the November 2015 Meetup
 layout: post
 author: Kevin Simper
-date: Wednesday, 2015-11-18 19:00
+date: 2015-11-18T19:00:00
 lanyrd: http://lanyrd.com/2015/copenhagenjs-november/
 host: Founders
 host_url: http://founders.as/

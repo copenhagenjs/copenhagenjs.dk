@@ -2,7 +2,7 @@
 title: Welcome to the June 2015 meetup
 layout: post
 author: Kevin Simper
-date: Thursday, 2015-06-18 18:00
+date: 2015-06-18T18:00:00
 lanyrd: http://lanyrd.com/2015/copenhagenjs-june/
 host: Billy's Billing
 host_url: https://www.billy.dk/
