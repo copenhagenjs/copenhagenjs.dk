@@ -17,7 +17,7 @@ async function main() {
   const formatted = description
     .replace(/<br\/>/g, "\n")
     .replace(/<p>|<\/p>/g, "\n")
-    .replace(/<a.*?>|<\/a>/g, '')
+    .replace(/<a.*?>|<\/a>/g, "");
   const headers = formatted
     .split("\n")
     .map(i => i.trim())
@@ -28,10 +28,12 @@ async function main() {
     )
     .join("\n");
 
+  // if a meetup doesn't have a venue
+  const location = venue ? `${venue.address_1}, ${venue.city}` : "";
   const output = `---
 title: ${name}
 type: meetup
-location: ${venue.address_1}, ${venue.city}
+location: ${location}
 link: ${link}
 date: ${local_date}T${local_time}:00
 duration: 3
