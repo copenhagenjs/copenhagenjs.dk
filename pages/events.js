@@ -15,17 +15,21 @@ function Events() {
         title
         date
         link
+        type
       }
     }
   `)
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
-  return data.events.reverse().map(({ title, date, link }) => (
-    <li key={title}>
-      <a href={link}>{title}</a> -{' '}
-      {new Date(parseInt(date)).toLocaleString('da-DK')}
-    </li>
+  return data.events.reverse().map(({ title, date, link, type }) => (
+    <tr key={title}>
+      <td>
+        <a href={link}>{title}</a>
+      </td>
+      <td>{new Date(parseInt(date)).toLocaleString('da-DK')}</td>
+      <td>{type}</td>
+    </tr>
   ))
 }
 
@@ -39,9 +43,18 @@ export default () => (
           meetup.com/copenhagenjs
         </a>
       </div>
-      <ul>
-        <Events />
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <Events />
+        </tbody>
+      </table>
     </Page>
   </ApolloProvider>
 )
