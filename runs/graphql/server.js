@@ -7,6 +7,10 @@ const marked = require("marked");
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
+  type Presentation {
+    title: String
+    name: String
+  }
   type Event {
     title: String
     markdown: String
@@ -14,6 +18,7 @@ const typeDefs = gql`
     link: String
     date: String
     type: String
+    presentations: [Presentation]
   }
   type Query {
     hello: String
@@ -44,7 +49,8 @@ const resolvers = {
           markdown: parsed.body,
           content: marked(parsed.body),
           date,
-          type: parsed.attributes.type || ""
+          type: parsed.attributes.type || "",
+          presentations: parsed.attributes.speakers || []
         };
       });
     }
