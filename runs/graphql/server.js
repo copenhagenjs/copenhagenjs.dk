@@ -13,6 +13,7 @@ const typeDefs = gql`
     content: String
     link: String
     date: String
+    type: String
   }
   type Query {
     hello: String
@@ -42,7 +43,8 @@ const resolvers = {
           link: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
           markdown: parsed.body,
           content: marked(parsed.body),
-          date
+          date,
+          type: parsed.attributes.type || ""
         };
       });
     }
