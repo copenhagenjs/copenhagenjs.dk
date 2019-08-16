@@ -25,23 +25,22 @@ https://forms.gle/XeBu2UuaY8YsDUic7
     17:50 Brief introduction to TDD and available test frameworks for frontend
     18:15 Hands-on - Setting up Jest / Migrating from Karma (or any others) to Jest
     18:45 Food break
+    19:15 How to test a component, service, reducer, effect and action? And what on earth is snapshot testing?
+    19:30 Hands-on Writing tests for component, service, etc
+    20:00 Best practices with testing consisting of naming, assertions, what should be tested and dealing with external resources
+    20:30 See you next time
 
-## 19:15 How to test a component, service, reducer, effect and action? And what on earth is snapshot testing?
+## What to bring:
 
-19:30 Hands-on Writing tests for component, service, etc
-20:00 Best practices with testing consisting of naming, assertions, what should be tested and dealing with external resources
-20:30 See you next time
-
-What to bring:
 Remember your laptop and charger.
 Fill out form: https://forms.gle/XeBu2UuaY8YsDUic7
 
-## What is a good workshop? You can read more about what we think is a good workshop here https://www.kevinsimper.dk/posts/what-is-a-good-workshop
+What is a good workshop? You can read more about what we think is a good workshop here https://www.kevinsimper.dk/posts/what-is-a-good-workshop
 
 You can with great benefit look at Jest at home and try out it, at the workshop we are going to help answer any questions you maybe didn’t find the answer to.
 This video by Kevin shows you how to get started with Jest.
 
-## https://www.youtube.com/watch?v=Dnr8Mu1Bco4
+https://www.youtube.com/watch?v=Dnr8Mu1Bco4
 
 Best regards
 Kevin and Mohsen
