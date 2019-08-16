@@ -3,13 +3,13 @@ title: CopenhagenJS August - Microsoft Lyngby
 type: meetup
 location: Microsoft, Kanalvej 7, Kongens Lyngby
 link: https://www.meetup.com/copenhagenjs/events/263233997/
-date: 2019-07-18T17:00:00
+date: 2019-08-18T17:00:00
 duration: 3
 speakers:
   - title: Automated dependency updates
     name: Jamie Magee
   - title: Being a self-taught javascript developer and what have I learned
-    name: Abdulahiii Mohamed
+    name: Abdulahili Mohamed
   - title: "Probability in TensorFlow.js - Chapter 1: A programmer's nightmare"
     name: Andreas Madsen
 ---
@@ -25,7 +25,7 @@ It is time for the August edition of CopenhagenJS. We are being hosted by Micros
     17:45 Welcome
     18:00 Automated dependency updates - Jamie Magee
     18:25 Break with food and drinks
-    19:00 Being a self-taught javascript developer and what have I learned - Abdulahiii Mohamed
+    19:00 Being a self-taught javascript developer and what have I learned - Abdulahili Mohamed
     19:25 Probability in TensorFlow.js - Chapter 1: A programmer's nightmare - Andreas Madsen
     19:50 Group photo
     19:55 Raffle.js
