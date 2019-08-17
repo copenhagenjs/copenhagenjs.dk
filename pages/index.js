@@ -8,7 +8,10 @@ export default class IndexRoutes extends React.Component {
   constructor() {
     super()
     this.state = {
-      markdown: ''
+      loading: false,
+      markdown: '',
+      localtion: '',
+      date: ''
     }
   }
   async fetchLatestPost() {
@@ -17,8 +20,10 @@ export default class IndexRoutes extends React.Component {
     const data = await req.text()
     const content = fm.default(data)
     this.setState({
+      loading: true,
       markdown: content.body,
-      location: content.attributes.location
+      location: content.attributes.location,
+      date: content.attributes.date
     })
   }
   componentDidMount() {
@@ -27,6 +32,16 @@ export default class IndexRoutes extends React.Component {
   render() {
     return (
       <Layout>
+        <style jsx>{`
+          .date {
+            font-size: 1.5rem;
+          }
+          .description {
+          }
+          .description :global(h1) {
+            margin: 5px 0;
+          }
+        `}</style>
         <header className="page-header master bg-grey" role="navigation">
           <Navigation />
 
@@ -48,24 +63,33 @@ export default class IndexRoutes extends React.Component {
           </a>
         </header>
 
-        <section className="page">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: marked(this.state.markdown)
-            }}
-          />
-          <div className="next-meetup">
-            <p>Read more and sign up for the next event here:</p>
+        {!this.state.loading && (
+          <section className="page">Fetching latest meetup..</section>
+        )}
+        {this.state.loading && (
+          <section className="page">
+            <div className="date">
+              {this.state.date && this.state.date.toLocaleString('da-DK')}
+            </div>
+            <div
+              className="description"
+              dangerouslySetInnerHTML={{
+                __html: marked(this.state.markdown)
+              }}
+            />
+            <div className="next-meetup">
+              <p>Read more and sign up for the next event here:</p>
 
-            <a
-              className="next-meetup__button"
-              href="https://www.meetup.com/copenhagenjs/"
-            >
-              View meetup group
-            </a>
-          </div>
-          {this.state.location && <Map location={this.state.location} />}
-        </section>
+              <a
+                className="next-meetup__button"
+                href="https://www.meetup.com/copenhagenjs/"
+              >
+                View meetup group
+              </a>
+            </div>
+            {this.state.location && <Map location={this.state.location} />}
+          </section>
+        )}
 
         <section className="newsletter">
           <h3>Dont miss important news!</h3>
