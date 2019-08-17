@@ -1,6 +1,6 @@
 ---
 title: Serverless workshop
-type: meetup
+type: workshop
 location: Njalsgade 19D, 1. sal, Copenhagen
 link: https://www.meetup.com/copenhagenjs/events/244143265/
 date: 2017-10-23T17:00:00
@@ -21,13 +21,14 @@ We will meet at Founders House that has been so nice to host us.
 You should bring you laptop as you will do everything yourself on that during the workshop!
 
 Time table:
-17:00 Doors open
-17:30 Welcome
-17:40 Presentation about serverless
-17:50 Workshop
-18:30 Something to eat and drink
-18:50 Workshop second half
-21:00 Done and thank you for today!
+
+    17:00 Doors open
+    17:30 Welcome
+    17:40 Presentation about serverless
+    17:50 Workshop
+    18:30 Something to eat and drink
+    18:50 Workshop second half
+    21:00 Done and thank you for today!
 
 Friendly regards
 Kevin Simper

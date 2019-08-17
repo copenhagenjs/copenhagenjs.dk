@@ -24,16 +24,17 @@ CopenhagenJS is back! We are getting started again and the theme for our first m
 So come and join for an evening together with awesome people in the Copenhagen JavaScript community, everybody is welcome :) We are also bringing the infamous CopenhagenJS raffle, so don’t miss that!
 
 <b>Agenda:</b>
-17:00 Doors open
-17:30 Welcome
-17:45 Talk: "Debugging Node.js Performance Issues in Production" by Thomas Watson
-https://twitter.com/wa7son
-18:15 Break
-18:40 Talk: "Replacing flash PDF reader with React and WebGL" by Anders Hellerup
-https://twitter.com/andershellerup
-19:20 Break
-19:40 Raffle
-20:30 Thanks for tonight
+
+    17:00 Doors open
+    17:30 Welcome
+    17:45 Talk: "Debugging Node.js Performance Issues in Production" by Thomas Watson
+    https://twitter.com/wa7son
+    18:15 Break
+    18:40 Talk: "Replacing flash PDF reader with React and WebGL" by Anders Hellerup
+    https://twitter.com/andershellerup
+    19:20 Break
+    19:40 Raffle
+    20:30 Thanks for tonight
 
 (The agenda might change before the meetup)
 

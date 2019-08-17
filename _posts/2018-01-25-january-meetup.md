@@ -15,15 +15,15 @@ It's time for the January edition of CopenhagenJS. This time we are so kindly ho
 
 ## Schedule:
 
-17:00 Doors open
-17:45 Welcome
-18:00 "Dear Javascript," - Olga Dmitricenko &amp; Steffen Agger
-18:25 Break with food and drinks
-19:00 Front-end at TDC - Mads Obel Jørgensen
-19:35 You?
-19:50 JavaScript Raffle
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 "Dear Javascript," - Olga Dmitricenko &amp; Steffen Agger
+    18:25 Break with food and drinks
+    19:00 Front-end at TDC - Mads Obel Jørgensen
+    19:35 You?
+    19:50 JavaScript Raffle
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 ## What is CopenhagenJS?
 If you've never heard about CopenhagenJS, it's a monthly community group in Copenhagen for all JavaScript enthusiasts.

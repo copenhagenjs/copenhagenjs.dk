@@ -25,16 +25,16 @@ We are looking for speakers for talks and lightning talks, so don't be shy, let 
 
 ## <b>Schedule:</b>
 
-17:00 Doors open
-17:45 Welcome
-18:00 Javascript and accessibility - Kenneth Larsen https://twitter.com/kennethlarsen
-18:25 Break with food and drinks
-19:00 Web Assembly - Boyan Mihaylov https://twitter.com/boyanio
-19:25 Short break
-19:35 Professionalism in tech - Yuriy https://twitter.com/yuriy_kurylenko
-19:50 JavaScript Raffle
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 Javascript and accessibility - Kenneth Larsen https://twitter.com/kennethlarsen
+    18:25 Break with food and drinks
+    19:00 Web Assembly - Boyan Mihaylov https://twitter.com/boyanio
+    19:25 Short break
+    19:35 Professionalism in tech - Yuriy https://twitter.com/yuriy_kurylenko
+    19:50 JavaScript Raffle
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 ## <b>What is CopenhagenJS? </b>
 

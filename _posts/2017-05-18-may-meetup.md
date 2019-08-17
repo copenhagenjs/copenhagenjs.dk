@@ -27,15 +27,15 @@ We are looking for speakers for talks and lightning talks, so don't be shy, let 
 
 ## <b>Schedule:</b>
 
-17:00 Doors open
-17:45 Welcome
-18:00 First talk - "TDD in a modern framework world" by Marcos Mellado
-18:25 Break with food and drinks
-19:00 Second talk - "React to the New World" by Albert Lindblom
-19:25 Short break
-19:35 <b>A talk or two lightning talks - do you have something to share? </b>
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 First talk - "TDD in a modern framework world" by Marcos Mellado
+    18:25 Break with food and drinks
+    19:00 Second talk - "React to the New World" by Albert Lindblom
+    19:25 Short break
+    19:35 <b>A talk or two lightning talks - do you have something to share? </b>
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 ## <b>What is CopenhagenJS? </b>
 

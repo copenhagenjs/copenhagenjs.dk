@@ -21,15 +21,15 @@ We are looking for speakers for talks and lightning talks, so don't be shy, let 
 
 ## <b>Schedule:</b>
 
-17:00 Doors open
-17:45 Welcome
-18:00 How to do Serverless - Kevin Simper https://connectedcars.dk/
-18:25 Break with food and drinks
-19:00 Vue.js and Loki.js - Jens Dahl Møllerhøj http://lawrence.ai/
-19:25 Short break
-19:35 JavaScript Quiz by Momondo
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 How to do Serverless - Kevin Simper https://connectedcars.dk/
+    18:25 Break with food and drinks
+    19:00 Vue.js and Loki.js - Jens Dahl Møllerhøj http://lawrence.ai/
+    19:25 Short break
+    19:35 JavaScript Quiz by Momondo
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 ## <b>What is CopenhagenJS? </b>
 

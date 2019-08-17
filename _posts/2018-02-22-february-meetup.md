@@ -20,15 +20,15 @@ It's time for the February edition of CopenhagenJS. This time we are so kindly h
 
 ## Schedule:
 
-17:00 Doors open
-17:45 Welcome
-18:00 Garbage collecting in the browser - Elvis Adomnica
-18:25 Break with food and drinks
-19:00 Rails Girls with Summer of Code - Anne &amp; Neer
-19:35 You?
-19:50 JavaScript Raffle
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 Garbage collecting in the browser - Elvis Adomnica
+    18:25 Break with food and drinks
+    19:00 Rails Girls with Summer of Code - Anne &amp; Neer
+    19:35 You?
+    19:50 JavaScript Raffle
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 ## What is CopenhagenJS?
 If you've never heard about CopenhagenJS, it's a monthly community group in Copenhagen for all JavaScript enthusiasts.

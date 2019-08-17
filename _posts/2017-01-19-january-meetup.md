@@ -27,16 +27,16 @@ We are going to talk a little bit about what the year going to bring for Copenha
 
 Agenda:
 
-17:30 Arrive
-17:45 Welcome - What does the year bring?
-18:00 Talk: "<b>AI and Cognitive Computing</b>" by Erik David Johnson from Netcompany
-18:30 Break - Something to eat
-18:45 Lightning talk: “<b>Creating an intelligent Facebook bot</b>” Kevin Simper
-19:00 Lightning talk: "<b>Optimizing Webpack bundles</b>" by Maciek Pękala
-19:15 Break
-19:45 Lightning talk: <b>How we replaced our Drupal CMS with 589 lines of JavaScript</b> by Allan Ebdrup
-20:00 Drinks and networking
-21:00 Finishing up
+    17:30 Arrive
+    17:45 Welcome - What does the year bring?
+    18:00 Talk: "<b>AI and Cognitive Computing</b>" by Erik David Johnson from Netcompany
+    18:30 Break - Something to eat
+    18:45 Lightning talk: “<b>Creating an intelligent Facebook bot</b>” Kevin Simper
+    19:00 Lightning talk: "<b>Optimizing Webpack bundles</b>" by Maciek Pękala
+    19:15 Break
+    19:45 Lightning talk: <b>How we replaced our Drupal CMS with 589 lines of JavaScript</b> by Allan Ebdrup
+    20:00 Drinks and networking
+    21:00 Finishing up
 
 ## <b>Why should you come? </b>
 Come and speak to others that also like JavaScript. CopenhagenJS is a community where we want to help each other become better developers and develop friendships.

@@ -23,15 +23,15 @@ It is time for the March edition of CopenhagenJS and TwentyThree has been so nic
 
 ## <b>Schedule:</b>
 
-17:00 Doors open
-17:45 Welcome
-18:00 First talk - Keep Calm And Curry On by Andreas Møller
-18:25 Break with refreshments
-19:00 Second talk - Generators and Async/Await by Daniel Pouzemski from TwentyThree
-19:25 Break and mingle
-19:35 Third talk - My journey into VR - Casper Fabricius
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 First talk - Keep Calm And Curry On by Andreas Møller
+    18:25 Break with refreshments
+    19:00 Second talk - Generators and Async/Await by Daniel Pouzemski from TwentyThree
+    19:25 Break and mingle
+    19:35 Third talk - My journey into VR - Casper Fabricius
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 We are happy to be hosted by TwentyThree
 

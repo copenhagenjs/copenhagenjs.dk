@@ -21,15 +21,15 @@ It's time for the Marts edition of CopenhagenJS. This time we are so kindly host
 
 ## Schedule:
 
-17:00 Doors open
-17:45 Welcome
-18:00 Building the VS Code editor at Microsoft - Kenneth Auchenberg
-18:25 Break with food and drinks
-19:00 ElectronJS at Saxobank, building a multiscreen desktop application - Ràul Pineda
-19:35 Making SVG and examples - Hunor Márton Borbély
-19:50 JavaScript Raffle
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 Building the VS Code editor at Microsoft - Kenneth Auchenberg
+    18:25 Break with food and drinks
+    19:00 ElectronJS at Saxobank, building a multiscreen desktop application - Ràul Pineda
+    19:35 Making SVG and examples - Hunor Márton Borbély
+    19:50 JavaScript Raffle
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 ## What is CopenhagenJS?
 If you've never heard about CopenhagenJS, it's a monthly community group in Copenhagen for all JavaScript enthusiasts.

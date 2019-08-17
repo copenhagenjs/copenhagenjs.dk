@@ -27,15 +27,15 @@ The agenda is still being put together, so changes may occur.
 
 <b>Agenda</b>
 
-17:30 Arrive
-17:45 Welcome
-18:00 Talk: "<b>Fake your WebComponents!</b>" by Daniel Spitzer
-18:20 Break with food
-18:45 Lightning talk: "<b>Lightning Fast Native App Development with Exponent</b>" by Cem Turan
-19:00 Lightning talk about Electron: "<b>One architecture: Four platforms</b>" by Søren Vind
-19:15 Short break
-19:30 Lightning talk: "<b>Documentation? Ain't nobody's got time for that!....</b>" by Marcos Mellado
-20:00 Drinks and hangout
+    17:30 Arrive
+    17:45 Welcome
+    18:00 Talk: "<b>Fake your WebComponents!</b>" by Daniel Spitzer
+    18:20 Break with food
+    18:45 Lightning talk: "<b>Lightning Fast Native App Development with Exponent</b>" by Cem Turan
+    19:00 Lightning talk about Electron: "<b>One architecture: Four platforms</b>" by Søren Vind
+    19:15 Short break
+    19:30 Lightning talk: "<b>Documentation? Ain't nobody's got time for that!....</b>" by Marcos Mellado
+    20:00 Drinks and hangout
 
 We're looking forward to seeing everyone at the meetup!
 

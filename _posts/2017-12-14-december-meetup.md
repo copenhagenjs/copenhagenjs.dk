@@ -24,15 +24,15 @@ We are looking for speakers for talks and lightning talks, so don't be shy, let 
 
 ## Schedule:
 
-17:00 Doors open
-17:45 Welcome
-18:00 How to do automatic WebFont setup - Peter Müller https://twitter.com/_munter_
-18:25 Break with food and drinks
-19:00 The state of WebVR and WebAR - Casper Fabricius https://twitter.com/fabricius
-19:35 Introduction to ReasonML - Cem Turan https://twitter.com/cem2ran
-19:50 JavaScript Raffle
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 How to do automatic WebFont setup - Peter Müller https://twitter.com/_munter_
+    18:25 Break with food and drinks
+    19:00 The state of WebVR and WebAR - Casper Fabricius https://twitter.com/fabricius
+    19:35 Introduction to ReasonML - Cem Turan https://twitter.com/cem2ran
+    19:50 JavaScript Raffle
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 ## What is CopenhagenJS?
 If you've never heard about CopenhagenJS, it's a monthly community group in Copenhagen for all JavaScript enthusiasts.

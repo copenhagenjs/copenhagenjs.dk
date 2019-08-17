@@ -19,15 +19,15 @@ speakers:
 
 Let's celebrate the soon-to-come holidays together with JavaScript meetup hygge and maybe some gløgg!
 
-17:00 Doors open
-17:30 Welcome
-17:45 Talk: "A Little Closer to Frontend Bliss with Elm" by Tereza Sokol (@terexka)
-18:15 Break - Food
-18:30 Talk: "Introduction to automated refactoring with JS codemods" by Kenneth Skovhus (@kenneth_skovhus)
-19:00 Lightning talk
-19:15 Break - Gløgg
-19:30 Raffle - Christmas Edition
-20:00 Thanks for tonight!
+    17:00 Doors open
+    17:30 Welcome
+    17:45 Talk: "A Little Closer to Frontend Bliss with Elm" by Tereza Sokol (@terexka)
+    18:15 Break - Food
+    18:30 Talk: "Introduction to automated refactoring with JS codemods" by Kenneth Skovhus (@kenneth_skovhus)
+    19:00 Lightning talk
+    19:15 Break - Gløgg
+    19:30 Raffle - Christmas Edition
+    20:00 Thanks for tonight!
 
 We look forward to seeing you!
 
