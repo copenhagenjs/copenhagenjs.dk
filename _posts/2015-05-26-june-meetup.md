@@ -7,6 +7,11 @@ lanyrd: http://lanyrd.com/2015/copenhagenjs-june/
 host: Billy's Billing
 host_url: https://www.billy.dk/
 host_address: Solbjerg Plads 3, 2000 Frederiksberg
+speakers:
+  - title: "spdiff.js: (towards) fully automated API updates"
+    name: Jesper Andersen
+  - title: AngularJS 1.x and TypeScript
+    name: Tinus Aamand Norstved
 ---
 
 There will be pizza, compliments of [Billy's Billing](https://www.billy.dk/)

@@ -11,7 +11,7 @@ speakers:
   - title: GraphQL and React Suspense
     name: Morten Barklund
   - title: Shape your workflows with custom eslint plugins
-    name: Peter Munter
+    name: Peter Müller
 ---
 
 # January meetup at Siteimprove
@@ -25,7 +25,7 @@ Hi friends, happy new year++ and we are ready to start another great year of Cop
 18:00 - micro:bit - JavaScript meets microcontroller - Kenneth Geisshirt
 18:25 - Break with food and drinks
 19:00 - GraphQL and React Suspense - Morten Barklund
-19:35 - Shape your workflows with custom eslint plugins - Peter Munter
+19:35 - Shape your workflows with custom eslint plugins - Peter Müller
 19:45 - You?
 20:00 - Quiz time
 20:10 - Socialising - meet the community

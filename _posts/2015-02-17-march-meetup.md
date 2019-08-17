@@ -7,6 +7,13 @@ lanyrd: http://lanyrd.com/2015/copenhagenjs
 host: Founders
 host_url: http://founders.as/
 host_address: Indiakaj 12, 2, Copenhagen
+speakers:
+  - title: Turning a supertanker - Switching Podio to React
+    name: Peter Müller
+  - title: Flux Architecture
+    name: Boyan Mihaylov
+  - title: Testing React with Karma and Jasmine
+    name: Nikolaj Lundsgaard
 ---
 
 This time around our focus will be on React and the paradigms surrounding it. This might also be the start of a Copenhagen React Meetup group, which we are collaborating with this time. If you are interested in React in general you might want to pay them a visit: [http://www.meetup.com/Copenhagen-React-Meetup/](http://www.meetup.com/Copenhagen-React-Meetup/).
