@@ -4,6 +4,13 @@ layout: post
 author: Kenneth Auchenberg
 date: Thursday, June 19, 2014 18:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-june
+speakers:
+  - title: Free geodata and you (and leaflet.js)
+    name: Jacob Andresen
+  - title: What is this WebRTC thing about?
+    name: Kenneth Auchenberg
+  - title: MongoJS. Node.js and MongoDB
+    name: Eduardo Sorribas
 ---
 
 ## Welcome to our June meetup 
