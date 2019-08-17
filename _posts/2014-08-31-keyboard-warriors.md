@@ -4,6 +4,7 @@ layout: post
 author: Peter Müller
 date: Wednesday, September 3, 2014 18:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-september
+location: Nørrebro bryghus, Ryesgade 3, Copenhagen
 ---
 
 ## Special event: Keyboard Warriors
@@ -13,8 +14,6 @@ Our September meetup is a bit different than normally. We have moved our meetup 
 We hope you'll join us at [Nørrebro Bryghus](http://www.noerrebrobryghus.dk/), for what might become the biggest meetup this year.
 
 If you'd like to give a lightning talk (5-15 minutes), there are still slots open. Ping us on [@copenhagenjs](https://twitter.com/copenhagenjs) and we'll add you to the schedule.
-
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:400px"><div id="gmap_canvas" style="height:400px"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.mapsembed.com" id="get-map-data">mapsembed.com</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(55.6902588,12.563921400000027),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(55.6902588, 12.563921400000027)});infowindow = new google.maps.InfoWindow({content:"<b>N&oslash;rrebro bryghus</b><br/>Ryesgade 3<br/> Copenhagen" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 
 #### No meetup September 18th
 

@@ -4,6 +4,11 @@ layout: post
 author: Kenneth Auchenberg
 date: Thursday, March 20, 2014 19:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-march
+speakers:
+  - title: "Lightning talk: Espruino - JavaScript for microcontrollers"
+    name: Björn Söderqvist
+  - title: Grunt vs. Gulp - a JavaScript Task runner showdown
+    name: Vanja Ćosić
 ---
 
 <h2>Welcome to our March meetup</h2>

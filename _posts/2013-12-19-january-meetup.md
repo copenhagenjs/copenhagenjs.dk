@@ -4,6 +4,13 @@ layout: post
 author: Peter Müller
 date: Thursday, January 16, 2014 19:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-january
+speakers:
+  - title: Large scale Backbone apps
+    name: Bo Gotthardt
+  - title: The TodoMVC challenge
+    name: Peter Müller
+  - title: "What's wrong with green"
+    name: Colin Eberhardt
 ---
 
 <h3>Happy new year!</h3>

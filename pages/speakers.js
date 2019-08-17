@@ -21,7 +21,8 @@ export default () => {
   return (
     <Page>
       <h1>Speakers</h1>
-      <p>These speakers have previously given talks at CopenhagenJS:</p>
+      <p>These speakers have previously given talks at CopenhagenJS.</p>
+      <p>There has been {speakerList.length} talks.</p>
       <ul>{speakerList}</ul>
     </Page>
   )

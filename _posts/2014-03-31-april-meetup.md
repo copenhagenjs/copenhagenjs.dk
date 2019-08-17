@@ -4,6 +4,11 @@ layout: post
 author: Björn Söderqvist
 date: Thursday, April 10, 2014 18:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-april
+speakers:
+  - title: StikJS - From jQuery hell to pluggable components
+    name: Lukas Alexandre
+  - title: Firespeed prototyping with Firebase
+    name: Kevin Simper
 ---
 
 <h2>Welcome to our April meetup</h2>

@@ -2,6 +2,9 @@
 title: Special Future of Internet Explorer event
 layout: post
 author: Kenneth Auchenberg
+speakers:
+  - title: The future of Internet Explorer
+    name: Jeffrey Burtoft
 ---
 
 We are glad to announce a very special Internet Explorer event. The event is co-organized, together with [Copenhagen .NET User Group](http://cnug.dk/), since it's also quite relevant for the Microsoft guys to know where IE is headed.
@@ -39,4 +42,3 @@ We expect to have space for around **60 people**, and this to **go quick**, so p
         Attendee list for CopenhagenJS — Special Internet Explorer event on Lanyrd
     </a>
 </div>
-

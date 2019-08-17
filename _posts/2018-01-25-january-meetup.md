@@ -1,39 +1,34 @@
 ---
-title: CopenhagenJS April
+title: CopenhagenJS January at YouSee
 type: meetup
-location: Skelbækgade 2, 5, Copenhagen
-link: https://www.meetup.com/copenhagenjs/events/249032147/
-date: 2018-04-19T17:00:00
+location: Teglholmsgade 1, Copenhagen
+link: https://www.meetup.com/copenhagenjs/events/246495698/
+date: 2018-01-25T17:00:00
 duration: 3
-speakers:
-  - title: 100 tests per second - 40 releases per week
-    name: Lars Thorup
-  - title: I'm not afraid of MV* in JavaScript
-    name: Aleksandra Shinkevich
 ---
 
-# CopenhagenJS April
+# CopenhagenJS January at YouSee
 
-It's time for the April edition of CopenhagenJS. Founders has been so awesome to host the meetup! Let us get together and talk about JavaScript and what cool things we can do with it!
+
+• What we'll do
+It's time for the January edition of CopenhagenJS. This time we are so kindly hosted by Yousee at the Yousee Digital Warehouse. It is a super cool venue and there should be space for the community! So big thank you to Yousee!
 
 ## Schedule:
 
     17:00 Doors open
     17:45 Welcome
-    18:00 100 tests per second - 40 releases per week by Lars Thorup
+    18:00 "Dear Javascript," - Olga Dmitricenko &amp; Steffen Agger
     18:25 Break with food and drinks
-    19:00 I'm not afraid of MV\* in JavaScript - Aleksandra Shinkevich
+    19:00 Front-end at TDC - Mads Obel Jørgensen
     19:35 You?
     19:50 JavaScript Raffle
     20:00 Socialising - meet the community
     21:00 See you next time!
 
 ## What is CopenhagenJS?
-
 If you've never heard about CopenhagenJS, it's a monthly community group in Copenhagen for all JavaScript enthusiasts.
 
 ## Can I present something at CopenhagenJS?
-
 Yes, CopenhagenJS is for and by the community so you are more than welcome to talk about things that you find interesting.
 
 Remeber to Like our facebook to get all the latest updates and videos!

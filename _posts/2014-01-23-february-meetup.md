@@ -4,6 +4,15 @@ layout: post
 author: Peter Müller
 date: Thursday, February 20, 2014 19:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-february
+speakers:
+  - title: 20 minutes Super Mario
+    name: Kevin Simper
+  - title: "TypeScript kata: The TDD style"
+    name: Ronnie H Hegelund
+  - title: Talkative JavaScript
+    name: BBalázs Suhajda
+  - title: Wrangling technical details in a book
+    name: Jacob Andresen
 ---
 
 <h2>Welcome to our february meetup</h2>
