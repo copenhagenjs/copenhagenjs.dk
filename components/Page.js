@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 export default ({ children }) => {
   return (
@@ -13,6 +14,7 @@ export default ({ children }) => {
         </div>
       </header>
       <section className="page">{children}</section>
+      <Footer />
     </Layout>
   )
 }
