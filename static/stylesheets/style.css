@@ -77,7 +77,8 @@ pre {
 	border-top: 1px solid #fff;
     text-align: center;
 
-	background-image: url('/static/images/header_bg.jpg');
+	/* background-image: url('/static/images/header_bg.jpg'); */
+	background-image: url('https://i.imgur.com/MM4azwB.jpg');
 	background-repeat: no-repeat;
 	background-position: center 45%;
 	background-size: cover;
