@@ -39,10 +39,12 @@ export default class Videos extends React.Component {
           </a>
         </p>
         <p>
-          {videos.reverse().map(([id, title]) => {
+          {videos.reverse().map(([id, title, name]) => {
             return (
               <>
-                <h3>{title}</h3>
+                <h3>
+                  {title} - {name}
+                </h3>
                 <Embed youtubeId={id} />
               </>
             )
