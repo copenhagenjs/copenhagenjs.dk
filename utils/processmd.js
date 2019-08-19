@@ -21,33 +21,17 @@ async function main() {
       `
 import Head from 'next/head'
 import Page from '../../components/Page'
-import Map from '../../components/Map'
+import Event from '../../components/Event'
+
 export default () => (
   <Page>
     <Head>
       <title>${`${content.attributes.title} - CopenhagenJS` ||
         'CopenhagenJS Event'}</title>
     </Head>
-    <style jsx>{\`
-      .date {
-        font-size: 1.5rem;
-      }
-      .description {
-      }
-      .description :global(h1) {
-        margin: 5px 0;
-      }
-    \`}</style>
-    <div className="date">
-      ${content.attributes.date &&
-        content.attributes.date.toLocaleString('da-DK')}
-    </div>
-    <div className="description" dangerouslySetInnerHTML={{__html: \`${html}\`}}></div>
-    ${
-      content.attributes.location
-        ? `<Map location='${content.attributes.location}'/>`
-        : ''
-    }
+    <Event title="${content.attributes.title}" date="${
+        content.attributes.date
+      }" html={\`${html}\`} location="${content.attributes.location}" />
   </Page> 
 )
       `
