@@ -1,12 +1,18 @@
 const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
 const data = require("../../_posts/_data.json");
+const {videos} = require('../../data/videos.js')
 const { readFileSync } = require("fs");
 const fm = require("front-matter");
 const marked = require("marked");
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
+  type Videos {
+    youtubeId: String
+    title: String
+    name: String
+  }
   type Presentation {
     title: String
     name: String
@@ -23,6 +29,7 @@ const typeDefs = gql`
   type Query {
     hello: String
     events: [Event]
+    videos: [Videos]
   }
 `;
 
@@ -53,6 +60,13 @@ const resolvers = {
           presentations: parsed.attributes.speakers || []
         };
       });
+    },
+    videos: () => {
+      return videos.map(v => ({
+        youtubeId: v[0],
+        title: v[1],
+        name: v[2]
+      }))
     }
   }
 };
