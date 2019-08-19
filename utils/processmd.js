@@ -23,7 +23,20 @@ import Page from '../../components/Page'
 import Map from '../../components/Map'
 export default () => (
   <Page>
-    <div dangerouslySetInnerHTML={{__html: \`${html}\`}}></div>
+    <style jsx>{\`
+      .date {
+        font-size: 1.5rem;
+      }
+      .description {
+      }
+      .description :global(h1) {
+        margin: 5px 0;
+      }
+    \`}</style>
+    <div className="date">
+      ${content.attributes.date && content.attributes.date.toLocaleString('da-DK')}
+    </div>
+    <div className="description" dangerouslySetInnerHTML={{__html: \`${html}\`}}></div>
     ${
       content.attributes.location
         ? `<Map location='${content.attributes.location}'/>`
