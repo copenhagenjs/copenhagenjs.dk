@@ -19,10 +19,15 @@ async function main() {
     writeFileSync(
       './pages/archive/' + files[file].replace('.md', '.js'),
       `
+import Head from 'next/head'
 import Page from '../../components/Page'
 import Map from '../../components/Map'
 export default () => (
   <Page>
+    <Head>
+      <title>${`${content.attributes.title} - CopenhagenJS` ||
+        'CopenhagenJS Event'}</title>
+    </Head>
     <style jsx>{\`
       .date {
         font-size: 1.5rem;
@@ -34,7 +39,8 @@ export default () => (
       }
     \`}</style>
     <div className="date">
-      ${content.attributes.date && content.attributes.date.toLocaleString('da-DK')}
+      ${content.attributes.date &&
+        content.attributes.date.toLocaleString('da-DK')}
     </div>
     <div className="description" dangerouslySetInnerHTML={{__html: \`${html}\`}}></div>
     ${
