@@ -79,6 +79,10 @@ const resolvers = {
             events {
               title
               markdown
+              content
+              link
+              date
+              type
             }
           }
         `
