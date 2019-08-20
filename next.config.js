@@ -10,6 +10,7 @@ module.exports = {
       '/speakers': { page: '/speakers' },
       '/guidelines': { page: '/guidelines' },
       '/login': { page: '/login' },
+      '/search': { page: '/search' },
       '/contact': { page: '/contact' }
     }
     const archive = readdirSync('./pages/archive')
