@@ -1,7 +1,9 @@
 const express = require("express");
+const { graphql } = require("graphql");
 const { ApolloServer, gql } = require("apollo-server-express");
+import { makeExecutableSchema } from "graphql-tools";
 const data = require("../../_posts/_data.json");
-const {videos} = require('../../data/videos.js')
+const { videos } = require("../../data/videos.js");
 const { readFileSync } = require("fs");
 const fm = require("front-matter");
 const marked = require("marked");
@@ -30,6 +32,7 @@ const typeDefs = gql`
     hello: String
     events: [Event]
     videos: [Videos]
+    searchEvents(query: String): [Event]
   }
 `;
 
@@ -66,10 +69,33 @@ const resolvers = {
         youtubeId: v[0],
         title: v[1],
         name: v[2]
-      }))
+      }));
+    },
+    searchEvents: async (parent, { query }) => {
+      const data = await graphql(
+        schema,
+        `
+          {
+            events {
+              title
+              markdown
+            }
+          }
+        `
+      );
+      return data.data.events.filter(e => {
+        if (e.title.toLowerCase().includes(query.toLowerCase())) return true;
+        if (e.markdown.toLowerCase().includes(query.toLowerCase())) return true;
+        return false;
+      });
     }
   }
 };
+
+export const schema = makeExecutableSchema({
+  typeDefs,
+  resolvers
+});
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
