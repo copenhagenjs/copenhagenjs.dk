@@ -105,7 +105,11 @@ const resolvers = {
     },
     speakers: () => {
       return getEvents()
-        .map(e => ({ ...e.presentations, link: e.link }))
+        .map(e => {
+          return e.presentations.map(p => {
+            return { ...p, link: e.link };
+          });
+        })
         .flat();
     }
   },
