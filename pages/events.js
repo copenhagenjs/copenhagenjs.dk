@@ -42,6 +42,10 @@ export default () => (
         <a href="https://www.meetup.com/copenhagenjs/">
           meetup.com/copenhagenjs
         </a>
+        .
+      </div>
+      <div>
+        <a href="/search/">Search meetups</a>
       </div>
       <table>
         <thead>
