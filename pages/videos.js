@@ -1,6 +1,13 @@
 import React from 'react'
+import 'isomorphic-unfetch'
+import ApolloClient, { gql } from 'apollo-boost'
+import { ApolloProvider } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
-import { videos } from '../data/videos.js'
+
+const client = new ApolloClient({
+  uri: 'https://graphql.copenhagenjs.dk/graphql'
+})
 
 const Embed = ({ youtubeId }) => {
   return (
@@ -28,29 +35,43 @@ const Embed = ({ youtubeId }) => {
   )
 }
 
-export default class Videos extends React.Component {
+function Videos() {
+  const { loading, error, data } = useQuery(gql`
+    {
+      videos {
+        title
+        name
+        youtubeId
+      }
+    }
+  `)
+
+  if (loading) return <span>Loading...</span>
+  if (error) return <span>Error :(</span>
+  return data.videos.reverse().map(({ title, name, youtubeId }, key) => (
+    <div key={key}>
+      <h3>
+        {title} - {name}
+      </h3>
+      <Embed youtubeId={youtubeId} />
+    </div>
+  ))
+}
+
+export default class VideosComponent extends React.Component {
   render() {
     return (
-      <Page>
-        <h1>Videos</h1>
-        <p>
-          <a href="https://www.youtube.com/channel/UCOD8lwED5PAcgmhwymQJsng">
-            Subscribe to us on Youtube
-          </a>
-        </p>
-        <p>
-          {videos.reverse().map(([id, title, name]) => {
-            return (
-              <>
-                <h3>
-                  {title} - {name}
-                </h3>
-                <Embed youtubeId={id} />
-              </>
-            )
-          })}
-        </p>
-      </Page>
+      <ApolloProvider client={client}>
+        <Page>
+          <h1>Videos</h1>
+          <p>
+            <a href="https://www.youtube.com/channel/UCOD8lwED5PAcgmhwymQJsng">
+              Subscribe to us on Youtube
+            </a>
+          </p>
+          <Videos />
+        </Page>
+      </ApolloProvider>
     )
   }
 }
