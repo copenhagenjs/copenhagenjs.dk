@@ -40,17 +40,20 @@ function Events({ query }) {
   ))
 }
 
-export default () => {
-  const params = new URLSearchParams(
+function getParams() {
+  return new URLSearchParams(
     typeof window == 'object' ? window.location.search : ''
   )
-  const [queryTerm, setQueryTerm] = useState(params.get('query') || '')
+}
+
+export default () => {
+  const [queryTerm, setQueryTerm] = useState(getParams().get('query') || '')
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search)
+    const params = getParams()
     params.set('query', queryTerm)
     history.pushState({}, 'Search: ' + queryTerm, 'search?' + params.toString())
-  })
+  }, [queryTerm])
 
   return (
     <ApolloProvider client={client}>
