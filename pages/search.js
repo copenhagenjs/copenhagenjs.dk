@@ -29,15 +29,31 @@ function Events({ query }) {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
-  return data.searchEvents.reverse().map(({ title, date, link, type }) => (
-    <tr key={title}>
-      <td>
-        <a href={link}>{title}</a>
-      </td>
-      <td>{new Date(parseInt(date)).toLocaleString('da-DK')}</td>
-      <td>{type}</td>
-    </tr>
-  ))
+  return (
+    <>
+      <div>{data.searchEvents.length} events found</div>
+      <table style={{ width: '100%' }}>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.searchEvents.reverse().map(({ title, date, link, type }) => (
+            <tr key={title}>
+              <td>
+                <a href={link}>{title}</a>
+              </td>
+              <td>{new Date(parseInt(date)).toLocaleString('da-DK')}</td>
+              <td>{type}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
+  )
 }
 
 function getParams() {
@@ -52,7 +68,11 @@ export default () => {
   useEffect(() => {
     const params = getParams()
     params.set('query', queryTerm)
-    history.pushState({}, 'Search: ' + queryTerm, 'search?' + params.toString())
+    history.pushState(
+      {},
+      'Search: ' + queryTerm,
+      '/search/?' + params.toString()
+    )
   }, [queryTerm])
 
   return (
@@ -68,18 +88,7 @@ export default () => {
             style={{ fontSize: '2rem' }}
           />
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Event</th>
-              <th>Date</th>
-              <th>Type</th>
-            </tr>
-          </thead>
-          <tbody>
-            {queryTerm.length > 0 ? <Events query={queryTerm} /> : <tr></tr>}
-          </tbody>
-        </table>
+        {queryTerm.length > 0 ? <Events query={queryTerm} /> : <tr></tr>}
       </Page>
     </ApolloProvider>
   )
