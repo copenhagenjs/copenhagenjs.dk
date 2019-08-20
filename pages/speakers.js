@@ -1,29 +1,50 @@
+import 'isomorphic-unfetch'
+import ApolloClient, { gql } from 'apollo-boost'
+import { ApolloProvider } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
-import speakerEvents from '../static/speakers.json'
 
-export default () => {
-  const speakerList = speakerEvents
-    .reverse()
-    .map((event, id) => {
-      return event.speakers.map(speaker => {
-        return (
-          <li key={`${id}-${speaker.name}`}>
-            <a href={`/archive/${event.src.replace('.md', '')}`}>
-              {speaker.name}
-            </a>{' '}
-            - {speaker.title}
-          </li>
-        )
-      })
-    })
-    .flat()
+const client = new ApolloClient({
+  uri: 'https://graphql.copenhagenjs.dk/graphql'
+})
 
+function Speakers() {
+  const { loading, error, data } = useQuery(gql`
+    {
+      speakers {
+        name
+        title
+        event {
+          link
+        }
+      }
+    }
+  `)
+
+  if (loading) return <span>Loading...</span>
+  if (error) return <span>Error :(</span>
   return (
-    <Page>
-      <h1>Speakers</h1>
-      <p>These speakers have previously given talks at CopenhagenJS.</p>
-      <p>There has been {speakerList.length} talks.</p>
-      <ul>{speakerList}</ul>
-    </Page>
+    <div>
+      <p>There has been {data.speakers.length} talks.</p>
+
+      {data.speakers.reverse().map(speaker => {
+        return (
+          <div key={speaker.title}>
+            <a href={speaker.event.link}>{speaker.name}</a>
+            {' - '}
+            {speaker.title}
+          </div>
+        )
+      })}
+    </div>
   )
 }
+
+export default () => (
+  <ApolloProvider client={client}>
+    <Page>
+      <h1>Speakers</h1>
+      <Speakers />
+    </Page>
+  </ApolloProvider>
+)
