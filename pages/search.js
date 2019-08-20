@@ -1,5 +1,5 @@
 import 'isomorphic-unfetch'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ApolloClient, { gql } from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
@@ -41,7 +41,17 @@ function Events({ query }) {
 }
 
 export default () => {
-  const [queryTerm, setQueryTerm] = useState('')
+  const params = new URLSearchParams(
+    typeof window == 'object' ? window.location.search : ''
+  )
+  const [queryTerm, setQueryTerm] = useState(params.get('query') || '')
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    params.set('query', queryTerm)
+    history.pushState({}, 'Search: ' + queryTerm, 'search?' + params.toString())
+  })
+
   return (
     <ApolloProvider client={client}>
       <Page>
