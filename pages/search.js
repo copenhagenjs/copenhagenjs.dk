@@ -6,7 +6,7 @@ import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:9000/graphql'
+  uri: 'https://graphql.copenhagenjs.dk/graphql'
 })
 
 const SEARCHEVENTS = gql`
