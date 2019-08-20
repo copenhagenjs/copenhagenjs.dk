@@ -31,6 +31,7 @@ const typeDefs = gql`
   type Speaker {
     title: String
     name: String
+    event: Event
   }
   type Query {
     hello: String
@@ -104,8 +105,14 @@ const resolvers = {
     },
     speakers: () => {
       return getEvents()
-        .map(e => e.presentations)
+        .map(e => ({ ...e.presentations, link: e.link }))
         .flat();
+    }
+  },
+  Speaker: {
+    event: async (parent, arg) => {
+      const event = getEvents().find(e => e.link === parent.link);
+      return event;
     }
   }
 };

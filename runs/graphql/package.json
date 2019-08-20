@@ -19,5 +19,6 @@
     "marked": "^0.7.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "prettier": {}
 }
