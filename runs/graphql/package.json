@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^2.8.1",
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "front-matter": "^3.0.2",
     "graphql": "^14.4.2",
