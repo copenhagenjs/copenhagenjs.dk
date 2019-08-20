@@ -42,5 +42,9 @@
     "@storybook/addons": "^5.1.10",
     "@babel/core": "^7.5.5",
     "babel-loader": "^8.0.6"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
