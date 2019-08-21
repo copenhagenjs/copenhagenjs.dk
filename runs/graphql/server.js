@@ -39,6 +39,7 @@ const typeDefs = gql`
     videos: [Videos]
     searchEvents(query: String): [Event]
     speakers: [Speaker]
+    searchSpeakers(name: String!): [Speaker]
   }
 `;
 
@@ -111,6 +112,16 @@ const resolvers = {
           });
         })
         .flat();
+    },
+    searchSpeakers: (parent, { name }) => {
+      return getEvents()
+        .map(e => {
+          return e.presentations.map(p => {
+            return { ...p, link: e.link };
+          });
+        })
+        .flat()
+        .filter(s => s.name.toLowerCase().includes(name.toLowerCase()));
     }
   },
   Speaker: {
