@@ -8,13 +8,19 @@ const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
 })
 
+function getParams() {
+  return new URLSearchParams(
+    typeof window == 'object' ? window.location.search : ''
+  )
+}
+
 function Speakers() {
+  const slug = getParams().get('name')
   const { loading, error, data } = useQuery(gql`
     {
-      speakers {
+      speaker(slug: "${slug}") {
         name
         title
-        slug
         event {
           link
         }
@@ -24,17 +30,15 @@ function Speakers() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+  if (data.speaker.length === 0) return <span>Could not find speaker</span>
   return (
     <div>
-      <p>There has been {data.speakers.length} talks.</p>
+      <h1>Speaker: {data.speaker[0].name}</h1>
+      <p>The person has {data.speaker.length} talks.</p>
 
-      {data.speakers.reverse().map(speaker => {
+      {data.speaker.reverse().map(speaker => {
         return (
           <div key={speaker.title}>
-            <strong>
-              <a href={'/speaker?name=' + speaker.slug}>{speaker.name}</a>
-            </strong>
-            {' - '}
             <a href={speaker.event.link}>{speaker.title}</a>
           </div>
         )
@@ -46,7 +50,6 @@ function Speakers() {
 export default () => (
   <ApolloProvider client={client}>
     <Page>
-      <h1>Speakers</h1>
       <Speakers />
     </Page>
   </ApolloProvider>
