@@ -7,6 +7,7 @@ const { videos } = require("../../data/videos.js");
 const { readFileSync } = require("fs");
 const fm = require("front-matter");
 const marked = require("marked");
+const pMemoize = require("p-memoize");
 
 // Construct a schema, using GraphQL schema language
 const typeDefs = gql`
@@ -67,6 +68,10 @@ const getEvents = () => {
   });
 };
 
+const memGetEvents = pMemoize(getEvents, {
+  maxAge: 1000 * 3600
+});
+
 // Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
@@ -115,7 +120,7 @@ const resolvers = {
   },
   Speaker: {
     event: async (parent, arg) => {
-      const event = getEvents().find(e => e.link === parent.link);
+      const event = memGetEvents().find(e => e.link === parent.link);
       return event;
     }
   }
