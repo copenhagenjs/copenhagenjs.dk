@@ -28,41 +28,51 @@ const typeDefs = gql`
     type: String
     presentations: [Presentation]
   }
+  type Speaker {
+    title: String
+    name: String
+    event: Event
+  }
   type Query {
     hello: String
     events: [Event]
     videos: [Videos]
     searchEvents(query: String): [Event]
+    speakers: [Speaker]
   }
 `;
+
+const getEvents = () => {
+  return data.posts.map(post => {
+    const markdown = readFileSync("../../_posts/" + post, "utf8");
+    const parsed = fm(markdown);
+    const date = parsed.attributes.date
+      ? new Date(parsed.attributes.date + " GMT+0200")
+      : new Date(
+          post
+            .split("-")
+            .slice(0, 2)
+            .join("-") + " GMT+0200"
+        );
+
+    return {
+      title: parsed.attributes.title || post.replace(".md", ""),
+      link: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
+      markdown: parsed.body,
+      content: marked(parsed.body),
+      date,
+      type: parsed.attributes.type || "",
+      presentations: parsed.attributes.speakers || []
+    };
+  });
+};
 
 // Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
     hello: () => "Hello world!",
     events: () => {
-      return data.posts.map(post => {
-        const markdown = readFileSync("../../_posts/" + post, "utf8");
-        const parsed = fm(markdown);
-        const date = parsed.attributes.date
-          ? new Date(parsed.attributes.date + " GMT+0200")
-          : new Date(
-              post
-                .split("-")
-                .slice(0, 2)
-                .join("-") + " GMT+0200"
-            );
-
-        return {
-          title: parsed.attributes.title || post.replace(".md", ""),
-          link: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
-          markdown: parsed.body,
-          content: marked(parsed.body),
-          date,
-          type: parsed.attributes.type || "",
-          presentations: parsed.attributes.speakers || []
-        };
-      });
+      return getEvents();
     },
     videos: () => {
       return videos.map(v => ({
@@ -92,6 +102,21 @@ const resolvers = {
         if (e.markdown.toLowerCase().includes(query.toLowerCase())) return true;
         return false;
       });
+    },
+    speakers: () => {
+      return getEvents()
+        .map(e => {
+          return e.presentations.map(p => {
+            return { ...p, link: e.link };
+          });
+        })
+        .flat();
+    }
+  },
+  Speaker: {
+    event: async (parent, arg) => {
+      const event = getEvents().find(e => e.link === parent.link);
+      return event;
     }
   }
 };
