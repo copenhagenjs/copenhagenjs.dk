@@ -1,4 +1,5 @@
 import 'isomorphic-unfetch'
+import Head from 'next/head'
 import ApolloClient, { gql } from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
@@ -33,6 +34,9 @@ function Speakers() {
   if (data.speaker.length === 0) return <span>Could not find speaker</span>
   return (
     <div>
+      <Head>
+        <title>{data.speaker[0].name} spoke at CopenhagenJS</title>
+      </Head>
       <h1>Speaker: {data.speaker[0].name}</h1>
       <p>The person has {data.speaker.length} talks.</p>
 

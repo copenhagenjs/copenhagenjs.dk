@@ -1,4 +1,5 @@
 import 'isomorphic-unfetch'
+import Head from 'next/head'
 import ApolloClient, { gql } from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
@@ -46,6 +47,10 @@ function Speakers() {
 export default () => (
   <ApolloProvider client={client}>
     <Page>
+      {' '}
+      <Head>
+        <title>Speakers at CopenhagenJS</title>
+      </Head>
       <h1>Speakers</h1>
       <Speakers />
     </Page>
