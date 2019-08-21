@@ -32,6 +32,7 @@ const typeDefs = gql`
   type Speaker {
     title: String
     name: String
+    slug: String
     event: Event
   }
   type Query {
@@ -40,6 +41,8 @@ const typeDefs = gql`
     videos: [Videos]
     searchEvents(query: String): [Event]
     speakers: [Speaker]
+    speaker(slug: String!): [Speaker]
+    searchSpeakers(name: String!): [Speaker]
   }
 `;
 
@@ -71,6 +74,35 @@ const getEvents = () => {
 const memGetEvents = pMemoize(getEvents, {
   maxAge: 1000 * 3600
 });
+
+const getSpeakers = () => {
+  return getEvents()
+    .map(e => {
+      return e.presentations.map(p => {
+        return { ...p, link: e.link, slug: slugify(p.name) };
+      });
+    })
+    .flat();
+};
+
+function slugify(string) {
+  const a =
+    "àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôœøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;";
+  const b =
+    "aaaaaaaaacccddeeeeeeegghiiiiilmnnnnooooooprrsssssttuuuuuuuuuwxyyzzz------";
+  const p = new RegExp(a.split("").join("|"), "g");
+
+  return string
+    .toString()
+    .toLowerCase()
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+    .replace(/&/g, "-and-") // Replace & with 'and'
+    .replace(/[^\w\-]+/g, "") // Remove all non-word characters
+    .replace(/\-\-+/g, "-") // Replace multiple - with single -
+    .replace(/^-+/, "") // Trim - from start of text
+    .replace(/-+$/, ""); // Trim - from end of text
+}
 
 // Provide resolver functions for your schema fields
 const resolvers = {
@@ -109,13 +141,17 @@ const resolvers = {
       });
     },
     speakers: () => {
-      return getEvents()
-        .map(e => {
-          return e.presentations.map(p => {
-            return { ...p, link: e.link };
-          });
-        })
-        .flat();
+      return getSpeakers();
+    },
+    searchSpeakers: (parent, { name }) => {
+      return getSpeakers().filter(s =>
+        s.name.toLowerCase().includes(name.toLowerCase())
+      );
+    },
+    speaker: (parent, { slug }) => {
+      return getSpeakers().filter(s =>
+        s.slug.toLowerCase().includes(slug.toLowerCase())
+      );
     }
   },
   Speaker: {
