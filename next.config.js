@@ -8,6 +8,7 @@ module.exports = {
       '/videos': { page: '/videos' },
       '/about': { page: '/about' },
       '/speakers': { page: '/speakers' },
+      '/speaker': { page: '/speaker' },
       '/guidelines': { page: '/guidelines' },
       '/login': { page: '/login' },
       '/search': { page: '/search' },

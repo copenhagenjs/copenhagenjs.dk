@@ -10,9 +10,8 @@
     "dev": "npm run prepare && next",
     "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json' 'utils/*.js' 'data/*.js'",
     "lint": "npx prettier -l --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json' 'utils/*.js' 'data/*.js'",
-    "prepare": "npm run process-archive && cp -R _posts/ static/posts && npm run speakers",
+    "prepare": "npm run process-archive && cp -R _posts/ static/posts",
     "process-archive": "mkdirp pages/archive && node utils/processmd",
-    "speakers": "node utils/pull-speakers.js",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "test": "npm run build-storybook && npm run lint"
