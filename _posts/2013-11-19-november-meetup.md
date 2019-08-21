@@ -3,6 +3,13 @@ title: November 21st - CopenhagenJS meetup at d60
 layout: post
 author: Jeppe Toustrup
 date: Thursday, November 21, 2013 19:00
+speakers:
+  - title: Automated testing for high level stateful applications
+    name: Ludwig Magnusson
+  - title: CSS the hard way
+    name: Mike Bailey
+  - title: Automated cross browser testing
+    name: Bram Stein
 ---
 
 The next CopenhagenJS meetup will be on Thursday 2013-11-21 at 19:00. The event will be hosted by [d60](http://www.d60.dk/) at [Frode Jakobsens Plads 4, 2., 2720 Vanløse](http://goo.gl/maps/f4i7K).

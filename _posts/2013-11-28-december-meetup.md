@@ -4,6 +4,13 @@ layout: post
 author: Kenneth Auchenberg
 date: Wednesday, December 18, 2013 19:00
 lanyrd: http://lanyrd.com/2013/copenhagenjs-december
+speakers:
+  - title: Introduction to Appcelerator Titanium Mobile
+    name: Jörgen Buder
+  - title: Promises
+    name: Tobias H. Michaelsen
+  - title: A little something about Dart
+    name: Troels Nørgaard
 ---
 
 The CopenhagenJS December 2013 meetup will be hosted by [Saxo Bank](http://dk.saxobank.com/).

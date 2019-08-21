@@ -7,4 +7,7 @@ lanyrd: http://lanyrd.com/2014/copenhagenjs-november/
 host: Trustpilot
 host_url: https://www.trustpilot.dk/
 host_address: Pilestræde 58, Copenhagen
+speakers:
+  - title: Writing an Exchange Active Sync server in Node.js
+    name: Morten Siebuhr
 ---
