@@ -55,13 +55,6 @@ export default class IndexRoutes extends React.Component {
             CopenhagenJS is a monthly meetup for people interested in JavaScript
             in Copenhagen.
           </h3>
-
-          <a
-            className="credits"
-            href="http://www.flickr.com/photos/tenzer/8148224729/"
-          >
-            Photo by Jeppe Toustrup
-          </a>
         </header>
 
         {!this.state.loading && (
