@@ -17,7 +17,7 @@ export default class IndexRoutes extends React.Component {
   }
   async fetchLatestPost() {
     const fm = await import('front-matter')
-    const req = await fetch('/static/posts/2019-08-22-august-meetup.md')
+    const req = await fetch('/static/posts/2019-09-17-september-meetup.md')
     const data = await req.text()
     const content = fm.default(data)
     this.setState({
