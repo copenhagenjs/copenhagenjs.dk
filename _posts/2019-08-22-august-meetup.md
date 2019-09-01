@@ -25,7 +25,7 @@ It is time for the August edition of CopenhagenJS. We are being hosted by Micros
     17:45 Welcome
     18:00 Automated dependency updates - Jamie Magee
     18:25 Break with food and drinks
-    19:00 Being a self-taught javascript developer and what have I learned - Abdulahili Mohamed
+    19:00 Being a self-taught javascript developer and what have I learned - Abdulahi Mohamed
     19:25 Probability in TensorFlow.js - Chapter 1: A programmer's nightmare - Andreas Madsen
     19:50 Group photo
     19:55 Raffle.js
