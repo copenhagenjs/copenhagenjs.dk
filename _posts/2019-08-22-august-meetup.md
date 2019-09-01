@@ -9,7 +9,7 @@ speakers:
   - title: Automated dependency updates
     name: Jamie Magee
   - title: Being a self-taught javascript developer and what have I learned
-    name: Abdulahili Mohamed
+    name: Abdulahi Mohamed
   - title: "Probability in TensorFlow.js - Chapter 1: A programmer's nightmare"
     name: Andreas Madsen
 ---
