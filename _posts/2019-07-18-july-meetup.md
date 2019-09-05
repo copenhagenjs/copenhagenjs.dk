@@ -11,7 +11,7 @@ speakers:
   - title: Deciding on a frontend framework and how we chose vue.js
     name: Sumit Kumar
   - title: Mythbusting around GraphQL
-    name: Uri Godshtein
+    name: Uri Goldshtein
 ---
 
 # CopenhagenJS July - Mærsk
@@ -26,11 +26,10 @@ It is time for the July edition of CopenhagenJS. We are being hosted by Mærsk.
     18:00 A journey => A developer by Zoey Zou
     18:25 Break with food and drinks
     19:00 Deciding on a frontend framework and how we chose vue.js - Sumit Kumar
-    19:15 Mythbusting around GraphQL by Uri Godshtein
-    19:50 Group photo
-    19:55 Raffle.js
-    20:00 Panel with speakers and free conversation + socializing - meet the community
-    21:00 See you next time!
+    19:30 Mythbusting around GraphQL - Uri Goldshtein
+    20:00 Group photo
+    20:05 Raffle.js
+    20:30 See you next time!
 
 ## About the speakers
 
