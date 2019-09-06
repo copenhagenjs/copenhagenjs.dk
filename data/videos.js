@@ -42,5 +42,7 @@ export const videos = [
     'IoB6lBWdiew',
     'Deciding on a frontend framework and how we chose vue.js',
     'Sumit Kumar'
-  ]
+  ],
+  ['fEqtq8z2GHk', 'Mythbusting around GraphQL', 'Uri Goldshtein'],
+  ['yAntIlemF28', 'Automated dependency updates', 'Jamie Magee']
 ]
