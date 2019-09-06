@@ -48,14 +48,35 @@ function Videos() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
-  return data.videos.reverse().map(({ title, name, youtubeId }, key) => (
-    <div key={key}>
-      <h3>
-        {title} - {name}
-      </h3>
-      <Embed youtubeId={youtubeId} />
+  return (
+    <div className="videos">
+      <style jsx>{`
+        @media (min-width: 800px) {
+          .videos {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .video {
+            width: 50%;
+            padding: 0 10px;
+          }
+          h3 {
+            min-height: 100px;
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+          }
+        }
+      `}</style>
+      {data.videos.reverse().map(({ title, name, youtubeId }, key) => (
+        <div key={key} className="video">
+          <Embed youtubeId={youtubeId} />
+          <h3>
+            {title} - {name}
+          </h3>
+        </div>
+      ))}
     </div>
-  ))
+  )
 }
 
 export default class VideosComponent extends React.Component {
