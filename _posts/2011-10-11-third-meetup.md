@@ -6,8 +6,6 @@ speakers:
     name: Peter Müller
   - title: An interactive HDR viewer using Canvas
     name: Björn Söderqvist
-  - title: Closures, this, call and apply — an attempt at an explanation
-    name: Morgan Roderick
   - title: Javascript + robots, hell yes!!!
     name: Ian Jørgensen
 ---

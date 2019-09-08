@@ -8,11 +8,10 @@
     "build": "npm run prepare && next build && next export",
     "deploy": "npm run build && firebase deploy",
     "dev": "npm run prepare && next",
-    "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json'",
-    "lint": "npx prettier -l --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json'",
-    "prepare": "npm run process-archive && cp -R _posts/ static/posts && npm run speakers",
+    "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json' 'utils/*.js' 'data/*.js'",
+    "lint": "npx prettier -l --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json' 'utils/*.js' 'data/*.js'",
+    "prepare": "npm run process-archive && cp -R _posts/ static/posts",
     "process-archive": "mkdirp pages/archive && node utils/processmd",
-    "speakers": "node utils/pull-speakers.js",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "test": "npm run build-storybook && npm run lint"
@@ -21,7 +20,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/react-hooks": "^3.0.0",
+    "apollo-boost": "^0.4.3",
+    "cross-fetch": "^3.0.4",
     "front-matter": "^3.0.2",
+    "graphql": "^14.4.2",
+    "isomorphic-unfetch": "^3.0.0",
     "marked": "^0.7.0",
     "mkdirp": "^0.5.1",
     "next": "^9.0.3",
@@ -37,5 +41,9 @@
     "@storybook/addons": "^5.1.10",
     "@babel/core": "^7.5.5",
     "babel-loader": "^8.0.6"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }

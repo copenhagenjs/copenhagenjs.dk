@@ -2,6 +2,15 @@
 title: October 17th - CopenhagenJS meetup at KiggIt/The Orbit
 layout: post
 author: Jeppe Toustrup
+speakers:
+  - title: TheEyeTribe = Eyetracking + JavaScript
+    name: Anders Bo Pedersen
+  - title: Practicing TDD with grunt and qunit
+    name: Jacob Andresen
+  - title: Workflow, please meet Travis + Podio
+    name: Søren Brokær
+  - title: Our web development workflow is completely broken
+    name: Kenneth Auchenberg
 ---
 
 The next CopenhagenJS meetup will be on Thursday 2013-10-17 at 19:00. The event will be hosted by [KiggIt](http://kiggit.com/) at [The Orbit](http://symbion.dk/orbit/) at [Amagerfælledvej 56, 2300 København S](http://goo.gl/maps/RjFKM).

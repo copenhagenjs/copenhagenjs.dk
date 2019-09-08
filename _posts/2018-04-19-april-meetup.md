@@ -18,15 +18,15 @@ It's time for the April edition of CopenhagenJS. Founders has been so awesome to
 
 ## Schedule:
 
-17:00 Doors open
-17:45 Welcome
-18:00 100 tests per second - 40 releases per week by Lars Thorup
-18:25 Break with food and drinks
-19:00 I'm not afraid of MV\* in JavaScript - Aleksandra Shinkevich
-19:35 You?
-19:50 JavaScript Raffle
-20:00 Socialising - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 100 tests per second - 40 releases per week by Lars Thorup
+    18:25 Break with food and drinks
+    19:00 I'm not afraid of MV\* in JavaScript - Aleksandra Shinkevich
+    19:35 You?
+    19:50 JavaScript Raffle
+    20:00 Socialising - meet the community
+    21:00 See you next time!
 
 ## What is CopenhagenJS?
 

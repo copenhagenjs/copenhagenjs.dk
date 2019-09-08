@@ -7,6 +7,12 @@ lanyrd: http://lanyrd.com/2014/copenhagenjs-october
 host: e-conomic
 host_url: http://www.e-conomic.com/
 host_address: Langebrogade 1
+speakers:
+  - title: Adobe Brackets - Code the Web
+    name: Amandeep Arora
+  - title: Browserify and modular JavaScript
+    name: Eduardo Sorribas
+
 ---
 
 ### Special event: Get-a-logo

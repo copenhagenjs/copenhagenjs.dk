@@ -7,6 +7,11 @@ lanyrd: http://lanyrd.com/2015/copenhagenjs-november/
 host: Founders
 host_url: http://founders.as/
 host_address: Indiakaj 12, 2, Copenhagen, 2100
+speakers:
+  - title: Offline Apps
+    name: P. Marco Calabrese
+  - title: The land of Isomorphic apps
+    name: Kevin Simper
 ---
 
 This meetup will be a nice Wednesday instead of the normal Thursday because [Startup Safari Copenhagen](http://copenhagen.startupsafary.com/) is taking place that day.

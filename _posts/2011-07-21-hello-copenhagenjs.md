@@ -1,6 +1,7 @@
 ---
 title: Hello CopenhagenJS
 layout: post
+type: update
 ---
 
 Welcome to CopenhagenJS, a JavaScript community in and around Copenhagen, Denmark. We're a group of JavaScript enthusiasts that meet every month to share our knowledge and war stories with each other.
@@ -24,4 +25,3 @@ If you have something you would like to share with the JavaScript community, why
 Drop us a note at <hello@copenhagenjs.dk> and tell us about your topic, and we will try to fit you in.
 
 We will try to coordinate and group related speakers together in the same meetup, to make it easier for the community members to decide if they want to attend a specific meetup.
-

@@ -3,14 +3,20 @@ title: August 21st - CopenhagenJS August Meetup.
 layout: post
 author: Peter Müller
 date: 2014-08-21T19:00:00
+location: Eksponent, Gammel Kongevej 3E, 4. sal, 1610 Copenhagen
 lanyrd: http://lanyrd.com/2014/copenhagenjs-august
+speakers:
+  - title: Mad JavaScript science
+    name: Mathias Buus
+  - title: Working in the open
+    name: Peter Müller
+  - title: Vej.js - Standardizing remote resource requests (Lightning talk)
+    name: Lukas Alexandre
 ---
 
 ## Welcome to our August meetup
 
 The August CopenhagenJS meetup is hosted by [Eksponent](http://www.eksponent.com/).
-
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:200px;width:600px;margin:0 auto;"><div id="gmap_canvas" style="height:200px;width:600px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.mapsembed.com/pixum-gutschein/" id="get-map-data">http://www.mapsembed.com/pixum-gutschein/</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(55.6740877,12.559706600000027),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(55.6740877, 12.559706600000027)});infowindow = new google.maps.InfoWindow({content:"<b>Eksponent</b><br/>Gammel Kongevej 3E, 4. sal, 1610<br/> Copenhagen" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
 
 ### Tell us about your summer
 

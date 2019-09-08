@@ -34,6 +34,7 @@ export default class Navigation extends React.Component {
             display: none;
             margin: 0;
             padding: 0;
+            list-style-type: none;
           }
           @media (max-width: 800px) {
             .navigation li a {

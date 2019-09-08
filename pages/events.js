@@ -1,8 +1,40 @@
+import 'isomorphic-unfetch'
+import ApolloClient, { gql } from 'apollo-boost'
+import { ApolloProvider } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
-import data from '../_posts/_data.json'
 
-export default () => {
-  return (
+const client = new ApolloClient({
+  uri: 'https://graphql.copenhagenjs.dk/graphql'
+})
+
+function Events() {
+  const { loading, error, data } = useQuery(gql`
+    {
+      events {
+        title
+        date
+        link
+        type
+      }
+    }
+  `)
+
+  if (loading) return <span>Loading...</span>
+  if (error) return <span>Error :(</span>
+  return data.events.reverse().map(({ title, date, link, type }) => (
+    <tr key={title}>
+      <td>
+        <a href={link}>{title}</a>
+      </td>
+      <td>{new Date(parseInt(date)).toLocaleString('da-DK')}</td>
+      <td>{type}</td>
+    </tr>
+  ))
+}
+
+export default () => (
+  <ApolloProvider client={client}>
     <Page>
       <h1>Events</h1>
       <div>
@@ -10,17 +42,23 @@ export default () => {
         <a href="https://www.meetup.com/copenhagenjs/">
           meetup.com/copenhagenjs
         </a>
+        .
       </div>
-      <h3>Archive</h3>
-      <ul>
-        {data.posts.reverse().map((p, id) => (
-          <li key={id}>
-            <a href={`/archive/${p.replace('.md', '')}`}>
-              {p.replace('.md', '')}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <div>
+        <a href="/search/">Search meetups</a>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <Events />
+        </tbody>
+      </table>
     </Page>
-  )
-}
+  </ApolloProvider>
+)

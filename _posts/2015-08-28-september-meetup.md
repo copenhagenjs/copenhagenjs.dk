@@ -18,5 +18,3 @@ from learning basic javascript, to working with WebGL and Browserify.
 [http://nodeschool.io/](http://nodeschool.io/)
 
 There will be several people to help, so don't be afraid that you will be stuck!
-
-<iframe  src="//eventbrite.com/tickets-external?eid=18618613775&ref=etckt" frameborder="0" height="300" width="100%" seamless="seamless" scrolling="auto" allowtransparency="true"></iframe>

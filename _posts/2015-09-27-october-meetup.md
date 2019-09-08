@@ -7,6 +7,16 @@ lanyrd: http://lanyrd.com/2015/copenhagenjs-october/
 host: One.com
 host_url: https://www.one.com/
 host_address: Kalvebod Brygge 24, 1650 København
+speakers:
+  - title: Expect the unexpected
+    name: Sune Sloth Simonsen
+  - title: Browser Linking with ES Modules
+    name: Guy Bedford
+  - title: MathJax and Custom Elements
+    name: Jan Marthedal Rasmussen
+  - title: Transpiling Recomposed
+    name: Peter Müller
+
 ---
 
 This meetup will be held at the One.com office, which is just south of the

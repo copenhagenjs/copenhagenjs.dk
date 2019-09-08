@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <style>{`body { margin: 0 }`}</style>
+          <style>{`body { margin: 0 } * { box-sizing: border-box }`}</style>
         </Head>
         <body>
           <Main />

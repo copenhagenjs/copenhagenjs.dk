@@ -2,6 +2,13 @@
 title: August 15th - CopenhagenJS meetup at Vertic
 layout: post
 author: Peter Müller
+speakers:
+  - title: "Limitations: Deal with it - Javascript in the '90s"
+    name: Thor Larholm
+  - title: A JavaScript RPG Editor
+    name: Niels Robin Aagaard
+  - title: Summer hacks
+    name: Rasmus Erik
 ---
 
 The next CopenhagenJS meetup will be on Thursday 2013-08-15 at <del>18:30</del> 19:00. The event will be hosted by [Vertic](http://www.vertic.com/) at [Ryesgade 3A 2, 2200 Copenhagen N](http://goo.gl/maps/O1G0n).

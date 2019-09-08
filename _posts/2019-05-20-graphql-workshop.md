@@ -14,13 +14,14 @@ In this workshop, we will look at GraphQL as frontend developers and learn how t
 We are really happy to be hosted by Pleo.
 
 Schedule:
-17:00 Doors open
-17:30 Welcome
-17:40 What is GraphQL and how to get started?
-17:55 Workshop 1
-18:30 Short break with pizza & beer
-19:00 Workshop 2
-20:30 Doors closing, see you next time!
+
+    17:00 Doors open
+    17:30 Welcome
+    17:40 What is GraphQL and how to get started?
+    17:55 Workshop 1
+    18:30 Short break with pizza & beer
+    19:00 Workshop 2
+    20:30 Doors closing, see you next time!
 
 What to bring:
 

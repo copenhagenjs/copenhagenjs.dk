@@ -7,6 +7,11 @@ lanyrd: http://lanyrd.com/2015/copenhagenjs-may
 host: Falcon Social
 host_url: http://www.falconsocial.com
 host_address: H.C. Andersens Boulevard 27, 1553 København V
+speakers:
+  - title: Lessons learnt building with Reflux.js
+    name: Kevin Simper
+  - title: ES6
+    name: Bo Gotthardt
 ---
 
 This one is organised with very short notice. We're trying to get back to the monthly schedule.
