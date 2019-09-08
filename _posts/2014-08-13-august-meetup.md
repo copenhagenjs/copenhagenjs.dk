@@ -2,7 +2,7 @@
 title: August 21st - CopenhagenJS August Meetup.
 layout: post
 author: Peter Müller
-date: Thursday, August 21, 2014 19:00
+date: 2014-08-21T19:00:00
 location: Eksponent, Gammel Kongevej 3E, 4. sal, 1610 Copenhagen
 lanyrd: http://lanyrd.com/2014/copenhagenjs-august
 speakers:

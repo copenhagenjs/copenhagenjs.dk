@@ -2,7 +2,7 @@
 title: November 21st - CopenhagenJS meetup at d60
 layout: post
 author: Jeppe Toustrup
-date: Thursday, November 21, 2013 19:00
+date: 2013-11-21T19:00:00
 speakers:
   - title: Automated testing for high level stateful applications
     name: Ludwig Magnusson

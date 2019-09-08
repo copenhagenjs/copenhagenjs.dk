@@ -2,7 +2,7 @@
 title: CopenhagenJS March React Meetup
 layout: post
 author: Peter Müller
-date: Thursday, March 19, 2015 18:00
+date: 2015-03-19T18:00:00
 lanyrd: http://lanyrd.com/2015/copenhagenjs
 host: Founders
 host_url: http://founders.as/

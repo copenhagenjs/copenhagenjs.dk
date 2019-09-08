@@ -2,7 +2,7 @@
 title: February 20th - CopenhagenJS meetup at Rocket Labs
 layout: post
 author: Peter Müller
-date: Thursday, February 20, 2014 19:00
+date: 2014-02-20T19:00:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-february
 speakers:
   - title: 20 minutes Super Mario

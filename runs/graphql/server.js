@@ -53,11 +53,11 @@ const getEvents = () => {
     const date = parsed.attributes.date
       ? new Date(parsed.attributes.date + " GMT+0200")
       : new Date(
-          post
-            .split("-")
-            .slice(0, 2)
-            .join("-") + " GMT+0200"
-        );
+        post
+          .split("-")
+          .slice(0, 2)
+          .join("-") + " GMT+0200"
+      );
 
     return {
       title: parsed.attributes.title || post.replace(".md", ""),

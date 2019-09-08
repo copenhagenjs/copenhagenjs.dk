@@ -2,7 +2,7 @@
 title: CopenhagenJS April Meetup.
 layout: post
 author: Peter Müller
-date: Thursday, April 16, 2015 19:00
+date: 2015-04-16T19:00:00
 lanyrd: http://lanyrd.com/2015/copenhagenjs-april
 host:
 host_url:

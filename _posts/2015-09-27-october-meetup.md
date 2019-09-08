@@ -2,7 +2,7 @@
 title: Welcome to the October 2015 Meetup
 layout: post
 author: Kevin Simper
-date: Thursday, 2015-10-15 19:00
+date: 2015-10-15T19:00:00
 lanyrd: http://lanyrd.com/2015/copenhagenjs-october/
 host: One.com
 host_url: https://www.one.com/

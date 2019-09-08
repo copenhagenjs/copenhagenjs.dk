@@ -2,7 +2,7 @@
 title: Welcome to the May 2015 meeting
 layout: post
 author: Morgan Roderick
-date: Thursday, 2015-05-21 19:00
+date: 2015-05-21T19:00:00
 lanyrd: http://lanyrd.com/2015/copenhagenjs-may
 host: Falcon Social
 host_url: http://www.falconsocial.com

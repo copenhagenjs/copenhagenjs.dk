@@ -2,7 +2,7 @@
 title: Copenhagen JavaScript Jeopardy
 layout: post
 author: Kevin Simper
-date: Wednesday, 2016-01-21 19:00
+date: 2016-01-21T19:00:00
 host: FoundersHouse
 host_url: http://www.foundershouse.dk/
 host_address: 1. sal, Njalsgade 19D, 2300 København S

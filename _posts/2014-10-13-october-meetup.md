@@ -2,7 +2,7 @@
 title: CopenhagenJS October Meetup.
 layout: post
 author: Peter Müller
-date: Thursday, October 16, 2014 19:00
+date: 2014-10-16T19:00:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-october
 host: e-conomic
 host_url: http://www.e-conomic.com/

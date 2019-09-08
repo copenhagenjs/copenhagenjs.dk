@@ -2,7 +2,7 @@
 title: September 18th – Yes, CopenhagenJS, but in Lund
 layout: post
 author: Björn Söderqvist
-date: Saturday, September 18, 2014 17:30
+date: 2014-09-18T17:30:00
 lanyrd: http://lanyrd.com/2014/copenhagenjs-september-2013-in-lund
 ---
 
