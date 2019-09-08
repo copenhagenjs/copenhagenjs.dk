@@ -4,12 +4,11 @@ const { ApolloServer, gql } = require("apollo-server-express");
 import { makeExecutableSchema } from "graphql-tools";
 const data = require("../../_posts/_data.json");
 const { videos } = require("../../data/videos.js");
-const { readFileSync } = require("fs");
 const fm = require("front-matter");
 const marked = require("marked");
-const pMemoize = require("p-memoize");
+const { slugify } = require('./src/slug.js')
+const { getEvents, memGetEvents } = require('./src/events.js')
 
-// Construct a schema, using GraphQL schema language
 const typeDefs = gql`
   type Videos {
     youtubeId: String
@@ -46,35 +45,6 @@ const typeDefs = gql`
   }
 `;
 
-const getEvents = () => {
-  return data.posts.map(post => {
-    const markdown = readFileSync("../../_posts/" + post, "utf8");
-    const parsed = fm(markdown);
-    const date = parsed.attributes.date
-      ? new Date(parsed.attributes.date + " GMT+0200")
-      : new Date(
-        post
-          .split("-")
-          .slice(0, 2)
-          .join("-") + " GMT+0200"
-      );
-
-    return {
-      title: parsed.attributes.title || post.replace(".md", ""),
-      link: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
-      markdown: parsed.body,
-      content: marked(parsed.body),
-      date,
-      type: parsed.attributes.type || "",
-      presentations: parsed.attributes.speakers || []
-    };
-  });
-};
-
-const memGetEvents = pMemoize(getEvents, {
-  maxAge: 1000 * 3600
-});
-
 const getSpeakers = () => {
   return getEvents()
     .map(e => {
@@ -84,25 +54,6 @@ const getSpeakers = () => {
     })
     .flat();
 };
-
-function slugify(string) {
-  const a =
-    "àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôœøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;";
-  const b =
-    "aaaaaaaaacccddeeeeeeegghiiiiilmnnnnooooooprrsssssttuuuuuuuuuwxyyzzz------";
-  const p = new RegExp(a.split("").join("|"), "g");
-
-  return string
-    .toString()
-    .toLowerCase()
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
-    .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w\-]+/g, "") // Remove all non-word characters
-    .replace(/\-\-+/g, "-") // Replace multiple - with single -
-    .replace(/^-+/, "") // Trim - from start of text
-    .replace(/-+$/, ""); // Trim - from end of text
-}
 
 // Provide resolver functions for your schema fields
 const resolvers = {
