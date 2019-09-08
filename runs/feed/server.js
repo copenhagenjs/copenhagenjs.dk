@@ -1,6 +1,6 @@
 import http from "http";
 import { Feed } from "feed";
-import data from "../../_posts/_data.json";
+import data from "./_posts/_data.json";
 import { readFileSync } from "fs";
 import fm from "front-matter";
 import marked from "marked";
@@ -17,7 +17,7 @@ const feed = new Feed({
 });
 
 data.posts.forEach(post => {
-  const markdown = readFileSync("../../_posts/" + post, "utf8");
+  const markdown = readFileSync("./_posts/" + post, "utf8");
   const parsed = fm(markdown);
   const date = parsed.attributes.date
     ? new Date(parsed.attributes.date + " GMT+0200")
