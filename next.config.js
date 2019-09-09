@@ -1,6 +1,9 @@
 const { readdirSync } = require('fs')
 
 module.exports = {
+  env: {
+    ACCOUNTKIT: '436110536998051'
+  },
   exportPathMap: function() {
     let pages = {
       '/': { page: '/' },

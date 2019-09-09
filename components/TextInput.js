@@ -9,12 +9,19 @@ const TextInput = ({
   width,
   height,
   padding,
-  margin
+  margin,
+  value
 }) => (
   <div className="input-root">
     <label>
       {label}
-      <input type={type} name={name} onChange={onChange} required={required} />
+      <input
+        type={type}
+        name={name}
+        onChange={onChange}
+        required={required}
+        value={value}
+      />
     </label>
     <style jsx>{`
       .input-root {
