@@ -28,12 +28,13 @@ export default class Videos extends React.Component {
   }
   initAccountkit() {
     console.log('Init', process.env.ACCOUNTKIT, window.initAccountkitDone)
-    if(!window.initAccountkitDone) {
+    if (!window.initAccountkitDone) {
       AccountKit.init({
         appId: process.env.ACCOUNTKIT,
         version: 'v1.3',
         state: 'test',
-        debug: true
+        debug: true,
+        fbAppEventsEnabled: true
       })
       window.initAccountkitDone = true
     }
@@ -56,15 +57,17 @@ export default class Videos extends React.Component {
             value={this.state.email}
             onChange={e => this.setState({ email: e.target.value })}
           />
-          {this.state.accountKitReady && <Button
-            type="button"
-            display="block"
-            size="lg"
-            margin="20px 0"
-            onClick={() => this.handleLogin()}
-          >
-            Login
-          </Button>}
+          {this.state.accountKitReady && (
+            <Button
+              type="button"
+              display="block"
+              size="lg"
+              margin="20px 0"
+              onClick={() => this.handleLogin()}
+            >
+              Login
+            </Button>
+          )}
         </div>
         <Head>
           <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
