@@ -6,6 +6,7 @@ export const organizers = [
   },
   {
     name: 'Zoey Zou',
-    github: 'zoeyzou'
+    github: 'zoeyzou',
+    twitter: 'zoeyzou0117'
   }
 ]
