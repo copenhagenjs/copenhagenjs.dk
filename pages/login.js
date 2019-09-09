@@ -8,27 +8,35 @@ export default class Videos extends React.Component {
   constructor() {
     super()
     this.state = {
-      email: ''
+      email: '',
+      accountKitReady: false
     }
     if (typeof window !== 'undefined') {
-      window.initAccountkit = this.init
+      window.initAccountkit = this.init.bind(this)
       if (AccountKit && AccountKit.init) {
         console.log('AccountKit already loaded')
-        this.init()
+        this.initAccountkit()
+        this.state.accountKitReady = true
       }
     }
   }
-  componentDidMount() {
-    console.log('AccountKit', AccountKit)
-  }
   init() {
-    console.log('Init', process.env.ACCOUNTKIT)
-    AccountKit.init({
-      appId: process.env.ACCOUNTKIT,
-      version: 'v1.3',
-      state: 'test',
-      debug: true
+    this.initAccountkit()
+    this.setState({
+      accountKitReady: true
     })
+  }
+  initAccountkit() {
+    console.log('Init', process.env.ACCOUNTKIT, window.initAccountkitDone)
+    if(!window.initAccountkitDone) {
+      AccountKit.init({
+        appId: process.env.ACCOUNTKIT,
+        version: 'v1.3',
+        state: 'test',
+        debug: true
+      })
+      window.initAccountkitDone = true
+    }
   }
   handleLogin() {
     AccountKit.login('EMAIL', { emailAddress: this.state.email }, res => {
@@ -48,7 +56,7 @@ export default class Videos extends React.Component {
             value={this.state.email}
             onChange={e => this.setState({ email: e.target.value })}
           />
-          <Button
+          {this.state.accountKitReady && <Button
             type="button"
             display="block"
             size="lg"
@@ -56,7 +64,7 @@ export default class Videos extends React.Component {
             onClick={() => this.handleLogin()}
           >
             Login
-          </Button>
+          </Button>}
         </div>
         <Head>
           <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
