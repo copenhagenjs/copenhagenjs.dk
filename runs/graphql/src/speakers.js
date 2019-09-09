@@ -1,4 +1,5 @@
-const { getEvents } = require('./events.js')
+const { getEvents } = require("./events.js");
+const { slugify } = require("./slug.js");
 
 const getSpeakers = () => {
   return getEvents()
@@ -10,4 +11,4 @@ const getSpeakers = () => {
     .flat();
 };
 
-exports.getSpeakers = getSpeakers
+exports.getSpeakers = getSpeakers;

@@ -6,8 +6,8 @@ const data = require("../../_posts/_data.json");
 const { videos } = require("../../data/videos.js");
 const fm = require("front-matter");
 const marked = require("marked");
-const { slugify } = require('./src/slug.js')
-const { getEvents, memGetEvents } = require('./src/events.js')
+const { getEvents, memGetEvents } = require("./src/events.js");
+const { getSpeakers } = require("./src/speakers.js");
 
 const typeDefs = gql`
   type Videos {
@@ -45,17 +45,6 @@ const typeDefs = gql`
   }
 `;
 
-const getSpeakers = () => {
-  return getEvents()
-    .map(e => {
-      return e.presentations.map(p => {
-        return { ...p, link: e.link, slug: slugify(p.name) };
-      });
-    })
-    .flat();
-};
-
-// Provide resolver functions for your schema fields
 const resolvers = {
   Query: {
     hello: () => "Hello world!",
