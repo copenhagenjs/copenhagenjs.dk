@@ -2,10 +2,7 @@ const express = require("express");
 const { graphql } = require("graphql");
 const { ApolloServer, gql } = require("apollo-server-express");
 import { makeExecutableSchema } from "graphql-tools";
-const data = require("../../_posts/_data.json");
 const { videos } = require("../../data/videos.js");
-const fm = require("front-matter");
-const marked = require("marked");
 const { getEvents, memGetEvents } = require("./src/events.js");
 const { getSpeakers } = require("./src/speakers.js");
 
