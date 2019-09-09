@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm server.js",
-    "fix-lint": "npx prettier --write '*.js'"
+    "fix-lint": "npx prettier --write '*.js' 'src/*.js'"
   },
   "keywords": [],
   "author": "",
