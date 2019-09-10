@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default () => (
   <section className="newsletter">
     <h3>Dont miss important news!</h3>
