@@ -38,7 +38,7 @@ function Speakers() {
         <title>{data.speaker[0].name} spoke at CopenhagenJS</title>
       </Head>
       <h1>Speaker: {data.speaker[0].name}</h1>
-      <p>The person has {data.speaker.length} talks.</p>
+      <p>The person have {data.speaker.length} talks.</p>
 
       {data.speaker.reverse().map(speaker => {
         return (
