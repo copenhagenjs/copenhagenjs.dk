@@ -1,7 +1,7 @@
 ---
 title: JavaScript testing workshop - learn how to write test
 type: workshop
-location:
+location: Founders House, Njalsgade 19D, 2300 København
 link: https://www.meetup.com/copenhagenjs/events/264005168/
 date: 2019-08-29T17:00:00
 duration: 3
