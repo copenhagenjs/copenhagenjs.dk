@@ -5,6 +5,9 @@ location: TwentyThree, Sortedam Dossering 5D, 2200 København
 link: https://www.meetup.com/copenhagenjs/events/264368457/
 date: 2019-09-19T17:00:00
 duration: 3
+speakers:
+  - title: Why is my build times so long?
+    name: Kevin Simper
 ---
 
 # CopenhagenJS September
@@ -17,7 +20,7 @@ It is time for the September edition of CopenhagenJS. We are going to be hosted 
 
     17:00 Doors open
     17:45 Welcome
-    18:00 You?
+    18:00 Why is my build times so long? - Kevin Simper
     18:25 Break with food and drinks
     19:00 You?
     19:25 You?
