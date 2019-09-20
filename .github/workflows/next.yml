@@ -1,0 +1,13 @@
+name: Next.js
+on: [push]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: "docker://gcr.io/cloud-builders/bazel"
+      with:
+        entrypoint: /bin/bash
+        args: -c "bazel version && docker version && docker images && bazel build --verbose_failures //:next"
