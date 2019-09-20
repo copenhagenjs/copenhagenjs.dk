@@ -8,6 +8,10 @@ duration: 3
 speakers:
   - title: Why is my build times so long?
     name: Kevin Simper
+  - title: WebRTC streaming to large audiences
+    name: Vasil Dimitrov & Daniel Pouzemski
+  - title: HackYourFuture - 2 years later
+    name: Christopher Klüter
 ---
 
 # CopenhagenJS September
@@ -22,8 +26,8 @@ It is time for the September edition of CopenhagenJS. We are going to be hosted 
     17:45 Welcome
     18:00 Why is my build times so long? - Kevin Simper
     18:25 Break with food and drinks
-    19:00 You?
-    19:25 You?
+    19:00 WebRTC streaming to large audiences - Vasil Dimitrov & Daniel Pouzemski
+    19:25 HackYourFuture - 2 years later - Christopher Klüter
     19:50 Group photo
     19:55 Raffle.js
     20:00 Socializing - meet the community
