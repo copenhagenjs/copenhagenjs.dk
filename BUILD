@@ -16,7 +16,7 @@ genrule(
     "utils/**",
     "WORKSPACE"
   ]) + ["//_posts:copy"],
-  cmd = "tar -czh . | docker build -t cphjs - && docker run --rm -v /github/workspace/bazel-out/k8-fastbuild/bin:/app/mountedout cphjs sh -c 'tar -C out -cvzf /app/mountedout/build.tar.gz . && sleep 10 && ls -alF /app/mountedout' && echo kevin && echo ls -alF $$PWD/$$(dirname $(location build.tar.gz)) && ls -alF $$PWD/$$(dirname $(location build.tar.gz)) && echo simper && ls -alF bazel-out/k8-fastbuild/bin && echo nyberg",
+  cmd = "tar -czh . | docker build -t cphjs - && docker run --rm cphjs sh -c 'tar -C out -cvzf - .' > $(location build.tar.gz)",
   outs = ["build.tar.gz"],
   tags = ["local"]
 )
