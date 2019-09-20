@@ -16,7 +16,7 @@ genrule(
     "utils/**",
     "WORKSPACE"
   ]) + ["//_posts:copy"],
-  cmd = "tar -czh . | docker build -t cphjs - && docker run --rm -v $$PWD/$$(dirname $(location build.tar.gz)):/app/mountedout cphjs sh -c 'tar -C out -cvzf /app/mountedout/build.tar.gz . && sleep 10 && ls -alF /app/mountedout'",
+  cmd = "tar -czh . | docker build -t cphjs - && docker run --rm -v $$PWD/$$(dirname $(location build.tar.gz)):/app/mountedout cphjs sh -c 'tar -C out -cvzf /app/mountedout/build.tar.gz . && sleep 10 && ls -alF /app/mountedout' && echo kevin && ls -alF $$PWD/$$(dirname $(location build.tar.gz)) && echo simper && ls -alF $(location build.tar.gz) && echo nyberg",
   outs = ["build.tar.gz"],
   tags = ["local"]
 )
