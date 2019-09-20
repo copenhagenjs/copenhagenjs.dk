@@ -16,7 +16,7 @@ genrule(
     "utils/**",
     "WORKSPACE"
   ]) + ["//_posts:copy"],
-  cmd = "tar -czh . | docker build -t cphjs - && echo docker run --rm -v $$PWD/$$(dirname $(location build.tar.gz)):/app/mountedout cphjs sh -c 'tar -C out -czf mountedout/build.tar.gz .'",
+  cmd = "tar -czh . | docker build -t cphjs - && docker run --rm -t -v $$PWD/$$(dirname $(location build.tar.gz)):/app/mountedout cphjs sh -c 'tar -C out -czf mountedout/build.tar.gz .'",
   outs = ["build.tar.gz"],
   tags = ["local"]
 )
