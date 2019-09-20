@@ -6,7 +6,7 @@ genrule(
 )
 
 sh_binary(
-    name = "feed",
+    name = "execute",
     srcs = ["run.sh"],
     data = [":docker"]
 )
@@ -15,5 +15,6 @@ genrule(
   name = "deploy",
   srcs = ["build.txt"],
   cmd = "echo example && echo deploy > $@",
-  outs = ["deploy.txt"]
+  outs = ["deploy.txt"],
+  tags = ["manual", "local"]
 )
