@@ -1,4 +1,14 @@
 language: node_js
 node_js:
   - "12"
-script: npm run build && npm test
+install:
+   - npm install -g markdownlint-cli
+
+jobs:
+  include:
+    - stage: "Documentation test"
+      name: "Markdown test"
+      script: markdownlint README.md
+    - stage: "Build and test"
+      name: "npm test"
+      script: npm run build && npm test
