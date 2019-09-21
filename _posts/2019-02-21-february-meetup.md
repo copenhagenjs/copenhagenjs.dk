@@ -11,7 +11,7 @@ speakers:
   - title: WebBluetooth, WebUSB, LitElement
     name: Lars Knudsen
   - title: Markdownlint
-    name: Jonas BN
+    name: jonasbn
 ---
 
 # February 21st
