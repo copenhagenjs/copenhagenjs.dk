@@ -44,5 +44,15 @@ export const videos = [
     'Sumit Kumar'
   ],
   ['fEqtq8z2GHk', 'Mythbusting around GraphQL', 'Uri Goldshtein'],
-  ['yAntIlemF28', 'Automated dependency updates', 'Jamie Magee']
+  ['yAntIlemF28', 'Automated dependency updates', 'Jamie Magee'],
+  [
+    '_WKukhiZhxs',
+    'Being a self-taught javascript developer and what have I learned',
+    'Abdulahi Mohamed'
+  ],
+  [
+    'VP8Sa7z7R5Y',
+    "Probability in TensorFlow.js: Chapter 1 - A programmer's nightmare",
+    'Andreas Madsen'
+  ]
 ]
