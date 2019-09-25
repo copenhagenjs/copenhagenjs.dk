@@ -26,6 +26,7 @@
     "front-matter": "^3.0.2",
     "graphql": "^14.4.2",
     "isomorphic-unfetch": "^3.0.0",
+    "markdownlint-cli": "^0.18.0",
     "marked": "^0.7.0",
     "mkdirp": "^0.5.1",
     "next": "^9.0.3",
