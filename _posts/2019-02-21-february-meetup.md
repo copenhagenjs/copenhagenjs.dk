@@ -11,7 +11,7 @@ speakers:
   - title: WebBluetooth, WebUSB, LitElement
     name: Lars Knudsen
   - title: Markdownlint
-    name: Jonas BN
+    name: Jonas Brømsø
 ---
 
 # February 21st
@@ -28,7 +28,7 @@ Like last February, we are being hosted by Karnov. They have a super cool venue 
     18:00 Talk with Neha Sharma from JSLovers community in Delhi
     18:25 Break with food and drinks
     19:00 WebBluetooth, WebUSB, LitElement - Lars Knudsen
-    19:35 Markdownlint - Jonas BN
+    19:35 Markdownlint - Jonas Brømsø
     19:50 Possible event
     20:00 Socialising - meet the community
     21:00 See you next time!
