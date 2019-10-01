@@ -1,4 +1,19 @@
 {
   "default": true,
-  "commands-show-output": false
+  "commands-show-output": false,
+  "heading-increment": false,
+  "no-bare-urls": false,
+  "line-length": false,
+  "blanks-around-headings": false,
+  "no-trailing-punctuation": false,
+  "no-multiple-blanks": false,
+  "no-inline-html": false,
+  "single-title": false,
+  "no-hard-tabs": false,
+  "no-trailing-spaces": false,
+  "no-missing-space-atx": false,
+  "single-trailing-newline": false,
+  "no-emphasis-as-heading": false,
+  "heading-style": false,
+  "no-blanks-blockquote": false
 }
