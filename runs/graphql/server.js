@@ -33,7 +33,7 @@ const typeDefs = gql`
   }
   type Query {
     hello: String
-    events: [Event]
+    events(first: Int, last: Int): [Event]
     videos: [Videos]
     searchEvents(query: String): [Event]
     speakers: [Speaker]
@@ -45,8 +45,15 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     hello: () => "Hello world!",
-    events: () => {
-      return getEvents();
+    events: (parent, { first, last}) => {
+      const events = getEvents();
+      if(first) {
+        return events.slice(0, first)
+      }
+      if(last) {
+        return events.slice(events.length - last, events.length)
+      }
+      return events
     },
     videos: () => {
       return videos.map(v => ({
