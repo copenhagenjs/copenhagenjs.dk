@@ -23,6 +23,7 @@ const typeDefs = gql`
     link: String
     date: String
     type: String
+    location: String
     presentations: [Presentation]
   }
   type Speaker {

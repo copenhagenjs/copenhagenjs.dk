@@ -1,91 +1,87 @@
-import React from 'react'
+import 'isomorphic-unfetch'
+import ApolloClient, { gql } from 'apollo-boost'
+import { ApolloProvider } from '@apollo/react-hooks'
+import { useQuery } from '@apollo/react-hooks'
 import Layout from '../components/Layout'
 import Map from '../components/Map'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import marked from 'marked'
 
-export default class IndexRoutes extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      loading: false,
-      markdown: '',
-      localtion: '',
-      date: ''
+const client = new ApolloClient({
+  uri: 'https://graphql.copenhagenjs.dk/graphql'
+})
+
+function Event() {
+  const { loading, error, data } = useQuery(gql`
+    {
+      events(last: 1) {
+        title
+        date
+        link
+        content
+        location
+      }
     }
-  }
-  async fetchLatestPost() {
-    const fm = await import('front-matter')
-    const req = await fetch('/static/posts/2019-09-17-september-meetup.md')
-    const data = await req.text()
-    const content = fm.default(data)
-    this.setState({
-      loading: true,
-      markdown: content.body,
-      location: content.attributes.location,
-      date: content.attributes.date
-    })
-  }
-  componentDidMount() {
-    this.fetchLatestPost()
-  }
-  render() {
-    return (
-      <Layout>
-        <style jsx>{`
-          .date {
-            font-size: 1.5rem;
-          }
-          .description {
-          }
-          .description :global(h1) {
-            margin: 5px 0;
-          }
-        `}</style>
-        <header className="page-header master bg-grey" role="navigation">
-          <Navigation />
+  `)
 
-          <img
-            className="logo"
-            src="/static/images/cphjs.png"
-            alt="CopenhagenJS logo"
-          />
-          <h3>
-            CopenhagenJS is a monthly meetup for people interested in JavaScript
-            in Copenhagen.
-          </h3>
-        </header>
+  if (loading) return <span>Loading...</span>
+  if (error) return <span>Error :(</span>
 
-        {!this.state.loading && (
-          <section className="page">Fetching latest meetup..</section>
-        )}
-        {this.state.loading && (
-          <section className="page">
-            <div className="date">
-              {this.state.date && this.state.date.toLocaleString('da-DK')}
-            </div>
-            <div
-              className="description"
-              dangerouslySetInnerHTML={{
-                __html: marked(this.state.markdown)
-              }}
-            />
-            <div className="next-meetup">
-              <p>Read more and sign up for the next event here:</p>
+  return (
+    <section className="page">
+      <style jsx>{`
+        .date {
+          font-size: 1.5rem;
+        }
+        .description {
+        }
+        .description :global(h1) {
+          margin: 5px 0;
+        }
+      `}</style>
+      <div className="date">
+        {data.events[0].date &&
+          new Date(parseInt(data.events[0].date)).toLocaleString('da-DK')}
+      </div>
+      <div
+        className="description"
+        dangerouslySetInnerHTML={{
+          __html: data.events[0].content
+        }}
+      />
+      <div className="next-meetup">
+        <p>Read more and sign up for the next event here:</p>
 
-              <a
-                className="next-meetup__button"
-                href="https://www.meetup.com/copenhagenjs/"
-              >
-                View meetup group
-              </a>
-            </div>
-            {this.state.location && <Map location={this.state.location} />}
-          </section>
-        )}
-        <Footer />
-      </Layout>
-    )
-  }
+        <a
+          className="next-meetup__button"
+          href="https://www.meetup.com/copenhagenjs/"
+        >
+          View meetup group
+        </a>
+      </div>
+      {data.events[0].location && <Map location={data.events[0].location} />}
+    </section>
+  )
 }
+
+export default () => (
+  <ApolloProvider client={client}>
+    <Layout>
+      <header className="page-header master bg-grey" role="navigation">
+        <Navigation />
+
+        <img
+          className="logo"
+          src="/static/images/cphjs.png"
+          alt="CopenhagenJS logo"
+        />
+        <h3>
+          CopenhagenJS is a monthly meetup for people interested in JavaScript
+          in Copenhagen.
+        </h3>
+      </header>
+      <Event />
+      <Footer />
+    </Layout>
+  </ApolloProvider>
+)

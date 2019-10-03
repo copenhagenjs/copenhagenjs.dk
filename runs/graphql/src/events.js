@@ -25,6 +25,7 @@ const getEvents = () => {
       content: marked(parsed.body),
       date,
       type: parsed.attributes.type || "",
+      location: parsed.attributes.location || "",
       presentations: parsed.attributes.speakers || []
     };
   });
