@@ -1,5 +1,8 @@
 {
   "scripts": {
     "start": "node server.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.6.0"
   }
 }
