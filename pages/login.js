@@ -66,6 +66,7 @@ export default class Videos extends React.Component {
             status: 'Successful login!'
           })
           window.localStorage.removeItem('emailForSignIn')
+          this.sendToBackend()
         })
         .catch(error => {
           this.setState({
@@ -74,6 +75,19 @@ export default class Videos extends React.Component {
           console.log('error', error)
         })
     }
+  }
+  getToken() {
+    return firebase.auth().currentUser.getIdToken(true)
+  }
+  async sendToBackend() {
+    const token = await this.getToken()
+    fetch('http://localhost:9000/token', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ token })
+    }).catch(e => console.log(e))
   }
   render() {
     return (
