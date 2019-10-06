@@ -3,7 +3,6 @@ import React from 'react'
 export default () => (
   <section className="newsletter">
     <h3>Dont miss important news!</h3>
-
     <div className="social">
       <div>
         <iframe
@@ -87,5 +86,6 @@ export default () => (
         className="newsletter__subscribe"
       />
     </form>
+    <script async src="//platform.twitter.com/widgets.js" />
   </section>
 )

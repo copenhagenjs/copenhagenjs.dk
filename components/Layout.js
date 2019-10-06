@@ -27,14 +27,7 @@ export default ({ children }) => {
           href="https://copenhagenjsdk-5qfo37at3a-ew.a.run.app/"
         />
       </Head>
-      <div>
-        {children}
-        <script async src="//platform.twitter.com/widgets.js" />
-        <script
-          async
-          src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=423774561071001"
-        />
-      </div>
+      <div>{children}</div>
     </div>
   )
 }
