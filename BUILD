@@ -16,7 +16,7 @@ genrule(
     "utils/**",
     "WORKSPACE"
   ]) + ["//_posts:copy"],
-  cmd = "tar -czh . | docker build -t cphjs - && docker run --rm cphjs sh -c 'tar -C out -cvzf - .' > $(location build.tar.gz)",
+  cmd = "tar --exclude='./node_modules' -czh . | docker build -t cphjs - && docker run --rm cphjs sh -c 'tar -C out -cvzf - .' > $(location build.tar.gz)",
   outs = ["build.tar.gz"],
   tags = ["local"]
 )
