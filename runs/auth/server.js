@@ -14,6 +14,7 @@ http
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Headers', 'authorization, content-type')
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST')
+
     if (req.method === 'OPTIONS') {
       return res.end('OK')
     }
@@ -33,7 +34,7 @@ http
             res.end('Firebase Token ' + uid)
           })
           .catch(function(error) {
-            // Handle error
+            console.log(error)
           })
       })
     } else {
