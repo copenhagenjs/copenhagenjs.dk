@@ -27,7 +27,15 @@ export default ({ children }) => {
           href="https://copenhagenjsdk-5qfo37at3a-ew.a.run.app/"
         />
       </Head>
-      <div>{children}</div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100vh'
+        }}
+      >
+        {children}
+      </div>
     </div>
   )
 }

@@ -5,6 +5,12 @@ import Footer from '../components/Footer'
 export default ({ children }) => {
   return (
     <Layout>
+      <style jsx>{`
+        .main {
+          flex: 1;
+          width: 100%;
+        }
+      `}</style>
       <header className="page-header bg-grey" role="navigation">
         <div className="page">
           <a href="/">
@@ -13,7 +19,7 @@ export default ({ children }) => {
           <Navigation />
         </div>
       </header>
-      <section className="page">{children}</section>
+      <section className="page main">{children}</section>
       <Footer />
     </Layout>
   )
