@@ -1,3 +1,5 @@
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 import React from 'react'
 import Head from 'next/head'
 import Page from '../components/Page'
@@ -8,10 +10,71 @@ export default class Videos extends React.Component {
   constructor() {
     super()
     this.state = {
-      email: ''
+      email: '',
+      status: ''
+    }
+    this.initFirebase()
+    console.log(typeof window, typeof window !== 'undefined')
+    if (typeof window !== 'undefined') {
+      this.finishLogin()
     }
   }
-  handleLogin() {}
+  initFirebase() {
+    const firebaseConfig = {
+      apiKey: 'AIzaSyBchWNVQsL7YEcTtf369PYTP-DLTiB7Vac',
+      projectId: 'copenhagenjsdk'
+    }
+    if (!firebase.apps.length) {
+      firebase.initializeApp(firebaseConfig)
+    }
+  }
+  handleLogin() {
+    var actionCodeSettings = {
+      url: window.location.origin + window.location.pathname,
+      // url: 'https://copenhagenjs.dk/login',
+      handleCodeInApp: true
+    }
+
+    firebase
+      .auth()
+      .sendSignInLinkToEmail(this.state.email, actionCodeSettings)
+      .then(() => {
+        window.localStorage.setItem('emailForSignIn', this.state.email)
+        this.setState({
+          status: 'Check your email for login link!'
+        })
+      })
+      .catch(error => {
+        this.setState({
+          status: 'Something went wrong! Check the console.'
+        })
+        console.log(error)
+      })
+  }
+  finishLogin() {
+    if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
+      var email = window.localStorage.getItem('emailForSignIn')
+      if (!email) {
+        email = window.prompt('Please provide your email for confirmation')
+      }
+      firebase
+        .auth()
+        .signInWithEmailLink(email, window.location.href)
+        .then(result => {
+          console.log(result)
+          this.setState({
+            status: 'Successful login!'
+          })
+          window.localStorage.removeItem('emailForSignIn')
+        })
+        .catch(error => {
+          this.setState({
+            status: 'Error logging in! See console.'
+          })
+          console.log('error', error)
+        })
+    }
+  }
   render() {
     return (
       <Page>
@@ -34,6 +97,7 @@ export default class Videos extends React.Component {
           >
             Login
           </Button>
+          {this.state.status}
         </div>
       </Page>
     )
