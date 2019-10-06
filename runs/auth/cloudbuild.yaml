@@ -1,0 +1,11 @@
+steps:
+  - name: gcr.io/cloud-builders/bazel
+    args: ['build', '//runs/auth:docker']
+  - name: gcr.io/cloud-builders/docker
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        docker tag $(cat bazel-bin/runs/auth/build.txt) gcr.io/copenhagenjsdk/auth:$SHORT_SHA
+  - name: gcr.io/cloud-builders/docker
+    args: ['push', 'gcr.io/copenhagenjsdk/auth:$SHORT_SHA']
