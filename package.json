@@ -10,7 +10,7 @@
     "dev": "npm run process && next",
     "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json' 'utils/*.js' 'data/*.js' 'stories/*.js' '.storybook/*.js'",
     "lint": "npx prettier -l --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json' 'utils/*.js' 'data/*.js' 'stories/*.js' '.storybook/*.js'",
-    "process": "npm run process-archive && cp -R _posts/ static/posts",
+    "process": "npm run process-archive",
     "process-archive": "npx mkdirp pages/archive && node utils/processmd",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
