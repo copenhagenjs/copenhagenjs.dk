@@ -81,7 +81,7 @@ export default class Videos extends React.Component {
   }
   async sendToBackend() {
     const token = await this.getToken()
-    fetch('http://localhost:9000/token', {
+    fetch('https://auth.copenhagenjs.dk/token', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
