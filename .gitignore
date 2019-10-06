@@ -11,3 +11,4 @@ bazel-copenhagenjs.dk
 bazel-genfiles
 bazel-out
 bazel-testlogs
+static/storybook
