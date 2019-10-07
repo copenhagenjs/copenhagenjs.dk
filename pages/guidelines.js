@@ -12,11 +12,19 @@ Please note that these are just for the guiding purpose and making the presentat
 * No hiring advertising - We believe in letting the product, and the technologies around it, speak for themselves. This should be enough to spark interest in people.
 * Share the presentation(even if you end up modifying parts of it) with the organisers at least three days before the event
 
-For any advice and help that you need when you build the presentation, you can contact [Kevin](<kevin.simper@gmail.com>) or [Paul](<paulcornelmorar@gmail.com>) directly.
+For any advice and help that you need when you build the presentation, you can contact the organizers directly. We love to help!
 
 ### Checklist for presenting
-* Expect to use HDMI, or bring a adapter to be sure
-* Disable Night Shift
+
+- Expect to use HDMI, or bring a adapter to be sure
+- Disable Night Shift
+- Disable Energy Saver (avoid black screen during presenting)
+- Check wifi access before starting
+- Check contrast to be at least AA https://accessible-colors.com/
+- Generate PDF of presentation to share afterwards
+
+https://www.kevinsimper.dk/posts/how-to-give-your-first-presentation
+
 `
 
 export default () => {
