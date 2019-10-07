@@ -15,8 +15,16 @@ Please note that these are just for the guiding purpose and making the presentat
 For any advice and help that you need when you build the presentation, you can contact the organizers directly. We love to help!
 
 ### Checklist for presenting
-* Expect to use HDMI, or bring a adapter to be sure
-* Disable Night Shift
+
+- Expect to use HDMI, or bring a adapter to be sure
+- Disable Night Shift
+- Disable Energy Saver (avoid black screen during presenting)
+- Check wifi access before starting
+- Check contrast to be at least AA https://accessible-colors.com/
+- Generate PDF of presentation to share afterwards
+
+https://www.kevinsimper.dk/posts/how-to-give-your-first-presentation
+
 `
 
 export default () => {
