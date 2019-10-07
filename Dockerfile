@@ -9,3 +9,5 @@ RUN npm ci
 ADD . /app
 
 RUN npm run build
+
+RUN sed -i 's/<script src="/<script src="\/static\/storybook\//g' static/storybook/iframe.html
