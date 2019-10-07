@@ -2,7 +2,8 @@ genrule(
   name = "docker",
   srcs = glob(["**"]),
   cmd = "tar -C runs/auth -czh . | docker build -q -t auth - > $@",
-  outs = ["build.txt"]
+  outs = ["build.txt"],
+  tags = ["local"]
 )
 
 genrule(

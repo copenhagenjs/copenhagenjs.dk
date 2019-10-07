@@ -2,6 +2,7 @@ genrule(
   name = "next",
   srcs = glob([
     "_speakers/**",
+    ".storybook/**",
     "components/**",
     "data/**",
     "Dockerfile",
@@ -16,7 +17,7 @@ genrule(
   ]) + ["//_posts:copy"],
   cmd = "tar --exclude='./node_modules' -czh . | docker build -t cphjs - && docker run --rm cphjs sh -c 'tar -C out -cvzf - .' > $(location build.tar.gz)",
   outs = ["build.tar.gz"],
-  tags = ["local"]
+  tags = ["no-sandbox"]
 )
 
 genrule(
