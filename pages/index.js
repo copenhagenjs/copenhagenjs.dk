@@ -30,6 +30,9 @@ function Event() {
   return (
     <section className="page">
       <style jsx>{`
+        .page {
+          flex: 1;
+        }
         .date {
           font-size: 1.5rem;
         }
