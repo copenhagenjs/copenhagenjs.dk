@@ -2,6 +2,49 @@ import React from 'react'
 
 export default () => (
   <section className="newsletter">
+    <style jsx>{`
+      .newsletter {
+        background-color: #f8de48;
+        text-align: center;
+        padding: 50px;
+      }
+      .newsletter h3 {
+        margin-top: 10px;
+      }
+      .newsletter__email {
+        padding: 10px;
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        max-width: 300px;
+      }
+      .newsletter__subscribe {
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+        background-color: #fff;
+        background: #428bca;
+        color: #fff;
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+      }
+      @media (min-width: 500px) {
+        .newsletter__subscribe {
+          display: inline-block;
+          width: auto;
+        }
+      }
+      .newsletter__subscribe:hover {
+        background-color: #067ade;
+        cursor: pointer;
+      }
+      .newsletter__description {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+    `}</style>
     <h3>Dont miss important news!</h3>
     <div className="social">
       <div>
