@@ -6,6 +6,8 @@ let text = `
 
 CopenhagenJS is a JavaScript user group in Copenhagen and the Öresund region. On the third thursday of every month we meet and share our knowledge, enthusiasm and war stories with each other.
 
+### How do a CopenhagenJS run?
+
 A wide range of backgrounds are represented in the group, from occasional users to JavaScript and front end experts. Everyone with an interest in JavaScript is welcome.
 
 In a typical meeting, we start at 18:00. There's a quick introduction, everyone grabs a drink of some sort. After that we usually have 3 talks of 20-25 minutes.
@@ -20,6 +22,8 @@ Previous topics include:
 * Use of CSS3 features
 * Game programming with WebGL
 * Robots!
+
+See our [previous speakers list](/speakers).
 
 Usually the meeting ends at around 21:00.
 
@@ -76,6 +80,12 @@ We, the organizers, try to meet once a month to talk about upcoming meetups (but
 You can also help out on the website, you can find the Github repo here https://github.com/copenhagenjs/copenhagenjs.dk
 
 The website can always be improved and we highlight all contributions at the next meetup, so there is a big potential to do something that will have a impact to many people.
+
+### More
+
+We wrote a bit about giving a presentation and tips & tricks.
+
+[Speaker Guidelines](/guidelines)
 
 `
 
