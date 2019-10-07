@@ -6,4 +6,4 @@ ADD . /app
 
 RUN npm i
 
-CMD npm start
+CMD ["node", "server.js"]
