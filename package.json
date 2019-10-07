@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-storybook": "build-storybook",
-    "build": "npm run process && next build && next export",
+    "build-storybook": "build-storybook -o static/storybook",
+    "build": "npm run process && next build && next export && npm run build-storybook",
     "deploy": "npm run build && firebase deploy",
     "dev": "npm run process && next",
     "fix-lint": "npx prettier --write --single-quote --no-semi next.config.js 'components/**/*.js' 'pages/*.js' '_posts/*.json' 'utils/*.js' 'data/*.js' 'stories/*.js' '.storybook/*.js'",
