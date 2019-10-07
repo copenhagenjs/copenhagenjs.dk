@@ -18,3 +18,9 @@ genrule(
   outs = ["run_graphql.sh"],
   executable = True
 )
+
+sh_test(
+  name = "test",
+  srcs = ["test.sh"],
+  data = [":docker"],
+)
