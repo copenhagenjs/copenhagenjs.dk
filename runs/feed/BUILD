@@ -2,7 +2,8 @@ genrule(
   name = "docker",
   srcs = glob(["**"]) + ["//_posts:copy"],
   cmd = "tar -czh . | docker build -t feed -f runs/feed/Dockerfile - > $@",
-  outs = ["build.txt"]
+  outs = ["build.txt"],
+  tags = ["local"]
 )
 
 sh_binary(

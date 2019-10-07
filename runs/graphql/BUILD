@@ -9,7 +9,8 @@ genrule(
     "src/**",
   ]) + ["//_posts:copy", "//data:copy"],
   cmd = "tar -czh . | docker build -q -t copenhagen.js-graphql -f runs/graphql/Dockerfile - > $@",
-  outs = ["build.txt"]
+  outs = ["build.txt"],
+  tags = ["local"]
 )
 
 genrule(
