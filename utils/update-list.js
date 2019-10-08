@@ -1,6 +1,8 @@
 const { readdirSync, writeFileSync } = require('fs')
 
-const dirs = readdirSync('./_posts').filter(a => a !== '_data.json')
+const dirs = readdirSync('./_posts')
+  .filter(a => a !== '_data.json')
+  .filter(a => a !== 'BUILD')
 const data = {
   posts: dirs
 }
