@@ -6,8 +6,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: "docker://gcr.io/cloud-builders/bazel"
-      with:
-        entrypoint: /bin/bash
-        args: -c "bazel build //runs/..."
+      - uses: actions/checkout@master
+      - uses: 'docker://gcr.io/cloud-builders/bazel'
+        with:
+          entrypoint: /bin/bash
+          args: -c "bazel build //runs/..."
+      - uses: 'docker://gcr.io/cloud-builders/bazel'
+        with:
+          entrypoint: /bin/bash
+          args: -c "bazel test //runs/..."
