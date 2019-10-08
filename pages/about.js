@@ -86,6 +86,7 @@ The website can always be improved and we highlight all contributions at the nex
 We wrote a bit about giving a presentation and tips & tricks.
 
 [Speaker Guidelines](/guidelines)
+[Learn](/learn)
 
 `
 
