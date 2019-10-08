@@ -12,7 +12,8 @@ module.exports = {
       '/guidelines': { page: '/guidelines' },
       '/login': { page: '/login' },
       '/search': { page: '/search' },
-      '/contact': { page: '/contact' }
+      '/contact': { page: '/contact' },
+      '/learn': { page: '/learn' }
     }
     const archive = readdirSync('./pages/archive')
     for (let page in archive) {
