@@ -5,6 +5,7 @@ const { videos } = require("../data/videos.js");
 const { getEvents, memGetEvents } = require("./events.js");
 const { getSpeakers } = require("./speakers.js");
 const { me } = require("./resolvers/me.js");
+const { updateProfile } = require("./resolvers/updateprofile.js");
 
 const typeDefs = gql`
   type Videos {
@@ -121,9 +122,7 @@ const resolvers = {
     }
   },
   Mutation: {
-    updateProfile: async (parent, arg) => {
-      return arg.input;
-    }
+    updateProfile
   }
 };
 
