@@ -1,5 +1,7 @@
 jest.mock("./resolvers/me.js");
 import { me } from "./resolvers/me.js";
+jest.mock("./resolvers/updateprofile.js");
+import { updateProfile } from "./resolvers/updateprofile.js";
 import { resolvers, schema } from "./schema.js";
 import { graphql } from "graphql";
 
@@ -27,4 +29,24 @@ test("me query", async () => {
     `
   );
   expect(result.data.me).toEqual(user);
+});
+
+test("updateProfile mutation", async () => {
+  const user = {
+    name: "Ada Lovelace codes"
+  };
+  updateProfile.mockReturnValue(user);
+  const result = await graphql(
+    schema,
+    `
+      mutation {
+        updateProfile(input: {
+          name: "${user.name}"
+        }) {
+          name
+        }
+      }
+    `
+  );
+  expect(result.data.updateProfile).toEqual(user);
 });

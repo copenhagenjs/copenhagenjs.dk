@@ -19,4 +19,10 @@ async function getUser(userId) {
   return doc;
 }
 
-export { admin, db, getUser };
+async function updateUser(userId, data) {
+  const doc = db.collection("users").doc(userId);
+  const update = await doc.set(data);
+  return update;
+}
+
+export { admin, db, getUser, updateUser };

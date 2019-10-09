@@ -5,6 +5,7 @@ const { videos } = require("../data/videos.js");
 const { getEvents, memGetEvents } = require("./events.js");
 const { getSpeakers } = require("./speakers.js");
 const { me } = require("./resolvers/me.js");
+const { updateProfile } = require("./resolvers/updateprofile.js");
 
 const typeDefs = gql`
   type Videos {
@@ -38,6 +39,10 @@ const typeDefs = gql`
     email: String
     githubId: String
   }
+  input ProfileInput {
+    name: String
+    githubId: String
+  }
   type Query {
     hello: String
     events(first: Int, last: Int): [Event]
@@ -47,6 +52,9 @@ const typeDefs = gql`
     speaker(slug: String!): [Speaker]
     searchSpeakers(name: String!): [Speaker]
     me: User
+  }
+  type Mutation {
+    updateProfile(input: ProfileInput): User
   }
 `;
 
@@ -112,6 +120,9 @@ const resolvers = {
       const event = memGetEvents().find(e => e.link === parent.link);
       return event;
     }
+  },
+  Mutation: {
+    updateProfile
   }
 };
 
