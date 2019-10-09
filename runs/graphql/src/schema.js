@@ -4,6 +4,7 @@ import { makeExecutableSchema } from "graphql-tools";
 const { videos } = require("../data/videos.js");
 const { getEvents, memGetEvents } = require("./events.js");
 const { getSpeakers } = require("./speakers.js");
+const { me } = require("./resolvers/me.js");
 
 const typeDefs = gql`
   type Videos {
@@ -31,6 +32,12 @@ const typeDefs = gql`
     slug: String
     event: Event
   }
+  type User {
+    id: String
+    name: String
+    email: String
+    githubId: String
+  }
   type Query {
     hello: String
     events(first: Int, last: Int): [Event]
@@ -39,6 +46,7 @@ const typeDefs = gql`
     speakers: [Speaker]
     speaker(slug: String!): [Speaker]
     searchSpeakers(name: String!): [Speaker]
+    me: User
   }
 `;
 
@@ -96,7 +104,8 @@ const resolvers = {
       return getSpeakers().filter(s =>
         s.slug.toLowerCase().includes(slug.toLowerCase())
       );
-    }
+    },
+    me
   },
   Speaker: {
     event: async (parent, arg) => {
