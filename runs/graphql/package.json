@@ -17,6 +17,7 @@
     "babel-jest": "^24.9.0",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "firebase-admin": "^8.6.0",
     "front-matter": "^3.0.2",
     "graphql": "^14.4.2",
     "jest": "^24.9.0",
