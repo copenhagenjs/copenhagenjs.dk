@@ -1,13 +1,10 @@
 import 'isomorphic-unfetch'
 import Head from 'next/head'
-import ApolloClient, { gql } from 'apollo-boost'
+import { gql } from 'apollo-boost'
+import { client } from '../services/graphql.js'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
-
-const client = new ApolloClient({
-  uri: 'https://graphql.copenhagenjs.dk/graphql'
-})
 
 function getParams() {
   return new URLSearchParams(

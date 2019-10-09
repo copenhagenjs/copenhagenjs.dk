@@ -1,15 +1,12 @@
 import 'isomorphic-unfetch'
-import ApolloClient, { gql } from 'apollo-boost'
+import { gql } from 'apollo-boost'
+import { client } from '../services/graphql.js'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import Layout from '../components/Layout'
 import Map from '../components/Map'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
-const client = new ApolloClient({
-  uri: 'https://graphql.copenhagenjs.dk/graphql'
-})
 
 function Event() {
   const { loading, error, data } = useQuery(gql`
