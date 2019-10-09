@@ -26,5 +26,8 @@
   },
   "devDependencies": {},
   "description": "",
-  "prettier": {}
+  "prettier": {},
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
