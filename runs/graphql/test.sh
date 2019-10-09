@@ -1,1 +1,1 @@
-docker run --rm $(cat runs/graphql/build.txt) sh -c "npm test"
+docker run --rm --entrypoint=sh $(cat runs/graphql/build.txt) -c "npm test"

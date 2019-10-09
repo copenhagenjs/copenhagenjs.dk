@@ -4,6 +4,8 @@ const { ApolloServer, gql } = require("apollo-server-express");
 import { makeExecutableSchema } from "graphql-tools";
 const { typeDefs, resolvers } = require("./schema.js");
 
+console.log("CopenhagenJS GraphQL server - " + process.env.FOO);
+
 const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
