@@ -1,7 +1,11 @@
 const admin = require("firebase-admin");
 
+const credential = process.env.FIREBASE_SVC_ACC
+  ? admin.credential.cert(JSON.parse(process.env.FIREBASE_SVC_ACC))
+  : admin.credential.applicationDefault();
+
 admin.initializeApp({
-  credential: admin.credential.applicationDefault(),
+  credential,
   projectId: "copenhagenjsdk",
   databaseURL: "https://copenhagenjs.firebaseio.com"
 });
