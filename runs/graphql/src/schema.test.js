@@ -28,3 +28,22 @@ test("me query", async () => {
   );
   expect(result.data.me).toEqual(user);
 });
+
+test("updateProfile mutation", async () => {
+  const user = {
+    name: "Ada Lovelace codes"
+  };
+  const result = await graphql(
+    schema,
+    `
+      mutation {
+        updateProfile(input: {
+          name: "${user.name}"
+        }) {
+          name
+        }
+      }
+    `
+  );
+  expect(result.data.updateProfile).toEqual(user);
+});

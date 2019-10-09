@@ -38,6 +38,10 @@ const typeDefs = gql`
     email: String
     githubId: String
   }
+  input ProfileInput {
+    name: String
+    githubId: String
+  }
   type Query {
     hello: String
     events(first: Int, last: Int): [Event]
@@ -47,6 +51,9 @@ const typeDefs = gql`
     speaker(slug: String!): [Speaker]
     searchSpeakers(name: String!): [Speaker]
     me: User
+  }
+  type Mutation {
+    updateProfile(input: ProfileInput): User
   }
 `;
 
@@ -111,6 +118,11 @@ const resolvers = {
     event: async (parent, arg) => {
       const event = memGetEvents().find(e => e.link === parent.link);
       return event;
+    }
+  },
+  Mutation: {
+    updateProfile: async (parent, arg) => {
+      return arg.input;
     }
   }
 };
