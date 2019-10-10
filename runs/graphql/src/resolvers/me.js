@@ -1,7 +1,7 @@
 import { getUser } from "../firebase.js";
 
-export const me = async (userId = "alovelace") => {
-  const doc = await getUser(userId);
+export const me = async (parent, args, context) => {
+  const doc = await getUser(context.user.user_id);
   if (!doc.exists) {
     throw Error("No such user!");
   }

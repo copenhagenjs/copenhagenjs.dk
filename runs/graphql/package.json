@@ -21,6 +21,7 @@
     "front-matter": "^3.0.2",
     "graphql": "^14.4.2",
     "jest": "^24.9.0",
+    "jsonwebtoken": "^8.5.1",
     "marked": "^0.7.0",
     "p-memoize": "^3.1.0"
   },

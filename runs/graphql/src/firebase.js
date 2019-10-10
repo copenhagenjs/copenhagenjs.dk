@@ -25,4 +25,8 @@ async function updateUser(userId, data) {
   return update;
 }
 
+export async function decodeJWT(token) {
+  return await admin.auth().verifyIdToken(token);
+}
+
 export { admin, db, getUser, updateUser };

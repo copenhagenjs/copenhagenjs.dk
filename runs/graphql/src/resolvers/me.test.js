@@ -17,6 +17,7 @@ test("me to return", async () => {
       data: () => fakeUser
     })
   );
-  const user = await me();
+  const user = await me({}, {}, { user: { user_id: "fake" } });
   expect(user).toEqual(fakeUser);
+  expect(getUser).lastCalledWith("fake");
 });
