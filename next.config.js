@@ -13,7 +13,8 @@ module.exports = {
       '/login': { page: '/login' },
       '/search': { page: '/search' },
       '/contact': { page: '/contact' },
-      '/learn': { page: '/learn' }
+      '/learn': { page: '/learn' },
+      '/profile': { page: '/profile' }
     }
     const archive = readdirSync('./pages/archive')
     for (let page in archive) {
