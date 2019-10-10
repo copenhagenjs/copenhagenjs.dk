@@ -12,6 +12,14 @@ test("updateProfile to return", async () => {
     githubId: "donald09"
   };
   updateUser.mockReturnValue(Promise.resolve({}));
-  const profile = await updateProfile(null, { input: userInput });
+  const profile = await updateProfile(
+    null,
+    { input: userInput },
+    { user: { user_id: "donald" } }
+  );
   expect(profile).toEqual(userInput);
+  expect(updateUser).lastCalledWith("donald", {
+    githubId: "donald09",
+    name: "Donald Duck"
+  });
 });

@@ -1,6 +1,6 @@
 import { updateUser } from "../firebase.js";
 
-export const updateProfile = async (parent, arg) => {
-  const data = await updateUser("alovelace", arg.input);
+export const updateProfile = async (parent, arg, context) => {
+  const data = await updateUser(context.user.user_id, arg.input);
   return arg.input;
 };
