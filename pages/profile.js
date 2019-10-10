@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'isomorphic-unfetch'
 import { gql } from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
@@ -8,6 +8,8 @@ import Page from '../components/Page'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import ApolloClient from 'apollo-boost'
+import TextInput from '../components/TextInput'
+import Button from '../components/Button'
 
 const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
@@ -55,7 +57,10 @@ const UPDATE_PROFILE = gql`
 `
 
 const Profile = () => {
-  const [getProfile, { loading, error, data }] = useLazyQuery(
+  const [name, setName] = useState('')
+  const [loaded, setLoaded] = useState(false)
+  const [githubId, setGithubId] = useState('')
+  const [getProfile, { called, loading, error, data }] = useLazyQuery(
     gql`
       {
         me {
@@ -68,6 +73,18 @@ const Profile = () => {
       context: {
         headers: {
           authorization: 'bearer ' + token
+        }
+      },
+      onCompleted(data) {
+        if (error) return false
+        if (!loaded && data.me) {
+          setLoaded(true)
+          if (data.me.name) {
+            setName(data.me.name)
+          }
+          if (data.me.githubId) {
+            setGithubId(data.me.githubId)
+          }
         }
       }
     }
@@ -82,8 +99,29 @@ const Profile = () => {
     }
   })
 
+  const button = (
+    <Button
+      type="button"
+      display="block"
+      size="lg"
+      margin="20px 0"
+      onClick={() => {
+        updateProfile({
+          variables: {
+            input: {
+              name,
+              githubId
+            }
+          }
+        })
+      }}
+    >
+      Update Profile
+    </Button>
+  )
+
   if (loading) return <span>Loading...</span>
-  if (error) return <span>Error :(</span>
+  if (error) return <span>Error :( {button}</span>
   if (!data) {
     return <div>Logging in</div>
   }
@@ -91,27 +129,26 @@ const Profile = () => {
   return (
     <>
       <div>
-        <strong>Name:</strong>
+        <TextInput
+          required
+          type="text"
+          label="Name:"
+          name="name"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
       </div>
-      <div>{data.me.name}</div>
       <div>
-        <strong>Github:</strong>
+        <TextInput
+          required
+          type="text"
+          label="GitHub:"
+          name="github"
+          value={githubId}
+          onChange={e => setGithubId(e.target.value)}
+        />
       </div>
-      <div>{data.me.githubId}</div>
-      <button
-        onClick={() => {
-          updateProfile({
-            variables: {
-              input: {
-                name: 'Kevin ' + Date.now(),
-                githubId: 'kevinsimper ' + Date.now()
-              }
-            }
-          })
-        }}
-      >
-        Update Profile
-      </button>
+      {button}
     </>
   )
 }
