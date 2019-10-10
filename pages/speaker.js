@@ -1,3 +1,4 @@
+import React from 'react'
 import 'isomorphic-unfetch'
 import Head from 'next/head'
 import { gql } from 'apollo-boost'
@@ -11,6 +12,21 @@ function getParams() {
     typeof window == 'object' ? window.location.search : ''
   )
 }
+
+export const SpeakerProfile = ({ name, presentations = [] }) => (
+  <>
+    <h1>Speaker: {name}</h1>
+    <p>The person have {presentations.length} talks.</p>
+
+    {presentations.reverse().map(speaker => {
+      return (
+        <div key={speaker.title}>
+          <a href={speaker.event.link}>{speaker.title}</a>
+        </div>
+      )
+    })}
+  </>
+)
 
 function Speakers() {
   const slug = getParams().get('name')
@@ -34,16 +50,10 @@ function Speakers() {
       <Head>
         <title>{data.speaker[0].name} spoke at CopenhagenJS</title>
       </Head>
-      <h1>Speaker: {data.speaker[0].name}</h1>
-      <p>The person have {data.speaker.length} talks.</p>
-
-      {data.speaker.reverse().map(speaker => {
-        return (
-          <div key={speaker.title}>
-            <a href={speaker.event.link}>{speaker.title}</a>
-          </div>
-        )
-      })}
+      <SpeakerProfile
+        name={data.speaker[0].name}
+        presentations={data.speaker}
+      />
     </div>
   )
 }
