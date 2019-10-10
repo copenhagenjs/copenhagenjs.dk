@@ -60,13 +60,14 @@ export default class Videos extends React.Component {
       firebase
         .auth()
         .signInWithEmailLink(email, window.location.href)
-        .then(result => {
+        .then(async result => {
           console.log(result)
           this.setState({
             status: 'Successful login!'
           })
           window.localStorage.removeItem('emailForSignIn')
-          this.sendToBackend()
+          await this.sendToBackend()
+          window.location.href = '/profile'
         })
         .catch(error => {
           this.setState({
@@ -81,7 +82,7 @@ export default class Videos extends React.Component {
   }
   async sendToBackend() {
     const token = await this.getToken()
-    fetch('https://auth.copenhagenjs.dk/token', {
+    return fetch('https://auth.copenhagenjs.dk/token', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
