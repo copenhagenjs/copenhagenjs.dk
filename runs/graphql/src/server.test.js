@@ -15,7 +15,7 @@ test("context - good token", async () => {
     user_id: "NRlxCTdQIkRMyzVzFygfTQik01i1",
     sub: "NRlxCTdQIkRMyzVzFygfTQik01i1",
     iat: 1570668073,
-    exp: 1570671673,
+    exp: Date.now() / 1000 + 120,
     email: "kevin.simper@gmail.com",
     email_verified: true,
     firebase: {
