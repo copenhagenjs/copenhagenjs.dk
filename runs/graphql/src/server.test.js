@@ -7,7 +7,7 @@ test("context defined", () => {
   expect(context).toBeDefined();
 });
 
-test("context", async () => {
+test("context - good token", async () => {
   const officialPayload = {
     iss: "https://securetoken.google.com/copenhagenjsdk",
     aud: "copenhagenjsdk",
@@ -26,7 +26,7 @@ test("context", async () => {
     }
   };
   const testToken = jwt.sign(officialPayload, "test");
-  decodeJWT.mockReturnValue(Promise.resolve(jwt.verify(testToken, "test")));
+  decodeJWT.mockReturnValueOnce(Promise.resolve(jwt.verify(testToken, "test")));
   const value = await context({
     req: {
       headers: {
@@ -36,5 +36,16 @@ test("context", async () => {
   });
   expect(value).toEqual({
     user: officialPayload
+  });
+});
+
+test("context - no token", async () => {
+  const value = await context({
+    req: {
+      headers: {}
+    }
+  });
+  expect(value).toEqual({
+    user: undefined
   });
 });

@@ -14,6 +14,9 @@ export const context = async ({ req }) => {
     const decodedToken = await decodeJWT(token);
     return { user: decodedToken };
   } catch (e) {
+    if (e.code === "auth/argument-error") {
+      return {};
+    }
     console.log(e);
     throw new Error("Could not verify token!");
   }
