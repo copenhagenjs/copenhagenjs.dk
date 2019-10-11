@@ -58,15 +58,18 @@ const UPDATE_PROFILE = gql`
 `
 
 const Profile = () => {
-  const [name, setName] = useState('')
   const [loaded, setLoaded] = useState(false)
-  const [githubId, setGithubId] = useState('')
+  const [profileData, setProfileData] = useState({})
   const [getProfile, { called, loading, error, data }] = useLazyQuery(
     gql`
       {
         me {
           name
+          image
           githubId
+          twitterId
+          instagramId
+          website
         }
       }
     `,
@@ -80,12 +83,7 @@ const Profile = () => {
         if (error) return false
         if (!loaded && data && data.me) {
           setLoaded(true)
-          if (data.me.name) {
-            setName(data.me.name)
-          }
-          if (data.me.githubId) {
-            setGithubId(data.me.githubId)
-          }
+          setProfileData({ ...data.me })
         }
       }
     }
@@ -105,16 +103,31 @@ const Profile = () => {
   return (
     <ProfileEditForm
       {...{
-        githubId,
-        setGithubId,
-        name,
-        setName,
-        onSubmit: () => {
+        defaultValues: {
+          name: profileData.name || '',
+          image: profileData.image || '',
+          githubId: profileData.githubId || '',
+          twitterId: profileData.twitterId || '',
+          instagramId: profileData.instagramId || '',
+          website: profileData.website || ''
+        },
+        onSubmit: ({
+          name,
+          image,
+          githubId,
+          twitterId,
+          instagramId,
+          website
+        }) => {
           updateProfile({
             variables: {
               input: {
                 name,
-                githubId
+                image,
+                githubId,
+                twitterId,
+                instagramId,
+                website
               }
             }
           })
