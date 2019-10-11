@@ -19,13 +19,18 @@ export const ProfileEditForm = ({
   const [twitterId, setTwitterId] = useState('')
   const [instagramId, setInstagramId] = useState('')
   const [website, setWebsite] = useState('')
+  const validateUsername = val => {
+    if (val.includes('/')) {
+      alert('It should just be your username, not the url :)')
+    }
+  }
   const fields = [
-    ['Name', name, setName],
-    ['Image', image, setImage],
-    ['Github', githubId, setGithubId],
-    ['Twitter', twitterId, setTwitterId],
-    ['Instagram', instagramId, setInstagramId],
-    ['Website', website, setWebsite]
+    ['Full name', name, setName],
+    ['Image URL', image, setImage],
+    ['Github username', githubId, setGithubId, validateUsername],
+    ['Twitter username', twitterId, setTwitterId, validateUsername],
+    ['Instagram username', instagramId, setInstagramId, validateUsername],
+    ['Website URL', website, setWebsite]
   ]
   useEffect(() => {
     setName(defaultValues.name)
@@ -46,7 +51,10 @@ export const ProfileEditForm = ({
             label={f[0] + ':'}
             name={f[0]}
             value={f[1]}
-            onChange={e => f[2](e.target.value)}
+            onChange={e => {
+              if (f[3]) f[3](e.target.value)
+              f[2](e.target.value)
+            }}
           />
         </div>
       ))}
