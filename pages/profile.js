@@ -10,6 +10,7 @@ import 'firebase/auth'
 import ApolloClient from 'apollo-boost'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
+import { ProfileEditForm } from '../components/ProfileEditForm'
 
 const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
@@ -55,48 +56,6 @@ const UPDATE_PROFILE = gql`
     }
   }
 `
-
-export const ProfileEditForm = ({
-  name,
-  setName,
-  githubId,
-  setGithubId,
-  onSubmit
-}) => (
-  <>
-    <div>
-      <TextInput
-        required
-        type="text"
-        label="Name:"
-        name="name"
-        value={name}
-        onChange={e => setName(e.target.value)}
-      />
-    </div>
-    <div>
-      <TextInput
-        required
-        type="text"
-        label="GitHub:"
-        name="github"
-        value={githubId}
-        onChange={e => setGithubId(e.target.value)}
-      />
-    </div>
-    <Button
-      type="button"
-      display="block"
-      size="lg"
-      margin="20px 0"
-      onClick={() => {
-        onSubmit()
-      }}
-    >
-      Update Profile
-    </Button>
-  </>
-)
 
 const Profile = () => {
   const [name, setName] = useState('')
