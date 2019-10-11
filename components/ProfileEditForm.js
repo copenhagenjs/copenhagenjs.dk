@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import TextInput from './TextInput.js'
 import Button from './Button.js'
 
@@ -13,12 +13,12 @@ export const ProfileEditForm = ({
   },
   onSubmit
 }) => {
-  const [name, setName] = useState(defaultValues.name)
-  const [image, setImage] = useState(defaultValues.image)
-  const [githubId, setGithubId] = useState(defaultValues.githubId)
-  const [twitterId, setTwitterId] = useState(defaultValues.twitterId)
-  const [instagramId, setInstagramId] = useState(defaultValues.instagramId)
-  const [website, setWebsite] = useState(defaultValues.website)
+  const [name, setName] = useState('')
+  const [image, setImage] = useState('')
+  const [githubId, setGithubId] = useState('')
+  const [twitterId, setTwitterId] = useState('')
+  const [instagramId, setInstagramId] = useState('')
+  const [website, setWebsite] = useState('')
   const fields = [
     ['Name', name, setName],
     ['Image', image, setImage],
@@ -27,6 +27,15 @@ export const ProfileEditForm = ({
     ['Instagram', instagramId, setInstagramId],
     ['Website', website, setWebsite]
   ]
+  useEffect(() => {
+    setName(defaultValues.name)
+    setImage(defaultValues.image)
+    setGithubId(defaultValues.githubId)
+    setTwitterId(defaultValues.twitterId)
+    setInstagramId(defaultValues.instagramId)
+    setWebsite(defaultValues.website)
+  }, [defaultValues.name])
+
   return (
     <>
       {fields.map(f => (
