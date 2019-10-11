@@ -119,7 +119,7 @@ const Profile = () => {
       },
       onCompleted(data) {
         if (error) return false
-        if (!loaded && data.me) {
+        if (!loaded && data && data.me) {
           setLoaded(true)
           if (data.me.name) {
             setName(data.me.name)
