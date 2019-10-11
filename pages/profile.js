@@ -56,6 +56,48 @@ const UPDATE_PROFILE = gql`
   }
 `
 
+export const ProfileEditForm = ({
+  name,
+  setName,
+  githubId,
+  setGithubId,
+  onSubmit
+}) => (
+  <>
+    <div>
+      <TextInput
+        required
+        type="text"
+        label="Name:"
+        name="name"
+        value={name}
+        onChange={e => setName(e.target.value)}
+      />
+    </div>
+    <div>
+      <TextInput
+        required
+        type="text"
+        label="GitHub:"
+        name="github"
+        value={githubId}
+        onChange={e => setGithubId(e.target.value)}
+      />
+    </div>
+    <Button
+      type="button"
+      display="block"
+      size="lg"
+      margin="20px 0"
+      onClick={() => {
+        onSubmit()
+      }}
+    >
+      Update Profile
+    </Button>
+  </>
+)
+
 const Profile = () => {
   const [name, setName] = useState('')
   const [loaded, setLoaded] = useState(false)
@@ -99,57 +141,27 @@ const Profile = () => {
     }
   })
 
-  const button = (
-    <Button
-      type="button"
-      display="block"
-      size="lg"
-      margin="20px 0"
-      onClick={() => {
-        updateProfile({
-          variables: {
-            input: {
-              name,
-              githubId
-            }
-          }
-        })
-      }}
-    >
-      Update Profile
-    </Button>
-  )
-
   if (loading) return <span>Loading...</span>
-  if (error) return <span>Error :( {button}</span>
-  if (!data) {
-    return <div>Logging in</div>
-  }
 
   return (
-    <>
-      <div>
-        <TextInput
-          required
-          type="text"
-          label="Name:"
-          name="name"
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
-      </div>
-      <div>
-        <TextInput
-          required
-          type="text"
-          label="GitHub:"
-          name="github"
-          value={githubId}
-          onChange={e => setGithubId(e.target.value)}
-        />
-      </div>
-      {button}
-    </>
+    <ProfileEditForm
+      {...{
+        githubId,
+        setGithubId,
+        name,
+        setName,
+        onSubmit: () => {
+          updateProfile({
+            variables: {
+              input: {
+                name,
+                githubId
+              }
+            }
+          })
+        }
+      }}
+    />
   )
 }
 
