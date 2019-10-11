@@ -100,41 +100,36 @@ const Profile = () => {
 
   if (loading) return <span>Loading...</span>
 
-  return (
-    <ProfileEditForm
-      {...{
-        defaultValues: {
-          name: profileData.name || '',
-          image: profileData.image || '',
-          githubId: profileData.githubId || '',
-          twitterId: profileData.twitterId || '',
-          instagramId: profileData.instagramId || '',
-          website: profileData.website || ''
-        },
-        onSubmit: ({
+  const onSubmit = ({
+    name,
+    image,
+    githubId,
+    twitterId,
+    instagramId,
+    website
+  }) => {
+    updateProfile({
+      variables: {
+        input: {
           name,
           image,
           githubId,
           twitterId,
           instagramId,
           website
-        }) => {
-          updateProfile({
-            variables: {
-              input: {
-                name,
-                image,
-                githubId,
-                twitterId,
-                instagramId,
-                website
-              }
-            }
-          })
         }
-      }}
-    />
-  )
+      }
+    })
+  }
+  const defaultValues = {
+    name: profileData.name || '',
+    image: profileData.image || '',
+    githubId: profileData.githubId || '',
+    twitterId: profileData.twitterId || '',
+    instagramId: profileData.instagramId || '',
+    website: profileData.website || ''
+  }
+  return <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
 }
 
 export default () => {
