@@ -90,7 +90,10 @@ const Profile = () => {
   )
   outerGetProfile = getProfile
 
-  const [updateProfile, { updateProfileData }] = useMutation(UPDATE_PROFILE, {
+  const [
+    updateProfile,
+    { data: updateProfileData, loading: mutationLoading, error: mutationError }
+  ] = useMutation(UPDATE_PROFILE, {
     context: {
       headers: {
         authorization: 'bearer ' + token
@@ -100,40 +103,42 @@ const Profile = () => {
 
   if (loading) return <span>Loading...</span>
 
-  return (
-    <ProfileEditForm
-      {...{
-        defaultValues: {
-          name: profileData.name || '',
-          image: profileData.image || '',
-          githubId: profileData.githubId || '',
-          twitterId: profileData.twitterId || '',
-          instagramId: profileData.instagramId || '',
-          website: profileData.website || ''
-        },
-        onSubmit: ({
+  const onSubmit = ({
+    name,
+    image,
+    githubId,
+    twitterId,
+    instagramId,
+    website
+  }) => {
+    updateProfile({
+      variables: {
+        input: {
           name,
           image,
           githubId,
           twitterId,
           instagramId,
           website
-        }) => {
-          updateProfile({
-            variables: {
-              input: {
-                name,
-                image,
-                githubId,
-                twitterId,
-                instagramId,
-                website
-              }
-            }
-          })
         }
-      }}
-    />
+      }
+    })
+  }
+  const defaultValues = {
+    name: profileData.name || '',
+    image: profileData.image || '',
+    githubId: profileData.githubId || '',
+    twitterId: profileData.twitterId || '',
+    instagramId: profileData.instagramId || '',
+    website: profileData.website || ''
+  }
+  return (
+    <>
+      <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
+      {mutationLoading && <p>Loading...</p>}
+      {mutationError && <p>Error :( Look in the console and report it!</p>}
+      {updateProfileData && <p>✅ Updated succesful!</p>}
+    </>
   )
 }
 
