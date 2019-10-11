@@ -40,6 +40,7 @@ const typeDefs = gql`
     image: String
     githubId: String
     twitterId: String
+    instagramId: String
     website: String
   }
   input ProfileInput {
@@ -47,6 +48,7 @@ const typeDefs = gql`
     image: String
     githubId: String
     twitterId: String
+    instagramId: String
     website: String
   }
   type Query {
