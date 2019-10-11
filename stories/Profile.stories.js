@@ -2,7 +2,7 @@ import React from 'react'
 
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { ProfileEditForm } from '../pages/profile'
+import { ProfileEditForm } from '../components/ProfileEditForm.js'
 
 storiesOf('Profile', module)
   .add('Empty form', () => (
@@ -11,10 +11,14 @@ storiesOf('Profile', module)
   .add('Filled out form', () => (
     <ProfileEditForm
       {...{
-        name: 'Donald',
-        setName: action('setName'),
-        githubId: 'donald09',
-        setGithubId: action('setGithubId'),
+        defaultValues: {
+          name: 'name',
+          image: 'image',
+          githubId: 'githubId',
+          twitterId: 'twitterId',
+          instagramId: 'instagramId',
+          website: 'website'
+        },
         onSubmit: action('sending')
       }}
     ></ProfileEditForm>

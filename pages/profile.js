@@ -10,6 +10,7 @@ import 'firebase/auth'
 import ApolloClient from 'apollo-boost'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
+import { ProfileEditForm } from '../components/ProfileEditForm'
 
 const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
@@ -56,58 +57,19 @@ const UPDATE_PROFILE = gql`
   }
 `
 
-export const ProfileEditForm = ({
-  name,
-  setName,
-  githubId,
-  setGithubId,
-  onSubmit
-}) => (
-  <>
-    <div>
-      <TextInput
-        required
-        type="text"
-        label="Name:"
-        name="name"
-        value={name}
-        onChange={e => setName(e.target.value)}
-      />
-    </div>
-    <div>
-      <TextInput
-        required
-        type="text"
-        label="GitHub:"
-        name="github"
-        value={githubId}
-        onChange={e => setGithubId(e.target.value)}
-      />
-    </div>
-    <Button
-      type="button"
-      display="block"
-      size="lg"
-      margin="20px 0"
-      onClick={() => {
-        onSubmit()
-      }}
-    >
-      Update Profile
-    </Button>
-  </>
-)
-
 const Profile = () => {
-  const [name, setName] = useState('')
   const [loaded, setLoaded] = useState(false)
-  const [githubId, setGithubId] = useState('')
+  const [profileData, setProfileData] = useState({})
   const [getProfile, { called, loading, error, data }] = useLazyQuery(
     gql`
       {
         me {
           name
+          image
           githubId
+          twitterId
+          instagramId
+          website
         }
       }
     `,
@@ -121,12 +83,7 @@ const Profile = () => {
         if (error) return false
         if (!loaded && data && data.me) {
           setLoaded(true)
-          if (data.me.name) {
-            setName(data.me.name)
-          }
-          if (data.me.githubId) {
-            setGithubId(data.me.githubId)
-          }
+          setProfileData({ ...data.me })
         }
       }
     }
@@ -146,16 +103,31 @@ const Profile = () => {
   return (
     <ProfileEditForm
       {...{
-        githubId,
-        setGithubId,
-        name,
-        setName,
-        onSubmit: () => {
+        defaultValues: {
+          name: profileData.name || '',
+          image: profileData.image || '',
+          githubId: profileData.githubId || '',
+          twitterId: profileData.twitterId || '',
+          instagramId: profileData.instagramId || '',
+          website: profileData.website || ''
+        },
+        onSubmit: ({
+          name,
+          image,
+          githubId,
+          twitterId,
+          instagramId,
+          website
+        }) => {
           updateProfile({
             variables: {
               input: {
                 name,
-                githubId
+                image,
+                githubId,
+                twitterId,
+                instagramId,
+                website
               }
             }
           })
