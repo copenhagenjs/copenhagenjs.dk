@@ -35,13 +35,19 @@ const typeDefs = gql`
   }
   type User {
     id: String
-    name: String
     email: String
+    name: String
+    image: String
     githubId: String
+    twitterId: String
+    website: String
   }
   input ProfileInput {
     name: String
+    image: String
     githubId: String
+    twitterId: String
+    website: String
   }
   type Query {
     hello: String
