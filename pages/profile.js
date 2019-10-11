@@ -90,7 +90,10 @@ const Profile = () => {
   )
   outerGetProfile = getProfile
 
-  const [updateProfile, { updateProfileData }] = useMutation(UPDATE_PROFILE, {
+  const [
+    updateProfile,
+    { data: updateProfileData, loading: mutationLoading, error: mutationError }
+  ] = useMutation(UPDATE_PROFILE, {
     context: {
       headers: {
         authorization: 'bearer ' + token
@@ -129,7 +132,14 @@ const Profile = () => {
     instagramId: profileData.instagramId || '',
     website: profileData.website || ''
   }
-  return <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
+  return (
+    <>
+      <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
+      {mutationLoading && <p>Loading...</p>}
+      {mutationError && <p>Error :( Look in the console and report it!</p>}
+      {updateProfileData && <p>✅ Updated succesful!</p>}
+    </>
+  )
 }
 
 export default () => {
