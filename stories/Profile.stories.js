@@ -11,10 +11,14 @@ storiesOf('Profile', module)
   .add('Filled out form', () => (
     <ProfileEditForm
       {...{
-        name: 'Donald',
-        setName: action('setName'),
-        githubId: 'donald09',
-        setGithubId: action('setGithubId'),
+        defaultValues: {
+          name: 'name',
+          image: 'image',
+          githubId: 'githubId',
+          twitterId: 'twitterId',
+          instagramId: 'instagramId',
+          website: 'website'
+        },
         onSubmit: action('sending')
       }}
     ></ProfileEditForm>
