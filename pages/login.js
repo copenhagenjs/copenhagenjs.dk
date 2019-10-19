@@ -55,7 +55,9 @@ export default class Videos extends React.Component {
     if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
       var email = window.localStorage.getItem('emailForSignIn')
       if (!email) {
-        email = window.prompt('Please provide your email for confirmation')
+        return alert(
+          'Open this URL in browser to login - This browser is probrably a in-app browser.'
+        )
       }
       firebase
         .auth()
