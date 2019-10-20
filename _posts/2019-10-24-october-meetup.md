@@ -5,6 +5,11 @@ location: Rentemestervej 56C, København
 link: https://www.meetup.com/copenhagenjs/events/265499826/
 date: 2019-10-24T17:00:00
 duration: 3
+speakers:
+  - title: "From JavaScript to TypeScript: how a different approach can make it more helpful"
+    name: Eduardo Sorribas
+  - title: My Coffee App with React Native
+    name: Martin Lichstam
 ---
 
 # CopenhagenJS October - Peytz
@@ -16,9 +21,9 @@ It is time for the October edition of CopenhagenJS!
 
     17:00 Doors open
     17:45 Welcome
-    18:00 You?
+    18:00 From JavaScript to TypeScript: how a different approach can make it more helpful - Eduardo Sorribas
     18:25 Break with food and drinks
-    19:00 You?
+    19:00 My Coffee App with React Native - Martin Lichstam
     19:25 You?
     19:50 Group photo
     19:55 Raffle.js
