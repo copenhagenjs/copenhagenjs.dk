@@ -16,9 +16,9 @@ It is time for the October edition of CopenhagenJS!
 
     17:00 Doors open
     17:45 Welcome
-    18:00 You?
+    18:00 From JavaScript to TypeScript: how a different approach can make it more helpful - Eduardo Sorribas
     18:25 Break with food and drinks
-    19:00 You?
+    19:00 My Coffee App with React Native - Martin Lichstam
     19:25 You?
     19:50 Group photo
     19:55 Raffle.js
