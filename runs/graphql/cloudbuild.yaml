@@ -11,3 +11,11 @@ steps:
         bazel build //runs/graphql:tag --action_env=SHA=$SHORT_SHA
   - name: gcr.io/cloud-builders/docker
     args: ["push", "gcr.io/copenhagenjsdk/copenhagenjs.dk-graphql:$SHORT_SHA"]
+  - name: gcr.io/cloud-builders/gcloud
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        cd runs/graphql
+        sed -e "s/##IMAGE##/gcr.io\/copenhagenjsdk\/copenhagenjs.dk-graphql:$SHORT_SHA/" knative.yaml > knative_out.yaml
+        [[ "$BRANCH_NAME" == "master" ]] && gcloud alpha run services replace knative_out.yaml --platform=managed --region=europe-west1 || echo "Skipping ..."

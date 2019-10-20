@@ -1,0 +1,36 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: copenhagenjsdk-graphql
+  namespace: "173624392733"
+  labels:
+    cloud.googleapis.com/location: europe-west1
+  annotations:
+    run.googleapis.com/client-name: cloud-console
+    serving.knative.dev/creator: kevin.simper@gmail.com
+    serving.knative.dev/lastModifier: kevin.simper@gmail.com
+spec:
+  traffic:
+    - percent: 100
+      latestRevision: true
+  template:
+    metadata:
+      labels:
+        client.knative.dev/nonce: f6388aa8-955f-46b3-8ca4-7e600115b3e2
+      annotations:
+        autoscaling.knative.dev/maxScale: "1000"
+    spec:
+      timeoutSeconds: 300
+      serviceAccountName: 173624392733-compute@developer.gserviceaccount.com
+      containerConcurrency: 80
+      containers:
+        - image: ##IMAGE##
+          env:
+            - name: FOO
+              value: berglas://copenhagenjsdksecrets/foo
+            - name: FIREBASE_SVC_ACC
+              value: berglas://copenhagenjsdksecrets/firebase-svc-acc
+          resources:
+            limits:
+              memory: 256Mi
+              cpu: 1000m
