@@ -8,4 +8,6 @@ steps:
     args:
       - "-c"
       - |
-        bazel build //runs/graphql:push --action_env=SHA=$SHORT_SHA --sandbox_debug
+        bazel build //runs/graphql:tag --action_env=SHA=$SHORT_SHA
+  - name: gcr.io/cloud-builders/docker
+    args: ["push", "gcr.io/copenhagenjsdk/copenhagenjs.dk-graphql:$SHORT_SHA"]
