@@ -26,6 +26,10 @@ const initFirebase = () => {
   }
 }
 
+const redirectToLogin = () => {
+  window.location = '/login'
+}
+
 let token = ''
 let outerGetProfile = null
 const firebaseLogin = new Promise((resolve, reject) => {
@@ -45,8 +49,24 @@ const firebaseLogin = new Promise((resolve, reject) => {
     outerGetProfile()
   })
   .catch(e => {
-    console.log('It is okay')
+    console.log('It is okay', e)
+    if (e.message === 'no user') {
+      redirectToLogin()
+    }
   })
+
+const logoutFirebase = () => {
+  firebase
+    .auth()
+    .signOut()
+    .then(function() {
+      console.log('signed out')
+      redirectToLogin()
+    })
+    .catch(function(error) {
+      console.log('Sign out error', error)
+    })
+}
 
 const UPDATE_PROFILE = gql`
   mutation UpdateProfile($input: ProfileInput!) {
@@ -134,7 +154,9 @@ const Profile = () => {
   }
   return (
     <>
-      <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
+      {loaded && (
+        <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
+      )}
       {mutationLoading && <p>Loading...</p>}
       {mutationError && <p>Error :( Look in the console and report it!</p>}
       {updateProfileData && <p>✅ Updated succesful!</p>}
@@ -146,6 +168,16 @@ export default () => {
   return (
     <Page>
       <ApolloProvider client={client}>
+        <div>
+          Menu:{' '}
+          <Button
+            onClick={() => {
+              logoutFirebase()
+            }}
+          >
+            Sign Out
+          </Button>
+        </div>
         <h1>Public Profile</h1>
         <Profile />
       </ApolloProvider>
