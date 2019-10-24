@@ -154,9 +154,7 @@ const Profile = () => {
   }
   return (
     <>
-      {loaded && (
-        <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
-      )}
+      <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
       {mutationLoading && <p>Loading...</p>}
       {mutationError && <p>Error :( Look in the console and report it!</p>}
       {updateProfileData && <p>✅ Updated succesful!</p>}
