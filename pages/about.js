@@ -81,12 +81,21 @@ You can also help out on the website, you can find the Github repo here https://
 
 The website can always be improved and we highlight all contributions at the next meetup, so there is a big potential to do something that will have a impact to many people.
 
+### Group Photos
+
+Here are links to all groups photos we have taken:
+
+- June: https://photos.app.goo.gl/yX9Kf6xW6RCmtHwY9
+- July: https://photos.app.goo.gl/9UtgpFa6upRZvcjY7
+- August: https://photos.app.goo.gl/YSFCUH2ypm1SAbrSA
+- September: https://photos.app.goo.gl/XyLydVj61KR4fqrQ9
+
 ### More
 
 We wrote a bit about giving a presentation and tips & tricks.
 
-[Speaker Guidelines](/guidelines)
-[Learn](/learn)
+- [Speaker Guidelines](/guidelines)
+- [Learn](/learn)
 
 `
 
