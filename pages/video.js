@@ -6,50 +6,32 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
 import { Embed } from '../components/YoutubeEmbed'
+import { getParams } from './speaker.js'
 
-function Videos() {
+function Video() {
+  const slug = getParams().get('name')
   const { loading, error, data } = useQuery(gql`
     {
-      videos {
+      video(slug: "${slug}") {
         title
         name
         youtubeId
-        slug
       }
     }
   `)
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+  const { title, name, youtubeId } = data.video
   return (
-    <div className="videos">
-      <style jsx>{`
-        @media (min-width: 800px) {
-          .videos {
-            display: flex;
-            flex-wrap: wrap;
-          }
-          .video {
-            width: 50%;
-            padding: 0 10px;
-          }
-          h3 {
-            min-height: 100px;
-            margin: 0 0 10px;
-            font-size: 1.5rem;
-          }
-        }
-      `}</style>
-      {data.videos.reverse().map(({ title, name, youtubeId, slug }, key) => (
-        <div key={key} className="video">
-          <Embed youtubeId={youtubeId} />
-          <h3>
-            <a href={`/video/?name=${slug}`}>
-              {title} - {name}
-            </a>
-          </h3>
-        </div>
-      ))}
+    <div className="video">
+      <style jsx>{``}</style>
+      <h2>
+        {title} - {name}
+      </h2>
+      <div className="video">
+        <Embed youtubeId={youtubeId} />
+      </div>
     </div>
   )
 }
@@ -59,13 +41,16 @@ export default class VideosComponent extends React.Component {
     return (
       <ApolloProvider client={client}>
         <Page>
-          <h1>Videos</h1>
+          <div>
+            <a href="/videos">⬅️ Go back to all videos</a>
+          </div>
+          <br />
+          <Video />
           <p>
             <a href="https://www.youtube.com/channel/UCOD8lwED5PAcgmhwymQJsng">
-              Subscribe to us on Youtube
+              Subscribe to CopenhagenJS on Youtube
             </a>
           </p>
-          <Videos />
         </Page>
       </ApolloProvider>
     )
