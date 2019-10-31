@@ -17,16 +17,16 @@ It is time for the November edition of CopenhagenJS. This time we are hosted by 
 
 ## Schedule:
 
-17:00 Doors open
-17:45 Welcome
-18:00 Typescript: Mapped & Conditional Types by Pavel Kučera
-18:25 Break with food and drinks
-19:00 You?
-19:25 You?
-19:50 Group photo
-19:55 Raffle.js
-20:00 Socializing - meet the community
-21:00 See you next time!
+    17:00 Doors open
+    17:45 Welcome
+    18:00 Typescript: Mapped & Conditional Types by Pavel Kučera
+    18:25 Break with food and drinks
+    19:00 You?
+    19:25 You?
+    19:50 Group photo
+    19:55 Raffle.js
+    20:00 Socializing - meet the community
+    21:00 See you next time!
 
 ## What is CopenhagenJS?
 
