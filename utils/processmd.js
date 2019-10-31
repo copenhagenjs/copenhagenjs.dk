@@ -31,7 +31,9 @@ export default () => (
     </Head>
     <Event title="${content.attributes.title}" date="${
         content.attributes.date
-      }" html={\`${html}\`} location="${content.attributes.location}" />
+      }" html={\`${html}\`} location="${
+        content.attributes.location
+      }" speakers={${JSON.stringify(content.attributes.speakers)}} />
   </Page> 
 )
       `
