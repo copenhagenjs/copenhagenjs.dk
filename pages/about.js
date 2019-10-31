@@ -89,6 +89,7 @@ Here are links to all groups photos we have taken:
 - July: https://photos.app.goo.gl/9UtgpFa6upRZvcjY7
 - August: https://photos.app.goo.gl/YSFCUH2ypm1SAbrSA
 - September: https://photos.app.goo.gl/XyLydVj61KR4fqrQ9
+- October: https://photos.app.goo.gl/MV7L1c2gkewyB854A
 
 ### More
 
