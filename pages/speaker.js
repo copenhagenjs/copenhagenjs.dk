@@ -15,16 +15,35 @@ function getParams() {
 
 export const SpeakerProfile = ({ name, presentations = [] }) => (
   <>
-    <h1>Speaker: {name}</h1>
-    <p>The person have {presentations.length} talks.</p>
+    <h1>{name}</h1>
+    <p>
+      {name} have spoken at {presentations.length} CopenhagenJS event
+      {presentations.length > 1 ? 's' : ''}.
+    </p>
 
-    {presentations.reverse().map(speaker => {
-      return (
-        <div key={speaker.title}>
-          <a href={speaker.event.link}>{speaker.title}</a>
-        </div>
-      )
-    })}
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        {presentations.reverse().map(speaker => {
+          const date = new Date(parseInt(speaker.event.date))
+          return (
+            <tr key={speaker.title}>
+              <td>
+                {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
+              </td>
+              <td>
+                <a href={speaker.event.link}>{speaker.title}</a>
+              </td>
+            </tr>
+          )
+        })}
+      </tbody>
+    </table>
   </>
 )
 
@@ -37,6 +56,7 @@ function Speakers() {
         title
         event {
           link
+          date
         }
       }
     }
