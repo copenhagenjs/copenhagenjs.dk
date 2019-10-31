@@ -1,6 +1,7 @@
 import Map from './Map'
+import SpeakerSchedule from './SpeakerSchedule.js'
 
-export default ({ title, date, html, location }) => {
+export default ({ title, date, html, location, speakers }) => {
   return (
     <div>
       <style jsx>{`
@@ -22,6 +23,7 @@ export default ({ title, date, html, location }) => {
         dangerouslySetInnerHTML={{ __html: html }}
       ></div>
       {location ? <Map location={location} /> : ''}
+      {speakers ? <SpeakerSchedule speakers={speakers} /> : ''}
     </div>
   )
 }
