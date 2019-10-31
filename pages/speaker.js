@@ -34,7 +34,12 @@ export const SpeakerProfile = ({ name, presentations = [] }) => (
           return (
             <tr key={speaker.title}>
               <td>
-                {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
+                {date
+                  .getDate()
+                  .toString()
+                  .padStart(2, '0')}
+                /{(date.getMonth() + 1).toString().padStart(2, '0')}/
+                {date.getFullYear()}
               </td>
               <td>
                 <a href={speaker.event.link}>{speaker.title}</a>
