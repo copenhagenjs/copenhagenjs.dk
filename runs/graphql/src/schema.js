@@ -1,17 +1,18 @@
 const { graphql } = require("graphql");
 const { gql } = require("apollo-server-express");
 import { makeExecutableSchema } from "graphql-tools";
-const { videos } = require("../data/videos.js");
 const { getEvents, memGetEvents } = require("./events.js");
 const { getSpeakers } = require("./speakers.js");
 const { me } = require("./resolvers/me.js");
 const { updateProfile } = require("./resolvers/updateprofile.js");
+const { video, videos } = require("./resolvers/videos.js");
 
 const typeDefs = gql`
-  type Videos {
+  type Video {
     youtubeId: String
     title: String
     name: String
+    slug: String
   }
   type Presentation {
     title: String
@@ -54,7 +55,8 @@ const typeDefs = gql`
   type Query {
     hello: String
     events(first: Int, last: Int): [Event]
-    videos: [Videos]
+    videos: [Video]
+    video(slug: String!): Video
     searchEvents(query: String): [Event]
     speakers: [Speaker]
     speaker(slug: String!): [Speaker]
@@ -79,13 +81,8 @@ const resolvers = {
       }
       return events;
     },
-    videos: () => {
-      return videos.map(v => ({
-        youtubeId: v[0],
-        title: v[1],
-        name: v[2]
-      }));
-    },
+    videos,
+    video,
     searchEvents: async (parent, { query }) => {
       const data = await graphql(
         schema,
