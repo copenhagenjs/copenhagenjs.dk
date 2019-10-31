@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default ({ location }) => (
   <div className="map" style={{ width: '100%' }}>
     <iframe
