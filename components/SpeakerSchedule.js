@@ -1,3 +1,14 @@
 import React from 'react'
 
-export default () => <div>Schedule:</div>
+export default ({ speakers }) => (
+  <div>
+    Schedule:
+    <ul>
+      {speakers.map(s => (
+        <li>
+          {s.title} - {s.name}
+        </li>
+      ))}
+    </ul>
+  </div>
+)
