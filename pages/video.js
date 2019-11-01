@@ -42,7 +42,7 @@ export default class VideosComponent extends React.Component {
       <ApolloProvider client={client}>
         <Page>
           <div>
-            <a href="/videos">⬅️ Go back to all videos</a>
+            <a href="/videos">See all videos</a>
           </div>
           <br />
           <Video />
