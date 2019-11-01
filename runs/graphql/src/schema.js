@@ -7,6 +7,11 @@ const { me } = require("./resolvers/me.js");
 const { updateProfile } = require("./resolvers/updateprofile.js");
 const { video, videos } = require("./resolvers/videos.js");
 const { events, searchEvents } = require("./resolvers/events.js");
+const {
+  speakers,
+  searchSpeakers,
+  speaker
+} = require("./resolvers/speakers.js");
 
 const typeDefs = gql`
   type Video {
@@ -80,19 +85,9 @@ const resolvers = {
     videos,
     video,
     searchEvents,
-    speakers: () => {
-      return getSpeakers();
-    },
-    searchSpeakers: (parent, { name }) => {
-      return getSpeakers().filter(s =>
-        s.name.toLowerCase().includes(name.toLowerCase())
-      );
-    },
-    speaker: (parent, { slug }) => {
-      return getSpeakers().filter(s =>
-        s.slug.toLowerCase().includes(slug.toLowerCase())
-      );
-    },
+    speakers,
+    searchSpeakers,
+    speaker,
     me
   },
   Speaker: {
