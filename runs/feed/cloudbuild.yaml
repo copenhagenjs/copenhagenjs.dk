@@ -1,0 +1,19 @@
+steps:
+  - name: gcr.io/cloud-builders/bazel
+    args: ['build', '//runs/feed:docker']
+  - name: gcr.io/cloud-builders/bazel
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        bazel build //runs/feed:tag --action_env=SHA=$SHORT_SHA
+  - name: gcr.io/cloud-builders/docker
+    args: ['push', 'gcr.io/copenhagenjsdk/copenhagenjs.dk-feed:$SHORT_SHA']
+  - name: gcr.io/cloud-builders/gcloud
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        cd runs/feed
+        sed -e "s/##IMAGE##/gcr.io\/copenhagenjsdk\/copenhagenjs.dk-feed:$SHORT_SHA/" knative.yaml > knative_out.yaml
+        [[ "master" == "master" ]] && gcloud alpha run services replace knative_out.yaml --platform=managed --region=europe-west1 || echo "Skipping ..."
