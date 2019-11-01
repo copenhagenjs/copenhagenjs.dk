@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import 'isomorphic-unfetch'
 import { gql } from 'apollo-boost'
 import { client } from '../services/graphql.js'
@@ -67,6 +68,9 @@ function Event() {
 export default () => (
   <ApolloProvider client={client}>
     <Layout>
+      <Head>
+        <title>CopenhagenJS - a JavaScript meetup in Copenhagen</title>
+      </Head>
       <header className="page-header master bg-grey" role="navigation">
         <Navigation />
 
