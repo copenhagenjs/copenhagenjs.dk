@@ -19,15 +19,32 @@ function Events() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
-  return data.events.reverse().map(({ title, date, link, type }) => (
-    <tr key={title}>
-      <td>
-        <a href={link}>{title}</a>
-      </td>
-      <td>{new Date(parseInt(date)).toLocaleString('da-DK')}</td>
-      <td>{type}</td>
-    </tr>
-  ))
+
+  return (
+    <>
+      <p>There has been {data.events.length} events.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.events.reverse().map(({ title, date, link, type }) => (
+            <tr key={title}>
+              <td>
+                <a href={link}>{title}</a>
+              </td>
+              <td>{new Date(parseInt(date)).toLocaleString('da-DK')}</td>
+              <td>{type}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
+  )
 }
 
 export default () => (
@@ -39,23 +56,11 @@ export default () => (
         <a href="https://www.meetup.com/copenhagenjs/">
           meetup.com/copenhagenjs
         </a>
-        .
+        <Events />
       </div>
       <div>
         <a href="/search/">Search meetups</a>
       </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Event</th>
-            <th>Date</th>
-            <th>Type</th>
-          </tr>
-        </thead>
-        <tbody>
-          <Events />
-        </tbody>
-      </table>
     </Page>
   </ApolloProvider>
 )
