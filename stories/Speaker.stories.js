@@ -12,7 +12,7 @@ storiesOf('SpeakerProfile', module).add('1 talk', () => (
     name={'Donald Duck'}
     presentations={[
       {
-        event: { link: 'http://example.com' },
+        event: { link: 'http://example.com', date: Date.now().toString() },
         title: 'Example'
       }
     ]}
