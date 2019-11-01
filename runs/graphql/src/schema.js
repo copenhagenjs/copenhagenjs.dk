@@ -19,6 +19,10 @@ const typeDefs = gql`
     title: String
     name: String
   }
+  enum EventStatus {
+    UPCOMING
+    PAST
+  }
   type Event {
     title: String
     markdown: String
@@ -55,7 +59,7 @@ const typeDefs = gql`
   }
   type Query {
     hello: String
-    events(first: Int, last: Int): [Event]
+    events(first: Int, last: Int, status: EventStatus): [Event]
     videos: [Video]
     video(slug: String!): Video
     searchEvents(query: String): [Event]

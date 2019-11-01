@@ -1,8 +1,23 @@
 const { graphql } = require("graphql");
 const { getEvents, memGetEvents } = require("../events.js");
 
-export const events = (parent, { first, last }) => {
-  const events = getEvents();
+export const filterEventStatus = (eventStatus, events) => {
+  const now = Date.now();
+  switch (eventStatus) {
+    case "UPCOMING":
+      return events.filter(event => now < parseInt(event.date));
+      break;
+    case "PAST":
+      return events.filter(event => now > parseInt(event.date));
+      break;
+    default:
+      throw new Error(`status "${eventStatus}" does not exist`);
+  }
+};
+
+export const events = (parent, { first, last, status }) => {
+  const events = status ? filterEventStatus(status, getEvents()) : getEvents();
+
   if (first) {
     return events.slice(0, first);
   }
@@ -13,6 +28,7 @@ export const events = (parent, { first, last }) => {
 };
 
 export const searchEvents = async (parent, { query }) => {
+  const { schema } = require("../schema.js");
   const data = await graphql(
     schema,
     `
