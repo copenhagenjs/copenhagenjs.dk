@@ -20,3 +20,12 @@ test("filterEventStatus filter only upcoming events", () => {
   ];
   expect(filterEventStatus(UPCOMING, events)).toEqual([events[1]]);
 });
+
+test("filterEventStatus filter only past events", () => {
+  const PAST = "PAST";
+  const events = [
+    { date: (Date.now() - 3600 * 1000).toString(), title: "Past" },
+    { date: (Date.now() + 3600 * 1000).toString(), title: "Upcoming" }
+  ];
+  expect(filterEventStatus(PAST, events)).toEqual([events[0]]);
+});
