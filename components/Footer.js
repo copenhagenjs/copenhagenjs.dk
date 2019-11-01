@@ -3,12 +3,10 @@ import React from 'react'
 export default () => (
   <section className="newsletter">
     <style jsx>{`
-      .discord a {
-        display: inline-flex;
-      }
-      .discord img {
+      .discord-logo {
         width: 30px;
         height: 30px;
+        vertical-align: middle;
       }
       .newsletter {
         background-color: #f8de48;
@@ -104,7 +102,16 @@ export default () => (
       </a>
     </div>
 
-    <div className="discord"><a href="https://discord.gg/pWDT2w"><img src="/static/images/discord-logo.svg" alt="copenhagenjs discord" /><span>Join our Discord</span></a></div>
+    <div className="discord">
+      <a href="https://discord.gg/pWDT2w">
+        <img
+          className="discord-logo"
+          src="/static/images/discord-logo.svg"
+          alt="copenhagenjs discord"
+        />
+        Join our Discord
+      </a>
+    </div>
 
     <div className="newsletter__description">
       <p>
