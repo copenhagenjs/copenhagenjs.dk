@@ -54,5 +54,15 @@ export const videos = [
     'VP8Sa7z7R5Y',
     "Probability in TensorFlow.js: Chapter 1 - A programmer's nightmare",
     'Andreas Madsen'
-  ]
+  ],
+  ['bYn_f05xfIU', 'Why is my build times so long', 'Kevin Simper'],
+  ['OGMcBOcgEOQ', 'Generators and Async Await', 'Daniel Pouzemski'],
+  ['T998Ezr5xjs', 'Keep Calm And Curry On', 'Andreas Møller'],
+  ['1IFVxE5Z02E', 'One architecture - Four platforms', 'Søren Vind'],
+  [
+    'YSHlwc_euyg',
+    'From JavaScript to TypeScript: how a different approach can make it more helpful',
+    'Eduardo Sorribas'
+  ],
+  ['sRBUkS6gT8k', 'HackYourFuture - 2 years later', 'Christopher Klüter']
 ]
