@@ -1,0 +1,28 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: copenhagenjsdk
+  namespace: '173624392733'
+  labels:
+    cloud.googleapis.com/location: europe-west1
+  annotations:
+    run.googleapis.com/client-name: cloud-console
+    serving.knative.dev/creator: kevin.simper@gmail.com
+    serving.knative.dev/lastModifier: kevin.simper@gmail.com
+spec:
+  traffic:
+    - percent: 100
+      latestRevision: true
+  template:
+    metadata:
+      labels:
+        client.knative.dev/nonce: d52feab2-b05a-4488-84f4-b2f49673e932
+    spec:
+      timeoutSeconds: 300
+      serviceAccountName: copenhagenjsdk@appspot.gserviceaccount.com
+      containerConcurrency: 80
+      containers:
+        - image: ##IMAGE##
+          resources:
+            limits:
+              memory: 256Mi

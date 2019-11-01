@@ -1,9 +1,17 @@
 genrule(
   name = "docker",
   srcs = glob(["**"]) + ["//_posts:copy"],
-  cmd = "tar -czh . | docker build -t feed -f runs/feed/Dockerfile - > $@",
+  cmd = "tar -czh . | docker build -q -t feed -f runs/feed/Dockerfile - > $@",
   outs = ["build.txt"],
   tags = ["local"]
+)
+
+genrule(
+  name = "tag",
+  srcs = ["build.txt"],
+  cmd = "docker tag $$(cat $(location build.txt)) gcr.io/copenhagenjsdk/copenhagenjs.dk-feed:$$SHA > $@",
+  outs = ["tag.txt"],
+  tags = ["manual"]
 )
 
 sh_binary(
