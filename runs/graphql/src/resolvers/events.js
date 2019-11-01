@@ -3,7 +3,13 @@ const { getEvents, memGetEvents } = require("../events.js");
 
 export const filterEventStatus = (eventStatus, events) => {
   const now = Date.now();
-  return events;
+  switch (eventStatus) {
+    case "UPCOMING":
+      return events.filter(event => now < parseInt(event.date));
+      break;
+    default:
+      throw new Error("status does not exist");
+  }
 };
 
 export const events = (parent, { first, last, status }) => {
