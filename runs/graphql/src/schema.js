@@ -6,6 +6,7 @@ const { getSpeakers } = require("./speakers.js");
 const { me } = require("./resolvers/me.js");
 const { updateProfile } = require("./resolvers/updateprofile.js");
 const { video, videos } = require("./resolvers/videos.js");
+const { events, searchEvents } = require("./resolvers/events.js");
 
 const typeDefs = gql`
   type Video {
@@ -71,40 +72,10 @@ const typeDefs = gql`
 const resolvers = {
   Query: {
     hello: () => "Hello world!",
-    events: (parent, { first, last }) => {
-      const events = getEvents();
-      if (first) {
-        return events.slice(0, first);
-      }
-      if (last) {
-        return events.slice(events.length - last, events.length);
-      }
-      return events;
-    },
+    events,
     videos,
     video,
-    searchEvents: async (parent, { query }) => {
-      const data = await graphql(
-        schema,
-        `
-          {
-            events {
-              title
-              markdown
-              content
-              link
-              date
-              type
-            }
-          }
-        `
-      );
-      return data.data.events.filter(e => {
-        if (e.title.toLowerCase().includes(query.toLowerCase())) return true;
-        if (e.markdown.toLowerCase().includes(query.toLowerCase())) return true;
-        return false;
-      });
-    },
+    searchEvents,
     speakers: () => {
       return getSpeakers();
     },
