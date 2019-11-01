@@ -7,8 +7,11 @@ export const filterEventStatus = (eventStatus, events) => {
     case "UPCOMING":
       return events.filter(event => now < parseInt(event.date));
       break;
+    case "PAST":
+      return events.filter(event => now > parseInt(event.date));
+      break;
     default:
-      throw new Error("status does not exist");
+      throw new Error(`status "${eventStatus}" does not exist`);
   }
 };
 
