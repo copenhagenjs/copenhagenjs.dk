@@ -7,7 +7,7 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
 
-function getParams() {
+export function getParams() {
   return new URLSearchParams(
     typeof window == 'object' ? window.location.search : ''
   )
