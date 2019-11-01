@@ -1,13 +1,13 @@
 const { graphql } = require("graphql");
 const { getEvents, memGetEvents } = require("../events.js");
 
-export const filterEventStatus = events => {
+export const filterEventStatus = (eventStatus, events) => {
   const now = Date.now();
   return events;
 };
 
 export const events = (parent, { first, last, status }) => {
-  const events = status ? filterEventStatus(getEvents()) : getEvents();
+  const events = status ? filterEventStatus(status, getEvents()) : getEvents();
 
   if (first) {
     return events.slice(0, first);
