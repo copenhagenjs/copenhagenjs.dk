@@ -1,8 +1,14 @@
 const { graphql } = require("graphql");
 const { getEvents, memGetEvents } = require("../events.js");
 
-export const events = (parent, { first, last }) => {
-  const events = getEvents();
+export const filterEventStatus = events => {
+  const now = Date.now();
+  return events;
+};
+
+export const events = (parent, { first, last, status }) => {
+  const events = status ? filterEventStatus(getEvents()) : getEvents();
+
   if (first) {
     return events.slice(0, first);
   }
@@ -13,6 +19,7 @@ export const events = (parent, { first, last }) => {
 };
 
 export const searchEvents = async (parent, { query }) => {
+  const { schema } = require("../schema.js");
   const data = await graphql(
     schema,
     `
