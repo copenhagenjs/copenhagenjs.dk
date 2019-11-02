@@ -13,6 +13,7 @@ const {
   speaker
 } = require("./resolvers/speakers.js");
 const { speakerProfile } = require("./resolvers/speakerprofile.js");
+const { SpeakerEvent } = require("./resolvers/speaker.js");
 
 const typeDefs = gql`
   type Video {
@@ -100,10 +101,7 @@ const resolvers = {
     me
   },
   Speaker: {
-    event: async (parent, arg) => {
-      const event = memGetEvents().find(e => e.selfLink === parent.selfLink);
-      return event;
-    }
+    event: SpeakerEvent
   },
   Mutation: {
     updateProfile
