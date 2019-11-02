@@ -5,10 +5,10 @@ export const filterEventStatus = (eventStatus, events) => {
   const now = Date.now();
   switch (eventStatus) {
     case "UPCOMING":
-      return events.filter(event => now < parseInt(event.date));
+      return events.filter(event => now < event.date.getTime());
       break;
     case "PAST":
-      return events.filter(event => now > parseInt(event.date));
+      return events.filter(event => now > event.date.getTime());
       break;
     default:
       throw new Error(`status "${eventStatus}" does not exist`);

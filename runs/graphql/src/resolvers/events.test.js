@@ -15,8 +15,8 @@ test("filterEventStatus to be defined", () => {
 test("filterEventStatus filter only upcoming events", () => {
   const UPCOMING = "UPCOMING";
   const events = [
-    { date: (Date.now() - 3600 * 1000).toString(), title: "Past" },
-    { date: (Date.now() + 3600 * 1000).toString(), title: "Upcoming" }
+    { date: new Date(Date.now() - 3600 * 1000), title: "Past" },
+    { date: new Date(Date.now() + 3600 * 1000), title: "Upcoming" }
   ];
   expect(filterEventStatus(UPCOMING, events)).toEqual([events[1]]);
 });
@@ -24,8 +24,8 @@ test("filterEventStatus filter only upcoming events", () => {
 test("filterEventStatus filter only past events", () => {
   const PAST = "PAST";
   const events = [
-    { date: (Date.now() - 3600 * 1000).toString(), title: "Past" },
-    { date: (Date.now() + 3600 * 1000).toString(), title: "Upcoming" }
+    { date: new Date(Date.now() - 3600 * 1000), title: "Past" },
+    { date: new Date(Date.now() + 3600 * 1000), title: "Upcoming" }
   ];
   expect(filterEventStatus(PAST, events)).toEqual([events[0]]);
 });
