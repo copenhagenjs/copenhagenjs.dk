@@ -12,7 +12,11 @@ const {
   searchSpeakers,
   speaker
 } = require("./resolvers/speakers.js");
-const { speakerProfile } = require("./resolvers/speakerprofile.js");
+const {
+  speakerProfile,
+  SpeakerPresentationEvent
+} = require("./resolvers/speakerprofile.js");
+const { SpeakerEvent } = require("./resolvers/speaker.js");
 
 const typeDefs = gql`
   type Video {
@@ -40,10 +44,14 @@ const typeDefs = gql`
     location: String
     presentations: [Presentation]
   }
+  type SpeakerPresentation {
+    title: String
+    event: Event
+  }
   type SpeakerProfile {
     name: String
     slug: String
-    presentations: [String]
+    presentations: [SpeakerPresentation]
   }
   type Speaker {
     name: String
@@ -100,10 +108,10 @@ const resolvers = {
     me
   },
   Speaker: {
-    event: async (parent, arg) => {
-      const event = memGetEvents().find(e => e.selfLink === parent.selfLink);
-      return event;
-    }
+    event: SpeakerEvent
+  },
+  SpeakerPresentation: {
+    event: SpeakerPresentationEvent
   },
   Mutation: {
     updateProfile
