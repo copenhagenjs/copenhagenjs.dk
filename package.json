@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-storybook": "build-storybook -c .storybook -o static/storybook",
+    "build-storybook": "build-storybook -c stories/.storybook -o static/storybook",
     "build": "npm run process && next build && next export",
     "deploy": "npm run build && firebase deploy",
     "dev": "npm run process && next",
@@ -13,7 +13,7 @@
     "process": "npm run process-archive",
     "process-archive": "npx mkdirp pages/archive && node utils/processmd",
     "start": "next start",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -c stories/.storybook -p 6006",
     "test": "npm run build-storybook && npm run lint"
   },
   "keywords": [],
