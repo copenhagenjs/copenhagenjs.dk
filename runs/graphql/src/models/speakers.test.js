@@ -50,6 +50,19 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
         { name: "Donald Duck", title: "Welcome to Disney" },
         { name: "Goofy Goof", title: "React.js in Disneyland" }
       ]
+    },
+    {
+      title: "Hello CopenhagenJS 2",
+      selfLink:
+        "https://copenhagenjs.dk/archive/2011-07-21-hello-copenhagenjs-2/",
+      markdown: "Welcome",
+      date: new Date(),
+      type: "update",
+      location: "",
+      presentations: [
+        { name: "Goofy Goof", title: "Programming funny websites" },
+        { name: "Batman", title: "My secret tools" }
+      ]
     }
   ];
   getEvents.mockReturnValueOnce(events);
@@ -70,6 +83,19 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
         {
           title: "React.js in Disneyland",
           selfLink: events[0].selfLink
+        },
+        {
+          title: "Programming funny websites",
+          selfLink: events[1].selfLink
+        }
+      ]
+    },
+    {
+      name: "Batman",
+      presentations: [
+        {
+          title: "My secret tools",
+          selfLink: events[1].selfLink
         }
       ]
     }
