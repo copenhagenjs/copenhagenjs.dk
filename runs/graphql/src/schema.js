@@ -93,7 +93,7 @@ const resolvers = {
   },
   Speaker: {
     event: async (parent, arg) => {
-      const event = memGetEvents().find(e => e.link === parent.link);
+      const event = memGetEvents().find(e => e.selfLink === parent.selfLink);
       return event;
     }
   },
