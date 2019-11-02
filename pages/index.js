@@ -12,7 +12,7 @@ import Footer from '../components/Footer'
 function Event() {
   const { loading, error, data } = useQuery(gql`
     {
-      events(last: 1) {
+      events(first: 1, status: UPCOMING) {
         title
         date
         link
