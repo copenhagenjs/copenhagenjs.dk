@@ -1,6 +1,6 @@
 const { getEvents } = require("./events.js");
 jest.mock("./events.js");
-const { getSpeakers } = require("./speakers.js");
+const { getSpeakers, getSpeakerProfiles } = require("./speakers.js");
 
 test("getSpeakers be defined", () => {
   expect(getSpeakers).toBeDefined();
@@ -30,4 +30,8 @@ test("getSpeakers be defined", () => {
       title: "Welcome to Disney"
     }
   ]);
+});
+
+test("getSpeakerProfiles be defined", () => {
+  expect(getSpeakerProfiles).toBeDefined();
 });

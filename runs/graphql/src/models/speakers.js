@@ -1,7 +1,7 @@
 const { getEvents } = require("./events.js");
 const { slugify } = require("../services/slug.js");
 
-const getSpeakers = () => {
+export const getSpeakers = () => {
   return getEvents()
     .map(e => {
       return e.presentations.map(p => {
@@ -11,4 +11,4 @@ const getSpeakers = () => {
     .flat();
 };
 
-exports.getSpeakers = getSpeakers;
+export const getSpeakerProfiles = () => {};
