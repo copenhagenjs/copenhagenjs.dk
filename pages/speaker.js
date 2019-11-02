@@ -13,14 +13,43 @@ export function getParams() {
   )
 }
 
-export const SpeakerProfile = ({ name, presentations = [] }) => (
+export const SpeakerProfile = ({ name, presentations = [], user }) => (
   <>
-    <h1>{name}</h1>
-    <p>
-      {name} have spoken at {presentations.length} CopenhagenJS event
-      {presentations.length > 1 ? 's' : ''}.
-    </p>
-
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: 30 }}>
+      <div>
+        {user && user.image && (
+          <img
+            src={user.image}
+            width="200px"
+            style={{ borderRadius: 100, float: 'left', marginRight: 30 }}
+          />
+        )}
+      </div>
+      <div>
+        <h1>{name}</h1>
+        <div>
+          {name} have spoken at {presentations.length} CopenhagenJS event
+          {presentations.length > 1 ? 's' : ''}.
+        </div>
+        <ul>
+          {user && user.twitterId && (
+            <li>
+              <a href={`https://twitter.com/${user.twitterId}`}>Twitter</a>
+            </li>
+          )}
+          {user && user.githubId && (
+            <li>
+              <a href={`https://github.com/${user.githubId}`}>Github</a>
+            </li>
+          )}
+          {user && user.website && (
+            <li>
+              <a href={user.website}>Website</a>
+            </li>
+          )}
+        </ul>
+      </div>
+    </div>
     <table>
       <thead>
         <tr>
@@ -58,6 +87,12 @@ function Speakers() {
     {
       speakerProfile(slug: "${slug}") {
         name
+        user {
+          image
+          twitterId
+          githubId
+          website
+        }
         presentations {
           title
           event {
@@ -79,6 +114,7 @@ function Speakers() {
       <SpeakerProfile
         name={data.speakerProfile.name}
         presentations={data.speakerProfile.presentations}
+        user={data.speakerProfile.user}
       />
     </div>
   )
