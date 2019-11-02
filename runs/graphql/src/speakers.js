@@ -5,7 +5,7 @@ const getSpeakers = () => {
   return getEvents()
     .map(e => {
       return e.presentations.map(p => {
-        return { ...p, link: e.link, slug: slugify(p.name) };
+        return { ...p, selfLink: e.selfLink, slug: slugify(p.name) };
       });
     })
     .flat();

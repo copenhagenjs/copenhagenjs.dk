@@ -42,7 +42,7 @@ export const SpeakerProfile = ({ name, presentations = [] }) => (
                 {date.getFullYear()}
               </td>
               <td>
-                <a href={speaker.event.link}>{speaker.title}</a>
+                <a href={speaker.event.selfLink}>{speaker.title}</a>
               </td>
             </tr>
           )
@@ -60,7 +60,7 @@ function Speakers() {
         name
         title
         event {
-          link
+          selfLink
           date
         }
       }

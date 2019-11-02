@@ -10,7 +10,8 @@ test("getSpeakers be defined", () => {
   const events = [
     {
       title: "Hello CopenhagenJS",
-      link: "https://copenhagenjs.dk/archive/2011-07-21-hello-copenhagenjs/",
+      selfLink:
+        "https://copenhagenjs.dk/archive/2011-07-21-hello-copenhagenjs/",
       markdown: "Welcome",
       date: new Date(),
       type: "update",
@@ -22,7 +23,8 @@ test("getSpeakers be defined", () => {
 
   expect(getSpeakers()).toEqual([
     {
-      link: "https://copenhagenjs.dk/archive/2011-07-21-hello-copenhagenjs/",
+      selfLink:
+        "https://copenhagenjs.dk/archive/2011-07-21-hello-copenhagenjs/",
       name: "Donald Duck",
       slug: "donald-duck",
       title: "Welcome to Disney"
