@@ -3,6 +3,11 @@ import React from 'react'
 export default () => (
   <section className="newsletter">
     <style jsx>{`
+      .discord-logo {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+      }
       .newsletter {
         background-color: #f8de48;
         text-align: center;
@@ -94,6 +99,17 @@ export default () => (
           </g>
         </svg>
         Subscribe on Youtube
+      </a>
+    </div>
+
+    <div className="discord">
+      <a href="https://discord.gg/pWDT2w">
+        <img
+          className="discord-logo"
+          src="/static/images/discord-logo.svg"
+          alt="copenhagenjs discord"
+        />
+        Join our Discord
       </a>
     </div>
 
