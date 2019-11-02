@@ -29,6 +29,13 @@ function EventGraph() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+  if (data.events.length === 0)
+    return (
+      <>
+        <h1>No upcoming event yet!</h1>
+        <p>The next event is coming up really soon!</p>
+      </>
+    )
 
   const { content, title, date, link, presentations, location } = data.events[0]
   return (
