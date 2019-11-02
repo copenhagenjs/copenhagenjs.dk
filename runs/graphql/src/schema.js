@@ -41,10 +41,14 @@ const typeDefs = gql`
     location: String
     presentations: [Presentation]
   }
+  type SpeakerPresentation {
+    title: String
+    event: Event
+  }
   type SpeakerProfile {
     name: String
     slug: String
-    presentations: [String]
+    presentations: [SpeakerPresentation]
   }
   type Speaker {
     name: String
