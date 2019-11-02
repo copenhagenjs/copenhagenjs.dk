@@ -1,7 +1,7 @@
-import { getSpeakers } from "../speakers.js";
+import { getSpeakers } from "../models/speakers.js";
 import { speakerProfile } from "./speakerprofile.js";
 import { slugify } from "../slug.js";
-jest.mock("../speakers.js");
+jest.mock("../models/speakers.js");
 
 test("speakerProfile should be defined", () => {
   expect(speakerProfile).toBeDefined();

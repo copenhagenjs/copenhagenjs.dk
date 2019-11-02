@@ -1,4 +1,4 @@
-import { getSpeakers } from "../speakers.js";
+import { getSpeakers } from "../models/speakers.js";
 import { slugify } from "../slug.js";
 
 export const speakerProfile = (parent, { slug }) => {
