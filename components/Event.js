@@ -35,13 +35,15 @@ export default ({ title, date, html, location, speakers, link }) => {
         ''
       )}
       {location ? <Map location={location} /> : ''}
-      {link && (
+      {link ? (
         <>
           <hr style={{ margin: '20px 0' }} />
           <a className="next-meetup__button" href={link}>
             Sign up here!
           </a>
         </>
+      ) : (
+        ''
       )}
     </div>
   )

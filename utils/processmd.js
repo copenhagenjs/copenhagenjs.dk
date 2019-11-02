@@ -30,12 +30,12 @@ export default () => (
         'CopenhagenJS Event'}</title>
     </Head>
     <Event
-      title="${content.attributes.title}"
-      date="${content.attributes.date}"
+      title="${content.attributes.title || ''}"
+      date="${content.attributes.date || ''}"
       html={\`${html}\`}
-      location="${content.attributes.location}"
+      location="${content.attributes.location || ''}"
       speakers={${JSON.stringify(content.attributes.speakers)}}
-      link="${content.attributes.link}"
+      link="${content.attributes.link || ''}"
     />
   </Page> 
 )
