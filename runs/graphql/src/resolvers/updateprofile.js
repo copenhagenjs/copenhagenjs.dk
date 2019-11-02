@@ -1,4 +1,4 @@
-import { updateUser } from "../firebase.js";
+import { updateUser } from "../services/firebase.js";
 
 export const updateProfile = async (parent, arg, context) => {
   if (!context.user) {

@@ -1,5 +1,5 @@
-jest.mock("../firebase.js");
-import { getUser } from "../firebase.js";
+jest.mock("../services/firebase.js");
+import { getUser } from "../services/firebase.js";
 import { me } from "./me.js";
 
 test("me to be defined", () => {

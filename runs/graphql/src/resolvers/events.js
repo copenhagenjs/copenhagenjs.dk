@@ -1,5 +1,5 @@
 const { graphql } = require("graphql");
-const { getEvents, memGetEvents } = require("../events.js");
+const { getEvents, memGetEvents } = require("../models/events.js");
 
 export const filterEventStatus = (eventStatus, events) => {
   const now = Date.now();

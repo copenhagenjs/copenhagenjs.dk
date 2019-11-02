@@ -1,8 +1,8 @@
 const { graphql } = require("graphql");
 const { gql } = require("apollo-server-express");
 import { makeExecutableSchema } from "graphql-tools";
-const { getEvents, memGetEvents } = require("./events.js");
-const { getSpeakers } = require("./speakers.js");
+const { getEvents, memGetEvents } = require("./models/events.js");
+const { getSpeakers } = require("./models/speakers.js");
 const { me } = require("./resolvers/me.js");
 const { updateProfile } = require("./resolvers/updateprofile.js");
 const { video, videos } = require("./resolvers/videos.js");

@@ -1,4 +1,4 @@
-const { getSpeakers } = require("../speakers.js");
+const { getSpeakers } = require("../models/speakers.js");
 
 export const speakers = () => {
   return getSpeakers();
