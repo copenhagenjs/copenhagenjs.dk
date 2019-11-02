@@ -1,5 +1,5 @@
 const videosData = require("../../data/videos.js");
-const { slugify } = require("../slug.js");
+const { slugify } = require("../services/slug.js");
 
 const prepareVideos = () => {
   return videosData.videos.map(v => ({

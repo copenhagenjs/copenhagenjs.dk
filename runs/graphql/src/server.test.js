@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import { context } from "./server.js";
-jest.mock("./firebase.js");
-const { decodeJWT } = require("./firebase.js");
+jest.mock("./services/firebase.js");
+const { decodeJWT } = require("./services/firebase.js");
 
 test("context defined", () => {
   expect(context).toBeDefined();

@@ -1,5 +1,5 @@
 const { getEvents } = require("./events.js");
-const { slugify } = require("./slug.js");
+const { slugify } = require("../services/slug.js");
 
 const getSpeakers = () => {
   return getEvents()

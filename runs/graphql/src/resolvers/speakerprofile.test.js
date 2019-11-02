@@ -1,6 +1,6 @@
 import { getSpeakers } from "../models/speakers.js";
 import { speakerProfile } from "./speakerprofile.js";
-import { slugify } from "../slug.js";
+import { slugify } from "../services/slug.js";
 jest.mock("../models/speakers.js");
 
 test("speakerProfile should be defined", () => {

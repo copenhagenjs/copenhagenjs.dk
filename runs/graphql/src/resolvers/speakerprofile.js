@@ -1,5 +1,5 @@
 import { getSpeakers } from "../models/speakers.js";
-import { slugify } from "../slug.js";
+import { slugify } from "../services/slug.js";
 
 export const speakerProfile = (parent, { slug }) => {
   const parsedPresentations = getSpeakers().filter(s =>

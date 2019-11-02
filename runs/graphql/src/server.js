@@ -5,7 +5,7 @@ import { makeExecutableSchema } from "graphql-tools";
 const { typeDefs, resolvers } = require("./schema.js");
 const http = require("http");
 const admin = require("firebase-admin");
-const { decodeJWT } = require("./firebase.js");
+const { decodeJWT } = require("./services/firebase.js");
 
 export const context = async ({ req }) => {
   const token = (req.headers.authorization || "").replace("bearer ", "");
