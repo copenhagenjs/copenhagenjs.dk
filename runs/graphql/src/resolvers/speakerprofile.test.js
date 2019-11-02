@@ -1,4 +1,4 @@
-import { getSpeakers } from "../models/speakers.js";
+import { getSpeakerProfiles } from "../models/speakers.js";
 import { speakerProfile } from "./speakerprofile.js";
 import { slugify } from "../services/slug.js";
 jest.mock("../models/speakers.js");
@@ -8,22 +8,16 @@ test("speakerProfile should be defined", () => {
 });
 
 test("speakerProfile should return a speaker", () => {
-  getSpeakers.mockReturnValue(
-    [
-      {
-        name: "Donald Duck",
-        title: "My first presentations"
-      },
-      {
-        name: "Donald Duck",
-        title: "Second presentation"
-      }
-    ].map(i => ({ ...i, slug: slugify(i.name) }))
-  );
+  getSpeakerProfiles.mockReturnValue([
+    {
+      slug: "donald-duck"
+    },
+    {
+      slug: "batman"
+    }
+  ]);
   const result = {
-    name: "Donald Duck",
-    slug: "donald-duck",
-    presentations: ["My first presentations", "Second presentation"]
+    slug: "donald-duck"
   };
   const args = {
     slug: result.slug
