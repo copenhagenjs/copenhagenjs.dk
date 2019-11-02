@@ -29,11 +29,14 @@ export default () => (
       <title>${`${content.attributes.title} - CopenhagenJS` ||
         'CopenhagenJS Event'}</title>
     </Head>
-    <Event title="${content.attributes.title}" date="${
-        content.attributes.date
-      }" html={\`${html}\`} location="${
-        content.attributes.location
-      }" speakers={${JSON.stringify(content.attributes.speakers)}} />
+    <Event
+      title="${content.attributes.title}"
+      date="${content.attributes.date}"
+      html={\`${html}\`}
+      location="${content.attributes.location}"
+      speakers={${JSON.stringify(content.attributes.speakers)}}
+      link={${content.attributes.link}}
+    />
   </Page> 
 )
       `
