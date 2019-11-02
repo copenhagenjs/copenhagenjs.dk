@@ -23,7 +23,7 @@ genrule(
 genrule(
   name = "deploy",
   srcs = ["build.tar.gz", "firebase.json"],
-  cmd = "mkdir out && tar -xf $(location build.tar.gz) -C out && firebase deploy | tee $(location firebase_deploy.txt)",
+  cmd = "mkdir -p out && tar -xf $(location build.tar.gz) -C out && firebase deploy | tee $(location firebase_deploy.txt)",
   outs = ["firebase_deploy.txt"],
   tags = ["manual", "local"]
 )
