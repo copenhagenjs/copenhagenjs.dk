@@ -32,6 +32,7 @@ const typeDefs = gql`
     title: String
     markdown: String
     content: String
+    selfLink: String
     link: String
     date: String
     type: String

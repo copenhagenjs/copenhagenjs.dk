@@ -2,7 +2,7 @@ import React from 'react'
 import Map from './Map'
 import SpeakerSchedule from './SpeakerSchedule.js'
 
-export default ({ title, date, html, location, speakers }) => {
+export default ({ title, date, html, location, speakers, link }) => {
   return (
     <div>
       <style jsx>{`
@@ -35,6 +35,14 @@ export default ({ title, date, html, location, speakers }) => {
         ''
       )}
       {location ? <Map location={location} /> : ''}
+      {link && (
+        <>
+          <hr style={{ margin: '20px 0' }} />
+          <a className="next-meetup__button" href={link}>
+            Sign up here!
+          </a>
+        </>
+      )}
     </div>
   )
 }

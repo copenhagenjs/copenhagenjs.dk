@@ -8,8 +8,9 @@ import Layout from '../components/Layout'
 import Map from '../components/Map'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import Event from '../components/Event'
 
-function Event() {
+function EventGraph() {
   const { loading, error, data } = useQuery(gql`
     {
       events(first: 1, status: UPCOMING) {
@@ -18,50 +19,36 @@ function Event() {
         link
         content
         location
+        presentations {
+          title
+          name
+        }
       }
     }
   `)
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+  if (data.events.length === 0)
+    return (
+      <>
+        <h1>No upcoming event yet!</h1>
+        <p>The next event is coming up really soon!</p>
+      </>
+    )
 
+  const { content, title, date, link, presentations, location } = data.events[0]
   return (
-    <section className="page">
-      <style jsx>{`
-        .page {
-          flex: 1;
-        }
-        .date {
-          font-size: 1.5rem;
-        }
-        .description {
-        }
-        .description :global(h1) {
-          margin: 5px 0;
-        }
-      `}</style>
-      <div className="date">
-        {data.events[0].date &&
-          new Date(parseInt(data.events[0].date)).toLocaleString('da-DK')}
-      </div>
-      <div
-        className="description"
-        dangerouslySetInnerHTML={{
-          __html: data.events[0].content
-        }}
+    <>
+      <Event
+        title={title}
+        date={new Date(parseInt(date))}
+        html={content}
+        location={location}
+        speakers={presentations}
+        link={link}
       />
-      <div className="next-meetup">
-        <p>Read more and sign up for the next event here:</p>
-
-        <a
-          className="next-meetup__button"
-          href="https://www.meetup.com/copenhagenjs/"
-        >
-          View meetup group
-        </a>
-      </div>
-      {data.events[0].location && <Map location={data.events[0].location} />}
-    </section>
+    </>
   )
 }
 
@@ -84,7 +71,9 @@ export default () => (
           in Copenhagen.
         </h3>
       </header>
-      <Event />
+      <section className="page">
+        <EventGraph />
+      </section>
       <Footer />
     </Layout>
   </ApolloProvider>

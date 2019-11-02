@@ -11,7 +11,7 @@ function Events() {
       events {
         title
         date
-        link
+        selfLink
         type
       }
     }
@@ -32,10 +32,10 @@ function Events() {
           </tr>
         </thead>
         <tbody>
-          {data.events.reverse().map(({ title, date, link, type }) => (
+          {data.events.reverse().map(({ title, date, selfLink, type }) => (
             <tr key={title}>
               <td>
-                <a href={link}>{title}</a>
+                <a href={selfLink}>{title}</a>
               </td>
               <td>{new Date(parseInt(date)).toLocaleString('da-DK')}</td>
               <td>{type}</td>

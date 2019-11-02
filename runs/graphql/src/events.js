@@ -20,7 +20,8 @@ const getEvents = () => {
 
     return {
       title: parsed.attributes.title || post.replace(".md", ""),
-      link: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
+      selfLink: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
+      link: parsed.attributes.link || "",
       markdown: parsed.body,
       content: marked(parsed.body),
       date,
