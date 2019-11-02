@@ -21,6 +21,7 @@ export const getSpeakerProfiles = () => {
       const profiles = presentations.map(presentation => {
         return {
           name: presentation.name,
+          slug: slugify(presentation.name),
           presentations: [{ title: presentation.title, selfLink }]
         };
       });

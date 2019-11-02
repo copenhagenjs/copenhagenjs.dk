@@ -70,6 +70,7 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
   expect(profiles).toEqual([
     {
       name: "Donald Duck",
+      slug: "donald-duck",
       presentations: [
         {
           title: "Welcome to Disney",
@@ -79,6 +80,7 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
     },
     {
       name: "Goofy Goof",
+      slug: "goofy-goof",
       presentations: [
         {
           title: "React.js in Disneyland",
@@ -92,6 +94,7 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
     },
     {
       name: "Batman",
+      slug: "batman",
       presentations: [
         {
           title: "My secret tools",
