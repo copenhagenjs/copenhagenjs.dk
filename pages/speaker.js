@@ -24,14 +24,26 @@ export const SpeakerProfile = ({ name, presentations = [] }) => (
     <table>
       <thead>
         <tr>
+          <th>Date</th>
           <th>Title</th>
         </tr>
       </thead>
       <tbody>
-        {presentations.reverse().map(title => {
+        {presentations.reverse().map(presentation => {
+          const date = new Date(parseInt(presentation.event.date))
           return (
-            <tr key={title}>
-              <td>{title}</td>
+            <tr key={presentation.title}>
+              <td>
+                {date
+                  .getDate()
+                  .toString()
+                  .padStart(2, '0')}
+                /{(date.getMonth() + 1).toString().padStart(2, '0')}/
+                {date.getFullYear()}
+              </td>
+              <td>
+                <a href={presentation.event.selfLink}>{presentation.title}</a>
+              </td>
             </tr>
           )
         })}
@@ -46,7 +58,13 @@ function Speakers() {
     {
       speakerProfile(slug: "${slug}") {
         name
-        presentations
+        presentations {
+          title
+          event {
+            date
+            selfLink
+          }
+        }
       }
     }
   `)
