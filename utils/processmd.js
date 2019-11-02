@@ -35,7 +35,7 @@ export default () => (
       html={\`${html}\`}
       location="${content.attributes.location}"
       speakers={${JSON.stringify(content.attributes.speakers)}}
-      link={${content.attributes.link}}
+      link="${content.attributes.link}"
     />
   </Page> 
 )
