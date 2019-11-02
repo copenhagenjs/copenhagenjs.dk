@@ -14,7 +14,7 @@ function Speakers() {
         title
         slug
         event {
-          link
+          selfLink
         }
       }
     }
@@ -33,7 +33,7 @@ function Speakers() {
               <a href={'/speaker?name=' + speaker.slug}>{speaker.name}</a>
             </strong>
             {' - '}
-            <a href={speaker.event.link}>{speaker.title}</a>
+            <a href={speaker.event.selfLink}>{speaker.title}</a>
           </div>
         )
       })}
