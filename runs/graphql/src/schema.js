@@ -12,7 +12,10 @@ const {
   searchSpeakers,
   speaker
 } = require("./resolvers/speakers.js");
-const { speakerProfile } = require("./resolvers/speakerprofile.js");
+const {
+  speakerProfile,
+  SpeakerPresentationEvent
+} = require("./resolvers/speakerprofile.js");
 const { SpeakerEvent } = require("./resolvers/speaker.js");
 
 const typeDefs = gql`
@@ -106,6 +109,9 @@ const resolvers = {
   },
   Speaker: {
     event: SpeakerEvent
+  },
+  SpeakerPresentation: {
+    event: SpeakerPresentationEvent
   },
   Mutation: {
     updateProfile
