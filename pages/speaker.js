@@ -6,6 +6,7 @@ import { client } from '../services/graphql.js'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
+import { Embed } from '../components/YoutubeEmbed'
 
 export function getParams() {
   return new URLSearchParams(
@@ -13,7 +14,36 @@ export function getParams() {
   )
 }
 
-export const SpeakerProfile = ({ name, presentations = [], user }) => (
+const SpeakerProfileVideos = {
+  tag: ({ videos }) => {
+    if (videos.length === 0) return null
+    return (
+      <div style={{ margin: '20px 0' }}>
+        <style jsx>{`
+          @media (min-width: 700px) {
+            .video {
+              width: 50%;
+            }
+          }
+        `}</style>
+        Videos:
+        {videos.map(video => (
+          <div className="video" key={video}>
+            <Embed youtubeId={video.youtubeId} />
+          </div>
+        ))}
+      </div>
+    )
+  },
+  fragment: gql`
+    fragment SpeakerProfileVideos on Video {
+      title
+      youtubeId
+    }
+  `
+}
+
+export const SpeakerProfile = ({ name, presentations = [], user, videos }) => (
   <>
     <div style={{ display: 'flex', alignItems: 'center', marginBottom: 30 }}>
       <div>
@@ -50,6 +80,7 @@ export const SpeakerProfile = ({ name, presentations = [], user }) => (
         </ul>
       </div>
     </div>
+    <SpeakerProfileVideos.tag videos={videos} />
     <table>
       <thead>
         <tr>
@@ -84,9 +115,12 @@ export const SpeakerProfile = ({ name, presentations = [], user }) => (
 function Speakers() {
   const slug = getParams().get('name')
   const { loading, error, data } = useQuery(gql`
-    {
+    query {
       speakerProfile(slug: "${slug}") {
         name
+        videos {
+          ...SpeakerProfileVideos
+        }
         user {
           image
           twitterId
@@ -108,6 +142,7 @@ function Speakers() {
         }
       }
     }
+    ${SpeakerProfileVideos.fragment}
   `)
 
   if (loading) return <span>Loading...</span>
@@ -122,6 +157,7 @@ function Speakers() {
         name={data.speakerProfile.name}
         presentations={data.speakerProfile.presentations}
         user={user}
+        videos={data.speakerProfile.videos}
       />
     </div>
   )
