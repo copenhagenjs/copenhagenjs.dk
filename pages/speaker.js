@@ -93,6 +93,12 @@ function Speakers() {
           githubId
           website
         }
+        ghostUser {
+          image
+          twitterId
+          githubId
+          website
+        }
         presentations {
           title
           event {
@@ -106,6 +112,7 @@ function Speakers() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+  const user = data.speakerProfile.ghostUser || data.speakerProfile.user
   return (
     <div>
       <Head>
@@ -114,7 +121,7 @@ function Speakers() {
       <SpeakerProfile
         name={data.speakerProfile.name}
         presentations={data.speakerProfile.presentations}
-        user={data.speakerProfile.user}
+        user={user}
       />
     </div>
   )
