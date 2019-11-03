@@ -20,18 +20,27 @@ const SpeakerProfileVideos = {
     return (
       <div style={{ margin: '20px 0' }}>
         <style jsx>{`
+          .video {
+            margin-bottom: 20px;
+          }
           @media (min-width: 700px) {
+            .videos {
+              display: flex;
+            }
             .video {
               width: 50%;
+              margin: 0 20px 0 0;
             }
           }
         `}</style>
         Videos:
-        {videos.map(video => (
-          <div className="video" key={video}>
-            <Embed youtubeId={video.youtubeId} />
-          </div>
-        ))}
+        <div className="videos">
+          {videos.map(video => (
+            <div className="video" key={video}>
+              <Embed youtubeId={video.youtubeId} />
+            </div>
+          ))}
+        </div>
       </div>
     )
   },
