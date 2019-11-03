@@ -1,11 +1,12 @@
 const videosData = require("../../data/videos.js");
 const { slugify } = require("../services/slug.js");
 
-const prepareVideos = () => {
+export const prepareVideos = () => {
   return videosData.videos.map(v => ({
     youtubeId: v[0],
     title: v[1],
     name: v[2],
+    speakerSlug: slugify(v[2]),
     slug: slugify(v[2] + " " + v[1])
   }));
 };
