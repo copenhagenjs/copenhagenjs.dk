@@ -1,7 +1,7 @@
 const { memGetEvents } = require("../models/events.js");
 import { getSpeakerProfiles } from "../models/speakers.js";
 import { slugify } from "../services/slug.js";
-import { searchUser } from "../services/firebase.js";
+import { searchUser, searchGhostUser } from "../services/firebase.js";
 
 export const speakerProfile = (parent, { slug }) => {
   const parsedPresentations = getSpeakerProfiles().find(
@@ -19,6 +19,12 @@ export const SpeakerPresentationEvent = (parent, args) => {
 
 export const SpeakerProfileUser = async (parent, args) => {
   const users = await searchUser("speakerProfile", parent.slug);
+  if (users.size === 0) return null;
+  return users.docs[0].data();
+};
+
+export const SpeakerProfileGhostUser = async (parent, args) => {
+  const users = await searchGhostUser("speakerProfile", parent.slug);
   if (users.size === 0) return null;
   return users.docs[0].data();
 };

@@ -15,7 +15,8 @@ const {
 const {
   speakerProfile,
   SpeakerPresentationEvent,
-  SpeakerProfileUser
+  SpeakerProfileUser,
+  SpeakerProfileGhostUser
 } = require("./resolvers/speakerprofile.js");
 const { SpeakerEvent } = require("./resolvers/speaker.js");
 
@@ -54,6 +55,7 @@ const typeDefs = gql`
     slug: String
     presentations: [SpeakerPresentation]
     user: User
+    ghostUser: User
   }
   type Speaker {
     name: String
@@ -113,7 +115,8 @@ const resolvers = {
     event: SpeakerEvent
   },
   SpeakerProfile: {
-    user: SpeakerProfileUser
+    user: SpeakerProfileUser,
+    ghostUser: SpeakerProfileGhostUser
   },
   SpeakerPresentation: {
     event: SpeakerPresentationEvent

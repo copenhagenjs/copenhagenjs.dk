@@ -25,6 +25,12 @@ export async function searchUser(key, value) {
   return results;
 }
 
+export async function searchGhostUser(key, value) {
+  const usersCol = db.collection("ghostusers");
+  const results = await usersCol.where(key, "==", value).get();
+  return results;
+}
+
 async function updateUser(userId, data) {
   const doc = db.collection("users").doc(userId);
   const update = await doc.set(data);
