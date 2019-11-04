@@ -42,6 +42,13 @@ An HTML version of the book is available online for free.
 
 <a href='http://speakingjs.com'>Check out Axel Rauschmayer's Speaking JavaScript</a>
 
+
+### 7. Frontend Masters
+This website has amazing video courses. It is subscription-based. However some previews are available. 
+If you are a student you can get 6 months for free through the <a href="https://frontendmasters.com/welcome/github-student-developers/">GitHub Student Developer Pack.</a>. 
+
+<a href='https://frontendmasters.com/learn/javascript/'>Check out Frontend Masters's JavaScript Learning Path</a>
+
 `
 export default () => {
   return (
