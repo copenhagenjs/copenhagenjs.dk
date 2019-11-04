@@ -19,6 +19,11 @@ async function getUser(userId) {
   return doc;
 }
 
+export async function getUsers() {
+  const doc = await db.collection("users").get();
+  return doc.docs;
+}
+
 export async function searchUser(key, value) {
   const usersCol = db.collection("users");
   const results = await usersCol.where(key, "==", value).get();
