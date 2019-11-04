@@ -64,5 +64,17 @@ export const videos = [
     'From JavaScript to TypeScript: how a different approach can make it more helpful',
     'Eduardo Sorribas'
   ],
-  ['sRBUkS6gT8k', 'HackYourFuture - 2 years later', 'Christopher Klüter']
+  ['sRBUkS6gT8k', 'HackYourFuture - 2 years later', 'Christopher Klüter'],
+  [
+    'UhGBDtt2E8g',
+    'How we replaced our Drupal CMS with 589 lines of JavaScript',
+    'Allan Ebdrup'
+  ],
+  [
+    '1YXzTiER5qM',
+    'WebRTC streaming to large audiences',
+    'Vasil Dimitrov & Daniel Pouzemski'
+  ],
+  ['qkYwXSd-oK4', 'My Coffee App with React Native', 'Martin Lichstam'],
+  ['fqIdpPfnAW8', 'Welcome to CopenhagenJS', 'Zoey Zou']
 ]
