@@ -5,14 +5,21 @@ import { makeExecutableSchema } from "graphql-tools";
 const { typeDefs, resolvers } = require("./schema.js");
 const http = require("http");
 const admin = require("firebase-admin");
-const { decodeJWT } = require("./services/firebase.js");
+const { decodeJWT, getUser } = require("./services/firebase.js");
 
 export const context = async ({ req }) => {
   const token = (req.headers.authorization || "").replace("bearer ", "");
 
   try {
     const decodedToken = await decodeJWT(token);
-    return { user: decodedToken };
+    if (decodedToken) {
+      const user = await getUser(decodedToken.user_id);
+      return { token: decodedToken, user: user.docs[0] };
+    }
+    return {
+      token: undefined,
+      user: undefined
+    };
   } catch (e) {
     if (e.code === "auth/argument-error") {
       return {};

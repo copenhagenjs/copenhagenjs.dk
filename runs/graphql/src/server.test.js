@@ -1,7 +1,17 @@
+jest.mock(
+  "../data/videos.js",
+  () => {
+    return {
+      videos: []
+    };
+  },
+  { virtual: true }
+);
+
 import jwt from "jsonwebtoken";
 import { context } from "./server.js";
 jest.mock("./services/firebase.js");
-const { decodeJWT } = require("./services/firebase.js");
+const { decodeJWT, getUser } = require("./services/firebase.js");
 
 test("context defined", () => {
   expect(context).toBeDefined();
@@ -25,8 +35,17 @@ test("context - good token", async () => {
       sign_in_provider: "password"
     }
   };
+
   const testToken = jwt.sign(officialPayload, "test");
   decodeJWT.mockReturnValueOnce(Promise.resolve(jwt.verify(testToken, "test")));
+
+  const user = {
+    name: "Donald Duck"
+  };
+  getUser.mockReturnValueOnce({
+    docs: [user]
+  });
+
   const value = await context({
     req: {
       headers: {
@@ -34,8 +53,11 @@ test("context - good token", async () => {
       }
     }
   });
+
+  expect(getUser).toHaveBeenCalledWith(officialPayload.user_id);
   expect(value).toEqual({
-    user: officialPayload
+    token: officialPayload,
+    user
   });
 });
 
