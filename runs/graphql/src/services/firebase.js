@@ -38,7 +38,7 @@ export async function searchGhostUser(key, value) {
 
 async function updateUser(userId, data) {
   const doc = db.collection("users").doc(userId);
-  const update = await doc.set(data);
+  const update = await doc.set(data, { merge: true });
   return update;
 }
 
