@@ -43,7 +43,7 @@ test("context - good token", async () => {
     name: "Donald Duck"
   };
   getUser.mockReturnValueOnce({
-    docs: [user]
+    data: () => user
   });
 
   const value = await context({

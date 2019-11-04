@@ -14,7 +14,7 @@ export const context = async ({ req }) => {
     const decodedToken = await decodeJWT(token);
     if (decodedToken) {
       const user = await getUser(decodedToken.user_id);
-      return { token: decodedToken, user: user.docs[0] };
+      return { token: decodedToken, user: user.data() };
     }
     return {
       token: undefined,
