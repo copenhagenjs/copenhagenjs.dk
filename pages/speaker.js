@@ -6,6 +6,7 @@ import { client } from '../services/graphql.js'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
+import { Embed } from '../components/YoutubeEmbed'
 
 export function getParams() {
   return new URLSearchParams(
@@ -13,9 +14,47 @@ export function getParams() {
   )
 }
 
-export const SpeakerProfile = ({ name, presentations = [], user }) => (
+const SpeakerProfileVideos = {
+  tag: ({ videos }) => {
+    if (videos.length === 0) return null
+    return (
+      <div style={{ margin: '0 0 20px' }}>
+        <style jsx>{`
+          .video {
+            margin-bottom: 20px;
+          }
+          @media (min-width: 700px) {
+            .videos {
+              display: flex;
+            }
+            .video {
+              width: 50%;
+              margin: 0 20px 0 0;
+            }
+          }
+        `}</style>
+        Videos:
+        <div className="videos">
+          {videos.map(video => (
+            <div className="video" key={video}>
+              <Embed youtubeId={video.youtubeId} />
+            </div>
+          ))}
+        </div>
+      </div>
+    )
+  },
+  fragment: gql`
+    fragment SpeakerProfileVideos on Video {
+      title
+      youtubeId
+    }
+  `
+}
+
+export const SpeakerProfile = ({ name, presentations = [], user, videos }) => (
   <>
-    <div style={{ display: 'flex', alignItems: 'center', marginBottom: 30 }}>
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20 }}>
       <div>
         {user && user.image && (
           <img
@@ -31,7 +70,7 @@ export const SpeakerProfile = ({ name, presentations = [], user }) => (
           {name} have spoken at {presentations.length} CopenhagenJS event
           {presentations.length > 1 ? 's' : ''}.
         </div>
-        <ul>
+        <ul style={{ margin: '20px 0 0' }}>
           {user && user.twitterId && (
             <li>
               <a href={`https://twitter.com/${user.twitterId}`}>Twitter</a>
@@ -50,6 +89,7 @@ export const SpeakerProfile = ({ name, presentations = [], user }) => (
         </ul>
       </div>
     </div>
+    <SpeakerProfileVideos.tag videos={videos} />
     <table>
       <thead>
         <tr>
@@ -84,9 +124,12 @@ export const SpeakerProfile = ({ name, presentations = [], user }) => (
 function Speakers() {
   const slug = getParams().get('name')
   const { loading, error, data } = useQuery(gql`
-    {
+    query {
       speakerProfile(slug: "${slug}") {
         name
+        videos {
+          ...SpeakerProfileVideos
+        }
         user {
           image
           twitterId
@@ -108,6 +151,7 @@ function Speakers() {
         }
       }
     }
+    ${SpeakerProfileVideos.fragment}
   `)
 
   if (loading) return <span>Loading...</span>
@@ -122,6 +166,7 @@ function Speakers() {
         name={data.speakerProfile.name}
         presentations={data.speakerProfile.presentations}
         user={user}
+        videos={data.speakerProfile.videos}
       />
     </div>
   )
