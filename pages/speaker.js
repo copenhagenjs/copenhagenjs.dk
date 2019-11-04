@@ -18,7 +18,7 @@ const SpeakerProfileVideos = {
   tag: ({ videos }) => {
     if (videos.length === 0) return null
     return (
-      <div style={{ margin: '20px 0' }}>
+      <div style={{ margin: '0 0 20px' }}>
         <style jsx>{`
           .video {
             margin-bottom: 20px;
@@ -54,7 +54,7 @@ const SpeakerProfileVideos = {
 
 export const SpeakerProfile = ({ name, presentations = [], user, videos }) => (
   <>
-    <div style={{ display: 'flex', alignItems: 'center', marginBottom: 30 }}>
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20 }}>
       <div>
         {user && user.image && (
           <img
@@ -70,7 +70,7 @@ export const SpeakerProfile = ({ name, presentations = [], user, videos }) => (
           {name} have spoken at {presentations.length} CopenhagenJS event
           {presentations.length > 1 ? 's' : ''}.
         </div>
-        <ul>
+        <ul style={{ margin: '20px 0 0' }}>
           {user && user.twitterId && (
             <li>
               <a href={`https://twitter.com/${user.twitterId}`}>Twitter</a>
