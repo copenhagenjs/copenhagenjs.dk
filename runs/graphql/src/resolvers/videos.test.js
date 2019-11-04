@@ -18,6 +18,7 @@ test("call videos", () => {
     {
       name: "Peter Müller",
       slug: "peter-muller-shape-your-workflows-with-custom-eslint-plugins",
+      speakerSlug: "peter-muller",
       title: "Shape your workflows with custom eslint plugins",
       youtubeId: "Zu8P6xejHuU"
     }
