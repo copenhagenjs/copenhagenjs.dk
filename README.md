@@ -14,6 +14,11 @@ $ npm run dev
 
 And the CopenhagenJS Website should become available on `http://localhost:3000`
 
+## Storybook
+
+We uses storybook for our components and we deploy it publicly here:
+[CopenhagenJS Storybook](https://copenhagenjs.dk/static/storybook/)
+
 ## How to run services
 
 First install [bazel](https://bazel.build/)
