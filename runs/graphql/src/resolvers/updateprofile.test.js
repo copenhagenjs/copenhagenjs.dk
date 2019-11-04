@@ -15,7 +15,7 @@ test("updateProfile with user", async () => {
   const profile = await updateProfile(
     null,
     { input: userInput },
-    { user: { user_id: "donald" } }
+    { token: { user_id: "donald" } }
   );
   expect(profile).toEqual(userInput);
   expect(updateUser).lastCalledWith("donald", {
