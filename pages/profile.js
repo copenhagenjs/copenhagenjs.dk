@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import 'isomorphic-unfetch'
 import { gql } from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
@@ -11,62 +11,19 @@ import ApolloClient from 'apollo-boost'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 import { ProfileEditForm } from '../components/ProfileEditForm'
+import {
+  initFirebase,
+  firebaseLogin,
+  logoutFirebase,
+  redirectToLogin
+} from '../services/firebase.js'
 
 const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
 })
 
-const initFirebase = () => {
-  const firebaseConfig = {
-    apiKey: 'AIzaSyBchWNVQsL7YEcTtf369PYTP-DLTiB7Vac',
-    projectId: 'copenhagenjsdk'
-  }
-  if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig)
-  }
-}
-
-const redirectToLogin = () => {
-  window.location = '/login'
-}
-
 let token = ''
 let outerGetProfile = null
-const firebaseLogin = new Promise((resolve, reject) => {
-  initFirebase()
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      user.getIdToken().then(function(idToken) {
-        resolve(idToken)
-      })
-    } else {
-      reject(new Error('no user'))
-    }
-  })
-})
-  .then(newToken => {
-    token = newToken
-    outerGetProfile()
-  })
-  .catch(e => {
-    console.log('It is okay', e)
-    if (e.message === 'no user') {
-      redirectToLogin()
-    }
-  })
-
-const logoutFirebase = () => {
-  firebase
-    .auth()
-    .signOut()
-    .then(function() {
-      console.log('signed out')
-      redirectToLogin()
-    })
-    .catch(function(error) {
-      console.log('Sign out error', error)
-    })
-}
 
 const UPDATE_PROFILE = gql`
   mutation UpdateProfile($input: ProfileInput!) {
@@ -109,6 +66,20 @@ const Profile = () => {
     }
   )
   outerGetProfile = getProfile
+
+  useEffect(() => {
+    firebaseLogin()
+      .then(newToken => {
+        token = newToken
+        outerGetProfile()
+      })
+      .catch(e => {
+        console.log('It is okay', e)
+        if (e.message === 'no user') {
+          redirectToLogin()
+        }
+      })
+  }, [])
 
   const [
     updateProfile,
