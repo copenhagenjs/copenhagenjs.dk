@@ -4,6 +4,11 @@ import { slugify } from "../services/slug.js";
 import { searchUser, searchGhostUser } from "../services/firebase.js";
 import { prepareVideos } from "./videos.js";
 
+export const speakerProfiles = (parent, args) => {
+  const parsedPresentations = getSpeakerProfiles();
+  return parsedPresentations;
+};
+
 export const speakerProfile = (parent, { slug }) => {
   const parsedPresentations = getSpeakerProfiles().find(
     speakerProfile => speakerProfile.slug === slug
