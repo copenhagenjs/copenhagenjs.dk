@@ -33,7 +33,7 @@ It is time for the November edition of CopenhagenJS. This time we are hosted by 
 
 ## ** Something New **
 
-JS Open mic is something that we believe can add more value to the meetup for the attendees and we want to experiment on. We will offer three one-minute slots for people to voluntarily talk about a) community events they are organizing, b) looking for people to join their Open source project, c) their availability for hire, etc. It should NOT be any commercial advertisements but we encourage self-promoting or community-centric everything.
+JS Open mic is a platform that encourages individuals to do shout-outs. We will offer three one-minute slots for people to voluntarily talk about a) community events they are organizing, b) looking for people to join their Open source project, c) their availability for hire, etc. It is NOT for companies to advertise on their products or do head-hunt, but we encourage individuals' self-promoting or community-centric everything.
 
 ## What is CopenhagenJS?
 
