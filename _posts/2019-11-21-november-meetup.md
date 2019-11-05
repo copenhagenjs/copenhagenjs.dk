@@ -8,6 +8,8 @@ duration: 3
 speakers:
   - title: 'Typescript: Mapped & Conditional Types'
     name: Pavel Kučera
+  - title: 'Proxy - how to make users of your library love you'
+    name: Radoslaw Medryk
 ---
 
 # CopenhagenJS November - Penni.io
@@ -20,13 +22,18 @@ It is time for the November edition of CopenhagenJS. This time we are hosted by 
     17:00 Doors open
     17:45 Welcome
     18:00 Typescript: Mapped & Conditional Types by Pavel Kučera
-    18:25 Break with food and drinks
-    19:00 You?
-    19:25 You?
+    18:25 JS Open mic
+    18:30 Break with food and drinks
+    19:00 Proxy - how to make users of your library love you by Radoslaw Medryk
+    19:25 How I made Copenhagen Commute Times Map by Benjamin Hughes
     19:50 Group photo
     19:55 Raffle.js
     20:00 Socializing - meet the community
     21:00 See you next time!
+
+## ** Something New **
+
+JS Open mic is something that we believe can add more value to the meetup for the attendees and we want to experiment on. We will offer three one-minute slots for people to voluntarily talk about a) community events they are organizing, b) looking for people to join their Open source project, c) their availability for hire, etc. It should NOT be any commercial advertisements but we encourage self-promoting or community-centric everything.
 
 ## What is CopenhagenJS?
 
