@@ -14,6 +14,7 @@ const {
 } = require("./resolvers/speakers.js");
 const {
   speakerProfile,
+  speakerProfiles,
   SpeakerPresentationEvent,
   SpeakerProfileUser,
   SpeakerProfileGhostUser,
@@ -92,6 +93,7 @@ const typeDefs = gql`
     searchEvents(query: String): [Event]
     speakers: [Speaker]
     speaker(slug: String!): [Speaker]
+    speakerProfiles: [SpeakerProfile]
     speakerProfile(slug: String!): SpeakerProfile
     searchSpeakers(name: String!): [Speaker]
     users: [User]
@@ -113,6 +115,7 @@ const resolvers = {
     searchSpeakers,
     speaker,
     speakerProfile,
+    speakerProfiles,
     users,
     me
   },
