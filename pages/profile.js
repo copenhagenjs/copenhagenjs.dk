@@ -22,9 +22,6 @@ const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
 })
 
-let token = ''
-let outerGetProfile = null
-
 const UPDATE_PROFILE = gql`
   mutation UpdateProfile($input: ProfileInput!) {
     updateProfile(input: $input) {
@@ -33,6 +30,8 @@ const UPDATE_PROFILE = gql`
     }
   }
 `
+
+let token = ''
 
 const Profile = () => {
   const [loaded, setLoaded] = useState(false)
@@ -65,13 +64,12 @@ const Profile = () => {
       }
     }
   )
-  outerGetProfile = getProfile
 
   useEffect(() => {
     firebaseLogin()
       .then(newToken => {
         token = newToken
-        outerGetProfile()
+        getProfile()
       })
       .catch(e => {
         console.log('It is okay', e)
