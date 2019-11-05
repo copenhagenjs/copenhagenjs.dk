@@ -22,7 +22,6 @@ genrule(
     "package-lock.json",
     "package.json",
     "Dockerfile-storybook",
-    "pages/**",
     "static/**",
     "stories/**",
   ]),
