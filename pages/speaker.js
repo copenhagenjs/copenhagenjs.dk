@@ -24,6 +24,7 @@ function Speakers() {
     query {
       speakerProfile(slug: "${slug}") {
         name
+        slug
         videos {
           ...SpeakerProfileVideos
         }
@@ -58,6 +59,10 @@ function Speakers() {
     <div>
       <Head>
         <title>{data.speakerProfile.name} spoke at CopenhagenJS</title>
+        <link
+          rel="canonical"
+          href={`https://copenhagenjs.dk/speaker/?name=${data.speakerProfile.slug}`}
+        />
       </Head>
       <SpeakerProfile
         name={data.speakerProfile.name}
