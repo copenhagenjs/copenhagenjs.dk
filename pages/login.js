@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Page from '../components/Page'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
+import { initFirebase } from '../services/firebase.js'
 
 export default class Videos extends React.Component {
   constructor() {
@@ -13,19 +14,10 @@ export default class Videos extends React.Component {
       email: '',
       status: ''
     }
-    this.initFirebase()
+    initFirebase()
     console.log(typeof window, typeof window !== 'undefined')
     if (typeof window !== 'undefined') {
       this.finishLogin()
-    }
-  }
-  initFirebase() {
-    const firebaseConfig = {
-      apiKey: 'AIzaSyBchWNVQsL7YEcTtf369PYTP-DLTiB7Vac',
-      projectId: 'copenhagenjsdk'
-    }
-    if (!firebase.apps.length) {
-      firebase.initializeApp(firebaseConfig)
     }
   }
   handleLogin() {
