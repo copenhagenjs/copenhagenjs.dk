@@ -31,7 +31,7 @@ function Video() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
-  if(!data.video) return <span>Didn't find video</span>
+  if (!data.video) return <span>Didn't find video</span>
 
   const { title, name, youtubeId, speakerProfile } = data.video
   const user = speakerProfile.user || speakerProfile.ghostUser
