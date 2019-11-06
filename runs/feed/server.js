@@ -39,12 +39,12 @@ data.posts.forEach(post => {
 })
 
 const rss = res => {
-  res.setHeader('Content-Type', 'application/rss+xml')
+  res.setHeader('Content-Type', 'application/rss+xml; charset=utf-8')
   res.end(feed.rss2())
 }
 
 const atom = res => {
-  res.setHeader('Content-Type', 'application/atom+xml')
+  res.setHeader('Content-Type', 'application/atom+xml; charset=utf-8')
   res.end(feed.atom1())
 }
 
@@ -57,10 +57,10 @@ http
         rss(res)
         break
       case '/atom.xml':
-        atom(rss)
+        atom(res)
         break
       default:
-        atom(rss)
+        atom(res)
         break
     }
   })
