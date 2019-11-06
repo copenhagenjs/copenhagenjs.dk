@@ -1,11 +1,64 @@
-body {
-    margin: 0;
-	color: #111;
-	background-color: #fff;
+html {
+    box-sizing: border-box;
+    font-size: 62.5%
+}
 
-    font-size: 18px;
+body {
     font-family: 'Source Sans Pro', sans-serif;
-    -webkit-font-smoothing: antialiased;
+    font-size: 1.8em;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+  	color: #111;
+  	background-color: #fff;
+}
+
+b,strong {
+    font-weight: bold
+}
+
+p {
+    margin-top: 0
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+    letter-spacing: -.1rem;
+    margin-bottom: 2.0rem;
+    margin-top: 0
+}
+
+h1 {
+    font-size: 4.6rem;
+    line-height: 1.2
+}
+
+h2 {
+    font-size: 3.6rem;
+    line-height: 1.25
+}
+
+h3 {
+    font-size: 2.8rem;
+    line-height: 1.3
+}
+
+h4 {
+    font-size: 2.2rem;
+    letter-spacing: -.08rem;
+    line-height: 1.35
+}
+
+h5 {
+    font-size: 1.8rem;
+    letter-spacing: -.05rem;
+    line-height: 1.5
+}
+
+h6 {
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    line-height: 1.4
 }
 
 label {
@@ -25,29 +78,17 @@ a:visited {
     color: #428BCA;
 }
 
-h1 {
-    font-size: 2.5em;
-    line-height: 1em;
-}
-
 h1 a {
     color: #111;
-    text-decoration: none;
-}
-
-h2 {
-    margin-top: 0;
-    font-size: 2.2rem;
-}
-
-h3 {
-    font-size: 1.8rem;
 }
 
 section {
     padding: 36px 0;
 }
 
+blockquote,dl,figure,form,ol,p,pre,table,ul {
+    margin-bottom: 2.5rem
+}
 pre {
   white-space: pre-wrap;
 }
@@ -121,30 +162,6 @@ pre {
     height: 200px;
 }
 
-.page-header .social {
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*position: absolute;*/
-    /*bottom: 30px;*/
-    /*left: 50%;*/
-    /*-webkit-transform: translateX(-50%);*/
-    /*transform: translateX(-50%);*/
-    padding-top: 10px;
-    line-height: 20px;
-    text-align: center;
-
-    white-space: nowrap;
-}
-
-.page-header .social > * {
-    margin: 0 10px;
-    padding-top: 10px;
-}
-
-.page-header .social .fb_iframe_widget {
-	line-height: 12px;
-}
-
 .page-header .credits {
 	position: absolute;
 	left: 50px;
@@ -161,218 +178,7 @@ pre {
     float: left;
 }
 
-iframe[src^="https://www.google.com/maps/embed/"] {
-    display: block;
-    border: 0;
-    width: 100%;
-    height: 300px;
-}
-
-.organizers h2 {
-	font-size: 2.5rem;
-	margin-bottom: 36px;
-}
-
-.organizers h4 {
-	margin: 18px 0;
-	font-size: 2rem;
-	line-height: 45px;
-}
-
-.organizers	ul {
-	display: flex;
-    flex-direction: row;
-	padding: 18px 0;
-	margin-bottom: 36px;
-}
-
-.organizers ul li {
-	flex: 1;
-	list-style: none;
-	padding: 18px 18px 10px 18px;
-	text-align: center;
-
-	background: #fff;
-	margin-right: 10px;
-}
-
-.organizers ul li h5 {
-	font-size: 18px;
-    line-height: 18px;
-	margin-top: 0;
-	margin-bottom: 18px;
-}
-
-.organizers ul li iframe {
-	display: inline-block;
-	margin: 0 auto;
-}
-
-
-.organizers img {
-    margin: 0 auto 5px;
-    display: block;
-    max-width: 100%;
-    margin-bottom: 12px;
-}
-
-.next-meetup {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.next-meetup__button {
-    padding: 10px;
-    font-size: 1.3rem;
-    border: none;
-    text-align: center;
-    background-color: #FFF;
-    background: #428BCA;
-    color: #fff;
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    margin: 10px auto;
-}
-
-.next-meetup__button:link,
-.next-meetup__button:visited {
-    color: #fff;
-}
-
-.past-events ul {
-	margin: 0;
-    padding: 0;
-	list-style: none;
-}
-
-.past-events li {
-    background: rgba(147, 128, 108, 0.1);
-	padding: 20px;
-	border-bottom: 1px solid #FFF;
-}
-
-.upcoming-meetings .lanyrd-target-guide {
-	margin-top: 20px;
-}
-
-.upcoming-meetings .lanyrd-target-guide h1 {
-	display: none;
-}
-
-.upcoming-meetings .lanyrd-target-guide .tags {
-	display: none;
-}
-
-.upcoming-meetings .lanyrd-guide-embed > p > a {
-	display: none;
-}
-
-.flickr_badge_wrapper {
-	text-align: center;
-    overflow: hidden;
-}
-
-.flickr_badge_image {
-	margin: 5px;
-    float: left;
-}
-
-.flickr_badge_image img {
-	border: 1px solid black;
-    height: 160px;
-    width: auto !important;
-}
-
-.media .thumbs {
-	margin-top: 20px;
-	width: 100%;
-	overflow: hidden;
-	padding: 0;
-}
-
-.media .thumbs ul {
-	list-style-type: none;
-	padding: 0;
-	margin: -10px;
-	overflow: hidden;
-}
-
-.media .thumbs li {
-	float: left;
-    box-sizing: border-box;
-    padding: 10px;
-	width: 33%;
-	height: 270px;
-}
-
-.media .thumbs img {
-	border: 1px solid #000;
-}
-
-.media .thumbs ul li h5 {
-	font-weight: bold;
-    line-height: 20px;
-	color: #000;
-	margin: 10px 0 0;
-}
-
-.media .thumbs ul li p {
-	font-size: 10px;
-	color: #9DA2A8;
-}
-
-.media .thumbs p {
-	margin: 0;
-}
-
-.media .thumb {
-	width: 100%;
-	background: url(http://a.vimeocdn.com/thumbnails/defaults/default.75x200.jpg);
-}
-
-.media .metadata {
-	font-size: 12px;
-}
-
-.media .embed {
-	background-color: #f5f5f5;
-	height: 400px;
-	width: 100%;
-}
-
-.media iframe {
-  width: 100% !important;
-}
-
-.twitter-timeline {
-	width: 100%;
-}
-
-.fb_iframe_widget{
-    top: -10px;
-    margin-right: 10px;
-}
-
-
-.lanyrd {
-	padding: 0;
-}
-
-.lanyrd .lanyrd-target-schedule {
-	margin-bottom: 20px;
-	padding-left: 40px;
-}
-
-.lanyrd .lanyrd-target-attendees {
-	margin-bottom: 20px;
-}
-
 @media (max-width: 700px) {
-  .organizers ul {
-    display: block;
-  }
-
   .page-header {
     padding: 20px 2px;
     line-height: 20px;
