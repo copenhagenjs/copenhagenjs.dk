@@ -5,7 +5,7 @@ const { getEvents, memGetEvents } = require("./models/events.js");
 const { getSpeakers } = require("./models/speakers.js");
 const { me } = require("./resolvers/me.js");
 const { updateProfile } = require("./resolvers/updateprofile.js");
-const { video, videos } = require("./resolvers/videos.js");
+const { video, videos, VideoSpeakerProfile } = require("./resolvers/videos.js");
 const { events, searchEvents } = require("./resolvers/events.js");
 const {
   speakers,
@@ -29,6 +29,7 @@ const typeDefs = gql`
     title: String
     name: String
     slug: String
+    speakerProfile: SpeakerProfile
   }
   type Presentation {
     title: String
@@ -129,6 +130,9 @@ const resolvers = {
   },
   SpeakerPresentation: {
     event: SpeakerPresentationEvent
+  },
+  Video: {
+    speakerProfile: VideoSpeakerProfile
   },
   Mutation: {
     updateProfile

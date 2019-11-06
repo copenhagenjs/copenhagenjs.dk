@@ -1,5 +1,6 @@
 const videosData = require("../../data/videos.js");
 const { slugify } = require("../services/slug.js");
+const { getSpeakerProfile } = require("../models/speakers.js");
 
 export const prepareVideos = () => {
   return videosData.videos.map(v => ({
@@ -17,4 +18,8 @@ export const videos = () => {
 
 export const video = (parent, { slug }) => {
   return prepareVideos().find(i => i.slug === slug);
+};
+
+export const VideoSpeakerProfile = parent => {
+  return getSpeakerProfile(parent.speakerSlug);
 };
