@@ -1,5 +1,6 @@
 import React from 'react'
 import Map from './Map'
+import Link from './Link'
 import SpeakerSchedule from './SpeakerSchedule.js'
 
 export default ({ title, date, html, location, speakers, link }) => {
@@ -20,6 +21,9 @@ export default ({ title, date, html, location, speakers, link }) => {
         .speaker-schedule {
           margin: 20px 0;
         }
+        .action {
+          text-align: center;
+        }
       `}</style>
       <div className="date">{date && date.toLocaleString('da-DK')}</div>
       <div
@@ -38,9 +42,9 @@ export default ({ title, date, html, location, speakers, link }) => {
       {link ? (
         <>
           <hr style={{ margin: '20px 0' }} />
-          <a className="next-meetup__button" href={link}>
-            Sign up here!
-          </a>
+          <div className="action">
+            <Link href={link}>Sign up here!</Link>
+          </div>
         </>
       ) : (
         ''
