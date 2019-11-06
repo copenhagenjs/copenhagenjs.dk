@@ -15,19 +15,27 @@ function Video() {
       video(slug: "${slug}") {
         title
         name
-        youtubeId
+        youtubeId,
+        speakerProfile {
+          slug
+        }
       }
     }
   `)
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
-  const { title, name, youtubeId } = data.video
+  const { title, name, youtubeId, speakerProfile } = data.video
   return (
     <div className="video">
       <style jsx>{``}</style>
       <h2>
-        {title} - {name}
+        {title} -{' '}
+        {speakerProfile ? (
+          <a href={`/speaker/?name=${speakerProfile.slug}`}>{name}</a>
+        ) : (
+          { name }
+        )}
       </h2>
       <div className="video">
         <Embed youtubeId={youtubeId} />

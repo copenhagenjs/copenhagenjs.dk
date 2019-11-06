@@ -50,3 +50,9 @@ export const getSpeakerProfiles = () => {
   // that has multiple presentations
   return Object.values(groupByName);
 };
+
+export const getSpeakerProfile = slug => {
+  return getSpeakerProfiles().find(
+    speakerProfile => speakerProfile.slug === slug
+  );
+};
