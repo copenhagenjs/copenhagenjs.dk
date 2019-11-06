@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { useLazyQuery } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
 import Page from '../../components/Page'
-import { initFirebase } from '../../services/firebase.js'
+import { initFirebase, redirectToLogin } from '../../services/firebase.js'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from '@apollo/react-hooks'
 
@@ -51,6 +51,7 @@ export default () => {
         setToken(result.token)
       } else {
         // No user is signed in.
+        redirectToLogin()
       }
     })
   }, [])
