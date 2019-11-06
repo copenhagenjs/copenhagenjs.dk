@@ -21,6 +21,9 @@ function Video() {
           user {
             image
           }
+          ghostUser {
+            image
+          }
         }
       }
     }
@@ -28,7 +31,10 @@ function Video() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+  if(!data.video) return <span>Didn't find video</span>
+
   const { title, name, youtubeId, speakerProfile } = data.video
+  const user = speakerProfile.user || speakerProfile.ghostUser
   return (
     <div className="video">
       <style jsx>{``}</style>
@@ -37,11 +43,11 @@ function Video() {
         {speakerProfile.slug ? (
           <>
             <a href={`/speaker/?name=${speakerProfile.slug}`}>
-              {speakerProfile.user && speakerProfile.user.image && (
+              {user && user.image && (
                 <img
                   width={30}
                   style={{ borderRadius: 30, verticalAlign: 'middle' }}
-                  src={speakerProfile.user.image}
+                  src={user.image}
                 />
               )}
               &nbsp;
