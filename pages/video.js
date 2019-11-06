@@ -18,6 +18,9 @@ function Video() {
         youtubeId,
         speakerProfile {
           slug
+          user {
+            image
+          }
         }
       }
     }
@@ -31,8 +34,20 @@ function Video() {
       <style jsx>{``}</style>
       <h2>
         {title} -{' '}
-        {speakerProfile ? (
-          <a href={`/speaker/?name=${speakerProfile.slug}`}>{name}</a>
+        {speakerProfile.slug ? (
+          <>
+            <a href={`/speaker/?name=${speakerProfile.slug}`}>
+              {speakerProfile.user && speakerProfile.user.image && (
+                <img
+                  width={30}
+                  style={{ borderRadius: 30, verticalAlign: 'middle' }}
+                  src={speakerProfile.user.image}
+                />
+              )}
+              &nbsp;
+              {name}
+            </a>
+          </>
         ) : (
           { name }
         )}
