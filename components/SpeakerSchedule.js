@@ -23,8 +23,8 @@ export default ({ speakers }) => (
   <div>
     <h2>Speakers:</h2>
     <ul>
-      {speakers.map(speaker => (
-        <li key={speaker}>
+      {speakers.map((speaker, key) => (
+        <li key={key}>
           {speaker.title} -{' '}
           <strong>
             <a href={'/speaker?name=' + slugify(speaker.name)}>
