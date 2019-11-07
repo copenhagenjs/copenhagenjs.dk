@@ -4,8 +4,14 @@ export default class Navigation extends React.Component {
   constructor() {
     super()
     this.state = {
-      showmenu: false
+      showmenu: false,
+      loggedIn: false
     }
+  }
+  componentDidMount() {
+    this.setState({
+      loggedIn: window.localStorage.getItem('copenhagenjs_loggedin') === 'true'
+    })
   }
   render() {
     return (
@@ -82,30 +88,43 @@ export default class Navigation extends React.Component {
             </a>
           </li>
           <li>
-            <a className="btn-white" href="/events">
-              All events
+            <a className="btn-white" href="/events/">
+              Events
             </a>
           </li>
           <li>
-            <a className="btn-white" href="/about">
+            <a className="btn-white" href="/about/">
               About
             </a>
           </li>
           <li>
-            <a className="btn-white" href="/videos">
+            <a className="btn-white" href="/videos/">
               Videos
             </a>
           </li>
           <li>
-            <a className="btn-white" href="/contact">
+            <a className="btn-white" href="/contact/">
               Contact
             </a>
           </li>
           <li>
-            <a className="btn-white" href="/speakers">
+            <a className="btn-white" href="/speakers/">
               Speakers
             </a>
           </li>
+          {this.state.loggedIn ? (
+            <li>
+              <a className="btn-white" href="/profile/">
+                Profile
+              </a>
+            </li>
+          ) : (
+            <li>
+              <a className="btn-white" href="/login/">
+                Login
+              </a>
+            </li>
+          )}
         </ul>
       </div>
     )

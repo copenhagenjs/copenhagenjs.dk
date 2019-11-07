@@ -6,6 +6,7 @@ import Page from '../components/Page'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 import { initFirebase } from '../services/firebase.js'
+import { setLoggedInStatus } from '../services/login.js'
 
 export default class Videos extends React.Component {
   constructor() {
@@ -59,6 +60,7 @@ export default class Videos extends React.Component {
           this.setState({
             status: 'Successful login!'
           })
+          setLoggedInStatus()
           window.localStorage.removeItem('emailForSignIn')
           await this.sendToBackend()
           window.location.href = '/profile'
