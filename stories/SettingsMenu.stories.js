@@ -5,5 +5,5 @@ import { action } from '@storybook/addon-actions'
 import SettingsMenu from '../components/SettingsMenu'
 
 storiesOf('SettingsMenu', module).add('Default', () => (
-  <SettingsMenu></SettingsMenu>
+  <SettingsMenu clickLogout={action('logout')}></SettingsMenu>
 ))
