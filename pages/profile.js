@@ -10,6 +10,7 @@ import 'firebase/auth'
 import ApolloClient from 'apollo-boost'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
+import SettingsMenu from '../components/SettingsMenu'
 import { ProfileEditForm } from '../components/ProfileEditForm'
 import {
   initFirebase,
@@ -135,16 +136,7 @@ export default () => {
   return (
     <Page>
       <ApolloProvider client={client}>
-        <div>
-          Menu:{' '}
-          <Button
-            onClick={() => {
-              logoutFirebase()
-            }}
-          >
-            Sign Out
-          </Button>
-        </div>
+        <SettingsMenu clickLogout={logoutFirebase} />
         <h1>Public Profile</h1>
         <Profile />
       </ApolloProvider>
