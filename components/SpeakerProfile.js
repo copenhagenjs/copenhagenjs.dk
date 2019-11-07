@@ -40,7 +40,12 @@ export const SpeakerProfileVideos = {
   `
 }
 
-export const SpeakerProfile = ({ name, presentations = [], user, videos }) => (
+export const SpeakerProfile = ({
+  name,
+  presentations = [],
+  user,
+  videos = []
+}) => (
   <>
     <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20 }}>
       <div>
