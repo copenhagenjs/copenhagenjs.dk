@@ -1,12 +1,11 @@
+import 'isomorphic-unfetch'
+import React, { useState, useEffect } from 'react'
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
-import React, { useState, useEffect } from 'react'
-import { useLazyQuery } from '@apollo/react-hooks'
-import { gql } from 'apollo-boost'
+import { ApolloProvider, useLazyQuery } from '@apollo/react-hooks'
+import ApolloClient, { gql } from 'apollo-boost'
 import Page from '../../components/Page'
 import { initFirebase, redirectToLogin } from '../../services/firebase.js'
-import ApolloClient from 'apollo-boost'
-import { ApolloProvider } from '@apollo/react-hooks'
 
 const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
