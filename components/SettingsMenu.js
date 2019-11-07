@@ -14,31 +14,28 @@ export default ({ clickLogout }) => (
       .link {
         margin-left: 10px;
         border: 1px solid #ccc;
+        color: #111;
+        text-decoration: none;
       }
       .link:hover {
         background: #ccc;
       }
-      .link a {
-        color: #111;
-        text-decoration: none;
-      }
     `}</style>
     <div className="menu">
       <div className="item">Menu:</div>
-      <div className="item link">
-        <a href="/profile/">Profile</a>
-      </div>
-      <div className="item link">
-        <a
-          href="#"
-          onClick={e => {
-            e.preventDefault()
-            clickLogout()
-          }}
-        >
-          Log Out
-        </a>
-      </div>
+      <a className="item link" href="/profile/">
+        Profile
+      </a>
+      <a
+        className="item link"
+        href="#"
+        onClick={e => {
+          e.preventDefault()
+          clickLogout()
+        }}
+      >
+        Log Out
+      </a>
     </div>
   </>
 )
