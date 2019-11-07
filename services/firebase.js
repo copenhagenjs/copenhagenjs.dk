@@ -1,5 +1,6 @@
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
+import { clearLoggedInStatus } from './login.js'
 
 export const initFirebase = () => {
   const firebaseConfig = {
@@ -17,6 +18,7 @@ export const logoutFirebase = () => {
     .signOut()
     .then(function() {
       console.log('signed out')
+      clearLoggedInStatus()
       redirectToLogin()
     })
     .catch(function(error) {
