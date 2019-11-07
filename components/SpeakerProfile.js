@@ -42,15 +42,29 @@ export const SpeakerProfileVideos = {
 
 export const SpeakerProfile = ({ name, presentations = [], user, videos }) => (
   <>
-    <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20 }}>
-      <div>
-        {user && user.image && (
-          <img
-            src={user.image}
-            width="200px"
-            style={{ borderRadius: 100, float: 'left', marginRight: 30 }}
-          />
-        )}
+    <style jsx>{`
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      @media (min-width: 800px) {
+        .profile {
+          flex-direction: row;
+        }
+      }
+      .userImageContainer {
+      }
+      .userImage {
+        border-radius: 100px;
+        margin-right: 30px;
+        width: 200px;
+      }
+    `}</style>
+    <div className="profile">
+      <div className="userImageContainer">
+        {user && user.image && <img src={user.image} className="userImage" />}
       </div>
       <div>
         <h1>{name}</h1>
