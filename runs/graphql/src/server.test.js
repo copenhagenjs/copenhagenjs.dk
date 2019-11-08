@@ -11,7 +11,9 @@ jest.mock(
 import jwt from "jsonwebtoken";
 import { context } from "./server.js";
 jest.mock("./services/firebase.js");
-const { decodeJWT, getUser } = require("./services/firebase.js");
+jest.mock("./models/user.js");
+const { decodeJWT } = require("./services/firebase.js");
+const { getUser } = require("./models/user.js");
 
 test("context defined", () => {
   expect(context).toBeDefined();

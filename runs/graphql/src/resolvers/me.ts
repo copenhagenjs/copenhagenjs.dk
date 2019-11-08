@@ -1,4 +1,4 @@
-import { getUser } from "../services/firebase.js";
+import { getUser } from "../models/user";
 
 export const me = async (parent, args, context) => {
   const doc = await getUser(context.token.user_id);

@@ -1,6 +1,6 @@
-jest.mock("../services/firebase.js");
+jest.mock("../models/user.js");
 import { users } from "./users.js";
-import { getUsers } from "../services/firebase.js";
+import { getUsers } from "../models/user.js";
 
 test("users should be defined", () => {
   expect(users).toBeDefined();
