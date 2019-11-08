@@ -1,4 +1,4 @@
-const { getEvents } = require("./events.js");
+import { getEvents, EventDetails } from "./events.js";
 const { slugify } = require("../services/slug.js");
 
 export const getSpeakers = () => {
@@ -11,8 +11,16 @@ export const getSpeakers = () => {
     .flat();
 };
 
-export const getSpeakerProfiles = () => {
-  const events = getEvents();
+type SpeakerProfilePresentation = { title: string; selfLink: string };
+
+type SpeakerProfile = {
+  name: string;
+  slug: string;
+  presentations: SpeakerProfilePresentation[];
+};
+
+export const getSpeakerProfiles = (): SpeakerProfile[] => {
+  const events: EventDetails[] = getEvents();
 
   // we create a speakerprofile for every single presentation
   const speakerprofiles = events
@@ -48,7 +56,8 @@ export const getSpeakerProfiles = () => {
 
   // return an array with speakerprofiles
   // that has multiple presentations
-  return Object.values(groupByName);
+  const speakerProfiles: SpeakerProfile[] = Object.values(groupByName);
+  return speakerProfiles;
 };
 
 export const getSpeakerProfile = slug => {

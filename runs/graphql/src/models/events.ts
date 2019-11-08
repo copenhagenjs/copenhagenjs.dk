@@ -4,7 +4,24 @@ const { readFileSync } = require("fs");
 const pMemoize = require("p-memoize");
 const { join } = require("path");
 
-const getEvents = () => {
+type Speaker = {
+  name: string;
+  title: string;
+};
+
+export type EventDetails = {
+  title?: string;
+  selfLink?: string;
+  link?: string;
+  markdown?: string;
+  content?: string;
+  date: Date;
+  type?: string;
+  location?: string;
+  presentations: Speaker[];
+};
+
+export const getEvents = (): [EventDetails] => {
   const data = require("../../_posts/_data.json");
   return data.posts.map(post => {
     const markdown = readFileSync(
@@ -35,10 +52,6 @@ const getEvents = () => {
   });
 };
 
-exports.getEvents = getEvents;
-
-const memGetEvents = pMemoize(getEvents, {
+export const memGetEvents = pMemoize(getEvents, {
   maxAge: 1000 * 3600
 });
-
-exports.memGetEvents = memGetEvents;

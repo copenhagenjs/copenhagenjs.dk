@@ -35,12 +35,12 @@ async function getUser(userId): Promise<FirebaseResult<User>> {
   return doc;
 }
 
-export async function getUsers(): Promise<[FirebaseResult<User>]> {
+export async function getUsers(): Promise<FirebaseResult<User>[]> {
   const doc = await db.collection("users").get();
   return doc.docs;
 }
 
-export async function searchUser(key, value): Promise<[FirebaseResult<User>]> {
+export async function searchUser(key, value): Promise<FirebaseResult<User>[]> {
   const usersCol = db.collection("users");
   const results = await usersCol.where(key, "==", value).get();
   return results;
