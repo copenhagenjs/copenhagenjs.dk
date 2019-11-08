@@ -1,12 +1,12 @@
 language: node_js
 node_js:
-  - "12"
+  - '12'
 
 jobs:
   include:
-    - stage: "Documentation test"
-      name: "markdownlint test"
+    - stage: 'Documentation test'
+      name: 'markdownlint test'
       script: markdownlint README.md
-    - stage: "Build and test"
-      name: "npm build and test"
-      script: npm run build && npm test
+    - stage: 'Build and test'
+      name: 'npm build and test'
+      script: rm -rf runs && npm run build && npm test
