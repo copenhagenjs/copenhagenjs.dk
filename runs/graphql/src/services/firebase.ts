@@ -11,7 +11,23 @@ admin.initializeApp({
 });
 let db = admin.firestore();
 
-async function getUser(userId) {
+type User = {
+  id?: String;
+  email?: String;
+  name?: String;
+  image: String;
+  githubId?: String;
+  twitterId?: String;
+  instagramId?: String;
+  website?: String;
+};
+
+interface FirebaseResult<T> {
+  exists: Boolean;
+  data: () => T;
+}
+
+async function getUser(userId): Promise<FirebaseResult<User>> {
   const doc = await db
     .collection("users")
     .doc(userId)
@@ -19,18 +35,21 @@ async function getUser(userId) {
   return doc;
 }
 
-export async function getUsers() {
+export async function getUsers(): Promise<[FirebaseResult<User>]> {
   const doc = await db.collection("users").get();
   return doc.docs;
 }
 
-export async function searchUser(key, value) {
+export async function searchUser(key, value): Promise<[FirebaseResult<User>]> {
   const usersCol = db.collection("users");
   const results = await usersCol.where(key, "==", value).get();
   return results;
 }
 
-export async function searchGhostUser(key, value) {
+export async function searchGhostUser(
+  key,
+  value
+): Promise<[FirebaseResult<User>]> {
   const usersCol = db.collection("ghostusers");
   const results = await usersCol.where(key, "==", value).get();
   return results;
