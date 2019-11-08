@@ -7,12 +7,13 @@ genrule(
     "package-lock.json",
     "package.json",
     "pages/**",
+    "services/**",
     "static/**",
     "utils/**",
   ]) + ["//_posts:copy"],
   cmd = "tar --exclude='./node_modules' -czh . | docker build -t cphjs - && docker run --rm cphjs sh -c 'tar -C out -cvzf - .' > $(location build.tar.gz)",
   outs = ["build.tar.gz"],
-  tags = ["no-sandbox"]
+  tags = ["requires-network", "no-remote"]
 )
 
 genrule(
