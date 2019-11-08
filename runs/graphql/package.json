@@ -23,7 +23,8 @@
     "jest": "^24.9.0",
     "jsonwebtoken": "^8.5.1",
     "marked": "^0.7.0",
-    "p-memoize": "^3.1.0"
+    "p-memoize": "^3.1.0",
+    "typescript": "^3.7.2"
   },
   "devDependencies": {},
   "description": "",
