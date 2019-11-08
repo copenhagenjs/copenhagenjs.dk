@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "node -r esm src/server.js",
-    "fix-lint": "npx prettier --write 'src/*.js'"
+    "test": "jest dist",
+    "start": "node -r esm dist/server.js",
+    "fix-lint": "npx prettier --write 'src/**/*'"
   },
   "keywords": [],
   "author": "",

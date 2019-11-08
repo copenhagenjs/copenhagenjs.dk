@@ -3,6 +3,7 @@ genrule(
   srcs = glob([
     "Dockerfile",
     "babel.config.js",
+    "tsconfig.json",
     "package-lock.json",
     "package.json",
     "server.js",
