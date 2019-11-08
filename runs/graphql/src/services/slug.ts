@@ -1,4 +1,4 @@
-function slugify(string) {
+function slugify(string: String) {
   const a =
     "àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôœøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;";
   const b =
@@ -17,4 +17,4 @@ function slugify(string) {
     .replace(/-+$/, ""); // Trim - from end of text
 }
 
-exports.slugify = slugify;
+export { slugify };
