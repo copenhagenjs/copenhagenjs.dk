@@ -9,7 +9,9 @@ admin.initializeApp({
   projectId: "copenhagenjsdk",
   databaseURL: "https://copenhagenjs.firebaseio.com"
 });
-let db = admin.firestore();
+export { admin }
+
+export let db = admin.firestore();
 
 type User = {
   id?: String;
@@ -22,12 +24,12 @@ type User = {
   website?: String;
 };
 
-interface FirebaseResult<T> {
+export interface FirebaseResult<T> {
   exists: Boolean;
   data: () => T;
 }
 
-async function getUser(userId): Promise<FirebaseResult<User>> {
+export async function getUser(userId): Promise<FirebaseResult<User>> {
   const doc = await db
     .collection("users")
     .doc(userId)
@@ -49,13 +51,13 @@ export async function searchUser(key, value): Promise<FirebaseResult<User>[]> {
 export async function searchGhostUser(
   key,
   value
-): Promise<[FirebaseResult<User>]> {
+): Promise<FirebaseResult<User>[]> {
   const usersCol = db.collection("ghostusers");
   const results = await usersCol.where(key, "==", value).get();
   return results;
 }
 
-async function updateUser(userId, data) {
+export async function updateUser(userId, data) {
   const doc = db.collection("users").doc(userId);
   const update = await doc.set(data, { merge: true });
   return update;
@@ -64,5 +66,3 @@ async function updateUser(userId, data) {
 export async function decodeJWT(token) {
   return await admin.auth().verifyIdToken(token);
 }
-
-export { admin, db, getUser, updateUser };
