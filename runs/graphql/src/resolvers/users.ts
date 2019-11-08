@@ -1,4 +1,4 @@
-import { getUsers } from "../services/firebase.js";
+import { getUsers } from "../models/user.js";
 
 export const users = async (root, args, context) => {
   if (
