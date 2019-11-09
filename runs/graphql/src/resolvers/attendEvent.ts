@@ -1,4 +1,4 @@
-import { EventDetails } from "../models/events";
+import { EventDetails, memGetEvents } from "../models/events";
 
 enum AttendanceStatus {
   GOING,
@@ -13,12 +13,16 @@ type AttendEventInput = {
 
 type Attendance = {
   status: AttendanceStatus;
-  // event: EventDetails;
+  event: EventDetails;
 };
 
 export const attendEvent = (
   parent,
-  { input: AttendEventInput }
+  { input }: { input: AttendEventInput }
 ): Attendance => {
-  return { status: AttendanceStatus.GOING };
+  const event = memGetEvents().find(event => event.slug === input.eventSlug);
+  if (event === undefined) {
+    throw new Error("Could not find event!");
+  }
+  return { status: AttendanceStatus.GOING, event };
 };
