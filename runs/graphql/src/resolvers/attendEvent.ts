@@ -12,7 +12,7 @@ type AttendEventInput = {
 };
 
 type Attendance = {
-  status: AttendanceStatus;
+  status: AttendanceStatus | string;
   event: EventDetails;
 };
 
@@ -24,5 +24,5 @@ export const attendEvent = (
   if (event === undefined) {
     throw new Error("Could not find event!");
   }
-  return { status: AttendanceStatus.GOING, event };
+  return { status: "GOING", event };
 };
