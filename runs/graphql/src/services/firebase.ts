@@ -23,6 +23,8 @@ export interface FirebaseResultItem<T> {
   data: () => T;
 }
 
+export interface FirebaseDocumentRef {}
+
 export async function decodeJWT(token) {
   return await admin.auth().verifyIdToken(token);
 }

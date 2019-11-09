@@ -1,4 +1,9 @@
-import { FirebaseResult, FirebaseResultItem, db } from "../services/firebase";
+import {
+  FirebaseResult,
+  FirebaseResultItem,
+  FirebaseDocumentRef,
+  db
+} from "../services/firebase";
 
 export enum AttendanceStatus {
   GOING = "GOING",
@@ -50,4 +55,12 @@ export async function getEventAttendees(
     .where("eventSlug", "==", eventSlug)
     .get();
   return results;
+}
+
+export async function updateAttendance(
+  input: Attendance
+): Promise<FirebaseDocumentRef> {
+  const coll = db.collection(collection);
+  const update = await coll.add(input);
+  return update;
 }
