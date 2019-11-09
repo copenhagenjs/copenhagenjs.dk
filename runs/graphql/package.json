@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest dist",
-    "start": "node -r esm dist/src/server.js",
+    "start": "node -r esm dist/server.js",
     "fix-lint": "npx prettier --write 'src/**/*'"
   },
   "keywords": [],

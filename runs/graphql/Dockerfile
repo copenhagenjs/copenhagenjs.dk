@@ -14,6 +14,6 @@ ADD data /app/data
 
 COPY --from=gcr.io/berglas/berglas:latest /bin/berglas /bin/berglas
 
-RUN npx tsc
+RUN npx tsc && mv dist/src/* dist/
 
 ENTRYPOINT exec /bin/berglas exec -- npm start
