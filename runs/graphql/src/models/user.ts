@@ -1,17 +1,20 @@
+import admin from "firebase-admin";
 import { FirebaseResult, FirebaseResultItem, db } from "../services/firebase";
 
-type User = {
-  id?: String;
-  email?: String;
-  name?: String;
-  image: String;
-  githubId?: String;
-  twitterId?: String;
-  instagramId?: String;
-  website?: String;
+export type User = {
+  id?: string;
+  email?: string;
+  name?: string;
+  image?: string;
+  githubId?: string;
+  twitterId?: string;
+  instagramId?: string;
+  website?: string;
 };
 
-export async function getUser(userId): Promise<FirebaseResultItem<User>> {
+export async function getUser(
+  userId
+): Promise<FirebaseResultItem<User> & admin.firestore.DocumentSnapshot> {
   const doc = await db
     .collection("users")
     .doc(userId)
@@ -19,12 +22,17 @@ export async function getUser(userId): Promise<FirebaseResultItem<User>> {
   return doc;
 }
 
-export async function getUsers(): Promise<FirebaseResultItem<User>[]> {
+export async function getUsers(): Promise<
+  admin.firestore.QueryDocumentSnapshot[]
+> {
   const doc = await db.collection("users").get();
   return doc.docs;
 }
 
-export async function searchUser(key, value): Promise<FirebaseResult<User>> {
+export async function searchUser(
+  key,
+  value
+): Promise<admin.firestore.QuerySnapshot> {
   const usersCol = db.collection("users");
   const results = await usersCol.where(key, "==", value).get();
   return results;
@@ -33,7 +41,7 @@ export async function searchUser(key, value): Promise<FirebaseResult<User>> {
 export async function searchGhostUser(
   key,
   value
-): Promise<FirebaseResult<User>> {
+): Promise<admin.firestore.QuerySnapshot> {
   const usersCol = db.collection("ghostusers");
   const results = await usersCol.where(key, "==", value).get();
   return results;
