@@ -29,9 +29,9 @@ export const events = (parent, { first, last, status }) => {
   return events;
 };
 
-export const event = (parent, { eventSlug }): EventDetails => {
+export const event = (parent, { slug }: { slug: string }): EventDetails => {
   const events = memGetEvents();
-  const event = events.find(event => event.slug === eventSlug);
+  const event = events.find(event => event.slug === slug);
   if (event === undefined) {
     throw new Error("Could not find event!");
   }

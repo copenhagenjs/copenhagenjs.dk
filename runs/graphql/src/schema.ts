@@ -22,6 +22,7 @@ const {
 } = require("./resolvers/speakerprofile.js");
 const { SpeakerEvent } = require("./resolvers/speaker.js");
 const { users } = require("./resolvers/users.js");
+import { attendEvent } from "./resolvers/attendEvent";
 
 const typeDefs = gql`
   type Video {
@@ -152,7 +153,8 @@ const resolvers = {
     speakerProfile: VideoSpeakerProfile
   },
   Mutation: {
-    updateProfile
+    updateProfile,
+    attendEvent
   }
 };
 
