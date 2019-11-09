@@ -1,4 +1,4 @@
-const admin = require("firebase-admin");
+import admin from "firebase-admin";
 
 const credential = process.env.FIREBASE_SVC_ACC
   ? admin.credential.cert(JSON.parse(process.env.FIREBASE_SVC_ACC))
@@ -20,11 +20,13 @@ export interface FirebaseResult<T> {
 
 export interface FirebaseResultItem<T> {
   exists: boolean;
-  data: () => T;
+  data: () => T | undefined;
 }
 
 export interface FirebaseDocumentRef {}
 
-export async function decodeJWT(token) {
+export async function decodeJWT(
+  token: string
+): Promise<admin.auth.DecodedIdToken> {
   return await admin.auth().verifyIdToken(token);
 }

@@ -5,35 +5,12 @@ import { makeExecutableSchema } from "graphql-tools";
 const { typeDefs, resolvers } = require("./schema.js");
 const http = require("http");
 const admin = require("firebase-admin");
-const { decodeJWT } = require("./services/firebase.js");
-const { getUser } = require("./models/user.js");
-
-export const context = async ({ req }) => {
-  const token = (req.headers.authorization || "").replace("bearer ", "");
-
-  try {
-    const decodedToken = await decodeJWT(token);
-    if (decodedToken) {
-      const user = await getUser(decodedToken.user_id);
-      return { token: decodedToken, user: user.data() };
-    }
-    return {
-      token: undefined,
-      user: undefined
-    };
-  } catch (e) {
-    if (e.code === "auth/argument-error") {
-      return {};
-    }
-    console.log(e);
-    throw new Error("Could not verify token!");
-  }
-};
+import { contextHandler } from "./services/context";
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context
+  context: contextHandler
 });
 
 const app = express();

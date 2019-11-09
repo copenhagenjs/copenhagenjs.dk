@@ -1,5 +1,5 @@
 jest.mock(
-  "../data/videos.js",
+  "../../data/videos.js",
   () => {
     return {
       videos: []
@@ -9,17 +9,17 @@ jest.mock(
 );
 
 import jwt from "jsonwebtoken";
-import { context } from "./server.js";
-jest.mock("./services/firebase.js");
-jest.mock("./models/user.js");
-const { decodeJWT } = require("./services/firebase.js");
-const { getUser } = require("./models/user.js");
+import { contextHandler } from "./context.js";
+jest.mock("./firebase.js");
+jest.mock("../models/user.js");
+const { decodeJWT } = require("./firebase.js");
+const { getUser } = require("../models/user.js");
 
-test("context defined", () => {
-  expect(context).toBeDefined();
+test("contextHandler defined", () => {
+  expect(contextHandler).toBeDefined();
 });
 
-test("context - good token", async () => {
+test("contextHandler - good token", async () => {
   const officialPayload = {
     iss: "https://securetoken.google.com/copenhagenjsdk",
     aud: "copenhagenjsdk",
@@ -48,7 +48,7 @@ test("context - good token", async () => {
     data: () => user
   });
 
-  const value = await context({
+  const value = await contextHandler({
     req: {
       headers: {
         authorization: "bearer " + testToken
@@ -58,13 +58,13 @@ test("context - good token", async () => {
 
   expect(getUser).toHaveBeenCalledWith(officialPayload.user_id);
   expect(value).toEqual({
-    token: officialPayload,
+    token: { user_id: officialPayload.user_id },
     user
   });
 });
 
-test("context - no token", async () => {
-  const value = await context({
+test("contextHandler - no token", async () => {
+  const value = await contextHandler({
     req: {
       headers: {}
     }
