@@ -54,6 +54,6 @@ export const getEvents = (): EventDetails[] => {
   });
 };
 
-export const memGetEvents = pMemoize(getEvents, {
+export const memGetEvents: () => EventDetails[] = pMemoize(getEvents, {
   maxAge: 1000 * 3600
 });

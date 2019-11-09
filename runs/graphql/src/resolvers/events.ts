@@ -29,6 +29,15 @@ export const events = (parent, { first, last, status }) => {
   return events;
 };
 
+export const event = (parent, { eventSlug }): EventDetails => {
+  const events = memGetEvents();
+  const event = events.find(event => event.slug === eventSlug);
+  if (event === undefined) {
+    throw new Error("Could not find event!");
+  }
+  return event;
+};
+
 export const searchEvents = async (parent, { query }) => {
   const { schema } = require("../schema.js");
   const data = await graphql(

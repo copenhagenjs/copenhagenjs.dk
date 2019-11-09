@@ -6,7 +6,7 @@ const { getSpeakers } = require("./models/speakers.js");
 const { me } = require("./resolvers/me.js");
 const { updateProfile } = require("./resolvers/updateprofile.js");
 const { video, videos, VideoSpeakerProfile } = require("./resolvers/videos.js");
-const { events, searchEvents } = require("./resolvers/events.js");
+const { events, event, searchEvents } = require("./resolvers/events.js");
 const {
   speakers,
   searchSpeakers,
@@ -121,6 +121,7 @@ const resolvers = {
   Query: {
     hello: () => "Hello world!",
     events,
+    event,
     videos,
     video,
     searchEvents,
