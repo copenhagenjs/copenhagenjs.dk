@@ -12,11 +12,11 @@ export enum AttendanceStatus {
   WAITLIST = "WAITLIST"
 }
 
-type Attendance = {
-  userId: String;
-  status: AttendanceStatus;
-  timestamp: String;
-  eventSlug: String;
+export type Attendance = {
+  userId?: String;
+  status?: AttendanceStatus;
+  timestamp?: String;
+  eventSlug?: String;
 };
 
 const collection = "attendance";
@@ -32,7 +32,7 @@ export async function getUserAttendance(
 export async function getUserEventAttendance(
   userId: string,
   eventSlug: string
-): Promise<admin.firestore.QuerySnapshot> {
+): Promise<FirebaseResult<Attendance>> {
   const attendanceColl = db.collection(collection);
   const results = await attendanceColl
     .where("userId", "==", userId)

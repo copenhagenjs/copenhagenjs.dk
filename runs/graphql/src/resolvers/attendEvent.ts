@@ -1,4 +1,8 @@
-import { AttendanceStatus, updateAttendance } from "../models/attendance";
+import {
+  AttendanceStatus,
+  updateAttendance,
+  getUserEventAttendance
+} from "../models/attendance";
 import { EventDetails, memGetEvents } from "../models/events";
 import { Context } from "../services/context";
 
@@ -29,6 +33,32 @@ export const attendEvent = async (
       eventSlug: input.eventSlug
     });
     return { status: input.status, event };
+  } else {
+    throw new Error("User is not authenticated");
+  }
+};
+
+export const EventAttendance = async (
+  parent: EventDetails,
+  args,
+  context: Context
+): Promise<{ status: AttendanceStatus } | null> => {
+  const eventSlug = parent.slug;
+  if (context.token) {
+    const attendance = await getUserEventAttendance(
+      context.token.user_id,
+      eventSlug
+    );
+    if (attendance.size === 0) {
+      return null;
+    } else {
+      const data = attendance.docs[0].data();
+      if (data && data.status) {
+        return { status: data.status };
+      } else {
+        return null;
+      }
+    }
   } else {
     throw new Error("User is not authenticated");
   }

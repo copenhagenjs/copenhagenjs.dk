@@ -22,7 +22,7 @@ const {
 } = require("./resolvers/speakerprofile.js");
 const { SpeakerEvent } = require("./resolvers/speaker.js");
 const { users } = require("./resolvers/users.js");
-import { attendEvent } from "./resolvers/attendEvent";
+import { attendEvent, EventAttendance } from "./resolvers/attendEvent";
 
 const typeDefs = gql`
   type Video {
@@ -51,6 +51,7 @@ const typeDefs = gql`
     type: String
     location: String
     presentations: [Presentation]
+    attendance: Attendance
   }
   type SpeakerPresentation {
     title: String
@@ -137,6 +138,9 @@ const resolvers = {
     speakerProfiles,
     users,
     me
+  },
+  Event: {
+    attendance: EventAttendance
   },
   Speaker: {
     event: SpeakerEvent
