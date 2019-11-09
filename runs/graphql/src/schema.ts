@@ -41,6 +41,7 @@ const typeDefs = gql`
   }
   type Event {
     title: String
+    slug: String
     markdown: String
     content: String
     selfLink: String
@@ -86,9 +87,19 @@ const typeDefs = gql`
     instagramId: String
     website: String
   }
+  enum AttendanceStatus = GOING | NOTGOING | WAITLISTED
+  input AttendEventInput {
+    eventSlug: String
+    status: AttendanceStatus
+  }
+  type Attendance {
+    status: AttendanceStatus
+    event: Event
+  }
   type Query {
     hello: String
     events(first: Int, last: Int, status: EventStatus): [Event]
+    event(slug: String!): Event
     videos: [Video]
     video(slug: String!): Video
     searchEvents(query: String): [Event]
@@ -102,6 +113,7 @@ const typeDefs = gql`
   }
   type Mutation {
     updateProfile(input: ProfileInput): User
+    attendEvent(input: AttendEventInput!): Attendance
   }
 `;
 
