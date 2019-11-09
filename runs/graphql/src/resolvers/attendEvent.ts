@@ -1,10 +1,5 @@
+import { AttendanceStatus } from "../models/attendance";
 import { EventDetails, memGetEvents } from "../models/events";
-
-enum AttendanceStatus {
-  GOING = "GOING",
-  NOTGOING = "NOTGOING",
-  WAITLIST = "WAITLIST"
-}
 
 type AttendEventInput = {
   eventSlug: string;
