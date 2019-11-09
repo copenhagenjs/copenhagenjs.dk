@@ -25,6 +25,8 @@ export interface FirebaseResultItem<T> {
 
 export interface FirebaseDocumentRef {}
 
-export async function decodeJWT(token) {
+export async function decodeJWT(
+  token: string
+): Promise<admin.auth.DecodedIdToken> {
   return await admin.auth().verifyIdToken(token);
 }
