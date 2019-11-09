@@ -58,7 +58,7 @@ test("contextHandler - good token", async () => {
 
   expect(getUser).toHaveBeenCalledWith(officialPayload.user_id);
   expect(value).toEqual({
-    token: officialPayload,
+    token: { user_id: officialPayload.user_id },
     user
   });
 });
