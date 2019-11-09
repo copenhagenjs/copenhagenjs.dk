@@ -1,5 +1,5 @@
 const { graphql } = require("graphql");
-const { getEvents, memGetEvents } = require("../models/events.js");
+import { getEvents, memGetEvents, EventDetails } from "../models/events.js";
 
 export const filterEventStatus = (eventStatus, events) => {
   const now = Date.now();
@@ -16,7 +16,9 @@ export const filterEventStatus = (eventStatus, events) => {
 };
 
 export const events = (parent, { first, last, status }) => {
-  const events = status ? filterEventStatus(status, getEvents()) : getEvents();
+  const events: EventDetails[] = status
+    ? filterEventStatus(status, getEvents())
+    : getEvents();
 
   if (first) {
     return events.slice(0, first);
@@ -25,6 +27,15 @@ export const events = (parent, { first, last, status }) => {
     return events.slice(events.length - last, events.length);
   }
   return events;
+};
+
+export const event = (parent, { eventSlug }): EventDetails => {
+  const events = memGetEvents();
+  const event = events.find(event => event.slug === eventSlug);
+  if (event === undefined) {
+    throw new Error("Could not find event!");
+  }
+  return event;
 };
 
 export const searchEvents = async (parent, { query }) => {

@@ -11,6 +11,7 @@ type Speaker = {
 
 export type EventDetails = {
   title?: string;
+  slug: string;
   selfLink?: string;
   link?: string;
   markdown?: string;
@@ -21,7 +22,7 @@ export type EventDetails = {
   presentations: Speaker[];
 };
 
-export const getEvents = (): [EventDetails] => {
+export const getEvents = (): EventDetails[] => {
   const data = require("../../_posts/_data.json");
   return data.posts.map(post => {
     const markdown = readFileSync(
@@ -40,6 +41,7 @@ export const getEvents = (): [EventDetails] => {
 
     return {
       title: parsed.attributes.title || post.replace(".md", ""),
+      slug: post.replace(".md", ""),
       selfLink: `https://copenhagenjs.dk/archive/${post.replace(".md", "")}/`,
       link: parsed.attributes.link || "",
       markdown: parsed.body,
@@ -52,6 +54,6 @@ export const getEvents = (): [EventDetails] => {
   });
 };
 
-export const memGetEvents = pMemoize(getEvents, {
+export const memGetEvents: () => EventDetails[] = pMemoize(getEvents, {
   maxAge: 1000 * 3600
 });
