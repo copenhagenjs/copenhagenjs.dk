@@ -1,9 +1,9 @@
 import { EventDetails, memGetEvents } from "../models/events";
 
 enum AttendanceStatus {
-  GOING,
-  NOTGOING,
-  WAITLIST
+  GOING = "GOING",
+  NOTGOING = "NOTGOING",
+  WAITLIST = "WAITLIST"
 }
 
 type AttendEventInput = {
@@ -12,7 +12,7 @@ type AttendEventInput = {
 };
 
 type Attendance = {
-  status: AttendanceStatus | string;
+  status: AttendanceStatus;
   event: EventDetails;
 };
 
@@ -24,5 +24,5 @@ export const attendEvent = (
   if (event === undefined) {
     throw new Error("Could not find event!");
   }
-  return { status: "GOING", event };
+  return { status: AttendanceStatus.GOING, event };
 };
