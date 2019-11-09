@@ -3,7 +3,7 @@ import { EventDetails, memGetEvents } from "../models/events";
 enum AttendanceStatus {
   GOING,
   NOTGOING,
-  WAITLISTED
+  WAITLIST
 }
 
 type AttendEventInput = {

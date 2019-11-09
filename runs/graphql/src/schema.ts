@@ -87,7 +87,11 @@ const typeDefs = gql`
     instagramId: String
     website: String
   }
-  enum AttendanceStatus = GOING | NOTGOING | WAITLISTED
+  enum AttendanceStatus {
+    GOING
+    NOTGOING
+    WAITLIST
+  }
   input AttendEventInput {
     eventSlug: String
     status: AttendanceStatus
