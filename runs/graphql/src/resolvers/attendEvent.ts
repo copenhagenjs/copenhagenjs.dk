@@ -1,7 +1,9 @@
 import {
+  Attendance,
   AttendanceStatus,
   updateAttendance,
-  getUserEventAttendance
+  getUserEventAttendance,
+  getEventAttendees
 } from "../models/attendance";
 import { EventDetails, memGetEvents } from "../models/events";
 import { Context } from "../services/context";
@@ -11,7 +13,7 @@ type AttendEventInput = {
   status: AttendanceStatus;
 };
 
-type Attendance = {
+type UserAttendance = {
   status: AttendanceStatus;
   event: EventDetails;
 };
@@ -20,7 +22,7 @@ export const attendEvent = async (
   parent: {},
   { input }: { input: AttendEventInput },
   context: Context
-): Promise<Attendance> => {
+): Promise<UserAttendance> => {
   const event = memGetEvents().find(event => event.slug === input.eventSlug);
   if (event === undefined) {
     throw new Error("Could not find event!");
@@ -62,4 +64,19 @@ export const EventAttendance = async (
   } else {
     throw new Error("User is not authenticated");
   }
+};
+
+type Attendee = {
+  status: AttendanceStatus;
+  userId: string;
+};
+
+export const EventAttendees = async (
+  parent: EventDetails
+): Promise<Attendance[]> => {
+  const attendees = await getEventAttendees(parent.slug);
+  const data = attendees.docs
+    .map(a => a.data())
+    .filter((x): x is Attendance => x !== undefined);
+  return data;
 };

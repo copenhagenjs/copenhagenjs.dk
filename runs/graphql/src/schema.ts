@@ -40,6 +40,10 @@ const typeDefs = gql`
     UPCOMING
     PAST
   }
+  type Attendee {
+    status: AttendanceStatus
+    user: User
+  }
   type Event {
     title: String
     slug: String
@@ -52,6 +56,7 @@ const typeDefs = gql`
     location: String
     presentations: [Presentation]
     attendance: Attendance
+    attendees: [Attendee]
   }
   type SpeakerPresentation {
     title: String
