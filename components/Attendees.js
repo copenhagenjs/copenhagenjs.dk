@@ -19,10 +19,24 @@ export const Attendees = {
             max-width: 50px;
           }
         `}</style>
-        {attendees.map(user => {
+        {attendees.map(attendees => {
+          const image = (
+            <img
+              alt={attendees.user.name}
+              title={attendees.user.name}
+              className="image"
+              src={attendees.user.image}
+            />
+          )
           return (
             <div className="image-container">
-              <img alt={user.name} className="image" src={user.image} />
+              {attendees.user.twitterId !== null ? (
+                <a href={'https://twitter.com/' + attendees.user.twitterId}>
+                  {image}
+                </a>
+              ) : (
+                image
+              )}
             </div>
           )
         })}
@@ -33,6 +47,7 @@ export const Attendees = {
     fragment Attendees on User {
       name
       image
+      twitterId
     }
   `
 }

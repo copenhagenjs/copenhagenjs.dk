@@ -11,6 +11,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Event from '../components/Event'
 import Attendance from '../components/Attendance'
+import { Attendees } from '../components/Attendees'
 
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
@@ -51,8 +52,14 @@ const EVENTS = gql`
         title
         name
       }
+      attendees {
+        user {
+          ...Attendees
+        }
+      }
     }
   }
+  ${Attendees.fragment}
 `
 
 function EventGraph() {
@@ -116,7 +123,15 @@ function EventGraph() {
       </>
     )
 
-  const { content, title, date, link, presentations, location } = data.events[0]
+  const {
+    content,
+    title,
+    date,
+    link,
+    presentations,
+    location,
+    attendees
+  } = data.events[0]
 
   return (
     <>
@@ -127,6 +142,7 @@ function EventGraph() {
         location={location}
         speakers={presentations}
         link={link}
+        attendees={attendees}
       />
       {token.length > 0 && (
         <Attendance

@@ -2,8 +2,17 @@ import React from 'react'
 import Map from './Map'
 import Link from './Link'
 import SpeakerSchedule from './SpeakerSchedule.js'
+import { Attendees } from './Attendees'
 
-export default ({ title, date, html, location, speakers, link }) => {
+export default ({
+  title,
+  date,
+  html,
+  location,
+  speakers,
+  link,
+  attendees = []
+}) => {
   return (
     <div>
       <style jsx>{`
@@ -30,6 +39,7 @@ export default ({ title, date, html, location, speakers, link }) => {
         className="description"
         dangerouslySetInnerHTML={{ __html: html }}
       ></div>
+      <Attendees.tag attendees={attendees} />
       <hr className="speaker-schedule" />
       {speakers ? (
         <div className="speaker-schedule">
