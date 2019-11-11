@@ -89,7 +89,9 @@ export const EventAttendees = async (
     }, new Map())
     .values();
 
-  return Array.from(onlyLast);
+  return Array.from(onlyLast).filter(
+    attendee => attendee.status === AttendanceStatus.GOING
+  );
 };
 
 export async function AttendeeUser(parent: Attendee): Promise<User | null> {
