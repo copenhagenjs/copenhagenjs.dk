@@ -25,7 +25,8 @@ const { users } = require("./resolvers/users.js");
 import {
   attendEvent,
   EventAttendance,
-  EventAttendees
+  EventAttendees,
+  AttendeeUser
 } from "./resolvers/attendEvent";
 
 const typeDefs = gql`
@@ -151,6 +152,9 @@ const resolvers = {
   Event: {
     attendance: EventAttendance,
     attendees: EventAttendees
+  },
+  Attendee: {
+    user: AttendeeUser
   },
   Speaker: {
     event: SpeakerEvent

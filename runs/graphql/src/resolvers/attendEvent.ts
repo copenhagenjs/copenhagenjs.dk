@@ -7,6 +7,8 @@ import {
 } from "../models/attendance";
 import { EventDetails, memGetEvents } from "../models/events";
 import { Context } from "../services/context";
+import { User, getUser } from "../models/user";
+import { FirebaseResult } from "../services/firebase";
 
 type AttendEventInput = {
   eventSlug: string;
@@ -80,3 +82,13 @@ export const EventAttendees = async (
     .filter((x): x is Attendance => x !== undefined);
   return data;
 };
+
+export async function AttendeeUser(parent: Attendee): Promise<User | null> {
+  const firebaseResult = await getUser(parent.userId);
+  if (firebaseResult && firebaseResult.exists) {
+    const user = firebaseResult.data();
+    return user ? user : null;
+  } else {
+    return null;
+  }
+}
