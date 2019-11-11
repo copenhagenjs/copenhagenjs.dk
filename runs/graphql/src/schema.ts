@@ -22,7 +22,11 @@ const {
 } = require("./resolvers/speakerprofile.js");
 const { SpeakerEvent } = require("./resolvers/speaker.js");
 const { users } = require("./resolvers/users.js");
-import { attendEvent, EventAttendance } from "./resolvers/attendEvent";
+import {
+  attendEvent,
+  EventAttendance,
+  EventAttendees
+} from "./resolvers/attendEvent";
 
 const typeDefs = gql`
   type Video {
@@ -145,7 +149,8 @@ const resolvers = {
     me
   },
   Event: {
-    attendance: EventAttendance
+    attendance: EventAttendance,
+    attendees: EventAttendees
   },
   Speaker: {
     event: SpeakerEvent
