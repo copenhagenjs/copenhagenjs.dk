@@ -54,6 +54,7 @@ export async function getEventAttendees(
   const attendanceColl = db.collection(collection);
   const results = await attendanceColl
     .where("eventSlug", "==", eventSlug)
+    .orderBy("timestamp")
     .get();
   return results;
 }
