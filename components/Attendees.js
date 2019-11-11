@@ -19,7 +19,7 @@ export const Attendees = {
             max-width: 50px;
           }
         `}</style>
-        {attendees.map(attendees => {
+        {attendees.map((attendees, key) => {
           const image = (
             <img
               alt={attendees.user.name}
@@ -29,7 +29,7 @@ export const Attendees = {
             />
           )
           return (
-            <div className="image-container">
+            <div className="image-container" key={key}>
               {attendees.user.twitterId !== null ? (
                 <a href={'https://twitter.com/' + attendees.user.twitterId}>
                   {image}
