@@ -56,7 +56,7 @@ export const EventAttendance = async (
     if (attendance.size === 0) {
       return null;
     } else {
-      const data = attendance.docs[0].data();
+      const data = attendance.docs[attendance.docs.length - 1].data();
       if (data && data.status) {
         return { status: data.status };
       } else {

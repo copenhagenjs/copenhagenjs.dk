@@ -11,6 +11,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Event from '../components/Event'
 import Attendance from '../components/Attendance'
+import { Attendees } from '../components/Attendees'
 
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
@@ -51,8 +52,14 @@ const EVENTS = gql`
         title
         name
       }
+      attendees {
+        user {
+          ...Attendees
+        }
+      }
     }
   }
+  ${Attendees.fragment}
 `
 
 function EventGraph() {
@@ -65,9 +72,7 @@ function EventGraph() {
       }
     },
     onCompleted(data) {
-      debugger
       if (data.attendEvent.status) {
-        debugger
         setAttendance(data.attendEvent.status)
       }
     }
@@ -80,13 +85,11 @@ function EventGraph() {
       }
     },
     onCompleted(data) {
-      debugger
       if (
         data.events &&
         data.events.length !== 0 &&
         data.events[0].attendance
       ) {
-        debugger
         setAttendance(data.events[0].attendance.status)
       }
     }
@@ -103,7 +106,9 @@ function EventGraph() {
   }, [])
 
   useEffect(() => {
-    getAttendanceStatus()
+    if (token !== '') {
+      getAttendanceStatus()
+    }
   }, [token])
 
   if (loading) return <span>Loading...</span>
@@ -116,7 +121,15 @@ function EventGraph() {
       </>
     )
 
-  const { content, title, date, link, presentations, location } = data.events[0]
+  const {
+    content,
+    title,
+    date,
+    link,
+    presentations,
+    location,
+    attendees
+  } = data.events[0]
 
   return (
     <>
@@ -127,19 +140,24 @@ function EventGraph() {
         location={location}
         speakers={presentations}
         link={link}
+        attendees={attendees}
       />
       {token.length > 0 && (
-        <Attendance
-          status={attendance}
-          onClick={status => {
-            setAttendance(status)
-            if (token.length > 0) {
-              attendEvent({
-                variables: { eventSlug: data.events[0].slug, status: status }
-              })
-            }
-          }}
-        />
+        <>
+          <hr />
+          <h2>Beta feature:</h2>
+          <Attendance
+            status={attendance}
+            onClick={status => {
+              setAttendance(status)
+              if (token.length > 0) {
+                attendEvent({
+                  variables: { eventSlug: data.events[0].slug, status: status }
+                })
+              }
+            }}
+          />
+        </>
       )}
     </>
   )

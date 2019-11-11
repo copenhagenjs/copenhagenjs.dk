@@ -37,6 +37,7 @@ export async function getUserEventAttendance(
   const results = await attendanceColl
     .where("userId", "==", userId)
     .where("eventSlug", "==", eventSlug)
+    .orderBy("timestamp")
     .get();
   return results;
 }
