@@ -72,9 +72,7 @@ function EventGraph() {
       }
     },
     onCompleted(data) {
-      debugger
       if (data.attendEvent.status) {
-        debugger
         setAttendance(data.attendEvent.status)
       }
     }
@@ -87,13 +85,11 @@ function EventGraph() {
       }
     },
     onCompleted(data) {
-      debugger
       if (
         data.events &&
         data.events.length !== 0 &&
         data.events[0].attendance
       ) {
-        debugger
         setAttendance(data.events[0].attendance.status)
       }
     }
@@ -147,17 +143,21 @@ function EventGraph() {
         attendees={attendees}
       />
       {token.length > 0 && (
-        <Attendance
-          status={attendance}
-          onClick={status => {
-            setAttendance(status)
-            if (token.length > 0) {
-              attendEvent({
-                variables: { eventSlug: data.events[0].slug, status: status }
-              })
-            }
-          }}
-        />
+        <>
+          <hr />
+          <h2>Beta feature:</h2>
+          <Attendance
+            status={attendance}
+            onClick={status => {
+              setAttendance(status)
+              if (token.length > 0) {
+                attendEvent({
+                  variables: { eventSlug: data.events[0].slug, status: status }
+                })
+              }
+            }}
+          />
+        </>
       )}
     </>
   )
