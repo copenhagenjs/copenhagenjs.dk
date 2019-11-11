@@ -50,7 +50,7 @@ export async function getAttendees(): Promise<
 
 export async function getEventAttendees(
   eventSlug: string
-): Promise<admin.firestore.QuerySnapshot> {
+): Promise<FirebaseResult<Attendance> & admin.firestore.QuerySnapshot> {
   const attendanceColl = db.collection(collection);
   const results = await attendanceColl
     .where("eventSlug", "==", eventSlug)
