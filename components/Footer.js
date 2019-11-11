@@ -103,7 +103,7 @@ export default () => (
     </div>
 
     <div className="discord">
-      <a href="https://discord.gg/C9dYKEy">
+      <a href="https://discord.gg/7vxce3s">
         <img
           className="discord-logo"
           src="/static/images/discord-logo.svg"
