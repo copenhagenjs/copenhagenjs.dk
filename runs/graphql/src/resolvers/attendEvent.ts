@@ -76,11 +76,20 @@ type Attendee = {
 export const EventAttendees = async (
   parent: EventDetails
 ): Promise<Attendance[]> => {
-  const attendees = await getEventAttendees(parent.slug);
-  const data = attendees.docs
+  const firebaseResult = await getEventAttendees(parent.slug);
+  const attendees = firebaseResult.docs
     .map(a => a.data())
     .filter((x): x is Attendance => x !== undefined);
-  return data;
+
+  // a user can change their status many times
+  // we only want to show their latest status
+  const onlyLast = attendees
+    .reduce((accumulator, current) => {
+      return accumulator.set(current.userId, current);
+    }, new Map())
+    .values();
+
+  return Array.from(onlyLast);
 };
 
 export async function AttendeeUser(parent: Attendee): Promise<User | null> {
