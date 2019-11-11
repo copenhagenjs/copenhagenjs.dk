@@ -110,7 +110,9 @@ function EventGraph() {
   }, [])
 
   useEffect(() => {
-    getAttendanceStatus()
+    if (token !== '') {
+      getAttendanceStatus()
+    }
   }, [token])
 
   if (loading) return <span>Loading...</span>
