@@ -15,17 +15,15 @@ export default ({ status, onClick }) => {
       </Button>
     </div>
   )
+  const handler = status => {
+    setEditState(false)
+    onClick(status)
+  }
   switch (status) {
     case 'INIT':
       return (
         <div>
-          <Button
-            onClick={() => {
-              onClick('GOING')
-            }}
-          >
-            I want to attend!
-          </Button>
+          <Button onClick={() => handler('GOING')}>I want to attend!</Button>
         </div>
       )
     case 'GOING':
@@ -34,13 +32,7 @@ export default ({ status, onClick }) => {
           <div>You are going!</div>
           {editButton}
           {editState && (
-            <Button
-              onClick={() => {
-                onClick('NOTGOING')
-              }}
-            >
-              I can't attend!
-            </Button>
+            <Button onClick={() => handler('NOTGOING')}>I can't attend!</Button>
           )}
         </div>
       )
@@ -50,13 +42,7 @@ export default ({ status, onClick }) => {
           <div>You are not going!</div>
           {editButton}
           {editState && (
-            <Button
-              onClick={() => {
-                onClick('GOING')
-              }}
-            >
-              I want to attend!
-            </Button>
+            <Button onClick={() => handler('GOING')}>I want to attend!</Button>
           )}
         </div>
       )
@@ -66,13 +52,7 @@ export default ({ status, onClick }) => {
           <div>You are on the waitlist!</div>
           {editButton}
           {editState && (
-            <Button
-              onClick={() => {
-                onClick('NOTGOING')
-              }}
-            >
-              I can't attend.
-            </Button>
+            <Button onClick={() => handler('NOTGOING')}>I can't attend.</Button>
           )}
         </div>
       )

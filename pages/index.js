@@ -1,31 +1,110 @@
+import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import 'isomorphic-unfetch'
 import { gql } from 'apollo-boost'
 import { client } from '../services/graphql.js'
 import { ApolloProvider } from '@apollo/react-hooks'
-import { useQuery } from '@apollo/react-hooks'
+import { useQuery, useLazyQuery, useMutation } from '@apollo/react-hooks'
 import Layout from '../components/Layout'
 import Map from '../components/Map'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Event from '../components/Event'
+import Attendance from '../components/Attendance'
 
-function EventGraph() {
-  const { loading, error, data } = useQuery(gql`
-    {
-      events(first: 1, status: UPCOMING) {
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
+import { initFirebase, redirectToLogin } from '../services/firebase.js'
+
+const ATTEND_EVENT = gql`
+  mutation AttendEvent($eventSlug: String!, $status: AttendanceStatus) {
+    attendEvent(input: { eventSlug: $eventSlug, status: $status }) {
+      status
+      event {
         title
-        date
-        link
-        content
-        location
-        presentations {
-          title
-          name
-        }
       }
     }
-  `)
+  }
+`
+const ATTENDING = gql`
+  {
+    events(first: 1, status: UPCOMING) {
+      title
+      slug
+      attendance {
+        status
+      }
+    }
+  }
+`
+
+const EVENTS = gql`
+  {
+    events(first: 1, status: UPCOMING) {
+      title
+      slug
+      date
+      link
+      content
+      location
+      presentations {
+        title
+        name
+      }
+    }
+  }
+`
+
+function EventGraph() {
+  const [token, setToken] = useState('')
+  const [attendance, setAttendance] = useState('INIT')
+  const [attendEvent, { attendEventData }] = useMutation(ATTEND_EVENT, {
+    context: {
+      headers: {
+        authorization: 'bearer ' + token
+      }
+    },
+    onCompleted(data) {
+      debugger
+      if (data.attendEvent.status) {
+        debugger
+        setAttendance(data.attendEvent.status)
+      }
+    }
+  })
+  const { loading, error, data } = useQuery(EVENTS)
+  const [getAttendanceStatus, attendanceMeta] = useLazyQuery(ATTENDING, {
+    context: {
+      headers: {
+        authorization: 'bearer ' + token
+      }
+    },
+    onCompleted(data) {
+      debugger
+      if (
+        data.events &&
+        data.events.length !== 0 &&
+        data.events[0].attendance
+      ) {
+        debugger
+        setAttendance(data.events[0].attendance.status)
+      }
+    }
+  })
+
+  useEffect(() => {
+    initFirebase()
+    firebase.auth().onAuthStateChanged(async function(user) {
+      if (user) {
+        const result = await user.getIdTokenResult()
+        setToken(result.token)
+      }
+    })
+  }, [])
+
+  useEffect(() => {
+    getAttendanceStatus()
+  }, [token])
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
@@ -38,6 +117,7 @@ function EventGraph() {
     )
 
   const { content, title, date, link, presentations, location } = data.events[0]
+
   return (
     <>
       <Event
@@ -48,6 +128,19 @@ function EventGraph() {
         speakers={presentations}
         link={link}
       />
+      {token.length > 0 && (
+        <Attendance
+          status={attendance}
+          onClick={status => {
+            setAttendance(status)
+            if (token.length > 0) {
+              attendEvent({
+                variables: { eventSlug: data.events[0].slug, status: status }
+              })
+            }
+          }}
+        />
+      )}
     </>
   )
 }
