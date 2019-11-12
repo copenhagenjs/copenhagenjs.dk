@@ -8,7 +8,7 @@ CopenhagenJS aims to provide a harassment-free meetup experience for everyone, r
 
 Sexual language and imagery is not appropriate for any meetup venue, including talks, workshops, parties, Twitter and other online media. Meetup participants violating these rules may be sanctioned or expelled from the meetup without a refund at the discretion of the meetup organisers.
 
-If alcohol is offered at a venue, drink respectfully, respect others choices not to do so.`
+If alcohol is offered at a venue, drink responsibly, respect others choices not to do so.`
 
 export default () => {
   return (
