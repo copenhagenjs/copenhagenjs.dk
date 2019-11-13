@@ -49,6 +49,12 @@ If you are a student you can get 6 months for free through the <a href="https://
 
 <a href='https://frontendmasters.com/learn/javascript/'>Check out Frontend Masters's JavaScript Learning Path</a>
 
+
+### 8. You Don't Know JS (Books)
+This is a series of books by Kyle Simpson diving deep into the core mechanisms of the JavaScript language.
+
+<a href='https://github.com/getify/You-Dont-Know-JS⁄'>Check out Kyle Simpsons You Don't Know JS</a>
+
 `
 export default () => {
   return (
