@@ -10,7 +10,7 @@ genrule(
     "services/**",
     "static/**",
     "utils/**",
-  ]) + ["//_posts:copy"],
+  ]) + ["//_posts:copy"] + ["//data:copy"],
   cmd = "tar --exclude='./node_modules' -czh . | docker build -t cphjs - && docker run --rm cphjs sh -c 'tar -C out -cvzf - .' > $(location build.tar.gz)",
   outs = ["build.tar.gz"],
   tags = ["requires-network", "no-remote"]
