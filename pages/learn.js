@@ -22,9 +22,13 @@ export default () => {
           </p>
         </div>
       ))}
-      <div>
-        <p>Feel free to add suggestios to learning resources <a href='https://github.com/copenhagenjs/copenhagenjs.dk/blob/master/data/learn.js'>here</a></p>
-      </div>
+      <p>
+        Do you know a good resource to learn JavaScript? You should
+        <a href="https://github.com/copenhagenjs/copenhagenjs.dk/blob/master/data/learn.js">
+          Submit a Pull Request here
+        </a>
+        .
+      </p>
     </Page>
   )
 }
