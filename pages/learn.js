@@ -23,7 +23,7 @@ export default () => {
         </div>
       ))}
       <div>
-        <p>Feel free to add suggestios to learning resources <a href="https://github.com/copenhagenjs/copenhagenjs.dk/blob/master/data/learn.js">here</a></p>
+        <p>Feel free to add suggestios to learning resources <a href='https://github.com/copenhagenjs/copenhagenjs.dk/blob/master/data/learn.js'>here</a></p>
       </div>
     </Page>
   )
