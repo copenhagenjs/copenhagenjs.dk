@@ -30,12 +30,12 @@ export const resources = [
   },
   {
     title: 'Speaking JavaScript',
-    desc: `This book is aimed at programmers who want to learn JavaScript quickly and properly, and JavaScript programmers who want to deepen their skills and/or look up specific topics. Dr. Axel Rauschmayer has written other books on JavaScript and also actively maintains a blog <a href='https://2ality.com'>2ality</a> where he writes mainly about JavaScript. An HTML version of the book is available online for free.`,
+    desc: `This book is aimed at programmers who want to learn JavaScript quickly and properly, and JavaScript programmers who want to deepen their skills and/or look up specific topics. Dr. Axel Rauschmayer has written other books on JavaScript and also actively maintains a blog where he writes mainly about JavaScript. An HTML version of the book is available online for free.`,
     url: 'http://speakingjs.com'
   },
   {
     title: 'Frontend Masters',
-    desc: `This website has amazing video courses. It is subscription-based. However some previews are available. If you are a student you can get 6 months for free through the <a href="https://frontendmasters.com/welcome/github-student-developers/">GitHub Student Developer Pack.</a>. `,
+    desc: `This website has amazing video courses. It is subscription-based. However some previews are available. If you are a student you can get 6 months for free through the GitHub Student Developer Pack. `,
     url: 'https://frontendmasters.com/learn/javascript/'
   },
   {
