@@ -2,11 +2,11 @@ FROM node:12-alpine
 
 WORKDIR /app
 
-ADD package.json package-lock.json /app/
+ADD web/package.json web/package-lock.json /app/
 
 RUN npm ci
 
-ADD . /app
+ADD web /app
 
 RUN npm run build-storybook
 

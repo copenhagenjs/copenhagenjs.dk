@@ -1,5 +1,7 @@
 # 📦 CopenhagenJS Website
 
+Find it inside `web` folder.
+
 Made with [Next.js](https://nextjs.org/) and deployed to [Firebase](https://firebase.google.com/).
 
 How to run the website:
