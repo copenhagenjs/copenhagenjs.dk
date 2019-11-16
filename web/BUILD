@@ -11,7 +11,7 @@ genrule(
     "static/**",
     "utils/**",
   ]) + ["//_posts:copy"] + ["//data:copy"],
-  cmd = "tar --exclude='./node_modules' -czh . | docker build -t cphjs - && docker run --rm cphjs sh -c 'tar -C out -cvzf - .' > $(location build.tar.gz)",
+  cmd = "tar --exclude='./node_modules' -czh . | docker build -f web/Dockerfile -t cphjs - && docker run --rm cphjs sh -c 'tar -C out -cvzf - .' > $(location build.tar.gz)",
   outs = ["build.tar.gz"],
   tags = ["requires-network", "no-remote"]
 )
@@ -26,7 +26,7 @@ genrule(
     "static/**",
     "stories/**",
   ]),
-  cmd = "tar --exclude='./node_modules' -czh . | docker build -t cphjs-storybook -f Dockerfile-storybook - && docker run --rm cphjs-storybook sh -c 'tar -C static/storybook -cvzf - .' > $(location storybook.tar.gz)",
+  cmd = "tar --exclude='./node_modules' -czh . | docker build -t cphjs-storybook -f web/Dockerfile-storybook - && docker run --rm cphjs-storybook sh -c 'tar -C static/storybook -cvzf - .' > $(location storybook.tar.gz)",
   outs = ["storybook.tar.gz"],
   tags = ["no-sandbox"]
 )

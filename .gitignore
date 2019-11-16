@@ -4,11 +4,11 @@ public/*
 node_modules
 .next
 out
-pages/archive
+archive
 .firebase
 bazel-bin
 bazel-copenhagenjs.dk
 bazel-genfiles
 bazel-out
 bazel-testlogs
-static/storybook
+static
