@@ -1,5 +1,5 @@
 jest.mock("../models/user.js");
-import { updateUser } from "../models/user.js";
+import { updateUser, searchUser } from "../models/user.js";
 import { updateProfile } from "./updateprofile.js";
 
 test("updateProfile defined", () => {
@@ -32,4 +32,32 @@ test("reject profileupdate when no user", async () => {
   await expect(updateProfile(null, { input: userInput }, {})).rejects.toThrow(
     "Can't update with no user"
   );
+});
+
+test("reject profileupdate if username already exist", async () => {
+  searchUser.mockReturnValue(
+    Promise.resolve({
+      size: 1
+    })
+  );
+  const userInput = {
+    username: "donaldduck"
+  };
+  await expect(
+    updateProfile(null, { input: userInput }, { token: { user_id: "donald" } })
+  ).rejects.toThrow("Username already exists!");
+});
+
+test("reject profileupdate if username too short", async () => {
+  searchUser.mockReturnValue(
+    Promise.resolve({
+      size: 0
+    })
+  );
+  const userInput = {
+    username: "don"
+  };
+  await expect(
+    updateProfile(null, { input: userInput }, { token: { user_id: "donald" } })
+  ).rejects.toThrow("Username already exists, it has to be min. 8 characters!");
 });

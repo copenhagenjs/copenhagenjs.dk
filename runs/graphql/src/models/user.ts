@@ -4,6 +4,7 @@ import { FirebaseResult, FirebaseResultItem, db } from "../services/firebase";
 export type User = {
   id?: string;
   email?: string;
+  username?: string;
   name?: string;
   image?: string;
   githubId?: string;
