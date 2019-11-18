@@ -61,3 +61,19 @@ test("reject profileupdate if username too short", async () => {
     updateProfile(null, { input: userInput }, { token: { user_id: "donald" } })
   ).rejects.toThrow("Username already exists, it has to be min. 8 characters!");
 });
+
+test("ensure username contains legal characters", async () => {
+  const userInput = {
+    username: "Donald Duck"
+  };
+  updateUser.mockReturnValue(Promise.resolve({}));
+  const profile = await updateProfile(
+    null,
+    { input: userInput },
+    { token: { user_id: "donald" } }
+  );
+  expect(profile).toEqual(userInput);
+  expect(updateUser).lastCalledWith("donald", {
+    username: "donald-duck"
+  });
+});

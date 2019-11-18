@@ -1,4 +1,5 @@
 import { updateUser, searchUser } from "../models/user";
+import { slugify } from "../services/slug";
 
 export const updateProfile = async (parent, arg, context) => {
   if (!context.token) {
@@ -15,6 +16,7 @@ export const updateProfile = async (parent, arg, context) => {
         "Username already exists, it has to be min. 8 characters!"
       );
     }
+    userInput.username = slugify(userInput.username);
   }
   const data = await updateUser(context.token.user_id, userInput);
   return arg.input;
