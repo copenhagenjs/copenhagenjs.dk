@@ -84,6 +84,7 @@ const typeDefs = gql`
   type User {
     id: String
     email: String
+    username: String
     name: String
     image: String
     githubId: String
@@ -92,6 +93,7 @@ const typeDefs = gql`
     website: String
   }
   input ProfileInput {
+    username: String
     name: String
     image: String
     githubId: String
