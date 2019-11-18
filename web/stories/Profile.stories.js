@@ -13,6 +13,7 @@ storiesOf('Profile', module)
       {...{
         defaultValues: {
           name: 'name',
+          username: 'username',
           image: 'image',
           githubId: 'githubId',
           twitterId: 'twitterId',
