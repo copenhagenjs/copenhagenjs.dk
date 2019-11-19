@@ -9,7 +9,7 @@ genrule(
     "server.js",
     "src/**",
   ]) + ["//_posts:copy", "//data:copy"],
-  cmd = "tar -czh . | docker build -q -t copenhagen.js-graphql -f runs/graphql/Dockerfile - > $@",
+  cmd = "tar --exclude='./node_modules' -czh . | docker build -q -t copenhagen.js-graphql -f runs/graphql/Dockerfile - > $@",
   outs = ["build.txt"],
   tags = ["requires-network", "no-remote"]
 )
