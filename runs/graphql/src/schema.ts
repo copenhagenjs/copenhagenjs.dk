@@ -28,6 +28,7 @@ import {
   EventAttendees,
   AttendeeUser
 } from "./resolvers/attendEvent";
+import { updateQuiz, getQuizAttendees } from "./models/quiz";
 
 const typeDefs = gql`
   type Video {
@@ -128,10 +129,12 @@ const typeDefs = gql`
     searchSpeakers(name: String!): [Speaker]
     users: [User]
     me: User
+    quizAttendees: [String]
   }
   type Mutation {
     updateProfile(input: ProfileInput): User
     attendEvent(input: AttendEventInput!): Attendance
+    submitQuiz(answer: String!): String
   }
 `;
 
@@ -149,7 +152,13 @@ const resolvers = {
     speakerProfile,
     speakerProfiles,
     users,
-    me
+    me,
+    quizAttendees: async () => {
+      const attendees = await getQuizAttendees();
+      return attendees.map(a => {
+        return a.data().answer || "";
+      });
+    }
   },
   Event: {
     attendance: EventAttendance,
@@ -174,7 +183,14 @@ const resolvers = {
   },
   Mutation: {
     updateProfile,
-    attendEvent
+    attendEvent,
+    submitQuiz: async (root, args, context) => {
+      if (!context.token) {
+        throw new Error("Can't attend quiz with no user!");
+      }
+      await updateQuiz(context.token.user_id, args);
+      return "You are participating!";
+    }
   }
 };
 
