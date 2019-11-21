@@ -5,7 +5,7 @@ export type Quiz = {
   answer?: string;
 };
 
-const collection = "quiz";
+const collection = "users";
 
 export async function getQuizAttendees(): Promise<
   admin.firestore.QueryDocumentSnapshot[]
@@ -15,7 +15,7 @@ export async function getQuizAttendees(): Promise<
 }
 
 export async function updateQuiz(userId, data: Quiz) {
-  const doc = db.collection("users").doc(userId);
+  const doc = db.collection(collection).doc(userId);
   const update = await doc.set(data, { merge: true });
   return update;
 }
