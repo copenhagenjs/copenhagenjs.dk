@@ -27,6 +27,7 @@ export default () => {
     }
     `,
     {
+      client,
       context: {
         headers: {
           authorization: 'bearer ' + token
@@ -47,6 +48,8 @@ export default () => {
       }
     })
   }, [])
+
+  if (mutationLoading) return <span>Loading...</span>
 
   return (
     <Page>
