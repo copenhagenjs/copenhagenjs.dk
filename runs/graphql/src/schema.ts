@@ -115,6 +115,10 @@ const typeDefs = gql`
     status: AttendanceStatus
     event: Event
   }
+  type Quiz {
+    answer: String
+    user: String
+  }
   type Query {
     hello: String
     events(first: Int, last: Int, status: EventStatus): [Event]
@@ -129,7 +133,7 @@ const typeDefs = gql`
     searchSpeakers(name: String!): [Speaker]
     users: [User]
     me: User
-    quizAttendees: [{answer: String, user: String}]
+    quizAttendees: [Quiz]
   }
   type Mutation {
     updateProfile(input: ProfileInput): User
