@@ -7,7 +7,7 @@ import ApolloClient, { gql } from 'apollo-boost'
 import Page from '../components/Page'
 import Button from '../components/Button'
 import TextInput from '../components/TextInput'
-import { initFirebase, redirectToLogin } from '../../services/firebase.js'
+import { initFirebase, redirectToLogin } from '../services/firebase.js'
 
 const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
@@ -75,6 +75,7 @@ export default () => {
       >
         Send
       </Button>
+      {quizData && quizData.submitQuiz}
     </Page>
   )
 }
