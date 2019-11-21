@@ -129,7 +129,7 @@ const typeDefs = gql`
     searchSpeakers(name: String!): [Speaker]
     users: [User]
     me: User
-    quizAttendees: [String]
+    quizAttendees: [{answer: String, user: String}]
   }
   type Mutation {
     updateProfile(input: ProfileInput): User
@@ -157,9 +157,9 @@ const resolvers = {
       const attendees = await getQuizAttendees();
       return attendees
         .map(a => {
-          return a.data().answer || "";
+          return { answer: a.data().answer || "", user: a.id };
         })
-        .filter(i => i.length > 0);
+        .filter(i => i.answer.length > 0);
     }
   },
   Event: {
