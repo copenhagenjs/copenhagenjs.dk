@@ -155,9 +155,11 @@ const resolvers = {
     me,
     quizAttendees: async () => {
       const attendees = await getQuizAttendees();
-      return attendees.map(a => {
-        return a.data().answer || "";
-      });
+      return attendees
+        .map(a => {
+          return a.data().answer || "";
+        })
+        .filter(i => i.length > 0);
     }
   },
   Event: {
