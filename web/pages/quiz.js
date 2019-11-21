@@ -21,10 +21,10 @@ export default () => {
     submitQuiz,
     { data: quizData, loading: mutationLoading, error: mutationError }
   ] = useMutation(
-    `
-    mutation UpdateQuiz($input: String!) {
-      submitQuiz(answer: $input)
-    }
+    gql`
+      mutation UpdateQuiz($input: String!) {
+        submitQuiz(answer: $input)
+      }
     `,
     {
       client,
@@ -49,7 +49,7 @@ export default () => {
     })
   }, [])
 
-  if (mutationLoading) return <span>Loading...</span>
+  if (mutationLoading) return <Page>Loading...</Page>
 
   return (
     <Page>
