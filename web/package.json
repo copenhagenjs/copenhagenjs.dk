@@ -37,12 +37,12 @@
     "yargs": "^14.2.0"
   },
   "devDependencies": {
-    "@storybook/react": "^5.2.6",
-    "@storybook/addon-actions": "^5.2.6",
-    "@storybook/addon-links": "^5.2.6",
-    "@storybook/addons": "^5.2.6",
-    "@babel/core": "^7.7.2",
-    "babel-loader": "^8.0.6"
+    "@storybook/react": "5.2.6",
+    "@storybook/addon-actions": "5.2.6",
+    "@storybook/addon-links": "5.2.6",
+    "@storybook/addons": "5.2.6",
+    "@babel/core": "7.7.2",
+    "babel-loader": "8.0.6"
   },
   "prettier": {
     "semi": false,
