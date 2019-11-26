@@ -3,6 +3,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "firebase-admin": "8.6.0"
+    "firebase-admin": "8.8.0"
   }
 }
