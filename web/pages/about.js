@@ -40,8 +40,8 @@ We've put together a little checklist, of things to keep in mind when hosting a 
    * Put up signs/posters on location to guide participants
 * Have your presentation setup ready and tested in advance
    * HDMI High Definition Projector
-     HD is needed because other text can become unreadable
-   * HDMI cable
+     HD is needed because otherwise text can become unreadable
+   * HDMI cable ([please see this picture if you're unsure](https://da.wikipedia.org/wiki/HDMI#/media/Fil:HDMI_connector-male_2_sharp_PNr%C2%B00059.jpg))
      (we can't use Google ChromeCast as we need the HDMI connection)
    * Power outlet for speaker's laptop
      Bonus points for outlets for participants
