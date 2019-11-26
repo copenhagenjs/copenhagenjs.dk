@@ -20,6 +20,8 @@ For any advice and help that you need when you build the presentation, you can c
 - Disable Night Shift
 - Disable Energy Saver (avoid black screen during presenting)
 - Check wifi access before starting
+- Check that code examples has high contrast
+  Dark colors on dark backgrounds can't be seen on projectors even though it works on monitors.
 - Check contrast to be at least AA https://accessible-colors.com/
 - Generate PDF of presentation to share afterwards
 
