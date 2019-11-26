@@ -39,10 +39,12 @@ We've put together a little checklist, of things to keep in mind when hosting a 
    * Supply links to map services with pointers placed correctly
    * Put up signs/posters on location to guide participants
 * Have your presentation setup ready and tested in advance
-   * HDMI Projector
+   * HDMI High Definition Projector
+     HD is needed because other text can become unreadable
    * HDMI cable
-   * Power outlet for speaker's laptop, bonus points for outlets for participants
-   * Possibly power supply for laptops, Macs are popular
+     (we can't use Google ChromeCast as we need the HDMI connection)
+   * Power outlet for speaker's laptop
+     Bonus points for outlets for participants
 * Drinks, snacks
    * Beer, sodas, tea and coffee are greatly appreciated
    * Snacks are popular, but not required
