@@ -43,4 +43,9 @@ export const resources = [
     desc: `This is a series of books diving deep into the core mechanisms of the JavaScript language.`,
     url: 'https://github.com/getify/You-Dont-Know-JS'
   }
+  {
+    title: `Udacity - Nanodegrees`,
+    desc: `This repository lists all free courses from Udacity. Udacity offers multiple courses in JavaScript in the three Web Developer Nanodegrees. You receive certificate after completion`,
+    url: 'https://github.com/mikesprague/udacity-nanodegrees#front-end-web-developer-nanodegree'
+  }
 ]
