@@ -3,7 +3,7 @@ genrule(
   srcs = glob(["**"]) + ["//_posts:copy"],
   cmd = "tar -czh . | docker build -q -t feed -f runs/feed/Dockerfile - > $@",
   outs = ["build.txt"],
-  tags = ["local"]
+  tags = ["requires-network", "no-remote"]
 )
 
 genrule(

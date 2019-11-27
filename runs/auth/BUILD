@@ -3,7 +3,7 @@ genrule(
   srcs = glob(["**"]),
   cmd = "tar -C runs/auth -czh . | docker build -q -t auth - > $@",
   outs = ["build.txt"],
-  tags = ["local"]
+  tags = ["requires-network", "no-remote"]
 )
 
 genrule(
