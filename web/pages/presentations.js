@@ -24,7 +24,7 @@ function Speakers() {
   if (error) return <span>Error :(</span>
   return (
     <div>
-      <p>There has been {data.speakers.length} talks.</p>
+      <p>There have been {data.speakers.length} talks.</p>
 
       {data.speakers.reverse().map(speaker => {
         return (
