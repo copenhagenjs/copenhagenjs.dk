@@ -26,7 +26,7 @@ function Speakers() {
   if (error) return <span>Error :(</span>
   return (
     <div>
-      <p>There has been {data.speakerProfiles.length} speakers.</p>
+      <p>There have been {data.speakerProfiles.length} speakers.</p>
 
       {data.speakerProfiles.reverse().map(speakerProfile => {
         const selectUser = speakerProfile.user || speakerProfile.ghostUser
