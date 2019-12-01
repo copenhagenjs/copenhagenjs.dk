@@ -22,7 +22,7 @@ function Events() {
 
   return (
     <>
-      <p>There has been {data.events.length} events.</p>
+      <p>There have been {data.events.length} events.</p>
       <table>
         <thead>
           <tr>
