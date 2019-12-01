@@ -14,6 +14,7 @@ export const ProfileEditForm = ({
   onSubmit
 }) => {
   const [name, setName] = useState('')
+  const [username, setUsername] = useState('')
   const [image, setImage] = useState('')
   const [githubId, setGithubId] = useState('')
   const [twitterId, setTwitterId] = useState('')
@@ -26,6 +27,7 @@ export const ProfileEditForm = ({
   }
   const fields = [
     ['Full name', name, setName],
+    ['Username - min. 8 Characters', username, setUsername],
     ['Image URL', image, setImage],
     ['Github username', githubId, setGithubId, validateUsername],
     ['Twitter username', twitterId, setTwitterId, validateUsername],
@@ -34,6 +36,7 @@ export const ProfileEditForm = ({
   ]
   useEffect(() => {
     setName(defaultValues.name)
+    setUsername(defaultValues.username)
     setImage(defaultValues.image)
     setGithubId(defaultValues.githubId)
     setTwitterId(defaultValues.twitterId)
