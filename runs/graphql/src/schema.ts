@@ -21,7 +21,7 @@ const {
   SpeakerProfileVideos
 } = require("./resolvers/speakerprofile.js");
 const { SpeakerEvent } = require("./resolvers/speaker.js");
-const { users } = require("./resolvers/users.js");
+const { users, user } = require("./resolvers/users.js");
 import {
   attendEvent,
   EventAttendance,
@@ -127,6 +127,7 @@ const typeDefs = gql`
     speakerProfile(slug: String!): SpeakerProfile
     searchSpeakers(name: String!): [Speaker]
     users: [User]
+    user(username: String): User
     me: User
   }
   type Mutation {
@@ -149,6 +150,7 @@ const resolvers = {
     speakerProfile,
     speakerProfiles,
     users,
+    user,
     me
   },
   Event: {
