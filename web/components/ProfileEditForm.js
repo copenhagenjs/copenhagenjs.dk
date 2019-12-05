@@ -68,7 +68,15 @@ export const ProfileEditForm = ({
         size="lg"
         margin="20px 0"
         onClick={() => {
-          onSubmit({ name, image, githubId, twitterId, instagramId, website })
+          onSubmit({
+            name,
+            username,
+            image,
+            githubId,
+            twitterId,
+            instagramId,
+            website
+          })
         }}
       >
         Update Profile
