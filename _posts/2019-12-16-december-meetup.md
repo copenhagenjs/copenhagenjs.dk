@@ -36,9 +36,9 @@ CopenhagenJs is a community group in Copenhagen for all JavaScript developers. W
 
 Definitely, CopenhagenJS is for and by the community, so you are more than welcome to talk about things that you find interesting and we will assist you with your speaking if you are new or have any difficulties. You can contact us with a private message or comment here on meetup.com, or on any social network where you can find us.
 
-Subscribe to our Youtube Channel: https://www.youtube.com/channel/UCOD8lwED5PAcgmhwymQJsng
-Twitter: https://twitter.com/copenhagenjs
-Facebook: https://www.facebook.com/copenhagenjs/
+- Subscribe to our Youtube Channel: https://www.youtube.com/channel/UCOD8lwED5PAcgmhwymQJsng
+- Twitter: https://twitter.com/copenhagenjs
+- Facebook: https://www.facebook.com/copenhagenjs/
 
 Also remember to check out HackXmas which is also a event we are co-organizing! https://hackxmas2019.web.app/
 
