@@ -1,10 +1,10 @@
-const express = require("express");
-const { graphql } = require("graphql");
-const { ApolloServer, gql } = require("apollo-server-express");
+import express from "express";
+import { graphql } from "graphql";
+import { ApolloServer, gql } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
-const { typeDefs, resolvers } = require("./schema.js");
-const http = require("http");
-const admin = require("firebase-admin");
+import { typeDefs, resolvers } from "./schema.js";
+import http from "http";
+import admin from "firebase-admin";
 import { contextHandler } from "./services/context";
 
 const server = new ApolloServer({
