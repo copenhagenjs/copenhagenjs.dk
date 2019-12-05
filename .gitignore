@@ -1,14 +1,6 @@
-/_site/
-public/*
-.DS_Store
-node_modules
-.next
-out
-archive
-.firebase
 bazel-bin
 bazel-copenhagenjs.dk
 bazel-genfiles
 bazel-out
 bazel-testlogs
-static
+node_modules
