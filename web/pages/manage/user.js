@@ -24,6 +24,7 @@ export default () => {
     gql`
       query Profile($username: String!) {
         user(username: $username) {
+          id
           name
           username
           image
@@ -76,6 +77,10 @@ export default () => {
           <div>
             {data.user.image && <img src={data.user.image} width={140} />}
           </div>
+          <div>
+            <strong>Id:</strong>
+          </div>
+          <div>{data.user.id || ''}</div>
           <div>
             <strong>Name:</strong>
           </div>
