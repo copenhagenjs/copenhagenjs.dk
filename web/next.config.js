@@ -18,7 +18,8 @@ module.exports = {
       '/contact': { page: '/contact' },
       '/learn': { page: '/learn' },
       '/profile': { page: '/profile' },
-      '/manage/': { page: '/manage/index' }
+      '/manage/': { page: '/manage/index' },
+      '/manage/user/': { page: '/manage/user' }
     }
     const archive = readdirSync('./pages/archive')
     for (let page in archive) {
