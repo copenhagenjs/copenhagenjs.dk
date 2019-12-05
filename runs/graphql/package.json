@@ -5,6 +5,8 @@
   "scripts": {
     "test": "jest dist",
     "start": "node -r esm dist/server.js",
+    "watch": "tsc --watch",
+    "build": "tsc",
     "fix-lint": "npx prettier --write 'src/**/*'"
   },
   "keywords": [],

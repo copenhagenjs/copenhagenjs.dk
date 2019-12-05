@@ -14,6 +14,6 @@ COPY --from=gcr.io/berglas/berglas:latest /bin/berglas /bin/berglas
 
 ADD runs/graphql /app
 
-RUN npx tsc && mv dist/src/* dist/
+RUN npm run build && mv dist/src/* dist/
 
 ENTRYPOINT exec /bin/berglas exec -- npm start

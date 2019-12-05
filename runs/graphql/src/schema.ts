@@ -1,27 +1,27 @@
-const { graphql } = require("graphql");
-const { gql } = require("apollo-server-express");
+import { graphql } from "graphql";
+import { gql } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
-const { getEvents, memGetEvents } = require("./models/events.js");
-const { getSpeakers } = require("./models/speakers.js");
-const { me } = require("./resolvers/me.js");
-const { updateProfile } = require("./resolvers/updateprofile.js");
-const { video, videos, VideoSpeakerProfile } = require("./resolvers/videos.js");
-const { events, event, searchEvents } = require("./resolvers/events.js");
-const {
+import { getEvents, memGetEvents } from "./models/events.js";
+import { getSpeakers } from "./models/speakers.js";
+import { me } from "./resolvers/me.js";
+import { updateProfile } from "./resolvers/updateprofile.js";
+import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
+import { events, event, searchEvents } from "./resolvers/events.js";
+import {
   speakers,
   searchSpeakers,
   speaker
-} = require("./resolvers/speakers.js");
-const {
+} from "./resolvers/speakers.js";
+import {
   speakerProfile,
   speakerProfiles,
   SpeakerPresentationEvent,
   SpeakerProfileUser,
   SpeakerProfileGhostUser,
   SpeakerProfileVideos
-} = require("./resolvers/speakerprofile.js");
-const { SpeakerEvent } = require("./resolvers/speaker.js");
-const { users, user } = require("./resolvers/users.js");
+} from "./resolvers/speakerprofile.js";
+import { SpeakerEvent } from "./resolvers/speaker.js";
+import { users, user } from "./resolvers/users.js";
 import {
   attendEvent,
   EventAttendance,
