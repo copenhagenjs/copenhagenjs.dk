@@ -23,7 +23,7 @@ export default () => {
         </div>
       ))}
       <p>
-        Do you know a good resource to learn JavaScript? You should
+        Do you know a good resource to learn JavaScript? You should 
         <a href="https://github.com/copenhagenjs/copenhagenjs.dk/blob/master/data/learn.js">
           Submit a Pull Request here
         </a>
