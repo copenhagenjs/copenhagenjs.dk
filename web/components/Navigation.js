@@ -21,7 +21,7 @@ export default class Navigation extends React.Component {
             text-decoration: none;
             border: 1px solid #fff;
             border-radius: 0;
-            padding: 10px 20px;
+            padding: 10px 16px;
             font-weight: bold;
             color: #fff;
             background-color: rgba(0, 0, 0, 0.5);
