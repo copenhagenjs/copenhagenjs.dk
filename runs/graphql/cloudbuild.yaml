@@ -16,4 +16,4 @@ steps:
     args:
       - "-c"
       - |
-        [[ "$BRANCH_NAME" == "master" ]] && gcloud beta run deploy copenhagenjsdk-graphql --image=gcr.io/copenhagenjsdk/copenhagenjs.dk-graphql:$SHORT_SHA --platform=managed --region=europe-west1
+        if [[ "$BRANCH_NAME" == "master" ]]; then gcloud beta run deploy copenhagenjsdk-graphql --image=gcr.io/copenhagenjsdk/copenhagenjs.dk-graphql:$SHORT_SHA --platform=managed --region=europe-west1; else echo "Skipping"; fi
