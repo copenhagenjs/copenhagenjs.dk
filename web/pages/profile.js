@@ -42,6 +42,7 @@ const Profile = () => {
       {
         me {
           name
+          username
           image
           githubId
           twitterId
@@ -95,6 +96,7 @@ const Profile = () => {
 
   const onSubmit = ({
     name,
+    username,
     image,
     githubId,
     twitterId,
@@ -105,6 +107,7 @@ const Profile = () => {
       variables: {
         input: {
           name,
+          username,
           image,
           githubId,
           twitterId,
@@ -116,6 +119,7 @@ const Profile = () => {
   }
   const defaultValues = {
     name: profileData.name || '',
+    username: profileData.username || '',
     image: profileData.image || '',
     githubId: profileData.githubId || '',
     twitterId: profileData.twitterId || '',
