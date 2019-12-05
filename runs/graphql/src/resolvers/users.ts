@@ -7,7 +7,13 @@ export const users = async (root, args, context) => {
     context.user.level.includes("organizer")
   ) {
     const users = await getUsers();
-    return users.map(user => user.data());
+    return users.map(user => {
+      const data = user.data();
+      return {
+        id: user.id,
+        ...data
+      };
+    });
   } else {
     return [];
   }
@@ -21,8 +27,9 @@ export const user = async (root, args, context): Promise<User | null> => {
   ) {
     const users = await searchUser("username", args.username);
     if (users.size === 0) return null;
-    const user: User = users.docs[0].data();
-    return user;
+    const userResult = users.docs[0];
+    const user: User = userResult.data();
+    return { id: userResult.id, ...user };
   } else {
     return null;
   }
