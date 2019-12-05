@@ -1,6 +1,6 @@
 jest.mock("../models/user.js");
 import { users, user } from "./users.js";
-import { getUsers, getUser } from "../models/user.js";
+import { getUsers, searchUser } from "../models/user.js";
 
 test("users should be defined", () => {
   expect(users).toBeDefined();
@@ -26,10 +26,10 @@ test("user should return one user", async () => {
   const fakeUser = {
     name: "Donald Duck"
   };
-  getUser.mockReturnValue(
+  searchUser.mockReturnValue(
     Promise.resolve({
-      data: () => fakeUser,
-      exists: true
+      docs: [{ data: () => fakeUser }],
+      size: 1
     })
   );
   const data = await user(
