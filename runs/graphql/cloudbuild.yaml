@@ -16,6 +16,4 @@ steps:
     args:
       - "-c"
       - |
-        cd runs/graphql
-        sed -e "s/##IMAGE##/gcr.io\/copenhagenjsdk\/copenhagenjs.dk-graphql:$SHORT_SHA/" knative.yaml > knative_out.yaml
-        [[ "$BRANCH_NAME" == "master" ]] && gcloud alpha run services replace knative_out.yaml --platform=managed --region=europe-west1 || echo "Skipping ..."
+        [[ "$BRANCH_NAME" == "master" ]] && gcloud beta run deploy copenhagenjsdk-graphql --image=gcr.io/copenhagenjsdk/copenhagenjs.dk-graphql:$SHORT_SHA --platform=managed --region=europe-west1
