@@ -1,0 +1,6 @@
+static/storybook
+node_modules
+.next
+out
+archive
+.firebase
