@@ -19,6 +19,7 @@ export default () => {
       {
         users {
           name
+          username
           image
           githubId
           twitterId
@@ -66,6 +67,7 @@ export default () => {
             <tr>
               <th></th>
               <th>Name</th>
+              <th>Username</th>
               <th>Github</th>
               <th>Twitter</th>
               <th>Website</th>
@@ -84,6 +86,15 @@ export default () => {
                 </td>
                 <td>{user.name || ''}</td>
                 <td>
+                  {user.username && user.username.length > 0 ? (
+                    <a href={`/manage/user/?username=${user.username}`}>
+                      {user.username}
+                    </a>
+                  ) : (
+                    ''
+                  )}
+                </td>
+                <td>
                   <a href={`https://github.com/${user.githubId}`}>
                     {user.githubId || ''}
                   </a>
@@ -94,7 +105,11 @@ export default () => {
                   </a>
                 </td>
                 <td>
-                  <a href={user.website}>Website</a>
+                  {user.website && user.website.length > 0 ? (
+                    <a href={user.website}>Website</a>
+                  ) : (
+                    ''
+                  )}
                 </td>
                 <td>
                   <a href={`https://instagram.com/${user.instagramId}`}>
