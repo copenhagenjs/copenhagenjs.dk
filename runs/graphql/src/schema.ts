@@ -19,6 +19,7 @@ import {
 import { updateProfile } from "./resolvers/updateprofile.js";
 import { users, user } from "./resolvers/users.js";
 import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
+import { UserEvents } from "./resolvers/userevents";
 
 const typeDefs = gql`
   type Video {
@@ -77,6 +78,7 @@ const typeDefs = gql`
     twitterId: String
     instagramId: String
     website: String
+    events: [Event]
   }
   input ProfileInput {
     username: String
@@ -132,6 +134,9 @@ const resolvers = {
     users,
     user,
     me
+  },
+  User: {
+    events: UserEvents
   },
   Event: {
     attendance: EventAttendance,
