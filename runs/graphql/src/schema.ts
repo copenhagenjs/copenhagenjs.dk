@@ -1,17 +1,13 @@
-import { graphql } from "graphql";
 import { gql } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
-import { getEvents, memGetEvents } from "./models/events.js";
-import { getSpeakers } from "./models/speakers.js";
-import { me } from "./resolvers/me.js";
-import { updateProfile } from "./resolvers/updateprofile.js";
-import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
-import { events, event, searchEvents } from "./resolvers/events.js";
 import {
-  speakers,
-  searchSpeakers,
-  speaker
-} from "./resolvers/speakers.js";
+  attendEvent,
+  EventAttendance,
+  EventAttendees,
+  AttendeeUser
+} from "./resolvers/attendEvent";
+import { events, event, searchEvents } from "./resolvers/events.js";
+import { me } from "./resolvers/me.js";
 import {
   speakerProfile,
   speakerProfiles,
@@ -20,14 +16,9 @@ import {
   SpeakerProfileGhostUser,
   SpeakerProfileVideos
 } from "./resolvers/speakerprofile.js";
-import { SpeakerEvent } from "./resolvers/speaker.js";
+import { updateProfile } from "./resolvers/updateprofile.js";
 import { users, user } from "./resolvers/users.js";
-import {
-  attendEvent,
-  EventAttendance,
-  EventAttendees,
-  AttendeeUser
-} from "./resolvers/attendEvent";
+import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
 
 const typeDefs = gql`
   type Video {
@@ -75,12 +66,6 @@ const typeDefs = gql`
     ghostUser: User
     videos: [Video]
   }
-  type Speaker {
-    name: String
-    slug: String
-    title: String
-    event: Event
-  }
   type User {
     id: String
     email: String
@@ -121,11 +106,8 @@ const typeDefs = gql`
     videos: [Video]
     video(slug: String!): Video
     searchEvents(query: String): [Event]
-    speakers: [Speaker]
-    speaker(slug: String!): [Speaker]
     speakerProfiles: [SpeakerProfile]
     speakerProfile(slug: String!): SpeakerProfile
-    searchSpeakers(name: String!): [Speaker]
     users: [User]
     user(username: String): User
     me: User
@@ -144,9 +126,6 @@ const resolvers = {
     videos,
     video,
     searchEvents,
-    speakers,
-    searchSpeakers,
-    speaker,
     speakerProfile,
     speakerProfiles,
     users,
@@ -159,9 +138,6 @@ const resolvers = {
   },
   Attendee: {
     user: AttendeeUser
-  },
-  Speaker: {
-    event: SpeakerEvent
   },
   SpeakerProfile: {
     user: SpeakerProfileUser,
