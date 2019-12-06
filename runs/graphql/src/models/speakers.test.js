@@ -76,7 +76,8 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
           title: "Welcome to Disney",
           selfLink: events[0].selfLink
         }
-      ]
+      ],
+      presentationsCount: 1
     },
     {
       name: "Goofy Goof",
@@ -90,7 +91,8 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
           title: "Programming funny websites",
           selfLink: events[1].selfLink
         }
-      ]
+      ],
+      presentationsCount: 2
     },
     {
       name: "Batman",
@@ -100,7 +102,8 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
           title: "My secret tools",
           selfLink: events[1].selfLink
         }
-      ]
+      ],
+      presentationsCount: 1
     }
   ]);
 });

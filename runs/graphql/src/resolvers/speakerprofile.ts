@@ -1,5 +1,5 @@
 const { memGetEvents } = require("../models/events.js");
-import { getSpeakerProfiles } from "../models/speakers.js";
+import { getSpeakerProfiles, getSpeakerProfile } from "../models/speakers.js";
 import { slugify } from "../services/slug.js";
 import { searchUser, searchGhostUser } from "../models/user.js";
 import { prepareVideos } from "./videos.js";
@@ -10,9 +10,7 @@ export const speakerProfiles = (parent, args) => {
 };
 
 export const speakerProfile = (parent, { slug }) => {
-  const parsedPresentations = getSpeakerProfiles().find(
-    speakerProfile => speakerProfile.slug === slug
-  );
+  const parsedPresentations = getSpeakerProfile(slug);
   return parsedPresentations;
 };
 

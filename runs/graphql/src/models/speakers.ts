@@ -17,6 +17,7 @@ type SpeakerProfile = {
   name: string;
   slug: string;
   presentations: SpeakerProfilePresentation[];
+  presentationsCount: number;
 };
 
 export const getSpeakerProfiles = (): SpeakerProfile[] => {
@@ -57,10 +58,15 @@ export const getSpeakerProfiles = (): SpeakerProfile[] => {
   // return an array with speakerprofiles
   // that has multiple presentations
   const speakerProfiles: SpeakerProfile[] = Object.values(groupByName);
+
+  speakerProfiles.forEach(speakerProfile => {
+    speakerProfile.presentationsCount = speakerProfile.presentations.length;
+  });
+
   return speakerProfiles;
 };
 
-export const getSpeakerProfile = slug => {
+export const getSpeakerProfile = (slug): SpeakerProfile | undefined => {
   return getSpeakerProfiles().find(
     speakerProfile => speakerProfile.slug === slug
   );

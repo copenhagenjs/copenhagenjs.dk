@@ -62,6 +62,7 @@ const typeDefs = gql`
     name: String
     slug: String
     presentations: [SpeakerPresentation]
+    presentationsCount: Int!
     user: User
     ghostUser: User
     videos: [Video]
