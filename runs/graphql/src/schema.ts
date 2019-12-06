@@ -20,6 +20,7 @@ import { updateProfile } from "./resolvers/updateprofile.js";
 import { users, user } from "./resolvers/users.js";
 import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
 import { UserAttendanceHistory } from "./resolvers/userattendancehistory";
+import { AttendanceEvent } from "./resolvers/attendanceevent";
 
 const typeDefs = gql`
   type Video {
@@ -142,6 +143,9 @@ const resolvers = {
   Event: {
     attendance: EventAttendance,
     attendees: EventAttendees
+  },
+  Attendance: {
+    event: AttendanceEvent
   },
   Attendee: {
     user: AttendeeUser

@@ -13,10 +13,10 @@ export enum AttendanceStatus {
 }
 
 export type Attendance = {
-  userId?: String;
+  userId?: string;
   status?: AttendanceStatus;
-  timestamp?: String;
-  eventSlug?: String;
+  timestamp?: string;
+  eventSlug?: string;
 };
 
 const collection = "attendance";
