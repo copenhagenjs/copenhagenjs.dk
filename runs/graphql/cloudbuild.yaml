@@ -1,19 +1,30 @@
 steps:
   - name: gcr.io/cloud-builders/bazel
     args: ["build", "//runs/graphql:docker"]
+    id: build
   - name: gcr.io/cloud-builders/bazel
     args: ["test", "//runs/graphql:test"]
+    id: test
   - name: gcr.io/cloud-builders/bazel
     entrypoint: "bash"
     args:
       - "-c"
       - |
         bazel build //runs/graphql:tag --action_env=SHA=$SHORT_SHA
+    id: tag
+    waitFor:
+      - build
   - name: gcr.io/cloud-builders/docker
     args: ["push", "gcr.io/copenhagenjsdk/copenhagenjs.dk-graphql:$SHORT_SHA"]
+    id: push
+    waitFor:
+      - tag
   - name: gcr.io/cloud-builders/gcloud
     entrypoint: "bash"
     args:
       - "-c"
       - |
         if [[ "$BRANCH_NAME" == "master" ]]; then gcloud beta run deploy copenhagenjsdk-graphql --image=gcr.io/copenhagenjsdk/copenhagenjs.dk-graphql:$SHORT_SHA --platform=managed --region=europe-west1; else echo "Skipping"; fi
+    waitFor:
+      - test
+      - push
