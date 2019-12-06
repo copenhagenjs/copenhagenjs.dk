@@ -23,7 +23,7 @@ const collection = "attendance";
 
 export async function getUserAttendance(
   userId: string
-): Promise<admin.firestore.QuerySnapshot> {
+): Promise<FirebaseResult<Attendance> & admin.firestore.QuerySnapshot> {
   const attendanceColl = db.collection(collection);
   const results = await attendanceColl.where("userId", "==", userId).get();
   return results;

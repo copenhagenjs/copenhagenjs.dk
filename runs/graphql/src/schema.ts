@@ -19,7 +19,7 @@ import {
 import { updateProfile } from "./resolvers/updateprofile.js";
 import { users, user } from "./resolvers/users.js";
 import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
-import { UserEvents } from "./resolvers/userevents";
+import { UserAttendanceHistory } from "./resolvers/userattendancehistory";
 
 const typeDefs = gql`
   type Video {
@@ -78,7 +78,7 @@ const typeDefs = gql`
     twitterId: String
     instagramId: String
     website: String
-    events: [Event]
+    attendanceHistory: [Attendance]
   }
   input ProfileInput {
     username: String
@@ -101,6 +101,7 @@ const typeDefs = gql`
   type Attendance {
     status: AttendanceStatus
     event: Event
+    timestamp: String
   }
   type Query {
     hello: String
@@ -136,7 +137,7 @@ const resolvers = {
     me
   },
   User: {
-    events: UserEvents
+    attendanceHistory: UserAttendanceHistory
   },
   Event: {
     attendance: EventAttendance,
