@@ -28,7 +28,9 @@
     "p-memoize": "^3.1.0",
     "typescript": "^3.7.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.23"
+  },
   "description": "",
   "prettier": {},
   "jest": {

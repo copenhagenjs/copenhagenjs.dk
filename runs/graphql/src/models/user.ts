@@ -53,3 +53,8 @@ export async function updateUser(userId, data) {
   const update = await doc.set(data, { merge: true });
   return update;
 }
+
+export async function getUserEmail(userId) {
+  const user = await admin.auth().getUser(userId);
+  return user.email;
+}
