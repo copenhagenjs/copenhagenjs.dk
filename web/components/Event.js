@@ -27,6 +27,9 @@ export default ({
         .description :global(h1) {
           margin: 5px 0;
         }
+        .description :global(a) {
+          word-break: break-all;
+        }
         .speaker-schedule {
           margin: 20px 0;
         }
