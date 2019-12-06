@@ -2,9 +2,10 @@ import { getUserAttendanceRaw, Attendance } from "../models/attendance";
 
 export const UserAttendanceHistory = async (
   parent,
-  args
+  args,
+  context
 ): Promise<Attendance[]> => {
-  const userId: string = args.userId;
+  const userId: string = context.token.user_id;
   const attendance = await getUserAttendanceRaw(userId);
   return attendance;
 };

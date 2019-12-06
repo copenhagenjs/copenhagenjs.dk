@@ -11,7 +11,11 @@ test("UserEvents defined", () => {
 
 test("UserEvents should find events based on UserId", async () => {
   mockedGetUserAttendance.mockResolvedValue([]);
-  const attendance = await UserAttendanceHistory({}, { userId: "123" });
+  const attendance = await UserAttendanceHistory(
+    {},
+    {},
+    { token: { user_id: "123" } }
+  );
   expect(getUserAttendanceRaw).toBeCalled();
   expect(attendance).toEqual([]);
 });

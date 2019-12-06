@@ -5,6 +5,7 @@ export const me = async (parent, args, context): Promise<User> => {
   const data = doc.data();
   const email = await getUserEmail(doc.id);
   return {
+    id: doc.id,
     email,
     ...data
   };
