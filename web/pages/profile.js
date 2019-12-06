@@ -42,6 +42,7 @@ const Profile = () => {
       {
         me {
           name
+          email
           username
           image
           githubId
@@ -128,6 +129,10 @@ const Profile = () => {
   }
   return (
     <>
+      <div>
+        <label>Email:</label>
+      </div>
+      <div>{profileData.email}</div>
       <ProfileEditForm defaultValues={defaultValues} onSubmit={onSubmit} />
       {mutationLoading && <p>Loading...</p>}
       {mutationError && <p>Error :( Look in the console and report it!</p>}
