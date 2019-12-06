@@ -10,7 +10,7 @@ jest.mock(
   },
   { virtual: true }
 );
-import { getSpeakerProfiles } from "../models/speakers.js";
+import { getSpeakerProfile } from "../models/speakers.js";
 import { speakerProfile, SpeakerProfileVideos } from "./speakerprofile.js";
 import { slugify } from "../services/slug.js";
 jest.mock("../models/speakers.js");
@@ -20,14 +20,9 @@ test("speakerProfile should be defined", () => {
 });
 
 test("speakerProfile should return a speaker", () => {
-  getSpeakerProfiles.mockReturnValue([
-    {
-      slug: "donald-duck"
-    },
-    {
-      slug: "batman"
-    }
-  ]);
+  getSpeakerProfile.mockReturnValue({
+    slug: "donald-duck"
+  });
   const result = {
     slug: "donald-duck"
   };
