@@ -23,10 +23,23 @@ const collection = "attendance";
 
 export async function getUserAttendance(
   userId: string
-): Promise<admin.firestore.QuerySnapshot> {
+): Promise<FirebaseResult<Attendance> & admin.firestore.QuerySnapshot> {
   const attendanceColl = db.collection(collection);
   const results = await attendanceColl.where("userId", "==", userId).get();
   return results;
+}
+
+export async function getUserAttendanceRaw(
+  userId: string
+): Promise<Attendance[]> {
+  const result = await getUserAttendance(userId);
+  if (result.size > 0) {
+    return result.docs
+      .map(d => d.data())
+      .filter((x): x is Attendance => x !== undefined);
+  } else {
+    return [];
+  }
 }
 
 export async function getUserEventAttendance(
