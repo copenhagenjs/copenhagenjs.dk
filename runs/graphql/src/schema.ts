@@ -1,5 +1,8 @@
 import { gql } from "apollo-server-express";
 import { makeExecutableSchema } from "graphql-tools";
+import { AttendanceEvent } from "./resolvers/attendanceevent";
+import { UserAttendanceHistory } from "./resolvers/userattendancehistory";
+import { UserEvents } from "./resolvers/userevents";
 import {
   attendEvent,
   EventAttendance,
@@ -19,8 +22,6 @@ import {
 import { updateProfile } from "./resolvers/updateprofile.js";
 import { users, user } from "./resolvers/users.js";
 import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
-import { UserAttendanceHistory } from "./resolvers/userattendancehistory";
-import { AttendanceEvent } from "./resolvers/attendanceevent";
 
 const typeDefs = gql`
   type Video {
@@ -80,6 +81,7 @@ const typeDefs = gql`
     instagramId: String
     website: String
     attendanceHistory: [Attendance]
+    events: [Event]
   }
   input ProfileInput {
     username: String
@@ -138,7 +140,8 @@ const resolvers = {
     me
   },
   User: {
-    attendanceHistory: UserAttendanceHistory
+    attendanceHistory: UserAttendanceHistory,
+    events: UserEvents
   },
   Event: {
     attendance: EventAttendance,
