@@ -15,7 +15,7 @@ export const uniqueEventsFromAttendance = (
 export const UserEvents = async (parent, args, context) => {
   const attendances = await getUserAttendanceRaw(context.token.user_id);
 
-  return attendances.map(attendance => {
+  return uniqueEventsFromAttendance(attendances).map(attendance => {
     if (attendance.eventSlug) {
       const event = memGetSingleEvent(attendance.eventSlug);
       return event;
