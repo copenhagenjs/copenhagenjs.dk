@@ -18,6 +18,7 @@ import {
   logoutFirebase,
   redirectToLogin
 } from '../services/firebase.js'
+import { UserEventFeed } from '../components/UserEventFeed'
 
 const client = new ApolloClient({
   uri: 'https://graphql.copenhagenjs.dk/graphql'
@@ -39,7 +40,7 @@ const Profile = () => {
   const [profileData, setProfileData] = useState({})
   const [getProfile, { called, loading, error, data }] = useLazyQuery(
     gql`
-      {
+      query {
         me {
           name
           email
@@ -49,8 +50,12 @@ const Profile = () => {
           twitterId
           instagramId
           website
+          events {
+            ...UserEventFeed
+          }
         }
       }
+      ${UserEventFeed.fragment}
     `,
     {
       context: {
@@ -129,6 +134,9 @@ const Profile = () => {
   }
   return (
     <>
+      <h1>Events attending</h1>
+      <UserEventFeed.tag events={profileData.events || []} />
+      <h1>Public Profile</h1>
       <div>
         <label>Email:</label>
       </div>
@@ -146,7 +154,6 @@ export default () => {
     <Page>
       <ApolloProvider client={client}>
         <SettingsMenu clickLogout={logoutFirebase} />
-        <h1>Public Profile</h1>
         <Profile />
       </ApolloProvider>
     </Page>

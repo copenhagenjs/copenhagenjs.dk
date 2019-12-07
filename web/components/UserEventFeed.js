@@ -4,12 +4,11 @@ import { gql } from 'apollo-boost'
 export const UserEventFeed = {
   tag: ({ events }) => (
     <div>
-      <h2>Events</h2>
-      <div>
+      <ul>
         {events.map(event => (
-          <div>{event.title}</div>
+          <li>{event.title}</li>
         ))}
-      </div>
+      </ul>
     </div>
   ),
   fragment: gql`
