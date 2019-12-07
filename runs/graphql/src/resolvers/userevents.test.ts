@@ -5,7 +5,7 @@ import {
   AttendanceStatus,
   Attendance
 } from "../models/attendance";
-import { UserEvents } from "./userevents";
+import { UserEvents, uniqueEventsFromAttendance } from "./userevents";
 import { memGetSingleEvent, EventDetails } from "../models/events";
 const mockedGetUserAttendance = getUserAttendanceRaw as jest.MockedFunction<
   typeof getUserAttendanceRaw
@@ -39,4 +39,25 @@ test("UserEvent should call attendance", async () => {
   expect(memGetSingleEvent).toBeCalledWith(attendanceHistory[0].eventSlug);
   expect(getUserAttendanceRaw).toBeCalled();
   expect(events).toEqual([allEvents[0]]);
+});
+
+test("last attendance for each event", () => {
+  const attendanceHistory: Attendance[] = [
+    {
+      userId: "123",
+      status: AttendanceStatus.NOTGOING,
+      timestamp: new Date().toString(),
+      eventSlug: "first"
+    },
+    {
+      userId: "123",
+      status: AttendanceStatus.GOING,
+      timestamp: new Date().toString(),
+      eventSlug: "first"
+    }
+  ];
+
+  expect(uniqueEventsFromAttendance(attendanceHistory)).toEqual(
+    attendanceHistory[1]
+  );
 });
