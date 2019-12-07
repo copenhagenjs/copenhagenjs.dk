@@ -1,12 +1,17 @@
 jest.mock("../models/attendance");
+jest.mock("../models/events");
 import {
   getUserAttendanceRaw,
   AttendanceStatus,
   Attendance
 } from "../models/attendance";
 import { UserEvents } from "./userevents";
+import { memGetSingleEvent, EventDetails } from "../models/events";
 const mockedGetUserAttendance = getUserAttendanceRaw as jest.MockedFunction<
   typeof getUserAttendanceRaw
+>;
+const mockedMemGetSingleEvent = memGetSingleEvent as jest.MockedFunction<
+  typeof memGetSingleEvent
 >;
 
 test("UserEvents defined", () => {
@@ -23,8 +28,15 @@ test("UserEvent should call attendance", async () => {
     }
   ];
   mockedGetUserAttendance.mockResolvedValue(attendanceHistory);
-  const allEvents = [{ slug: "first" }, { slug: "second" }];
+  const allEvents: EventDetails[] = [
+    { slug: "first", date: new Date(), presentations: [] },
+    { slug: "second", date: new Date(), presentations: [] }
+  ];
+  mockedMemGetSingleEvent.mockImplementation(slugId =>
+    allEvents.find(i => i.slug === slugId)
+  );
   const events = await UserEvents({}, {}, { token: { user_id: "123" } });
+  expect(memGetSingleEvent).toBeCalledWith(attendanceHistory[0].eventSlug);
   expect(getUserAttendanceRaw).toBeCalled();
   expect(events).toEqual(allEvents[0]);
 });
