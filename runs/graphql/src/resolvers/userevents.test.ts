@@ -54,10 +54,17 @@ test("last attendance for each event", () => {
       status: AttendanceStatus.GOING,
       timestamp: new Date().toString(),
       eventSlug: "first"
+    },
+    {
+      userId: "123",
+      status: AttendanceStatus.NOTGOING,
+      timestamp: new Date().toString(),
+      eventSlug: "second"
     }
   ];
 
-  expect(uniqueEventsFromAttendance(attendanceHistory)).toEqual(
-    attendanceHistory[1]
-  );
+  expect(uniqueEventsFromAttendance(attendanceHistory)).toEqual([
+    attendanceHistory[1],
+    attendanceHistory[2]
+  ]);
 });
