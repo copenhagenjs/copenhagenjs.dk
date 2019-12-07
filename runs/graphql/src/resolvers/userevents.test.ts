@@ -38,5 +38,5 @@ test("UserEvent should call attendance", async () => {
   const events = await UserEvents({}, {}, { token: { user_id: "123" } });
   expect(memGetSingleEvent).toBeCalledWith(attendanceHistory[0].eventSlug);
   expect(getUserAttendanceRaw).toBeCalled();
-  expect(events).toEqual(allEvents[0]);
+  expect(events).toEqual([allEvents[0]]);
 });
