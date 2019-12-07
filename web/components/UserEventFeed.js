@@ -6,7 +6,9 @@ export const UserEventFeed = {
     <div>
       <ul>
         {events.map(event => (
-          <li>{event.title}</li>
+          <li>
+            {event.title} - {event.attendance.status}
+          </li>
         ))}
       </ul>
     </div>
@@ -14,6 +16,9 @@ export const UserEventFeed = {
   fragment: gql`
     fragment UserEventFeed on Event {
       title
+      attendance {
+        status
+      }
     }
   `
 }
