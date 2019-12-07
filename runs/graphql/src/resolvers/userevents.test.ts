@@ -25,12 +25,19 @@ test("UserEvent should call attendance", async () => {
       status: AttendanceStatus.GOING,
       timestamp: new Date().toString(),
       eventSlug: "first"
+    },
+    {
+      userId: "123",
+      status: AttendanceStatus.GOING,
+      timestamp: new Date().toString(),
+      eventSlug: "third"
     }
   ];
   mockedGetUserAttendance.mockResolvedValue(attendanceHistory);
   const allEvents: EventDetails[] = [
     { slug: "first", date: new Date(), presentations: [] },
-    { slug: "second", date: new Date(), presentations: [] }
+    { slug: "second", date: new Date(), presentations: [] },
+    { slug: "third", date: new Date(), presentations: [] }
   ];
   mockedMemGetSingleEvent.mockImplementation(slugId =>
     allEvents.find(i => i.slug === slugId)
@@ -38,7 +45,7 @@ test("UserEvent should call attendance", async () => {
   const events = await UserEvents({}, {}, { token: { user_id: "123" } });
   expect(memGetSingleEvent).toBeCalledWith(attendanceHistory[0].eventSlug);
   expect(getUserAttendanceRaw).toBeCalled();
-  expect(events).toEqual([allEvents[0]]);
+  expect(events).toEqual([allEvents[0], allEvents[2]]);
 });
 
 test("last attendance for each event", () => {
