@@ -9,12 +9,15 @@ import Page from '../components/Page'
 function Speakers() {
   const { loading, error, data } = useQuery(gql`
     {
-      speakers {
+      speakerProfiles {
         name
-        title
         slug
-        event {
-          selfLink
+        presentations {
+          title
+          event {
+            date
+            selfLink
+          }
         }
       }
     }
@@ -22,21 +25,53 @@ function Speakers() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+  const presentations = data.speakerProfiles
+    .map(s => {
+      return s.presentations.map(p => {
+        return {
+          ...p,
+          name: s.name,
+          slug: s.slug
+        }
+      })
+    })
+    .flat()
+    .sort((a, b) => {
+      return parseInt(b.event.date) - parseInt(a.event.date)
+    })
+
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  })
+
   return (
     <div>
-      <p>There have been {data.speakers.length} talks.</p>
-
-      {data.speakers.reverse().map(speaker => {
-        return (
-          <div key={speaker.title}>
-            <strong>
-              <a href={'/speaker?name=' + speaker.slug}>{speaker.name}</a>
-            </strong>
-            {' - '}
-            <a href={speaker.event.selfLink}>{speaker.title}</a>
-          </div>
-        )
-      })}
+      <p>There have been {presentations.length} talks.</p>
+      <table>
+        <tbody>
+          {presentations.map((presentation, key) => {
+            return (
+              <tr key={key}>
+                <td style={{ width: 110 }}>
+                  {formatter.format(
+                    new Date(parseInt(presentation.event.date))
+                  )}
+                </td>
+                <td>
+                  <a href={presentation.event.selfLink}>{presentation.title}</a>
+                </td>
+                <td>
+                  <a href={'/speaker/?name=' + presentation.slug}>
+                    {presentation.name}
+                  </a>
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     </div>
   )
 }
