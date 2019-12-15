@@ -9,6 +9,7 @@ export default () => (
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        flex-shrink: 0;
       }
       .footer > div {
         margin: 20px;
