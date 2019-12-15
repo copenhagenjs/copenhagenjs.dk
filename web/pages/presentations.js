@@ -11,6 +11,7 @@ function Speakers() {
     {
       speakerProfiles {
         name
+        slug
         presentations {
           title
           event {
@@ -25,9 +26,19 @@ function Speakers() {
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
   const presentations = data.speakerProfiles
-    .map(s => s.presentations)
+    .map(s => {
+      return s.presentations.map(p => {
+        return {
+          ...p,
+          name: s.name,
+          slug: s.slug
+        }
+      })
+    })
     .flat()
-    .reverse()
+    .sort((a, b) => {
+      return parseInt(b.event.date) - parseInt(a.event.date)
+    })
 
   const formatter = new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
@@ -50,6 +61,11 @@ function Speakers() {
                 </td>
                 <td>
                   <a href={presentation.event.selfLink}>{presentation.title}</a>
+                </td>
+                <td>
+                  <a href={'/speaker/?name=' + presentation.slug}>
+                    {presentation.name}
+                  </a>
                 </td>
               </tr>
             )
