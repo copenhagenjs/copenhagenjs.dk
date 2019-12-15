@@ -9,12 +9,14 @@ import Page from '../components/Page'
 function Speakers() {
   const { loading, error, data } = useQuery(gql`
     {
-      speakers {
+      speakerProfiles {
         name
-        title
-        slug
-        event {
-          selfLink
+        presentations {
+          title
+          event {
+            date
+            selfLink
+          }
         }
       }
     }
@@ -22,18 +24,18 @@ function Speakers() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+  const presentations = data.speakerProfiles
+    .map(s => s.presentations)
+    .flat()
+    .reverse()
   return (
     <div>
-      <p>There have been {data.speakers.length} talks.</p>
+      <p>There have been {presentations.length} talks.</p>
 
-      {data.speakers.reverse().map(speaker => {
+      {presentations.map((presentation, key) => {
         return (
-          <div key={speaker.title}>
-            <strong>
-              <a href={'/speaker?name=' + speaker.slug}>{speaker.name}</a>
-            </strong>
-            {' - '}
-            <a href={speaker.event.selfLink}>{speaker.title}</a>
+          <div key={key}>
+            <a href={presentation.event.selfLink}>{presentation.title}</a>
           </div>
         )
       })}
