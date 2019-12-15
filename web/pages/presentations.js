@@ -28,17 +28,34 @@ function Speakers() {
     .map(s => s.presentations)
     .flat()
     .reverse()
+
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  })
+
   return (
     <div>
       <p>There have been {presentations.length} talks.</p>
-
-      {presentations.map((presentation, key) => {
-        return (
-          <div key={key}>
-            <a href={presentation.event.selfLink}>{presentation.title}</a>
-          </div>
-        )
-      })}
+      <table>
+        <tbody>
+          {presentations.map((presentation, key) => {
+            return (
+              <tr key={key}>
+                <td style={{ width: 110 }}>
+                  {formatter.format(
+                    new Date(parseInt(presentation.event.date))
+                  )}
+                </td>
+                <td>
+                  <a href={presentation.event.selfLink}>{presentation.title}</a>
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     </div>
   )
 }
