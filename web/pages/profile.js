@@ -50,6 +50,7 @@ const Profile = () => {
           twitterId
           instagramId
           website
+          favorites
           events {
             ...UserEventFeed
           }
@@ -107,7 +108,8 @@ const Profile = () => {
     githubId,
     twitterId,
     instagramId,
-    website
+    website,
+    favorites
   }) => {
     updateProfile({
       variables: {
@@ -118,7 +120,8 @@ const Profile = () => {
           githubId,
           twitterId,
           instagramId,
-          website
+          website,
+          favorites
         }
       }
     })
@@ -130,7 +133,8 @@ const Profile = () => {
     githubId: profileData.githubId || '',
     twitterId: profileData.twitterId || '',
     instagramId: profileData.instagramId || '',
-    website: profileData.website || ''
+    website: profileData.website || '',
+    favorites: profileData.favorites || []
   }
   return (
     <>

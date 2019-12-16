@@ -9,7 +9,8 @@ export const ProfileEditForm = ({
     githubId: '',
     twitterId: '',
     instagramId: '',
-    website: ''
+    website: '',
+    favorites: []
   },
   onSubmit
 }) => {
@@ -20,6 +21,7 @@ export const ProfileEditForm = ({
   const [twitterId, setTwitterId] = useState('')
   const [instagramId, setInstagramId] = useState('')
   const [website, setWebsite] = useState('')
+  const [favorites, setFavorites] = useState('')
   const validateUsername = val => {
     if (val.includes('/')) {
       alert('It should just be your username, not the url :)')
@@ -32,7 +34,12 @@ export const ProfileEditForm = ({
     ['Github username', githubId, setGithubId, validateUsername],
     ['Twitter username', twitterId, setTwitterId, validateUsername],
     ['Instagram username', instagramId, setInstagramId, validateUsername],
-    ['Website URL', website, setWebsite]
+    ['Website URL', website, setWebsite],
+    [
+      'Favorite technologies and frameworks (comma seperated)',
+      favorites,
+      setFavorites
+    ]
   ]
   useEffect(() => {
     setName(defaultValues.name)
@@ -42,6 +49,7 @@ export const ProfileEditForm = ({
     setTwitterId(defaultValues.twitterId)
     setInstagramId(defaultValues.instagramId)
     setWebsite(defaultValues.website)
+    setFavorites(defaultValues.favorites.join(', '))
   }, [defaultValues.name])
 
   return (
@@ -75,7 +83,8 @@ export const ProfileEditForm = ({
             githubId,
             twitterId,
             instagramId,
-            website
+            website,
+            favorites: favorites.split(',').map(i => i.trim())
           })
         }}
       >
