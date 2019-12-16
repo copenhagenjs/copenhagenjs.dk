@@ -1,27 +1,14 @@
 import React from 'react'
 
-const Link = ({
-  href,
-  children,
-  display,
-  onClick,
-  size,
-  width,
-  height,
-  padding,
-  margin
-}) => (
+const Link = ({ href, children, display, onClick, size, padding, margin }) => (
   <>
     <style jsx>{`
       .link {
         display: ${display ? display : 'inline-block'};
-        max-width: 300px;
         background: #067ade;
         color: #fff;
         border: none;
         font-size: ${size === 'default' ? '1.3rem' : '1rem'};
-        width: ${width ? width : '100%'};
-        height: ${height};
         margin: ${margin ? margin : '10px 0'};
         padding: ${padding ? padding : '10px'};
       }
