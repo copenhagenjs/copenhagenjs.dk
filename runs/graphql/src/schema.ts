@@ -92,6 +92,7 @@ const typeDefs = gql`
     twitterId: String
     instagramId: String
     website: String
+    favorites: [String]
   }
   enum AttendanceStatus {
     GOING
