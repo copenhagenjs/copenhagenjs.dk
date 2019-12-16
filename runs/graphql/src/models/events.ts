@@ -9,6 +9,11 @@ type Speaker = {
   title: string;
 };
 
+export enum EventStatus {
+  UPCOMING = "UPCOMING",
+  PAST = "PAST"
+}
+
 export type EventDetails = {
   title?: string;
   slug: string;

@@ -110,7 +110,7 @@ const typeDefs = gql`
   }
   type Query {
     hello: String
-    events(first: Int, last: Int, status: EventStatus): [Event]
+    events(first: Int, last: Int, status: EventStatus, types: [String]): [Event]
     event(slug: String!): Event
     videos: [Video]
     video(slug: String!): Video

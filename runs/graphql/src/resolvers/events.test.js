@@ -1,4 +1,9 @@
-import { events, searchEvents, filterEventStatus } from "./events.js";
+import {
+  events,
+  searchEvents,
+  filterEventStatus,
+  filterEventType
+} from "./events.js";
 
 test("events to be defined", () => {
   expect(events).toBeDefined();
@@ -28,4 +33,16 @@ test("filterEventStatus filter only past events", () => {
     { date: new Date(Date.now() + 3600 * 1000), title: "Upcoming" }
   ];
   expect(filterEventStatus(PAST, events)).toEqual([events[0]]);
+});
+
+test("filterEventType filter only workshop", () => {
+  const types = ["workshop"];
+  const events = [{ type: "meetup" }, { type: "workshop" }];
+  expect(filterEventType(types, events)).toEqual([events[1]]);
+});
+
+test("filterEventType filter two types", () => {
+  const types = ["workshop", "meetup"];
+  const events = [{ type: "meetup" }, { type: "update" }, { type: "workshop" }];
+  expect(filterEventType(types, events)).toEqual([events[0], events[2]]);
 });
