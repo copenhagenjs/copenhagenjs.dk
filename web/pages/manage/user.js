@@ -32,6 +32,7 @@ export default () => {
           twitterId
           instagramId
           website
+          favorites
         }
       }
     `,
@@ -119,6 +120,10 @@ export default () => {
               {data.user.instagramId || ''}
             </a>
           </div>
+          <div>
+            <strong>Favorite technologies and frameworks:</strong>
+          </div>
+          <div>{data.user.favorites && data.user.favorites.join(', ')}</div>
         </div>
       )}
     </Page>
