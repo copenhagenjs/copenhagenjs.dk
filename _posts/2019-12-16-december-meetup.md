@@ -5,6 +5,11 @@ location: Bernhard Bangs Alle 25, Frederiksberg
 link: https://www.meetup.com/copenhagenjs/events/266947533/
 date: 2019-12-16T17:00:00
 duration: 3
+speakers:
+  - title: "Blogging: good for your brain, colleagues and career"
+    name: Jonathan M. Hethey
+  - title: Making an Chrome Extentension - Monkey Worker
+    name: Andreas Gade Jensen
 ---
 
 # CopenhagenJS December - Dwarf.dk
@@ -19,10 +24,10 @@ We will nominate and make a form where one can vote on what is the best in diffe
 
     17:00 Doors open
     17:45 Welcome
-    18:00 You?
+    18:00 Blogging: good for your brain, colleagues and career - Jonathan M. Hethey
     18:25 Break with food and drinks
     19:00 CopenhagenJS Awards - Annoncement winners
-    19:25 You?
+    19:25 Making an Chrome Extentension - Monkey Worker - Andreas Gade Jensen
     19:50 Group photo
     19:55 Raffle.js
     20:00 Socializing - meet the community
