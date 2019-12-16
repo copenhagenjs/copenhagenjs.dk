@@ -88,28 +88,23 @@ export default class Navigation extends React.Component {
             </a>
           </li>
           <li>
-            <a className="btn-white" href="/events/">
-              Events
-            </a>
-          </li>
-          <li>
             <a className="btn-white" href="/about/">
               About
             </a>
           </li>
           <li>
-            <a className="btn-white" href="/videos/">
-              Videos
-            </a>
-          </li>
-          <li>
-            <a className="btn-white" href="/contact/">
-              Contact
+            <a className="btn-white" href="/events/">
+              Events
             </a>
           </li>
           <li>
             <a className="btn-white" href="/speakers/">
               Speakers
+            </a>
+          </li>
+          <li>
+            <a className="btn-white" href="/menu/">
+              All Menu
             </a>
           </li>
           {this.state.loggedIn ? (

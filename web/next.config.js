@@ -4,6 +4,7 @@ module.exports = {
   exportPathMap: function() {
     let pages = {
       '/': { page: '/' },
+      '/menu': { page: '/menu' },
       '/events': { page: '/events' },
       '/videos': { page: '/videos' },
       '/video': { page: '/video' },
