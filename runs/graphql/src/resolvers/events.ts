@@ -1,7 +1,15 @@
 const { graphql } = require("graphql");
-import { getEvents, memGetEvents, EventDetails } from "../models/events.js";
+import {
+  getEvents,
+  memGetEvents,
+  EventDetails,
+  EventStatus
+} from "../models/events.js";
 
-export const filterEventStatus = (eventStatus, events) => {
+export const filterEventStatus = (
+  eventStatus: EventStatus,
+  events: EventDetails[]
+) => {
   const now = Date.now();
   switch (eventStatus) {
     case "UPCOMING":
@@ -15,11 +23,39 @@ export const filterEventStatus = (eventStatus, events) => {
   }
 };
 
-export const events = (parent, { first, last, status }) => {
-  const events: EventDetails[] = status
+export const filterEventType = (
+  types: string[],
+  events: EventDetails[]
+): EventDetails[] => {
+  return events.filter(event => {
+    if (!event.type) return true;
+    if (types.indexOf(event.type) > -1) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+};
+
+export const events = (parent, args) => {
+  const {
+    first,
+    last,
+    status,
+    types
+  }: {
+    first?: number;
+    last?: number;
+    status?: EventStatus;
+    types?: string[];
+  } = args;
+  let events: EventDetails[] = status
     ? filterEventStatus(status, getEvents())
     : getEvents();
 
+  if (types) {
+    events = filterEventType(types, events);
+  }
   if (first) {
     return events.slice(0, first);
   }
