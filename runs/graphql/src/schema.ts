@@ -82,6 +82,7 @@ const typeDefs = gql`
     website: String
     attendanceHistory: [Attendance]
     events: [Event]
+    favorites: [String]
   }
   input ProfileInput {
     username: String

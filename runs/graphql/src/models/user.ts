@@ -11,6 +11,7 @@ export type User = {
   twitterId?: string;
   instagramId?: string;
   website?: string;
+  favorites?: string[];
 };
 
 export async function getUser(
