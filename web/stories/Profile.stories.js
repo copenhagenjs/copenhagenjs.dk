@@ -18,7 +18,8 @@ storiesOf('Profile', module)
           githubId: 'githubId',
           twitterId: 'twitterId',
           instagramId: 'instagramId',
-          website: 'website'
+          website: 'website',
+          favorites: ['javascript', 'html']
         },
         onSubmit: action('sending')
       }}
