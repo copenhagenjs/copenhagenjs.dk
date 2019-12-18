@@ -1,5 +1,7 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "separateMinorPatch": true,
+  "patch": {
+    "enabled": false
+  }
 }
