@@ -1,38 +1,8 @@
 import React from 'react'
 
-export default () => (
-  <section className="footer">
+const NewsletterForm = () => (
+  <div className="newsletter">
     <style jsx>{`
-      .footer {
-        display: flex;
-        background-color: #f8de48;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        flex-shrink: 0;
-      }
-      .footer > div {
-        margin: 20px;
-      }
-      @media (min-width: 1024px) {
-        .footer {
-          flex-direction: row;
-        }
-        .footer > div {
-          margin: 40px 20px;
-        }
-      }
-      .discord-logo {
-        width: 30px;
-        height: 30px;
-        vertical-align: middle;
-      }
-      .github-logo {
-        width: 25px;
-        height: 25px;
-        vertical-align: middle;
-        margin-right: 6px;
-      }
       .newsletter {
         text-align: center;
       }
@@ -78,40 +48,76 @@ export default () => (
         margin: 0 auto;
       }
     `}</style>
-    <div className="newsletter">
-      <div className="newsletter__description">
-        <p>
-          Sign up for the CopenhagenJS newsletter and get notifications about
-          upcoming events.
-        </p>
-      </div>
-      <form
-        action="//copenhagenjs.us11.list-manage.com/subscribe/post?u=e5f1b30e5ca3a2a397fa93a0d&amp;id=163c4118a6"
-        method="post"
-        target="_blank"
-      >
-        <input
-          type="email"
-          placeholder="mail@example.com"
-          name="EMAIL"
-          className="newsletter__email"
-          required
-        />
-        <div style={{ position: 'absolute', left: '-5000px' }}>
-          <input
-            type="text"
-            name="b_e5f1b30e5ca3a2a397fa93a0d_163c4118a6"
-            tabIndex="-1"
-          />
-        </div>
-        <input
-          type="submit"
-          value="Subscribe now!"
-          name="subscribe"
-          className="newsletter__subscribe"
-        />
-      </form>
+    <div className="newsletter__description">
+      <p>
+        Sign up for the CopenhagenJS newsletter and get notifications about
+        upcoming events.
+      </p>
     </div>
+    <form
+      action="//copenhagenjs.us11.list-manage.com/subscribe/post?u=e5f1b30e5ca3a2a397fa93a0d&amp;id=163c4118a6"
+      method="post"
+      target="_blank"
+    >
+      <input
+        type="email"
+        placeholder="mail@example.com"
+        name="EMAIL"
+        className="newsletter__email"
+        required
+      />
+      <div style={{ position: 'absolute', left: '-5000px' }}>
+        <input
+          type="text"
+          name="b_e5f1b30e5ca3a2a397fa93a0d_163c4118a6"
+          tabIndex="-1"
+        />
+      </div>
+      <input
+        type="submit"
+        value="Subscribe now!"
+        name="subscribe"
+        className="newsletter__subscribe"
+      />
+    </form>
+  </div>
+)
+
+export default () => (
+  <section className="footer">
+    <style jsx>{`
+      .footer {
+        display: flex;
+        background-color: #f8de48;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+      }
+      .footer > div {
+        margin: 20px;
+      }
+      @media (min-width: 1024px) {
+        .footer {
+          flex-direction: row;
+        }
+        .footer > div {
+          margin: 40px 20px;
+        }
+      }
+      .discord-logo {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+      }
+      .github-logo {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+    `}</style>
+    <NewsletterForm />
     <div className="social">
       <h3>Dont miss important news!</h3>
       <div>
