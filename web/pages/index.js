@@ -12,6 +12,7 @@ import Footer from '../components/Footer'
 import Event from '../components/Event'
 import Attendance from '../components/Attendance'
 import { Attendees } from '../components/Attendees'
+import { Events } from '../components/Events'
 
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
@@ -87,8 +88,8 @@ const ATTENDING = gql`
 `
 
 const EVENTS = gql`
-  {
-    events(first: 1, status: UPCOMING) {
+  query Events {
+    upcoming: events(first: 1, status: UPCOMING) {
       ...UpcomingEvents
       attendees {
         user {
@@ -96,9 +97,13 @@ const EVENTS = gql`
         }
       }
     }
+    past: events(last: 2, status: PAST) {
+      ...Events
+    }
   }
   ${UpcomingEvents.fragment}
   ${Attendees.fragment}
+  ${Events.fragment}
 `
 
 function EventGraph() {
@@ -125,11 +130,11 @@ function EventGraph() {
     },
     onCompleted(data) {
       if (
-        data.events &&
-        data.events.length !== 0 &&
-        data.events[0].attendance
+        data.upcoming &&
+        data.upcoming.length !== 0 &&
+        data.upcoming[0].attendance
       ) {
-        setAttendance(data.events[0].attendance.status)
+        setAttendance(data.upcoming[0].attendance.status)
       }
     }
   })
@@ -155,25 +160,31 @@ function EventGraph() {
 
   return (
     <>
-      <UpcomingEvents.tag events={data.events} />
-      {token.length > 0 && data.events.length !== 0 && (
+      <UpcomingEvents.tag events={data.upcoming} />
+      {token.length > 0 && data.upcoming.length !== 0 && (
         <>
           <hr />
           <h2>Beta feature:</h2>
           <Attendance
-            status={data.events[0].attendance}
+            status={data.upcoming[0].attendance}
             onClick={status => {
               setAttendance(status)
               if (token.length > 0) {
                 attendEvent({
                   variables: {
-                    eventSlug: data.events[0].slug,
+                    eventSlug: data.upcoming[0].slug,
                     status: status
                   }
                 })
               }
             }}
           />
+        </>
+      )}
+      {data.upcoming.length === 0 && (
+        <>
+          <h2>Past two events:</h2>
+          <Events.tag events={data.past} />
         </>
       )}
     </>
