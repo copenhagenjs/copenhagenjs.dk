@@ -17,6 +17,53 @@ import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import { initFirebase, redirectToLogin } from '../services/firebase.js'
 
+const UpcomingEvents = {
+  tag: ({ events }) => {
+    if (events.length === 0)
+      return (
+        <>
+          <h1>No upcoming event yet!</h1>
+          <p>The next event is coming up really soon!</p>
+        </>
+      )
+
+    const {
+      content,
+      title,
+      date,
+      link,
+      presentations,
+      location,
+      attendees
+    } = events[0]
+    return (
+      <Event
+        title={title}
+        date={new Date(parseInt(date))}
+        html={content}
+        location={location}
+        speakers={presentations}
+        link={link}
+        attendees={attendees}
+      />
+    )
+  },
+  fragment: gql`
+    fragment UpcomingEvents on Event {
+      title
+      slug
+      date
+      link
+      content
+      location
+      presentations {
+        title
+        name
+      }
+    }
+  `
+}
+
 const ATTEND_EVENT = gql`
   mutation AttendEvent($eventSlug: String!, $status: AttendanceStatus) {
     attendEvent(input: { eventSlug: $eventSlug, status: $status }) {
@@ -42,16 +89,7 @@ const ATTENDING = gql`
 const EVENTS = gql`
   {
     events(first: 1, status: UPCOMING) {
-      title
-      slug
-      date
-      link
-      content
-      location
-      presentations {
-        title
-        name
-      }
+      ...UpcomingEvents
       attendees {
         user {
           ...Attendees
@@ -59,6 +97,7 @@ const EVENTS = gql`
       }
     }
   }
+  ${UpcomingEvents.fragment}
   ${Attendees.fragment}
 `
 
@@ -113,46 +152,24 @@ function EventGraph() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
-  if (data.events.length === 0)
-    return (
-      <>
-        <h1>No upcoming event yet!</h1>
-        <p>The next event is coming up really soon!</p>
-      </>
-    )
-
-  const {
-    content,
-    title,
-    date,
-    link,
-    presentations,
-    location,
-    attendees
-  } = data.events[0]
 
   return (
     <>
-      <Event
-        title={title}
-        date={new Date(parseInt(date))}
-        html={content}
-        location={location}
-        speakers={presentations}
-        link={link}
-        attendees={attendees}
-      />
-      {token.length > 0 && (
+      <UpcomingEvents.tag events={data.events} />
+      {token.length > 0 && data.events.length !== 0 && (
         <>
           <hr />
           <h2>Beta feature:</h2>
           <Attendance
-            status={attendance}
+            status={data.events[0].attendance}
             onClick={status => {
               setAttendance(status)
               if (token.length > 0) {
                 attendEvent({
-                  variables: { eventSlug: data.events[0].slug, status: status }
+                  variables: {
+                    eventSlug: data.events[0].slug,
+                    status: status
+                  }
                 })
               }
             }}
