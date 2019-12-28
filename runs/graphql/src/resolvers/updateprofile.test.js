@@ -1,5 +1,5 @@
 jest.mock("../models/user.js");
-import { updateUser, searchUser } from "../models/user.js";
+import { updateUser, searchUser, getUserEmail } from "../models/user.js";
 import { updateProfile } from "./updateprofile.js";
 
 test("updateProfile defined", () => {
@@ -37,7 +37,12 @@ test("reject profileupdate when no user", async () => {
 test("reject profileupdate if username already exist", async () => {
   searchUser.mockReturnValue(
     Promise.resolve({
-      size: 1
+      size: 1,
+      docs: [
+        {
+          id: "otheruser"
+        }
+      ]
     })
   );
   const userInput = {
@@ -46,6 +51,24 @@ test("reject profileupdate if username already exist", async () => {
   await expect(
     updateProfile(null, { input: userInput }, { token: { user_id: "donald" } })
   ).rejects.toThrow("Username already exists!");
+});
+
+test("don't reject profileupdate if username is the same", async () => {
+  const token = { user_id: "donald" };
+  searchUser.mockReturnValue(
+    Promise.resolve({
+      size: 1,
+      docs: [{ id: token.user_id }]
+    })
+  );
+  const email = "test@test.com";
+  getUserEmail.mockResolvedValueOnce(email);
+  const userInput = {
+    username: "donaldduck"
+  };
+  await expect(
+    updateProfile(null, { input: userInput }, { token })
+  ).resolves.toEqual({ username: userInput.username, email });
 });
 
 test("reject profileupdate if username too short", async () => {
