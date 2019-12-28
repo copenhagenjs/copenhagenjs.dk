@@ -8,21 +8,21 @@ export const Events = {
       <div>
         <style jsx>{`
           .event {
-            padding: 20px;
+            padding: 20px 0;
             margin-bottom: 10px;
           }
-          .event h2 {
+          .event h3 {
             margin: 0;
           }
         `}</style>
         {events.map(event => (
           <div className="event">
-            <h2>{event.title}</h2>
+            <h3>{event.title}</h3>
             <div>
               {new Date(parseInt(event.date)).toDateString()} - {event.location}
             </div>
             <div>{event.content.replace(/#/gm, '').slice(0, 200)} ...</div>
-            <Link href="" size="small">
+            <Link href={event.selfLink} size="small">
               Read more
             </Link>
           </div>
@@ -31,11 +31,13 @@ export const Events = {
     )
   },
   fragment: gql`
-    fragment events on Event {
+    fragment Events on Event {
       title
       date
+      selfLink
       markdown
       location
+      content
     }
   `
 }
