@@ -12,6 +12,7 @@ export type User = {
   instagramId?: string;
   website?: string;
   favorites?: string[];
+  created?: string;
 };
 
 export async function getUser(
@@ -58,4 +59,26 @@ export async function updateUser(userId, data) {
 export async function getUserEmail(userId) {
   const user = await admin.auth().getUser(userId);
   return user.email;
+}
+
+export async function getAuthUser(userId: string) {
+  const user = await admin.auth().getUser(userId);
+  return user;
+}
+
+export async function getUsersFull(): Promise<User[]> {
+  const users = await getUsers();
+  const usersMeta = users.map(
+    async (user): Promise<User> => {
+      const data: User = user.data();
+      const authUser = await getAuthUser(user.id);
+      return {
+        id: user.id,
+        created: authUser.metadata.creationTime,
+        ...data
+      };
+    }
+  );
+  const transformed = await Promise.all(usersMeta);
+  return transformed;
 }
