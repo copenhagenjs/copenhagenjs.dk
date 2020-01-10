@@ -15,6 +15,7 @@ module.exports = {
       '/speaker': { page: '/speaker' },
       '/guidelines': { page: '/guidelines' },
       '/login': { page: '/login' },
+      '/login-forward': { page: '/login-forward' },
       '/search': { page: '/search' },
       '/contact': { page: '/contact' },
       '/learn': { page: '/learn' },
