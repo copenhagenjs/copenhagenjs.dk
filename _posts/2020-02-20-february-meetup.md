@@ -2,7 +2,7 @@
 title: CopenhagenJS Febuary - DFDS
 type: meetup
 location: Sundkrogen 1, 2150 København
-link: https://www.meetup.com/copenhagenjs/
+link: https://www.meetup.com/copenhagenjs/events/267972088/
 date: 2020-02-20T17:00:00
 duration: 3
 speakers:
@@ -30,7 +30,7 @@ So come and join us and talk about JavaScript 😀
     19:00 You?
     19:25 You?
     19:50 Group photo
-    19:55 Raffle.js
+    19:55 Raffle.js - 2 one-year Jetbrains licenses - Jamie Magee
     20:00 Socializing - meet the community
     21:00 See you next time!
 
