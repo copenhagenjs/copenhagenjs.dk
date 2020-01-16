@@ -3,7 +3,7 @@ title: CopenhagenJS Febuary - DFDS
 type: meetup
 location: Sundkrogen 1, 2150 København
 link: https://www.meetup.com/copenhagenjs/
-date: 2020-02-22T17:00:00
+date: 2020-02-20T17:00:00
 duration: 3
 speakers:
   - title: "What I learned from publishing software that wasn't finished"
