@@ -12,12 +12,12 @@ speakers:
 
 # CopenhagenJS February - DFDS
 
-Hi everyone
+Hi everyone!
 
 First CopenhagenJS of the year and this time we are going to be at DFDS.
 
-A new year of JavaScript and already so many cool things has happend. Microsoft Edge is out of preview and Microsoft has changed a lot of things about the browser, it is not just a Chrome with a new skin.
-New stuff is also happening with ES modules, like https://www.snowpack.dev that allows you to build webapps with no bundler! Gatsby.js and Next.js is continuing developing strongly https://nextjs.org/blog/next-9-2
+A new year of JavaScript and already so many cool things have happened. Microsoft Edge is out of preview and Microsoft has changed a lot of things about the browser, it is not just a Chrome with a new skin.
+New stuff is also happening with ES modules, like https://www.snowpack.dev that allows you to build webapps with no bundler! Gatsby.js and Next.js are continuing developing strongly https://nextjs.org/blog/next-9-2
 
 So come and join us and talk about JavaScript 😀
 
@@ -36,7 +36,7 @@ So come and join us and talk about JavaScript 😀
 
 ## What is CopenhagenJS?
 
-CopenhagenJs is a community group in Copenhagen for all JavaScript developers. We get together and share things we work on and really like. We talk about various technologies that we either use on a day to day basis or aspire to use.
+CopenhagenJS is a community group in Copenhagen for all JavaScript developers. We get together and share things we work on and really like. We talk about various technologies that we either use on a day to day basis or aspire to use.
 
 ## Can I present something at CopenhagenJS?
 
