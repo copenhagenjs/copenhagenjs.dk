@@ -38,3 +38,11 @@ genrule(
   outs = ["firebase_deploy.txt"],
   tags = ["manual", "local"]
 )
+
+genrule(
+  name = "deploy-cloudbuild",
+  srcs = ["build.tar.gz", "storybook.tar.gz", "firebase.json"],
+  cmd = "cd web && mkdir -p out && tar -xf ../$(location build.tar.gz) -C out && mkdir -p out/static/storybook && tar -xf ../$(location storybook.tar.gz) -C out/static/storybook && firebase deploy --token $$(berglas access copenhagenjsdksecrets/firebase-ci-token) | tee ../$(location firebase_ci.txt)",
+  outs = ["firebase_ci.txt"],
+  tags = ["manual", "local"]
+)

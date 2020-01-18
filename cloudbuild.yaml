@@ -1,3 +1,22 @@
 steps:
   - name: gcr.io/cloud-builders/bazel
-    args: ["build", "web:all"]
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        bazel build //web:all
+
+        if [[ "$BRANCH_NAME" == "master" ]]; then
+          # nodejs
+          curl -sL https://deb.nodesource.com/setup_13.x | bash -
+          apt-get install -y nodejs
+          # firebase
+          npm install firebase-tools -g
+          # berglas
+          curl -O https://storage.googleapis.com/berglas/master/linux_amd64/berglas && chmod +x ./berglas && mv ./berglas /usr/bin
+
+          bazel build //web:deploy-cloudbuild
+
+        else
+          echo "Skipping";
+        fi
