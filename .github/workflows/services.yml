@@ -14,4 +14,4 @@ jobs:
       - uses: 'docker://gcr.io/cloud-builders/bazel'
         with:
           entrypoint: /bin/bash
-          args: -c "bazel test //runs/..."
+          args: -c "bazel test --test_output=errors //runs/..."

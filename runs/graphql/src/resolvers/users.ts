@@ -1,4 +1,4 @@
-import { getUsers, searchUser, User } from "../models/user.js";
+import { getUsersFull, searchUser, User } from "../models/user.js";
 
 export const users = async (root, args, context) => {
   if (
@@ -6,14 +6,7 @@ export const users = async (root, args, context) => {
     context.user.level &&
     context.user.level.includes("organizer")
   ) {
-    const users = await getUsers();
-    return users.map(user => {
-      const data = user.data();
-      return {
-        id: user.id,
-        ...data
-      };
-    });
+    return await getUsersFull();
   } else {
     return [];
   }
