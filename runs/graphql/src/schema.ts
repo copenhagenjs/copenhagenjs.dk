@@ -74,6 +74,7 @@ const typeDefs = gql`
     id: String
     email: String
     username: String
+    created: String
     name: String
     image: String
     githubId: String
