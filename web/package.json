@@ -41,7 +41,7 @@
     "@storybook/addon-actions": "5.3.6",
     "@storybook/addon-links": "5.3.6",
     "@storybook/addons": "5.3.6",
-    "@babel/core": "7.7.5",
+    "@babel/core": "7.8.3",
     "babel-loader": "8.0.6"
   },
   "prettier": {
