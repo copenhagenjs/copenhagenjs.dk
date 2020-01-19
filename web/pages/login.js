@@ -1,12 +1,10 @@
 import * as firebase from 'firebase/app'
 import 'firebase/auth'
 import React from 'react'
-import Head from 'next/head'
 import Page from '../components/Page'
 import TextInput from '../components/TextInput'
 import Button from '../components/Button'
 import { initFirebase } from '../services/firebase.js'
-import { setLoggedInStatus } from '../services/login.js'
 
 export default class Videos extends React.Component {
   constructor() {
@@ -16,15 +14,11 @@ export default class Videos extends React.Component {
       status: ''
     }
     initFirebase()
-    console.log(typeof window, typeof window !== 'undefined')
-    if (typeof window !== 'undefined') {
-      this.finishLogin()
-    }
   }
   handleLogin() {
     var actionCodeSettings = {
-      url: window.location.origin + window.location.pathname,
-      // url: 'https://copenhagenjs.dk/login',
+      url: window.location.origin + '/login-forward',
+      // url: 'https://copenhagenjs.dk/login-forward',
       handleCodeInApp: true
     }
 
@@ -43,48 +37,6 @@ export default class Videos extends React.Component {
         })
         console.log(error)
       })
-  }
-  finishLogin() {
-    if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
-      var email = window.localStorage.getItem('emailForSignIn')
-      if (!email) {
-        return alert(
-          'Open this URL in browser to login - This browser is probrably a in-app browser.'
-        )
-      }
-      firebase
-        .auth()
-        .signInWithEmailLink(email, window.location.href)
-        .then(async result => {
-          console.log(result)
-          this.setState({
-            status: 'Successful login!'
-          })
-          setLoggedInStatus()
-          window.localStorage.removeItem('emailForSignIn')
-          await this.sendToBackend()
-          window.location.href = '/profile'
-        })
-        .catch(error => {
-          this.setState({
-            status: 'Error logging in! See console.'
-          })
-          console.log('error', error)
-        })
-    }
-  }
-  getToken() {
-    return firebase.auth().currentUser.getIdToken(true)
-  }
-  async sendToBackend() {
-    const token = await this.getToken()
-    return fetch('https://auth.copenhagenjs.dk/token', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ token })
-    }).catch(e => console.log(e))
   }
   render() {
     return (
