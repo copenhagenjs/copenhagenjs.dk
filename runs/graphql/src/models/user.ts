@@ -75,6 +75,7 @@ export async function getUsersFull(): Promise<User[]> {
       return {
         id: user.id,
         created: authUser.metadata.creationTime,
+        email: authUser.email,
         ...data
       };
     }
@@ -93,6 +94,7 @@ export async function getUserFull(username: String): Promise<User | null> {
   return {
     id: userResult.id,
     created: authUser.metadata.creationTime,
+    email: authUser.email,
     ...data
   };
 }
