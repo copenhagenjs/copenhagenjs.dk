@@ -82,3 +82,17 @@ export async function getUsersFull(): Promise<User[]> {
   const transformed = await Promise.all(usersMeta);
   return transformed;
 }
+
+export async function getUserFull(username: String): Promise<User | null> {
+  const searchResult = await searchUser("username", username);
+  if (searchResult.size === 0) return null;
+  const userResult = searchResult.docs[0];
+  const data: User = userResult.data();
+  const authUser = await getAuthUser(userResult.id);
+
+  return {
+    id: userResult.id,
+    created: authUser.metadata.creationTime,
+    ...data
+  };
+}
