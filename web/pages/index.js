@@ -166,7 +166,7 @@ function EventGraph() {
           <hr />
           <h2>Beta feature:</h2>
           <Attendance
-            status={data.upcoming[0].attendance}
+            status={attendance}
             onClick={status => {
               setAttendance(status)
               if (token.length > 0) {
