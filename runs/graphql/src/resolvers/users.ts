@@ -18,7 +18,7 @@ export const user = async (root, args, context): Promise<User | null> => {
     context.user.level &&
     context.user.level.includes("organizer")
   ) {
-    return await getUserFull(args.username)
+    return await getUserFull(args.username);
   } else {
     return null;
   }
