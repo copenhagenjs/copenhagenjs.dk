@@ -27,6 +27,12 @@ export type EventDetails = {
   presentations: Speaker[];
 };
 
+export type WorkshopDetails = {
+  attendeeLimit: number;
+  price: number;
+  questions: string[];
+}
+
 export const getEvents = (): EventDetails[] => {
   const data = require("../../_posts/_data.json");
   return data.posts.map(post => {
