@@ -26,6 +26,8 @@ export default () => {
         user(username: $username) {
           id
           name
+          email
+          created
           username
           image
           githubId
@@ -90,6 +92,14 @@ export default () => {
             <strong>Username:</strong>
           </div>
           <div>{data.user.username || ''}</div>
+          <div>
+            <strong>Created:</strong>
+          </div>
+          <div>{data.user.created || ''}</div>
+          <div>
+            <strong>Email:</strong>
+          </div>
+          <div>{data.user.email || ''}</div>
           <div>
             <strong>Github:</strong>
           </div>
