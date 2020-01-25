@@ -27,8 +27,8 @@ So come and join us and talk about JavaScript 😀
     17:45 Welcome
     18:00 What I learned from publishing software that wasn't finished - Mathias Grundtvig Andreasen
     18:25 Break with food and drinks
-    19:00 You?
-    19:25 You?
+    19:00 Generating TypeScript types from Postgres - Kristian Dupont
+    19:25 Building parsers in JavaScript - Kenneth Geisshirt
     19:50 Group photo
     19:55 Raffle.js - 2 one-year Jetbrains licenses - Jamie Magee
     20:00 Socializing - meet the community
