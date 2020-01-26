@@ -125,9 +125,29 @@ export default () => (
         width: 25px;
         height: 25px;
       }
+      .jetbrains-container {
+        display: inline-block;
+        width: 100px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .jetbrains-logo {
+        width: 100px;
+        height: 100px;
+      }
     `}</style>
     <div>
       <NewsletterForm />
+      <a href="https://www.jetbrains.com/" className="social-link">
+        <div className="jetbrains-container">
+          <img
+            className="jetbrains-logo"
+            src="/static/images/jetbrains.svg"
+            alt="JetBrains"
+          />
+        </div>
+        Sponsored by JetBrains
+      </a>
     </div>
     <div className="social">
       <h3>Dont miss important news!</h3>
