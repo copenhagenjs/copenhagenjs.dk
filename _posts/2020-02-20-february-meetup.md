@@ -8,6 +8,10 @@ duration: 3
 speakers:
   - title: "What I learned from publishing software that wasn't finished"
     name: Mathias Grundtvig Andreasen
+  - title: Generating TypeScript types from Postgres
+    name: Kristian Dupont
+  - title: Building parsers in JavaScript
+    name: Kenneth Geisshirt
 ---
 
 # CopenhagenJS February - DFDS
