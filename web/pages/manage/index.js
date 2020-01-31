@@ -20,10 +20,10 @@ export default () => {
         users {
           name
           username
+          created
           image
           githubId
           twitterId
-          instagramId
           website
         }
       }
@@ -68,6 +68,7 @@ export default () => {
               <th></th>
               <th>Name</th>
               <th>Username</th>
+              <th>Created</th>
               <th>Github</th>
               <th>Twitter</th>
               <th>Website</th>
@@ -94,6 +95,7 @@ export default () => {
                     ''
                   )}
                 </td>
+                <td>{user.created || ''}</td>
                 <td>
                   <a href={`https://github.com/${user.githubId}`}>
                     {user.githubId || ''}
@@ -110,11 +112,6 @@ export default () => {
                   ) : (
                     ''
                   )}
-                </td>
-                <td>
-                  <a href={`https://instagram.com/${user.instagramId}`}>
-                    {user.instagramId || ''}
-                  </a>
                 </td>
               </tr>
             ))}
