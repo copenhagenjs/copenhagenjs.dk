@@ -56,67 +56,84 @@ export default () => {
     })
   }, [])
 
+  if (error) {
+    return <div>Error :(</div>
+  }
+
+  if (loading) {
+    return <div>Loading</div>
+  }
   return (
     <Page>
       <h1>Manage</h1>
-      {loading && <div>Loading</div>}
-      {error && <div>Error :(</div>}
       {data && data.users && (
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Username</th>
-              <th>Created</th>
-              <th>Github</th>
-              <th>Twitter</th>
-              <th>Website</th>
-              <th>Instagram</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.users.map((user, key) => (
-              <tr key={key}>
-                <td>
-                  {user.image ? (
-                    <img src={user.image} width={40} />
-                  ) : (
-                    <div style={{ height: 40 }} />
-                  )}
-                </td>
-                <td>{user.name || ''}</td>
-                <td>
-                  {user.username && user.username.length > 0 ? (
-                    <a href={`/manage/user/?username=${user.username}`}>
-                      {user.username}
-                    </a>
-                  ) : (
-                    ''
-                  )}
-                </td>
-                <td>{user.created || ''}</td>
-                <td>
-                  <a href={`https://github.com/${user.githubId}`}>
-                    {user.githubId || ''}
-                  </a>
-                </td>
-                <td>
-                  <a href={`https://twitter.com/${user.twitterId}`}>
-                    {user.twitterId || ''}
-                  </a>
-                </td>
-                <td>
-                  {user.website && user.website.length > 0 ? (
-                    <a href={user.website}>Website</a>
-                  ) : (
-                    ''
-                  )}
-                </td>
+        <>
+          <p>There are {data.users.length} users.</p>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Created</th>
+                <th>Github</th>
+                <th>Twitter</th>
+                <th>Website</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {data.users.map((user, key) => (
+                <tr key={key}>
+                  <td>
+                    {user.image ? (
+                      <img src={user.image} width={40} />
+                    ) : (
+                      <div style={{ height: 40 }} />
+                    )}
+                  </td>
+                  <td>{user.name || ''}</td>
+                  <td>
+                    {user.username && user.username.length > 0 ? (
+                      <a href={`/manage/user/?username=${user.username}`}>
+                        Profile
+                      </a>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                  <td>
+                    {user.created
+                      ? `${(new Date(user.created).getDate() + 1)
+                          .toString()
+                          .padStart(2, '0')}/${(
+                          new Date(user.created).getMonth() + 1
+                        )
+                          .toString()
+                          .padStart(2, '0')}/${new Date(
+                          user.created
+                        ).getFullYear()}`
+                      : ''}
+                  </td>
+                  <td>
+                    <a href={`https://github.com/${user.githubId}`}>GitHub</a>
+                  </td>
+                  <td>
+                    <a href={`https://twitter.com/${user.twitterId}`}>
+                      Twitter
+                    </a>
+                  </td>
+                  <td>
+                    {user.website && user.website.length > 0 ? (
+                      <a href={user.website}>Website</a>
+                    ) : (
+                      ''
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
       )}
     </Page>
   )
