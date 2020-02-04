@@ -1,5 +1,5 @@
 ---
-title: CopenhagenJS Febuary - DFDS
+title: CopenhagenJS February - DFDS
 type: meetup
 location: Sundkrogen 1, 2150 København
 link: https://www.meetup.com/copenhagenjs/events/267972088/
