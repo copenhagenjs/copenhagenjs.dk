@@ -54,6 +54,9 @@ function Speakers() {
 
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
+
+  if (!data.speakerProfile) return <span>No data yet!</span>
+
   const user = data.speakerProfile.ghostUser || data.speakerProfile.user
   return (
     <div>
