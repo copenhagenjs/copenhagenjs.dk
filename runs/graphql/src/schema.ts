@@ -22,6 +22,7 @@ import {
 import { updateProfile } from "./resolvers/updateprofile.js";
 import { users, user } from "./resolvers/users.js";
 import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
+import { presentation } from "./resolvers/presentation";
 
 const typeDefs = gql`
   type Video {
@@ -118,7 +119,7 @@ const typeDefs = gql`
     searchEvents(query: String): [Event]
     speakerProfiles: [SpeakerProfile]
     speakerProfile(slug: String!): SpeakerProfile
-    presentation(slug: String!): SpeakerPresentation
+    presentation(titleslug: String!, nameslug: String!): SpeakerPresentation
     users: [User]
     user(username: String): User
     me: User
@@ -139,6 +140,7 @@ const resolvers = {
     searchEvents,
     speakerProfile,
     speakerProfiles,
+    presentation,
     users,
     user,
     me
