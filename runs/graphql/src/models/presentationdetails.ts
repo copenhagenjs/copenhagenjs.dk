@@ -7,14 +7,16 @@ import {
 import admin from "firebase-admin";
 
 export type PresentationDetails = {
+  timestamp?: string;
+  userId?: string;
   name?: string;
   title?: string;
-  timestamp?: string;
   text?: string;
   link?: string;
 };
 
 export type PresentationDetailsInput = {
+  userId: string;
   name: string;
   title: string;
   text: string;
@@ -36,6 +38,7 @@ export async function addPresentationDetail(
 
 if(require.main === module) {
   addPresentationDetail({
+    userId: '123abc',
     name: 'kevin',
     title: 'tech',
     text: 'github',
