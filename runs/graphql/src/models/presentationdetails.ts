@@ -9,21 +9,21 @@ import admin from "firebase-admin";
 export type PresentationDetails = {
   timestamp?: number;
   userId?: string;
-  name?: string;
-  title?: string;
+  eventslug?: string;
+  titleslug?: string;
   text?: string;
   link?: string;
 };
 
 export type PresentationDetailsInput = {
   userId: string;
-  name: string;
-  title: string;
+  eventslug: string;
+  titleslug: string;
   text: string;
   link: string;
 };
 
-const collection = 'presentationdetails'
+const collection = "presentationdetails";
 
 export async function addPresentationDetail(
   input: PresentationDetailsInput
@@ -32,17 +32,39 @@ export async function addPresentationDetail(
   const doc: PresentationDetails = {
     timestamp: Date.now(),
     ...input
-  }
+  };
   const update = await coll.add(doc);
   return update;
 }
 
-if(require.main === module) {
-  addPresentationDetail({
-    userId: '123abc',
-    name: 'kevin',
-    title: 'tech',
-    text: 'github',
-    link: 'http'
-  })
+export async function getPresentationDetails(
+  eventslug: string,
+  titleslug: string
+) {
+  const pdCol = db.collection(collection);
+  const results = await pdCol
+    .where("eventslug", "==", eventslug)
+    .where("titleslug", "==", titleslug)
+    .get();
+  const docs: PresentationDetails[] = results.docs.map(i => i.data());
+  return docs;
+}
+
+if (require.main === module) {
+  async function main() {
+    try {
+      await addPresentationDetail({
+        userId: "123abc",
+        eventslug: "kevin",
+        titleslug: "tech",
+        text: "github",
+        link: "http"
+      });
+      const result = await getPresentationDetails("kevin", "tech");
+      console.log(result);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  main();
 }
