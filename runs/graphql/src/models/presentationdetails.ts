@@ -7,7 +7,7 @@ import {
 import admin from "firebase-admin";
 
 export type PresentationDetails = {
-  timestamp?: string;
+  timestamp?: number;
   userId?: string;
   name?: string;
   title?: string;
@@ -29,10 +29,11 @@ export async function addPresentationDetail(
   input: PresentationDetailsInput
 ): Promise<FirebaseDocumentRef> {
   const coll = db.collection(collection);
-  const update = await coll.add({
-    timestamp: Date.now().toString(),
+  const doc: PresentationDetails = {
+    timestamp: Date.now(),
     ...input
-  });
+  }
+  const update = await coll.add(doc);
   return update;
 }
 
