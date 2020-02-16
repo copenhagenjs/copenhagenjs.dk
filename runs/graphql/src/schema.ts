@@ -119,7 +119,7 @@ const typeDefs = gql`
     searchEvents(query: String): [Event]
     speakerProfiles: [SpeakerProfile]
     speakerProfile(slug: String!): SpeakerProfile
-    presentation(titleslug: String!, nameslug: String!): SpeakerPresentation
+    presentation(titleslug: String!, eventslug: String!): SpeakerPresentation
     users: [User]
     user(username: String): User
     me: User
