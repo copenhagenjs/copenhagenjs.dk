@@ -90,7 +90,15 @@ export const SpeakerProfile = ({
           )}
           {user && user.website && (
             <li>
-              <a href={user.website.startsWith('http') ? user.website : `https://${user.website}`}>Website</a>
+              <a
+                href={
+                  user.website.startsWith('http')
+                    ? user.website
+                    : `https://${user.website}`
+                }
+              >
+                Website
+              </a>
             </li>
           )}
         </ul>
