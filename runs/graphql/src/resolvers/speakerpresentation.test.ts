@@ -28,7 +28,7 @@ test("SpeakerPresentationDetails should return an array of details", async () =>
       presentations: []
     }
   ]);
-  mockedGetPresentationDetails.mockReturnValueOnce([]);
+  mockedGetPresentationDetails.mockResolvedValueOnce([]);
   const SpeakerPresentation = {
     title,
     selfLink
