@@ -1,4 +1,4 @@
-const { memGetEvents } = require("../models/events.js");
+import { memGetEvents } from "../models/events.js";
 import { getSpeakerProfiles, getSpeakerProfile } from "../models/speakers.js";
 import { slugify } from "../services/slug.js";
 import { searchUser, searchGhostUser } from "../models/user.js";

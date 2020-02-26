@@ -11,7 +11,7 @@ export const getSpeakers = () => {
     .flat();
 };
 
-type SpeakerProfilePresentation = { title: string; selfLink: string };
+export type SpeakerProfilePresentation = { title: string; selfLink: string };
 
 type SpeakerProfile = {
   name: string;

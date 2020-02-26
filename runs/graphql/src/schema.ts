@@ -23,6 +23,7 @@ import { updateProfile } from "./resolvers/updateprofile.js";
 import { users, user } from "./resolvers/users.js";
 import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
 import { presentation } from "./resolvers/presentation";
+import { SpeakerPresentationDetails } from "./resolvers/speakerpresentation";
 
 const typeDefs = gql`
   type Video {
@@ -58,9 +59,14 @@ const typeDefs = gql`
     attendance: Attendance
     attendees: [Attendee]
   }
+  type PresentationDetail {
+    text: String
+    link: String
+  }
   type SpeakerPresentation {
     title: String
     event: Event
+    details: [PresentationDetail]
   }
   type SpeakerProfile {
     name: String
@@ -165,7 +171,8 @@ const resolvers = {
     videos: SpeakerProfileVideos
   },
   SpeakerPresentation: {
-    event: SpeakerPresentationEvent
+    event: SpeakerPresentationEvent,
+    details: SpeakerPresentationDetails
   },
   Video: {
     speakerProfile: VideoSpeakerProfile
