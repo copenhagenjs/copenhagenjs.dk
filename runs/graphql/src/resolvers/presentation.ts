@@ -1,8 +1,14 @@
-import { getSpeakerProfile } from "../models/speakers";
+import {
+  getSpeakerProfile,
+  SpeakerProfilePresentation
+} from "../models/speakers";
 import { memGetSingleEvent } from "../models/events";
 import { slugify } from "../services/slug";
 
-export const presentation = (parent, { eventslug, titleslug }) => {
+export const presentation = (
+  parent,
+  { eventslug, titleslug }
+): SpeakerProfilePresentation | null => {
   const event = memGetSingleEvent(eventslug);
   if (!event) {
     throw new Error("Could not find event!");
@@ -23,7 +29,5 @@ export const presentation = (parent, { eventslug, titleslug }) => {
   if (!speakerPresentation) {
     throw new Error("Did not find any presentation!");
   }
-  return {
-    title: speakerPresentation.title
-  };
+  return speakerPresentation;
 };
