@@ -4,28 +4,23 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { SpeakerProfile } from '../components/SpeakerProfile'
 
+const presentations = [{
+  event: { selfLink: 'http://example.com', date: Date.now().toString(), slug: "event-slug" },
+  title: 'Example'
+}]
+
 storiesOf('SpeakerProfile', module)
   .add('No talks', () => <SpeakerProfile name={'Donald Duck'}></SpeakerProfile>)
   .add('1 talk', () => (
     <SpeakerProfile
       name={'Donald Duck'}
-      presentations={[
-        {
-          event: { link: 'http://example.com', date: Date.now().toString() },
-          title: 'Example'
-        }
-      ]}
+      presentations={presentations}
     ></SpeakerProfile>
   ))
   .add('1 talk - 1 youtube', () => (
     <SpeakerProfile
       name={'Donald Duck'}
-      presentations={[
-        {
-          event: { link: 'http://example.com', date: Date.now().toString() },
-          title: 'Example'
-        }
-      ]}
+      presentations={presentations}
       videos={[{ video: 'dQw4w9WgXcQ' }]}
     ></SpeakerProfile>
   ))
