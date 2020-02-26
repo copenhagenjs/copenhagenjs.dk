@@ -65,6 +65,7 @@ const typeDefs = gql`
   }
   type SpeakerPresentation {
     title: String
+    slug: String
     event: Event
     details: [PresentationDetail]
   }

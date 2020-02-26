@@ -41,7 +41,8 @@ test("given a slug return a presentation", () => {
     presentations: [
       {
         title,
-        selfLink
+        selfLink,
+        slug: titleslug
       }
     ]
   });

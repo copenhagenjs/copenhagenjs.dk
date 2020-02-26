@@ -11,7 +11,11 @@ export const getSpeakers = () => {
     .flat();
 };
 
-export type SpeakerProfilePresentation = { title: string; selfLink: string };
+export type SpeakerProfilePresentation = {
+  title: string;
+  slug: string;
+  selfLink: string;
+};
 
 type SpeakerProfile = {
   name: string;
@@ -31,7 +35,13 @@ export const getSpeakerProfiles = (): SpeakerProfile[] => {
         return {
           name: presentation.name,
           slug: slugify(presentation.name),
-          presentations: [{ title: presentation.title, selfLink }]
+          presentations: [
+            {
+              title: presentation.title,
+              selfLink,
+              slug: slugify(presentation.title)
+            }
+          ]
         };
       });
       return profiles;
