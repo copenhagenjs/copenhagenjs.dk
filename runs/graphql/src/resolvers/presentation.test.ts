@@ -34,16 +34,18 @@ test("given a slug return a presentation", () => {
     ]
   });
 
+  const presentationObj = {
+    title,
+    selfLink,
+    slug: titleslug
+  }
+
   mockedGetSpeakerProfile.mockReturnValueOnce({
     name,
     slug: nameslug,
     presentationsCount: 1,
     presentations: [
-      {
-        title,
-        selfLink,
-        slug: titleslug
-      }
+      presentationObj
     ]
   });
 
@@ -55,7 +57,5 @@ test("given a slug return a presentation", () => {
         titleslug
       }
     )
-  ).toEqual({
-    title
-  });
+  ).toEqual(presentationObj);
 });
