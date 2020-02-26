@@ -1,10 +1,13 @@
 import { SpeakerProfilePresentation } from "../models/speakers";
-import { getPresentationDetails } from "../models/presentationdetails";
+import {
+  getPresentationDetails,
+  PresentationDetails
+} from "../models/presentationdetails";
 import { memGetEvents } from "../models/events";
 
 export const SpeakerPresentationDetails = async (
   parent: SpeakerProfilePresentation
-) => {
+): Promise<PresentationDetails[]> => {
   const event = memGetEvents().find(
     event => event.selfLink === parent.selfLink
   );

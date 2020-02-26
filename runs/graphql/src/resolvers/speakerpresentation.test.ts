@@ -7,7 +7,7 @@ const mockedMemGetEvents = memGetEvents as jest.MockedFunction<
 >;
 
 jest.mock("../models/presentationdetails");
-import { getPresentationDetails } from "../models/presentationdetails";
+import { getPresentationDetails, PresentationDetails } from "../models/presentationdetails";
 const mockedGetPresentationDetails = getPresentationDetails as jest.MockedFunction<
   typeof getPresentationDetails
 >;
@@ -28,12 +28,16 @@ test("SpeakerPresentationDetails should return an array of details", async () =>
       presentations: []
     }
   ]);
-  mockedGetPresentationDetails.mockResolvedValueOnce([]);
+  const details: PresentationDetails[] = [{
+    text: 'text',
+    link: 'link'
+  }]
+  mockedGetPresentationDetails.mockResolvedValueOnce(details);
   const SpeakerPresentation = {
     title,
     selfLink
   };
-  const details = await SpeakerPresentationDetails(SpeakerPresentation);
-  expect(details).toEqual([]);
+  const resultDetails = await SpeakerPresentationDetails(SpeakerPresentation);
+  expect(resultDetails).toEqual(details);
   expect(mockedGetPresentationDetails).toBeCalledWith(slug, title);
 });
