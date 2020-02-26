@@ -42,9 +42,11 @@ function Speakers() {
         }
         presentations {
           title
+          slug
           event {
             date
             selfLink
+            slug
           }
         }
       }

@@ -126,7 +126,7 @@ export const SpeakerProfile = ({
                 {date.getFullYear()}
               </td>
               <td>
-                <a href={presentation.event.selfLink}>{presentation.title}</a>
+                <a href={`/presentation/?event=${presentation.event.slug}&title=${presentation.slug}`}>{presentation.title}</a>
               </td>
             </tr>
           )
