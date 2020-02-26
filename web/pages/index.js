@@ -184,7 +184,7 @@ function EventGraph() {
       {data.upcoming.length === 0 && (
         <>
           <h2>Past two events:</h2>
-          <Events.tag events={data.past} />
+          <Events.tag events={data.past.reverse()} />
         </>
       )}
     </>
