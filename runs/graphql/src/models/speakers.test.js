@@ -74,6 +74,7 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
       presentations: [
         {
           title: "Welcome to Disney",
+          slug: "welcome-to-disney",
           selfLink: events[0].selfLink
         }
       ],
@@ -85,10 +86,12 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
       presentations: [
         {
           title: "React.js in Disneyland",
+          slug: "reactjs-in-disneyland",
           selfLink: events[0].selfLink
         },
         {
           title: "Programming funny websites",
+          slug: "programming-funny-websites",
           selfLink: events[1].selfLink
         }
       ],
@@ -100,6 +103,7 @@ test("getSpeakerProfiles should return profiles with presentations", () => {
       presentations: [
         {
           title: "My secret tools",
+          slug: "my-secret-tools",
           selfLink: events[1].selfLink
         }
       ],
