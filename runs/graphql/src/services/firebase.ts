@@ -6,8 +6,7 @@ const credential = process.env.FIREBASE_SVC_ACC
 
 admin.initializeApp({
   credential,
-  projectId: "copenhagenjsdk",
-  databaseURL: "https://copenhagenjs.firebaseio.com"
+  projectId: "copenhagenjsdk"
 });
 export { admin };
 
