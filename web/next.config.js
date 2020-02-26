@@ -12,6 +12,7 @@ module.exports = {
       '/speakers': { page: '/speakers' },
       '/code-of-conduct': { page: '/code-of-conduct' },
       '/presentations': { page: '/presentations' },
+      '/presentation': { page: '/presentation' },
       '/speaker': { page: '/speaker' },
       '/guidelines': { page: '/guidelines' },
       '/login': { page: '/login' },
