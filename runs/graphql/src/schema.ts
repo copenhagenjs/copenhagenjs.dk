@@ -24,7 +24,7 @@ import { users, user } from "./resolvers/users.js";
 import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
 import { presentation } from "./resolvers/presentation";
 import { SpeakerPresentationDetails } from "./resolvers/speakerpresentation";
-import { addPresentationDetailMutation } from "./mutations/addpresentationdetail";
+import { addPresentationDetailMutation as addPresentationDetail } from "./mutations/addpresentationdetail";
 
 const typeDefs = gql`
   type Video {
@@ -189,7 +189,7 @@ const resolvers = {
   Mutation: {
     updateProfile,
     attendEvent,
-    addPresentationDetailMutation
+    addPresentationDetail
   }
 };
 
