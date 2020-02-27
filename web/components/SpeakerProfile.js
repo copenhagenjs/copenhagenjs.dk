@@ -1,6 +1,6 @@
 import React from 'react'
 import { gql } from 'apollo-boost'
-import { SpeakerProfileVideos } from "./SpeakerProfileVideos";
+import { SpeakerProfileVideos } from './SpeakerProfileVideos'
 
 export const SpeakerProfile = ({
   name,
@@ -88,7 +88,11 @@ export const SpeakerProfile = ({
                 {date.getFullYear()}
               </td>
               <td>
-                <a href={`/presentation/?event=${presentation.event.slug}&title=${presentation.slug}`}>{presentation.title}</a>
+                <a
+                  href={`/presentation/?event=${presentation.event.slug}&title=${presentation.slug}`}
+                >
+                  {presentation.title}
+                </a>
               </td>
             </tr>
           )
