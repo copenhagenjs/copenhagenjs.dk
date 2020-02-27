@@ -6,7 +6,8 @@ import { SpeakerProfile } from '../components/SpeakerProfile'
 
 const presentations = [{
   event: { selfLink: 'http://example.com', date: Date.now().toString(), slug: "event-slug" },
-  title: 'Example'
+  title: 'Example',
+  slug: 'example'
 }]
 
 storiesOf('SpeakerProfile', module)
