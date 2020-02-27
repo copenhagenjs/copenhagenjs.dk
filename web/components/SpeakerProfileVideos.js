@@ -1,4 +1,5 @@
 import React from 'react'
+import { gql } from 'apollo-boost'
 import { Embed } from './YoutubeEmbed.js'
 
 export const SpeakerProfileVideos = {

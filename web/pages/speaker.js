@@ -7,10 +7,7 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
 import { Embed } from '../components/YoutubeEmbed'
-import {
-  SpeakerProfile,
-  SpeakerProfileVideos
-} from '../components/SpeakerProfile.js'
+import { SpeakerProfile } from '../components/SpeakerProfile.js'
 
 export function getParams() {
   return new URLSearchParams(
@@ -23,35 +20,10 @@ function Speakers() {
   const { loading, error, data } = useQuery(gql`
     query {
       speakerProfile(slug: "${slug}") {
-        name
-        slug
-        videos {
-          ...SpeakerProfileVideos
-        }
-        user {
-          image
-          twitterId
-          githubId
-          website
-        }
-        ghostUser {
-          image
-          twitterId
-          githubId
-          website
-        }
-        presentations {
-          title
-          slug
-          event {
-            date
-            selfLink
-            slug
-          }
-        }
+        ...SpeakerProfileDetails
       }
     }
-    ${SpeakerProfileVideos.fragment}
+    ${SpeakerProfile.fragment}
   `)
 
   if (loading) return <span>Loading...</span>
@@ -69,7 +41,7 @@ function Speakers() {
           href={`https://copenhagenjs.dk/speaker/?name=${data.speakerProfile.slug}`}
         />
       </Head>
-      <SpeakerProfile
+      <SpeakerProfile.tag
         name={data.speakerProfile.name}
         presentations={data.speakerProfile.presentations}
         user={user}
