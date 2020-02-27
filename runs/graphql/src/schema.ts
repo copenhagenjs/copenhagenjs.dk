@@ -24,6 +24,7 @@ import { users, user } from "./resolvers/users.js";
 import { video, videos, VideoSpeakerProfile } from "./resolvers/videos.js";
 import { presentation } from "./resolvers/presentation";
 import { SpeakerPresentationDetails } from "./resolvers/speakerpresentation";
+import { addPresentationDetailMutation as addPresentationDetail } from "./mutations/addpresentationdetail";
 
 const typeDefs = gql`
   type Video {
@@ -117,6 +118,12 @@ const typeDefs = gql`
     event: Event
     timestamp: String
   }
+  input PresentationDetailInput {
+    eventslug: String
+    titleslug: String
+    text: String
+    link: String
+  }
   type Query {
     hello: String
     events(first: Int, last: Int, status: EventStatus, types: [String]): [Event]
@@ -134,6 +141,7 @@ const typeDefs = gql`
   type Mutation {
     updateProfile(input: ProfileInput): User
     attendEvent(input: AttendEventInput!): Attendance
+    addPresentationDetail(input: PresentationDetailInput): PresentationDetail
   }
 `;
 
@@ -180,7 +188,8 @@ const resolvers = {
   },
   Mutation: {
     updateProfile,
-    attendEvent
+    attendEvent,
+    addPresentationDetail
   }
 };
 

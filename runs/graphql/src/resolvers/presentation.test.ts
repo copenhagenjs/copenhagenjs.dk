@@ -38,15 +38,13 @@ test("given a slug return a presentation", () => {
     title,
     selfLink,
     slug: titleslug
-  }
+  };
 
   mockedGetSpeakerProfile.mockReturnValueOnce({
     name,
     slug: nameslug,
     presentationsCount: 1,
-    presentations: [
-      presentationObj
-    ]
+    presentations: [presentationObj]
   });
 
   expect(

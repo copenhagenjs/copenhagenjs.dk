@@ -15,5 +15,5 @@ export const SpeakerPresentationDetails = async (
     throw new Error("Did not find event!");
   }
   const details = await getPresentationDetails(event.slug, parent.slug);
-  return details
+  return details;
 };
