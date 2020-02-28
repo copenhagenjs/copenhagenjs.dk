@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 import PresentationDetails from '../components/PresentationDetails'
 
 storiesOf('PresentationDetails', module).add('Default', () => (
-  <PresentationDetails
+  <PresentationDetails.tag
     details={[
       { text: 'GitHub Project', link: 'http://example.com' },
       { text: 'Presentation', link: 'http://example.com' }
