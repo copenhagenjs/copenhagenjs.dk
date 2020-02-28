@@ -5,6 +5,7 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { useQuery } from '@apollo/react-hooks'
 import Page from '../components/Page'
 import { getParams } from '../services/url'
+import { PresentationDetails } from '../components/PresentationDetails'
 
 function Presentation() {
   const { loading, error, data } = useQuery(
@@ -12,8 +13,12 @@ function Presentation() {
       query Presentations($eventslug: String!, $titleslug: String!) {
         presentation(eventslug: $eventslug, titleslug: $titleslug) {
           title
+          details {
+            ...PresentaionDetailsList
+          }
         }
       }
+      ${PresentationDetails.fragment}
     `,
     {
       variables: {
@@ -26,7 +31,12 @@ function Presentation() {
   if (loading) return <span>Loading...</span>
   if (error) return <span>Error :(</span>
 
-  return <div>{data.presentation.title}</div>
+  return (
+    <div>
+      {data.presentation.title}
+      <PresentationDetails.tag details={data.presentation.details} />
+    </div>
+  )
 }
 
 export default () => (
