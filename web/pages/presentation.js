@@ -8,6 +8,8 @@ import Page from '../components/Page'
 import { getParams } from '../services/url'
 import { PresentationDetails } from '../components/PresentationDetails'
 import { firebaseLogin } from '../services/firebase.js'
+import TextInput from '../components/TextInput'
+import Button from '../components/Button'
 
 const ADD_PRESENTATION_DETAIL = gql`
   mutation AddPresentationDetail($input: PresentationDetailInput!) {
@@ -73,26 +75,20 @@ function Presentation() {
       <PresentationDetails.tag details={data.presentation.details} />
       <div>
         <h3>Add link/note to this presentation</h3>
-        <label>
-          Text
-          <input
-            type="text"
-            value={text}
-            style={{ display: 'block' }}
-            onChange={e => setText(e.target.value)}
-          />
-        </label>
-        <label>
-          Link
-          <input
-            type="text"
-            value={link}
-            style={{ display: 'block' }}
-            onChange={e => setLink(e.target.value)}
-          />
-        </label>
+        <TextInput
+          label="Description:"
+          type="text"
+          value={text}
+          onChange={e => setText(e.target.value)}
+        />
+        <TextInput
+          label="Link:"
+          type="text"
+          value={link}
+          onChange={e => setLink(e.target.value)}
+        />
         {token !== '' && (
-          <button
+          <Button
             onClick={() => {
               addPresentationDetail({
                 variables: {
@@ -106,8 +102,8 @@ function Presentation() {
               })
             }}
           >
-            Add
-          </button>
+            Add Detail
+          </Button>
         )}
       </div>
     </div>
