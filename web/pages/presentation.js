@@ -25,7 +25,7 @@ function Presentation() {
   const [link, setLink] = useState('')
   const [token, setToken] = useState('')
 
-  const { loading, error, data } = useQuery(
+  const { loading, error, data, refetch } = useQuery(
     gql`
       query Presentations($eventslug: String!, $titleslug: String!) {
         presentation(eventslug: $eventslug, titleslug: $titleslug) {
@@ -89,8 +89,11 @@ function Presentation() {
         />
         {token !== '' && (
           <Button
-            onClick={() => {
-              addPresentationDetail({
+            onClick={async () => {
+              if (link.length === 0 || text.length === 0) {
+                return alert('Remember to fill out the form fields!')
+              }
+              await addPresentationDetail({
                 variables: {
                   input: {
                     eventslug: getParams().get('event'),
@@ -100,6 +103,8 @@ function Presentation() {
                   }
                 }
               })
+              alert('Thanks for your submission!')
+              refetch()
             }}
           >
             Add Detail
