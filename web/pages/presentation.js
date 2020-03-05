@@ -8,6 +8,8 @@ import Page from '../components/Page'
 import { getParams } from '../services/url'
 import { PresentationDetails } from '../components/PresentationDetails'
 import { firebaseLogin } from '../services/firebase.js'
+import TextInput from '../components/TextInput'
+import Button from '../components/Button'
 
 const ADD_PRESENTATION_DETAIL = gql`
   mutation AddPresentationDetail($input: PresentationDetailInput!) {
@@ -23,7 +25,7 @@ function Presentation() {
   const [link, setLink] = useState('')
   const [token, setToken] = useState('')
 
-  const { loading, error, data } = useQuery(
+  const { loading, error, data, refetch } = useQuery(
     gql`
       query Presentations($eventslug: String!, $titleslug: String!) {
         presentation(eventslug: $eventslug, titleslug: $titleslug) {
@@ -73,28 +75,25 @@ function Presentation() {
       <PresentationDetails.tag details={data.presentation.details} />
       <div>
         <h3>Add link/note to this presentation</h3>
-        <label>
-          Text
-          <input
-            type="text"
-            value={text}
-            style={{ display: 'block' }}
-            onChange={e => setText(e.target.value)}
-          />
-        </label>
-        <label>
-          Link
-          <input
-            type="text"
-            value={link}
-            style={{ display: 'block' }}
-            onChange={e => setLink(e.target.value)}
-          />
-        </label>
+        <TextInput
+          label="Description:"
+          type="text"
+          value={text}
+          onChange={e => setText(e.target.value)}
+        />
+        <TextInput
+          label="Link:"
+          type="text"
+          value={link}
+          onChange={e => setLink(e.target.value)}
+        />
         {token !== '' && (
-          <button
-            onClick={() => {
-              addPresentationDetail({
+          <Button
+            onClick={async () => {
+              if (link.length === 0 || text.length === 0) {
+                return alert('Remember to fill out the form fields!')
+              }
+              await addPresentationDetail({
                 variables: {
                   input: {
                     eventslug: getParams().get('event'),
@@ -104,10 +103,12 @@ function Presentation() {
                   }
                 }
               })
+              alert('Thanks for your submission!')
+              refetch()
             }}
           >
-            Add
-          </button>
+            Add Detail
+          </Button>
         )}
       </div>
     </div>
