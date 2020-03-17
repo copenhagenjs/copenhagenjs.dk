@@ -21,7 +21,13 @@ export const Events = {
             <div>
               {new Date(parseInt(event.date)).toDateString()} - {event.location}
             </div>
-            <div>{event.content.replace(/#/gm, '').slice(0, 200)} ...</div>
+            <div>
+              {event.content
+                .replace(/#/gm, '')
+                .replace(/(<([^>]+)>)/gi, '')
+                .slice(0, 200)}{' '}
+              ...
+            </div>
             <Link href={event.selfLink} size="small">
               Read more
             </Link>
