@@ -11,7 +11,10 @@ export default () => {
         You fill out the form here or{' '}
         <a href="mailto:hi@copenhagenjs.dk">hi@copenhagenjs.dk</a>
       </p>
-      <form action="https://formspree.io/kevin.simper@gmail.com" method="POST">
+      <form
+        action="https://contactform.dk/kevin.simper@gmail.com"
+        method="POST"
+      >
         <TextInput required label="Your name" name="name" />
         <TextInput required type="email" label="Your email" name="email" />
         <TextInput required label="Title" name="title" />
