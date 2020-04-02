@@ -36,12 +36,12 @@ export const getEvents = (): EventDetails[] => {
     );
     const parsed = fm(markdown);
     const date = parsed.attributes.date
-      ? new Date(parsed.attributes.date + " GMT+0200")
+      ? new Date(parsed.attributes.date + " (CET)")
       : new Date(
           post
             .split("-")
             .slice(0, 2)
-            .join("-") + " GMT+0200"
+            .join("-") + " (CET)"
         );
 
     return {
