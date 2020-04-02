@@ -25,7 +25,7 @@
     "cross-fetch": "^3.0.4",
     "firebase": "^7.3.0",
     "front-matter": "^3.0.2",
-    "graphql": "^14.5.8",
+    "graphql": "^15.0.0",
     "isomorphic-unfetch": "^3.0.0",
     "markdownlint-cli": "^0.22.0",
     "marked": "^0.8.0",
