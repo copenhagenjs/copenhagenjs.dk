@@ -36,13 +36,23 @@ export const getEvents = (): EventDetails[] => {
     );
     const parsed = fm(markdown);
     const date = parsed.attributes.date
-      ? new Date(parsed.attributes.date + " (CET)")
+      ? parsed.attributes.date
       : new Date(
           post
             .split("-")
             .slice(0, 2)
-            .join("-") + " (CET)"
+            .join("-")
         );
+
+    // YAML will by default parse dates as UTC
+    // This parses the date as Copenhagen time
+    // and takes care of summertime
+    const timezoneFormatted = date.toLocaleString("en-US", {
+      timeZone: "Europe/Copenhagen"
+    });
+    const diff =
+      new Date(timezoneFormatted + " UTC").getTime() - date.getTime();
+    const correctDate = new Date(date.getTime() - diff);
 
     return {
       title: parsed.attributes.title || post.replace(".md", ""),
@@ -51,7 +61,7 @@ export const getEvents = (): EventDetails[] => {
       link: parsed.attributes.link || "",
       markdown: parsed.body,
       content: marked(parsed.body),
-      date,
+      date: correctDate,
       type: parsed.attributes.type || "",
       location: parsed.attributes.location || "",
       presentations: parsed.attributes.speakers || []
