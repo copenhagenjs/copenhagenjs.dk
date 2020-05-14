@@ -29,8 +29,8 @@
     "@sendgrid/mail": "6.5.2",
     "@types/jest": "25.1.1",
     "@types/node": "13.9.8",
-    "babel-jest": "25.2.4",
-    "jest": "25.2.4",
+    "babel-jest": "25.5.1",
+    "jest": "25.5.4",
     "typescript": "3.9.2"
   },
   "description": "",
