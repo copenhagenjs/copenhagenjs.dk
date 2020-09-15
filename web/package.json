@@ -34,7 +34,7 @@
     "prettier": "^2.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "yargs": "^15.0.0"
+    "yargs": "^16.0.0"
   },
   "devDependencies": {
     "@storybook/react": "5.3.6",
