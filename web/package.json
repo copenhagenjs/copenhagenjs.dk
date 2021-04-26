@@ -37,10 +37,10 @@
     "yargs": "^15.0.0"
   },
   "devDependencies": {
-    "@storybook/react": "5.3.6",
-    "@storybook/addon-actions": "5.3.6",
-    "@storybook/addon-links": "5.3.6",
-    "@storybook/addons": "5.3.6",
+    "@storybook/react": "6.2.9",
+    "@storybook/addon-actions": "6.2.9",
+    "@storybook/addon-links": "6.2.9",
+    "@storybook/addons": "6.2.9",
     "@babel/core": "7.11.4",
     "babel-loader": "8.1.0"
   },
