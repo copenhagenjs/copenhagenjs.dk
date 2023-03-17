@@ -31,7 +31,7 @@
     "@types/node": "13.9.8",
     "babel-jest": "26.0.1",
     "jest": "26.0.1",
-    "typescript": "3.9.2"
+    "typescript": "4.9.5"
   },
   "description": "",
   "prettier": {},
