@@ -28,7 +28,7 @@
     "@babel/preset-env": "7.11.0",
     "@sendgrid/mail": "6.5.2",
     "@types/jest": "25.1.1",
-    "@types/node": "13.9.8",
+    "@types/node": "13.13.52",
     "babel-jest": "26.0.1",
     "jest": "26.0.1",
     "typescript": "3.9.2"
