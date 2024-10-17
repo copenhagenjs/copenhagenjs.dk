@@ -24,8 +24,8 @@
     "p-memoize": "^3.1.0"
   },
   "devDependencies": {
-    "@babel/core": "7.11.4",
-    "@babel/preset-env": "7.11.0",
+    "@babel/core": "7.25.8",
+    "@babel/preset-env": "7.25.8",
     "@sendgrid/mail": "6.5.2",
     "@types/jest": "25.1.1",
     "@types/node": "13.9.8",
