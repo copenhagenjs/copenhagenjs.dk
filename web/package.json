@@ -24,7 +24,7 @@
     "apollo-boost": "^0.4.4",
     "cross-fetch": "^3.0.4",
     "firebase": "^7.3.0",
-    "front-matter": "^3.0.2",
+    "front-matter": "^4.0.0",
     "graphql": "^14.5.8",
     "isomorphic-unfetch": "^3.0.0",
     "markdownlint-cli": "^0.23.0",

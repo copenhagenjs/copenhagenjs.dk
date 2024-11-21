@@ -13,7 +13,7 @@
   "dependencies": {
     "esm": "^3.2.25",
     "feed": "^4.0.0",
-    "front-matter": "^3.0.2",
+    "front-matter": "^4.0.0",
     "marked": "^0.8.0"
   }
 }
